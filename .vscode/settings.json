@@ -13,5 +13,11 @@
     "statusBarItem.remoteBackground": "#7b6476",
     "statusBarItem.remoteForeground": "#e7e7e7"
   },
-  "peacock.color": "#7b6476"
+  "peacock.color": "#7b6476",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }
