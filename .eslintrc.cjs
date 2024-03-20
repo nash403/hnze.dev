@@ -9,6 +9,9 @@ module.exports = {
     'object-shorthand': ['error', 'always'],
 
     // Vue
+    'vue/block-order': ['error', {
+      order: ['script', 'template', 'style'],
+    }],
     'vue/html-self-closing': [
       'error',
       {

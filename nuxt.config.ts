@@ -1,3 +1,5 @@
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'src/',
@@ -13,13 +15,27 @@ export default defineNuxtConfig({
 
   css: ['~/assets/main.css'],
 
-  modules: ['@nuxtjs/eslint-module', '@nuxtseo/module', '@nuxtjs/color-mode', 'nuxt-icon', '@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxtseo/module',
+    '@nuxtjs/color-mode',
+    ['unplugin-icons/nuxt', {
+      autoInstall: true,
+      customCollections: {
+        hnze: FileSystemIconLoader('./src/assets/icons'),
+      },
+    }],
+    '@nuxtjs/tailwindcss',
+  ],
 
   site: {
-    name: 'Honoré Nintunze\'s homepage',
+    name: 'Honoré Nintunze - Fullstack Web Developer',
   },
 
   tailwindcss: {
     configPath: '~~/tailwind.config',
+  },
+
+  colorMode: {
+    classSuffix: '',
   },
 })
