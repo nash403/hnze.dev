@@ -20,5 +20,10 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "eslint.validate": ["javascript", "javascriptreact", "json", "jsonc", "json5"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.localesPaths": [
+    "src/locales",
+    "config/installed-modules/i18n"
+  ]
 }
