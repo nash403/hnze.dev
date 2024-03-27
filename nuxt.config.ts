@@ -25,9 +25,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       i18n: {
-        defaultLocale: 'fr-FR',
+        // should be set by DEFAULT_LOCALE env variable
+        // defaultLocale: 'fr',
+
         detectBrowserLanguage: {
-          fallbackLocale: 'fr-FR',
+          // redirectOn: 'no_prefix',
+          useCookie: false,
         },
       },
     },
@@ -37,15 +40,17 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/i18n',
       {
+        // debug: process.env.NODE_ENV === 'development',
         vueI18n: './i18n.config.ts', // relative to /<rootDir>
 
         types: 'composition',
 
         lazy: true,
         langDir: './locales', // relative to /<srcDir>
+        strategy: 'prefix_except_default',
         locales: [
-          { code: 'fr-FR', iso: 'fr-FR', file: 'fr-FR.json5', name: 'Français' },
-          { code: 'en-US', iso: 'en-US', file: 'en-US.json5', name: 'English' },
+          { code: 'fr', iso: 'fr-FR', file: 'fr.json5', name: 'Français' },
+          { code: 'en', iso: 'en-US', file: 'en.json5', name: 'English' },
         ],
       },
     ],
