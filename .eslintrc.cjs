@@ -11,8 +11,6 @@ module.exports = {
           localeKey: 'file',
         },
       ],
-      // localeDir: './src/locales/*.{json,json5,yaml,yml}',
-
       messageSyntaxVersion: '^9.10.2',
     },
   },

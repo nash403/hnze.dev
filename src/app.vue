@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import IconLogo from '~icons/hnze/logo'
 import IconWarning from '~icons/hnze/warning'
+const { locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
@@ -14,5 +16,14 @@ import IconWarning from '~icons/hnze/warning'
     <div>
       <ColorModePicker />
     </div>
+    <div>
+      <template v-for="(locale, i) in locales" :key="locale.code">
+        <NuxtLink :to="switchLocalePath(locale.code)">
+          {{ locale.name }}
+        </NuxtLink>
+        <hr v-if="i < locales.length - 1" />
+      </template>
+    </div>
+    <NuxtPage />
   </div>
 </template>

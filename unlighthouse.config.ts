@@ -1,7 +1,7 @@
 import { defineConfig } from 'unlighthouse'
 
 export default defineConfig({
-  site: `http://${process.env.HOST ?? '0.0.0.0'}:${+(process.env.PORT ?? 3000)}`,
+  site: process.env.NUXT_PUBLIC_SITE_URL ?? 'http://0.0.0.0:3000',
   scanner: {
     device: 'desktop',
   },
