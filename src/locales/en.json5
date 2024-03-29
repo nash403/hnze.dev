@@ -1,3 +1,5 @@
 {
   'app.toggle_theme_label': 'Switch theme (current: {0})',
+  'app.toggle_navbar_menu': 'Toggle menu',
+  'app.link_go_home': 'Go Home',
 }

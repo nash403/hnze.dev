@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'plugin:@intlify/vue-i18n/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   settings: {
     'vue-i18n': {
@@ -34,5 +35,8 @@ module.exports = {
         },
       },
     ],
+
+    // Tailwind CSS
+    'tailwindcss/no-custom-classname': 'off',
   },
 }

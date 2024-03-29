@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import type { FunctionalComponent } from 'vue'
 import IconThemeSystem from '~icons/line-md/computer'
 import IconThemeLight from '~icons/line-md/sunny-outline-twotone'
 import IconThemeDark from '~icons/line-md/moon'
 
 const colorMode = useColorMode()
-const themes = ['system', 'light', 'dark'] as const
+const themesIcons: { [theme in 'system' | 'light' | 'dark']: FunctionalComponent } = {
+  system: IconThemeSystem,
+  light: IconThemeLight,
+  dark: IconThemeDark,
+}
+
+const themes = Object.entries(themesIcons).map(([theme, _]) => theme)
 const currentThemeIndex = ref(colorMode.preference === 'unkown'
   ? 0
   : themes.findIndex(theme => theme === colorMode.preference))
@@ -25,9 +32,9 @@ const toggleTheme = () => {
     @click="toggleTheme()"
   >
     <ColorScheme placeholder="...">
-      <IconThemeSystem v-if="(colorMode.preference as typeof themes[number]) ==='system'" />
-      <IconThemeDark v-if="(colorMode.preference as typeof themes[number]) ==='light'" />
-      <IconThemeLight v-if="(colorMode.preference as typeof themes[number]) ==='dark'" />
+      <template v-for="(theme, i) of themes" :key="i">
+        <component :is="(themesIcons as any)[themes[getNextThemeIndex()]]" v-if="(colorMode.preference as typeof themes[number]) === theme" />
+      </template>
     </ColorScheme>
   </button>
 </template>

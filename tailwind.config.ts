@@ -11,6 +11,11 @@ export default {
         '2xl': '6rem',
       },
     },
+    extend: {
+      maxWidth: {
+        fullxl: '144rem',
+      },
+    },
   },
   plugins: [],
   content: [

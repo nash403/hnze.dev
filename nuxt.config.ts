@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   nitro: {
-    static: true,
+    serveStatic: true,
   },
 
   components: [
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
       },
     ],
 
-    '@nuxtjs/seo',
+    // '@nuxtjs/seo',
 
     [
       '@nuxtjs/tailwindcss',
@@ -97,6 +97,8 @@ export default defineNuxtConfig({
         },
       },
     ],
+
+    '@nuxt/image',
   ],
 
   postcss: {

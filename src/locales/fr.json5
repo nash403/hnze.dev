@@ -1,3 +1,5 @@
 {
+  'app.link_go_home': "Aller à l' acceuil",
+  'app.toggle_navbar_menu': 'Bascule du menu',
   'app.toggle_theme_label': 'Basculer de thème (actuellement: {0})',
 }
