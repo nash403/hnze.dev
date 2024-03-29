@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import IconLogo from '~icons/hnze/logo'
-import IconWarning from '~icons/hnze/warning'
-const { locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
+// import IconLogo from '~icons/hnze/logo'
+// import IconWarning from '~icons/hnze/warning'
+// const { locales } = useI18n()
+// const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
-  <div class="text-center p-12 h-full space-y-20">
-    <div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <!-- <div>
+
+  </div>
+  <HAppHeader /> -->
+  <!-- <div class="text-center p-12 h-full space-y-20"> -->
+  <!-- <div>
       <IconLogo class="text-[13rem] mx-auto transition-all duration-[0.3s] " />
     </div>
     <p class="transition-all duration-[0.3s] bg-[color:var(--color-secondary)] text-[color:var(--bg-secondary)] p-[15px] rounded-[5px] inline-flex items-center">
@@ -23,7 +30,7 @@ const switchLocalePath = useSwitchLocalePath()
         </NuxtLink>
         <hr v-if="i < locales.length - 1" />
       </template>
-    </div>
-    <NuxtPage />
-  </div>
+    </div> -->
+  <!-- <NuxtPage />
+  </div> -->
 </template>

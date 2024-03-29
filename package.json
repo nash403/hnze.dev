@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "nuxi build",
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --clipboard",
+    "dev:ssl": "WEBAPP_LOCAL_CERTS_PATH=\"$(mkcert -CAROOT)\" && echo \"Reading your SSL certificates at path: $WEBAPP_LOCAL_CERTS_PATH\" && WEBAPP_LOCAL_CERTS_PATH=$WEBAPP_LOCAL_CERTS_PATH NODE_TLS_REJECT_UNAUTHORIZED=0 nuxi dev --clipboard",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "find:unused": "knip",
@@ -15,6 +16,7 @@
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
+    "@iconify-json/line-md": "^1.1.37",
     "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",

@@ -1,13 +1,26 @@
 import { FileSystemIconLoader } from 'unplugin-icons/dist/loaders.js'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
   srcDir: 'src/',
 
   devServer: {
     host: process.env.HOST ?? '0.0.0.0',
     port: +(process.env.PORT ?? 3000),
+    https: process.env.WEBAPP_LOCAL_CERTS_PATH
+      ? {
+          key: process.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA-key.pem',
+          cert: process.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA.pem',
+        }
+      : false,
+  },
+
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
   },
 
   css: ['~/assets/css/main.css'],
@@ -16,7 +29,12 @@ export default defineNuxtConfig({
     static: true,
   },
 
+  components: [
+    { path: '~/components', prefix: 'H', pathPrefix: false },
+  ],
+
   app: {
+    rootId: '__hnze-app-nuxt',
     head: {
       titleTemplate: '%s %separator %siteName',
     },
@@ -40,7 +58,6 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/i18n',
       {
-        // debug: process.env.NODE_ENV === 'development',
         vueI18n: './i18n.config.ts', // relative to /<rootDir>
 
         types: 'composition',

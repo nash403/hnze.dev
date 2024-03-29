@@ -1,5 +1,3 @@
 {
-  'app.warning_site_under_construction': 'Soyez patient. Le site est encore en construction....',
-  // put description I will put next to photo
-  'nuxtSiteConfig.description': '',
+  'app.toggle_theme_label': 'Basculer de thème (actuellement: {0})',
 }

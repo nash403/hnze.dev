@@ -1,4 +1,3 @@
 {
-  'app.warning_site_under_construction': 'Be patient. This website is still under construction....',
-  'nuxtSiteConfig.description': '',
+  'app.toggle_theme_label': 'Switch theme (current: {0})',
 }
