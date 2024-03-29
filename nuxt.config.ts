@@ -1,23 +1,24 @@
 import { FileSystemIconLoader } from 'unplugin-icons/dist/loaders.js'
+import { freezeColorModeOnEveryPages } from './src/hooks/freezeColorMode'
+import { DEFAULT_THEME } from './config/contants'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'src/',
 
   devServer: {
-    host: process.env.HOST ?? '0.0.0.0',
-    port: +(process.env.PORT ?? 3000),
-    https: process.env.WEBAPP_LOCAL_CERTS_PATH
+    host: import.meta.env.HOST ?? '0.0.0.0',
+    port: +(import.meta.env.PORT ?? 3000),
+    https: import.meta.env.WEBAPP_LOCAL_CERTS_PATH
       ? {
-          key: process.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA-key.pem',
-          cert: process.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA.pem',
+          key: import.meta.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA-key.pem',
+          cert: import.meta.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA.pem',
         }
       : false,
   },
 
   devtools: {
     enabled: true,
-
     timeline: {
       enabled: true,
     },
@@ -30,6 +31,7 @@ export default defineNuxtConfig({
   },
 
   components: [
+    { path: '~/components/ui', prefix: '', pathPrefix: false },
     { path: '~/components', prefix: 'H', pathPrefix: false },
   ],
 
@@ -48,7 +50,7 @@ export default defineNuxtConfig({
 
         detectBrowserLanguage: {
           // redirectOn: 'no_prefix',
-          useCookie: false,
+          useCookie: true,
         },
       },
     },
@@ -66,13 +68,13 @@ export default defineNuxtConfig({
         langDir: './locales', // relative to /<srcDir>
         strategy: 'prefix_except_default',
         locales: [
-          { code: 'fr', iso: 'fr-FR', file: 'fr.json5', name: 'Français' },
-          { code: 'en', iso: 'en-US', file: 'en.json5', name: 'English' },
+          { code: 'fr', iso: 'fr-FR', file: 'fr-FR.json5', name: 'FR' },
+          { code: 'en', iso: 'en-US', file: 'en-US.json5', name: 'EN' },
         ],
       },
     ],
 
-    // '@nuxtjs/seo',
+    '@nuxtjs/seo',
 
     [
       '@nuxtjs/tailwindcss',
@@ -84,6 +86,7 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/color-mode',
       {
+        fallback: DEFAULT_THEME,
         classSuffix: '',
       },
     ],
@@ -105,6 +108,13 @@ export default defineNuxtConfig({
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+    },
+  },
+
+  hooks: {
+    'pages:extend' (pages) {
+      // TODO: remove this hook when dark mode is supported
+      freezeColorModeOnEveryPages(pages, DEFAULT_THEME)
     },
   },
 })

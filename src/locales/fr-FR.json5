@@ -1,0 +1,8 @@
+{
+  'app.link_go_home': "Aller à l' acceuil",
+  'app.toggle_navbar_menu': "Basculer l' ouverture du menu",
+  'app.theme.names.dark': 'foncé',
+  'app.theme.names.light': 'clair',
+  'app.theme.names.system': 'système',
+  'app.theme.toggle_btn_label': 'Thème {0}',
+}

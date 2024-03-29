@@ -2,6 +2,7 @@
 definePageMeta({
   title: '',
 })
+
 const localePath = useLocalePath()
 </script>
 
