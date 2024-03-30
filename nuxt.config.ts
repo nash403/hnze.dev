@@ -1,4 +1,5 @@
 import { FileSystemIconLoader } from 'unplugin-icons/dist/loaders.js'
+import { consola } from 'consola'
 import { freezeColorModeOnEveryPages } from './src/hooks/freezeColorMode'
 import { DEFAULT_THEME } from './config/contants'
 
@@ -69,7 +70,8 @@ export default defineNuxtConfig({
         strategy: 'prefix_except_default',
         locales: [
           { code: 'fr', iso: 'fr-FR', file: 'fr-FR.json5', name: 'FR' },
-          { code: 'en', iso: 'en-US', file: 'en-US.json5', name: 'EN' },
+          // TODO: enable english when implemented
+          // { code: 'en', iso: 'en-US', file: 'en-US.json5', name: 'EN' },
         ],
       },
     ],
@@ -114,6 +116,7 @@ export default defineNuxtConfig({
   hooks: {
     'pages:extend' (pages) {
       // TODO: remove this hook when dark mode is supported
+      consola.warn(`[hook][pages:extend] Forcing all pages to use ${DEFAULT_THEME} color mode`)
       freezeColorModeOnEveryPages(pages, DEFAULT_THEME)
     },
   },

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { FunctionalComponent } from 'vue'
 import IconThemeSystem from '~icons/line-md/computer'
-import IconThemeLight from '~icons/line-md/sunny-outline-twotone'
+import IconThemeLight from '~icons/line-md/sunny-outline'
 import IconThemeDark from '~icons/line-md/moon'
 import type { ColorTheme } from '~/types'
 
@@ -54,14 +54,8 @@ watch(() => colorMode.preference, () => {
     :class="{ 'cursor-not-allowed': colorMode.forced }"
     @click="toggleTheme()"
   >
-    <ColorScheme placeholder="...">
-      <template v-for="(theme, i) of themes" :key="i">
-        <component
-          :is="themesIcons[
-            themes[currentThemeIndex]]"
-          v-if="(colorMode.preference as typeof themes[number]) === theme"
-        />
-      </template>
+    <ColorScheme placeholder="..." tag="div" class="size-5">
+      <component :is="themesIcons[themes[currentThemeIndex]]" class="size-5" />
     </ColorScheme>
   </button>
 </template>

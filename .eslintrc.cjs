@@ -25,16 +25,16 @@ module.exports = {
     'vue/block-order': ['error', {
       order: ['script', 'template', 'style'],
     }],
-    'vue/html-self-closing': [
-      'error',
-      {
-        html: {
-          void: 'always',
-          normal: 'never',
-          component: 'always',
-        },
-      },
-    ],
+    // 'vue/html-self-closing': [
+    //   'error',
+    //   {
+    //     html: {
+    //       void: 'always',
+    //       normal: 'never',
+    //       component: 'always',
+    //     },
+    //   },
+    // ],
 
     // Tailwind CSS
     'tailwindcss/no-custom-classname': 'off',

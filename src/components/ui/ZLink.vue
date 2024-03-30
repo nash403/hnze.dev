@@ -73,7 +73,7 @@ export default defineComponent({
       :class="active !== undefined ? (active ? activeClass : inactiveClass) : resolveLinkClass(route, $route, { isActive: isActive, isExactActive: isExactActive })"
       @click="(e) => (!isExternal && !disabled) && navigate(e)"
     >
-      <slot v-bind="{ isActive: active !== undefined ? active : (exact ? isExactActive : isActive) }" :class="{ 'TODO-truncate-impl': !label && truncate }">
+      <slot v-bind="{ isActive: active !== undefined ? active : (exact ? isExactActive : isActive), class: 'TODO-truncate-impl' }">
         <span v-if="label" :class="{ 'TODO-truncate-impl': truncate }">
           {{ label }}
         </span>
