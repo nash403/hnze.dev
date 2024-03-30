@@ -47,17 +47,17 @@ const closeNavbar = () => {
     >
       <div class="flex items-center space-x-10">
         <ZLink :to="localePath('index')" :title="$t('app.link_go_home')" class="flex items-center">
-          <HnzeLogo class="size-16" />
+          <HnzeLogo class="size-[4.5rem]" />
         </ZLink>
 
-        <ZLink to="#" class="text-primary-500 hover:bg-primary-50 focus-visible:ring-primary-500 hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium text-gray-600 focus:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-inset  xl:inline-flex xl:items-center">
+        <ZLink to="#" class="text-primary-500 hover:bg-primary-50 focus-visible:ring-primary-500 hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium text-gray-600 focus:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-inset lg:inline-flex lg:items-center">
           {{ `@` }} <IconFlagpackCa /> {{ 'Montreal' }}
         </ZLink>
       </div>
 
-      <div class="flex items-center space-x-10">
+      <div class="relative flex items-center space-x-10">
         <nav
-          class="ml-auto flex items-center justify-between gap-x-5"
+          class="ml-auto flex items-center justify-between gap-x-5 lg:mr-16"
         >
           <span v-for="nav of navItems" :key="nav.text">{{ nav.text }}</span>
         </nav>
@@ -65,6 +65,7 @@ const closeNavbar = () => {
         <div title="Fonctionnalités limitées pour le moment" class="flex items-center space-x-4">
           <HAppLanguageSwitcher />
           <HAppToggleLoopTheme />
+
           <ZButton
             :aria-label="$t('app.toggle_navbar_menu')"
             class="relative border-l-2 border-l-gray-200 py-3 pl-3 outline-none md:hidden"

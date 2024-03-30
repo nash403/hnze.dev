@@ -1,5 +1,6 @@
 <script lang="ts">
-import { getZLinkProps, nuxtLinkProps, zLinkProps } from '~/lib/utils/link'
+import { computed, defineComponent, type PropType } from 'vue'
+import { getZLinkProps, nuxtLinkProps, zLinkProps } from './link.utils'
 
 export default defineComponent({
   inheritAttrs: false,
@@ -46,3 +47,4 @@ export default defineComponent({
     </slot>
   </ZLink>
 </template>
+~/components/ui/link/link

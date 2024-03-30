@@ -1,6 +1,6 @@
 import type { PropType } from 'vue'
-import type { NuxtLinkProps } from '#app'
-import type { RouteLocationRaw } from '#vue-router'
+import type { NuxtLinkProps } from 'nuxt/app'
+import type { RouteLocationRaw } from 'vue-router'
 
 export const nuxtLinkProps = {
   to: {
@@ -80,6 +80,8 @@ export const nuxtLinkProps = {
   },
 } as const
 
+const nuxtDetected = import.meta.server || (import.meta.client && Boolean(window.__NUXT__))
+
 export const zLinkProps = {
   as: {
     type: String,
@@ -87,7 +89,7 @@ export const zLinkProps = {
   },
   nuxt: {
     type: Boolean,
-    default: true,
+    default: !!nuxtDetected,
     required: false,
   },
   type: {

@@ -1,6 +1,6 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { nuxtLinkProps, zLinkProps } from '~/lib/utils/link'
+import { defineComponent, resolveComponent } from 'vue'
+import { nuxtLinkProps, zLinkProps } from './link.utils'
 
 export default defineComponent({
   inheritAttrs: false,
@@ -81,3 +81,4 @@ export default defineComponent({
     </a>
   </component>
 </template>
+~/components/ui/link/link
