@@ -13,9 +13,26 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
   <div aria-hidden="true" class="fixed inset-0 z-30 bg-gray-800/40" :class="menuOpened ? 'flex md:hidden' : 'hidden'" @click="closeMenu" />
   <header class="sticky top-0 z-40 w-full">
     <div
-      class="relative mx-auto flex max-w-fullxl items-center justify-between bg-[--bg] px-4 sm:px-8 sm:py-0"
+      class="relative mx-auto flex max-w-fullxl items-center justify-between bg-[--bg] pr-4 sm:py-0 sm:pr-8 md:px-8"
     >
-      <div class="flex items-center space-x-10">
+      <ZButton
+        :aria-label="$t('app.navbar.toggle_menu_label')"
+        class="relative border-r-2 border-r-gray-200 p-3 outline-none md:hidden"
+        @click="toggleMenuOpen"
+      >
+        <div
+          aria-hidden="true"
+          class="h-0.5 w-6 rounded bg-gray-800 transition"
+          :class="{ 'translate-y-[0.33rem] rotate-45': menuOpened }"
+        />
+        <div
+          aria-hidden="true"
+          class="mt-2 h-0.5 w-6 rounded bg-gray-800 transition"
+          :class="{ 'translate-y-[-0.33rem] -rotate-45': menuOpened }"
+        />
+      </ZButton>
+
+      <div class="mr-auto flex items-center space-x-10">
         <ZLink :to="localePath('index')" :title="$t('app.link_go_home')" class="flex items-center">
           <HnzeLogo class="size-[4.5rem]" />
         </ZLink>
@@ -53,7 +70,7 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
           <HAppLanguageSwitcher />
           <HAppToggleLoopTheme />
 
-          <ZButton
+          <!-- <ZButton
             :aria-label="$t('app.navbar.toggle_menu_label')"
             class="relative border-l-2 border-l-gray-200 py-3 pl-3 outline-none md:hidden"
             @click="toggleMenuOpen"
@@ -68,7 +85,7 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
               class="mt-2 h-0.5 w-6 rounded bg-gray-800 transition"
               :class="{ 'translate-y-[-0.33rem] -rotate-45': menuOpened }"
             />
-          </ZButton>
+          </ZButton> -->
         </div>
       </div>
     </div>

@@ -116,7 +116,7 @@ export default defineNuxtConfig({
   hooks: {
     'pages:extend' (pages) {
       // TODO: remove this hook when dark mode is supported
-      consola.warn(`[hook][pages:extend] Forcing all pages to use ${DEFAULT_THEME} color mode`)
+      consola.warn(`[nuxt.config][hook(pages:extend)] Forcing all pages to use ${DEFAULT_THEME} color mode`)
       freezeColorModeOnEveryPages(pages, DEFAULT_THEME)
     },
   },
