@@ -48,8 +48,8 @@ watch(() => colorMode.preference, () => {
 
 <template>
   <button
-    :aria-label="$t('app.theme.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
-    :title="$t('app.theme.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
+    :aria-label="t('app.theme.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
+    :title="t('app.theme.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
     :disabled="colorMode.forced"
     :class="{ 'cursor-not-allowed': colorMode.forced }"
     @click="toggleTheme()"
