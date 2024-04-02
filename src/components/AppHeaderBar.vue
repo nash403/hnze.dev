@@ -11,28 +11,26 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
 
 <template>
   <div aria-hidden="true" class="fixed inset-0 z-30 bg-gray-800/40" :class="menuOpened ? 'flex md:hidden' : 'hidden'" @click="closeMenu" />
-  <header class="sticky top-0 z-40 w-full">
+  <header class="sticky top-0 z-40 w-full select-none">
     <div
       class="relative mx-auto flex max-w-fullxl items-center justify-between bg-[--bg] pr-4 sm:py-0 sm:pr-8 md:px-8"
     >
-      <ZButton
-        :aria-label="$t('app.navbar.toggle_menu_label')"
-        class="relative border-r-2 border-r-gray-200 p-3 outline-none md:hidden"
+      <label
+        class="peer relative border-r-2 border-r-gray-200 p-2 outline-none md:hidden"
         @click="toggleMenuOpen"
       >
+        <input type="checkbox" :aria-label="$t('app.navbar.toggle_menu_label')" class="peer sr-only">
         <div
           aria-hidden="true"
-          class="h-0.5 w-6 rounded bg-gray-800 transition"
-          :class="{ 'translate-y-[0.33rem] rotate-45': menuOpened }"
+          class="h-0.5 w-4 rounded bg-gray-800 transition peer-checked:translate-y-[0.33rem] peer-checked:rotate-45"
         />
         <div
           aria-hidden="true"
-          class="mt-2 h-0.5 w-6 rounded bg-gray-800 transition"
-          :class="{ 'translate-y-[-0.33rem] -rotate-45': menuOpened }"
+          class="mt-2 h-0.5 w-4 rounded bg-gray-800 transition peer-checked:translate-y-[-0.33rem] peer-checked:-rotate-45"
         />
-      </ZButton>
+      </label>
 
-      <div class="mr-auto flex items-center space-x-10">
+      <div class="ml-2 mr-auto flex items-center space-x-10 md:ml-0">
         <ZLink :to="localePath('index')" :title="$t('app.link_go_home')" class="flex items-center">
           <HnzeLogo class="size-[4.5rem]" />
         </ZLink>
@@ -47,46 +45,29 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
         </ZLink>
       </div>
 
-      <div class="flex items-center space-x-2 lg:space-x-10">
-        <nav class="absolute inset-x-0 top-full z-50 border-b border-b-gray-200 bg-[--bg] px-4 duration-300 ease-linear sm:px-8 md:relative md:border-b-0 md:px-0" :class="menuOpened ? 'visible opacity-100' : 'invisible opacity-0 md:visible md:opacity-100'">
-          <ul class="flex flex-col gap-x-2 md:flex-row md:items-center md:justify-between lg:mr-16 lg:gap-x-5">
-            <li v-for="nav of navItems" :key="nav.id">
-              <ZButton
-                prepend
-                prepend-class="hidden size-5 text-sm opacity-75 transition md:text-base xl:inline-flex group-hover:opacity-100"
-                :to="nav.link"
-                :icon="nav.icon"
-                class="group flex items-center px-2 py-1 md:p-0"
-              >
-                <div class="rounded p-1 lg:px-3 lg:py-2">
-                  {{ nav.text }}
-                </div>
-              </ZButton>
-            </li>
-          </ul>
-        </nav>
+      <nav
+        class="invisible absolute inset-x-0 top-full z-50 ml-auto border-b border-b-gray-200 bg-[--bg] pl-8 pr-4 opacity-0 duration-300 ease-linear peer-has-[:checked]:visible peer-has-[:checked]:opacity-100 sm:px-8 md:visible md:relative md:border-b-0 md:px-0 md:opacity-100"
+      >
+        <ul class="flex flex-col gap-x-2 md:flex-row md:items-center md:justify-between lg:mr-16 lg:gap-x-5">
+          <li v-for="nav of navItems" :key="nav.id">
+            <ZButton
+              prepend
+              prepend-class="hidden size-5 text-sm opacity-75 transition md:text-base xl:inline-flex group-hover:opacity-100"
+              :to="nav.link"
+              :icon="nav.icon"
+              class="group flex items-center px-2 py-1 md:p-0"
+            >
+              <div class="rounded p-1 lg:px-3 lg:py-2">
+                {{ nav.text }}
+              </div>
+            </ZButton>
+          </li>
+        </ul>
+      </nav>
 
-        <div title="Fonctionnalités limitées pour le moment" class="flex items-center space-x-4">
-          <HAppLanguageSwitcher />
-          <HAppToggleLoopTheme />
-
-          <!-- <ZButton
-            :aria-label="$t('app.navbar.toggle_menu_label')"
-            class="relative border-l-2 border-l-gray-200 py-3 pl-3 outline-none md:hidden"
-            @click="toggleMenuOpen"
-          >
-            <div
-              aria-hidden="true"
-              class="h-0.5 w-6 rounded bg-gray-800 transition"
-              :class="{ 'translate-y-[0.33rem] rotate-45': menuOpened }"
-            />
-            <div
-              aria-hidden="true"
-              class="mt-2 h-0.5 w-6 rounded bg-gray-800 transition"
-              :class="{ 'translate-y-[-0.33rem] -rotate-45': menuOpened }"
-            />
-          </ZButton> -->
-        </div>
+      <div class="ml-4 flex items-center space-x-4 lg:space-x-10" title="Fonctionnalités limitées pour le moment">
+        <HAppLanguageSwitcher />
+        <HAppToggleLoopTheme />
       </div>
     </div>
   </header>

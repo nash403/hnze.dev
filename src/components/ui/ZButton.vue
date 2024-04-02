@@ -36,11 +36,11 @@ export default defineComponent({
       type: Object as PropType<FunctionalComponent>,
       default: undefined,
     },
-    leadingIcon: {
+    prependIcon: {
       type: Object as PropType<FunctionalComponent>,
       default: undefined
     },
-    trailingIcon: {
+    appendIcon: {
       type: Object as PropType<FunctionalComponent>,
       default: undefined
     },
@@ -58,35 +58,35 @@ export default defineComponent({
     const linkProps = computed(() => getZLinkProps(props))
 
     const isLeading = computed(() => {
-      return (props.icon && props.prepend) || (props.icon && !props.append) || (props.loading && !props.append) || props.leadingIcon
+      return (props.icon && props.prepend) || (props.icon && !props.append) || (props.loading && !props.append) || props.prependIcon
     })
 
     const isTrailing = computed(() => {
-      return (props.icon && props.append) || (props.loading && props.append) || props.trailingIcon
+      return (props.icon && props.append) || (props.loading && props.append) || props.appendIcon
     })
 
-    const leadingIconComponent = computed(() => {
+    const prependIconComponent = computed(() => {
       if (props.loading) {
         return props.loadingIcon
       }
 
-      return props.leadingIcon || props.icon
+      return props.prependIcon || props.icon
     })
 
-    const trailingIconComponent = computed(() => {
+    const appendIconComponent = computed(() => {
       if (props.loading && !isLeading.value) {
         return props.loadingIcon
       }
 
-      return props.trailingIcon || props.icon
+      return props.appendIcon || props.icon
     })
 
     return {
       linkProps,
       isLeading,
       isTrailing,
-      leadingIconComponent,
-      trailingIconComponent
+      prependIconComponent,
+      appendIconComponent,
     }
   },
 })
@@ -95,18 +95,18 @@ export default defineComponent({
 <template>
   <ZLink :type="type" :disabled="disabled || loading" v-bind="{ ...linkProps, ...$attrs }" :class="class">
     <slot name="prepend" :disabled="disabled" :loading="loading">
-      <component :is="leadingIconComponent" v-if="isLeading && leadingIconComponent" :class="[prependClass, loading && loadingClass ? loadingClass : '']" aria-hidden="true" />
+      <component :is="prependIconComponent" v-if="isLeading && prependIconComponent" :class="[prependClass, loading && loadingClass ? loadingClass : '']" aria-hidden="true" />
     </slot>
 
-    <slot truncate-class="TODO-truncate-impl">
-      <component v-if="loading && icon && !isLeading && !isTrailing" :is="icon" aria-hidden="true" :class="loading && loadingClass ? loadingClass : ''" />
-      <span v-else-if="label" :class="{ 'TODO-truncate-impl': truncate }">
+    <component v-if="loading && icon && !isLeading && !isTrailing" :is="icon" aria-hidden="true" :class="loading && loadingClass ? loadingClass : ''" />
+    <slot v-else truncate-class="TODO-truncate-impl">
+      <span v-if="label" :class="{ 'TODO-truncate-impl': truncate }">
         {{ label }}
       </span>
     </slot>
 
     <slot name="append" :disabled="disabled" :loading="loading">
-      <component :is="trailingIconComponent" v-if="isTrailing && trailingIconComponent" :class="[appendClass, loading && loadingClass ? loadingClass : '']" aria-hidden="true"  />
+      <component :is="appendIconComponent" v-if="isTrailing && appendIconComponent" :class="[appendClass, loading && loadingClass ? loadingClass : '']" aria-hidden="true"  />
     </slot>
   </ZLink>
 </template>
