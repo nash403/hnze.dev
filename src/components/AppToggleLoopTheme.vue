@@ -16,9 +16,9 @@ const themesIcons: { [theme in ColorTheme]: FunctionalComponent } = {
 }
 
 const themeNames: { [theme in ColorTheme]: string } = {
-  system: t('app.theme.names.system'),
-  light: t('app.theme.names.light'),
-  dark: t('app.theme.names.dark'),
+  system: t('app.navbar.theming.names.system'),
+  light: t('app.navbar.theming.names.light'),
+  dark: t('app.navbar.theming.names.dark'),
 }
 
 const themes = Object.entries(themesIcons).map(([theme, _]) => theme as ColorTheme)
@@ -48,8 +48,8 @@ watch(() => colorMode.preference, () => {
 
 <template>
   <button
-    :aria-label="t('app.theme.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
-    :title="t('app.theme.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
+    :aria-label="t('app.navbar.theming.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
+    :title="t('app.navbar.theming.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
     :disabled="colorMode.forced"
     :class="{ 'cursor-not-allowed': colorMode.forced }"
     @click="toggleTheme()"

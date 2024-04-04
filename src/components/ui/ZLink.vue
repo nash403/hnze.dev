@@ -1,12 +1,12 @@
 <script lang="ts">
 import { defineComponent, resolveComponent } from 'vue'
-import { nuxtLinkProps, zLinkProps } from './link.utils'
+import { nuxtLinkProps, aLinkProps } from '~/utils/components/ui/link'
 
 export default defineComponent({
   inheritAttrs: false,
   props: {
     ...nuxtLinkProps,
-    ...zLinkProps,
+    ...aLinkProps,
   },
   setup (props) {
     function resolveLinkClass (route: any, $route: any, { isActive, isExactActive }: { isActive: boolean, isExactActive: boolean }) {
@@ -81,4 +81,3 @@ export default defineComponent({
     </a>
   </component>
 </template>
-~/components/ui/link/link

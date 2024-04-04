@@ -82,7 +82,7 @@ export const nuxtLinkProps = {
 
 const nuxtDetected = import.meta.server || (import.meta.client && Boolean(window.__NUXT__))
 
-export const zLinkProps = {
+export const aLinkProps = {
   as: {
     type: String,
     default: 'button',
@@ -142,7 +142,7 @@ export const getNuxtLinkProps = (props: any) => {
 }
 
 export const getZLinkProps = (props: any) => {
-  const keys = [...Object.keys(nuxtLinkProps), ...Object.keys(zLinkProps)]
+  const keys = [...Object.keys(nuxtLinkProps), ...Object.keys(aLinkProps)]
 
   return keys.reduce((acc: any, key) => {
     if (props[key] !== undefined) {

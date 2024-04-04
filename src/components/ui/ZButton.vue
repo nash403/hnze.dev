@@ -1,13 +1,13 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
-import { getZLinkProps, nuxtLinkProps, zLinkProps } from './link.utils'
+import { getZLinkProps, nuxtLinkProps, aLinkProps } from '~/utils/components/ui/link'
 import type { FunctionalComponent, PropType } from 'vue'
 
 export default defineComponent({
   inheritAttrs: false,
   props: {
     ...nuxtLinkProps,
-    ...zLinkProps,
+    ...aLinkProps,
     loading: {
       type: Boolean,
       default: false

@@ -104,6 +104,8 @@ export default defineNuxtConfig({
     ],
 
     '@nuxt/image',
+
+    '@vueuse/nuxt',
   ],
 
   postcss: {

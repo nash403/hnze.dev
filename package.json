@@ -18,6 +18,7 @@
   "devDependencies": {
     "@iconify-json/flagpack": "^1.1.14",
     "@iconify-json/line-md": "^1.1.37",
+    "@iconify-json/mingcute": "^1.1.17",
     "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
     "@nuxt/image": "^1.5.0",
     "@nuxtjs/color-mode": "^3.3.3",
@@ -26,6 +27,9 @@
     "@nuxtjs/seo": "^2.0.0-rc.10",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@types/node": "^20.12.3",
+    "@vueuse/components": "^10.9.0",
+    "@vueuse/core": "^10.9.0",
+    "@vueuse/nuxt": "^10.9.0",
     "eslint": "^8.57.0",
     "eslint-plugin-tailwindcss": "^3.15.1",
     "knip": "^5.7.0",
