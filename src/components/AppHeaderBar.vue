@@ -11,9 +11,9 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
 
 <template>
   <div aria-hidden="true" class="fixed inset-0 z-30 bg-gray-800/40" :class="menuOpened ? 'flex md:hidden' : 'hidden'" @click="closeMenu" />
-  <header class="sticky top-0 z-40 w-full select-none">
+  <header class="sticky top-0 z-40 w-full select-none bg-[#f3f5f4]/[.4] backdrop-blur-[1.25rem] backdrop-saturate-[180%]">
     <div
-      class="relative mx-auto flex max-w-fullxl items-center justify-between bg-[--bg] pr-4 sm:py-0 sm:pr-8 md:px-8"
+      class="relative mx-auto flex max-w-fullxl items-center justify-between pr-4 sm:py-0 sm:pr-8 md:px-8"
     >
       <label
         class="peer relative border-r-2 border-r-gray-200 p-2 outline-none md:hidden"
@@ -37,7 +37,7 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
 
         <ZLink
           :to="localePath('lets-meet')"
-          class="text-primary-500 hover:bg-primary-50 focus-visible:ring-primary-500 hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono
+          class="text-primary-500 focus-visible:ring-primary-500 hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono
          text-sm font-medium text-gray-600 focus:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-inset lg:inline-flex lg:items-center"
         >
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
@@ -46,7 +46,7 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
       </div>
 
       <nav
-        class="invisible absolute inset-x-0 top-full z-50 ml-auto border-b border-b-gray-200 bg-[--bg] pl-8 pr-4 opacity-0 duration-300 ease-linear peer-has-[:checked]:visible peer-has-[:checked]:opacity-100 sm:px-8 md:visible md:relative md:border-b-0 md:px-0 md:opacity-100"
+        class="invisible absolute inset-x-0 top-full z-50 ml-auto border-b border-b-gray-200 pl-8 pr-4 opacity-0 duration-300 ease-linear peer-has-[:checked]:visible peer-has-[:checked]:opacity-100 sm:px-8 md:visible md:relative md:border-b-0 md:px-0 md:opacity-100"
       >
         <ul class="flex flex-col gap-x-2 md:flex-row md:items-center md:justify-between lg:mr-16 lg:gap-x-5">
           <li v-for="nav of navItems" :key="nav.id">

@@ -129,7 +129,7 @@ const footerSocialLinks = [
         </div>
       </nav>
 
-      <div class="flex w-full flex-col items-center gap-4 border-t border-gray-200 py-3 text-gray-700 sm:justify-between md:flex-row dark:border-t-gray-800 dark:text-gray-300">
+      <div class="flex w-full flex-col items-center justify-between gap-4 border-t border-gray-200 py-3 text-gray-700 md:flex-row md:flex-wrap dark:border-t-gray-800 dark:text-gray-300">
         <div class="flex text-center sm:min-w-max sm:text-left">
           <i18n-t keypath="app.footer.copyright" tag="p">
             <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
@@ -142,7 +142,7 @@ const footerSocialLinks = [
           </i18n-t>
         </div>
 
-        <div class="flex w-full justify-center gap-3 sm:justify-end">
+        <div class="flex justify-center gap-3">
           <template v-for="(social, i) of footerSocialLinks" :key="i">
             <UseClipboard v-if="social.isCopyLinkAction" v-slot="{ copy, copied }" :source="discordHandle">
               <button

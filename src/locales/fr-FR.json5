@@ -15,6 +15,7 @@
   'app.footer.menu.link_titles.contact': 'Contact',
   'app.footer.menu.link_titles.content': 'Contenu',
   'app.footer.menu.link_titles.general': 'Général',
+  'app.homepage.tech_showcase': 'Aller sur le site de {0}',
   'app.link_go_home': "Aller à l' acceuil",
   'app.navbar.pages.about': 'À propos',
   'app.navbar.pages.blog': 'Blog',

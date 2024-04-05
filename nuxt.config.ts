@@ -103,7 +103,12 @@ export default defineNuxtConfig({
       },
     ],
 
-    '@nuxt/image',
+    [
+      '@nuxt/image',
+      {
+        domains: [],
+      },
+    ],
 
     '@vueuse/nuxt',
   ],
