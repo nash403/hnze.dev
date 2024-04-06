@@ -25,18 +25,48 @@ module.exports = {
     'vue/block-order': ['error', {
       order: ['script', 'template', 'style'],
     }],
-    // 'vue/html-self-closing': [
-    //   'error',
-    //   {
-    //     html: {
-    //       void: 'always',
-    //       normal: 'never',
-    //       component: 'always',
-    //     },
-    //   },
-    // ],
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always',
+          normal: 'never',
+          component: 'always',
+        },
+      },
+    ],
 
     // Tailwind CSS
     'tailwindcss/no-custom-classname': 'off',
+
+    // I18n
+    '@intlify/vue-i18n/no-raw-text': [
+      'warn',
+      {
+        attributes: {
+          '/.+/': [
+            'title',
+            'aria-label',
+            'aria-placeholder',
+            'aria-roledescription',
+            'aria-valuetext',
+          ],
+          input: ['placeholder'],
+          img: ['alt'],
+        },
+        ignoreNodes: [],
+        ignorePattern: '^[-#:()&]+$',
+        ignoreText: ['EUR', 'HKD', 'USD'],
+      },
+    ],
+
+    '@intlify/vue-i18n/key-format-style': [
+      'error',
+      'snake_case',
+      {
+        splitByDots: true,
+      },
+    ],
+    '@intlify/vue-i18n/no-missing-keys-in-other-locales': 'error',
   },
 }

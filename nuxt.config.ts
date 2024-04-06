@@ -69,9 +69,9 @@ export default defineNuxtConfig({
         langDir: './locales', // relative to /<srcDir>
         strategy: 'prefix_except_default',
         locales: [
-          { code: 'fr', iso: 'fr-FR', file: 'fr-FR.json5', name: 'FR' },
+          { code: 'fr', iso: 'fr-FR', file: 'fr-FR.yaml', name: 'FR' },
           // TODO: enable english when implemented
-          // { code: 'en', iso: 'en-US', file: 'en-US.json5', name: 'EN' },
+          // { code: 'en', iso: 'en-US', file: 'en-US.yaml', name: 'EN' },
         ],
       },
     ],

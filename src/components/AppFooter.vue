@@ -110,9 +110,9 @@ const footerSocialLinks = [
 </script>
 
 <template>
-  <footer class="bg-gray-100 pt-16 md:pt-20 dark:bg-gray-900">
+  <footer class="bg-gray-900 pt-16 md:pt-20">
     <div class="mx-auto max-w-7xl px-5 sm:px-10 md:px-12 lg:px-5">
-      <nav class="grid grid-cols-2 gap-8 gap-y-10 py-10 text-gray-700 md:grid-cols-3 lg:grid-cols-4 dark:text-gray-300">
+      <nav class="grid grid-cols-2 gap-8 gap-y-10 py-10 text-gray-700 dark:text-gray-300 md:grid-cols-3 lg:grid-cols-4">
         <div v-for="section of footerSections" :key="section.title" class="space-y-5">
           <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
             {{ section.title }}
@@ -129,8 +129,8 @@ const footerSocialLinks = [
         </div>
       </nav>
 
-      <div class="flex w-full flex-col items-center justify-between gap-4 border-t border-gray-200 py-3 text-gray-700 md:flex-row md:flex-wrap dark:border-t-gray-800 dark:text-gray-300">
-        <div class="flex text-center sm:min-w-max sm:text-left">
+      <div class="flex w-full flex-col items-center justify-between gap-4 border-t border-gray-200 py-3 text-gray-700 dark:border-t-gray-800 dark:text-gray-300 md:flex-row md:flex-wrap">
+        <div class="order-2 flex text-center sm:min-w-max sm:text-left md:order-none">
           <i18n-t keypath="app.footer.copyright" tag="p">
             <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
             <template #copyrightDate>
@@ -142,7 +142,7 @@ const footerSocialLinks = [
           </i18n-t>
         </div>
 
-        <div class="flex justify-center gap-3">
+        <div class="order-1 flex justify-center gap-3 md:order-none">
           <template v-for="(social, i) of footerSocialLinks" :key="i">
             <UseClipboard v-if="social.isCopyLinkAction" v-slot="{ copy, copied }" :source="discordHandle">
               <button
