@@ -50,15 +50,15 @@ export function useAppNavbar () {
 }
 
 export function useAppNavbarMenu () {
-  const navbarMenuOpened = ref(false)
+  const menuOpened = ref(false)
 
-  const toggleMenuOpen = () => (navbarMenuOpened.value = !navbarMenuOpened.value)
+  const toggleMenuOpen = () => (menuOpened.value = !menuOpened.value)
   const closeMenu = () => {
-    navbarMenuOpened.value = false
+    menuOpened.value = false
   }
 
   return {
-    menuOpened: navbarMenuOpened,
+    menuOpened,
     toggleMenuOpen,
     closeMenu,
   }

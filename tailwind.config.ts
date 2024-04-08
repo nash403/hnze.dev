@@ -39,6 +39,7 @@ export default {
         },
         primary: {
           DEFAULT: 'hsl(var(--hzcv-primary) / <alpha-value>)',
+          foreground: 'hsl(var(--hzcv-primary-foreground) / <alpha-value>)',
           50: 'hsl(var(--hzcv-primary-50) / <alpha-value>)',
           100: 'hsl(var(--hzcv-primary-100) / <alpha-value>)',
           200: 'hsl(var(--hzcv-primary-200) / <alpha-value>)',
@@ -53,6 +54,7 @@ export default {
         },
         secondary: {
           DEFAULT: 'hsl(var(--hzcv-secondary) / <alpha-value>)',
+          foreground: 'hsl(var(--hzcv-secondary-foreground) / <alpha-value>)',
           50: 'hsl(var(--hzcv-secondary-50) / <alpha-value>)',
           100: 'hsl(var(--hzcv-secondary-100) / <alpha-value>)',
           200: 'hsl(var(--hzcv-secondary-200) / <alpha-value>)',
@@ -67,6 +69,7 @@ export default {
         },
         accent: {
           DEFAULT: 'hsl(var(--hzcv-accent) / <alpha-value>)',
+          foreground: 'hsl(var(--hzcv-accent-foreground) / <alpha-value>)',
           50: 'hsl(var(--hzcv-accent-50) / <alpha-value>)',
           100: 'hsl(var(--hzcv-accent-100) / <alpha-value>)',
           200: 'hsl(var(--hzcv-accent-200) / <alpha-value>)',

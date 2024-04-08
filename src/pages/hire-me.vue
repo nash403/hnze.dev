@@ -4,16 +4,20 @@ const testimonialFormFrameOpened = ref(false)
 </script>
 
 <template>
-  <main>
+  <main class="mx-auto max-w-5xl">
     <ZCardGlow>
-      <div class="relative flex h-full flex-col md:justify-center">
-        <h2>Construisons quelque chose ensemble</h2>
-        <div>Je peux transformer votre idée en réalité.</div>
-        <div>
-          <ZTag label="MVP" />
-          <ZTag label="SaaS" />
-          <ZTag label="Site Internet" />
-          <ZTag label="Renfort d'équipe" />
+      <div class="prose prose-xl grid max-w-none p-8 px-4 prose-h2:mt-0 lg:min-h-[250px] lg:grid-cols-2 lg:p-16 lg:px-8 lg:py-12">
+        <div class="flex h-full flex-col">
+          <h2 class="">
+            Travaillons ensemble
+          </h2>
+          <div>Je peux transformer votre idée d'app en réalité.</div>
+          <div class="mt-4 text-base">
+            <ZTag label="MVP" />
+            <ZTag label="SAAS" />
+            <ZTag label="Site Internet" />
+            <ZTag label="Renfort d'équipe" />
+          </div>
         </div>
       </div>
     </ZCardGlow>

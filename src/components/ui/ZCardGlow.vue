@@ -10,14 +10,15 @@ const { elementX, elementY } = useMouseInElement(card)
       '--x': `${elementX}px`,
       '--y': `${elementY}px`,
     }"
-    class="border-gradient group relative rounded-xl bg-background-50 p-8 before:absolute before:-inset-px before:size-[calc(100%+2px)] before:rounded-md lg:p-16
-    "
+    class="border-gradient relative rounded-xl ring-2 ring-gray-300/40 before:absolute before:-inset-px before:size-[calc(100%+2px)] before:rounded-xl dark:ring-gray-700"
   >
     <div
-      class="absolute inset-0 rounded-md bg-background-50 transition-colors duration-300"
+      class="absolute inset-0 rounded-xl bg-background-50 transition-colors duration-300"
     ></div>
 
-    <slot></slot>
+    <div class="relative overflow-hidden">
+      <slot></slot>
+    </div>
   </div>
 </template>
 

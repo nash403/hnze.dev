@@ -46,45 +46,52 @@
     }
   }
 
-  a:not(.unstyled), .link:not(.unstyled) {
-    @apply relative;
+  @media screen(md) {
+    a:not(.unstyled), .link:not(.unstyled) {
+      @apply relative pb-[2px];
 
-    &:before, &:after {
-      position: absolute;
-      height: 3px;
-      bottom: -2px;
-      content: ' ';
-      display: block;
-      width: 12px;
-      opacity: 0;
-      transition: 0.4s;
-      z-index: -1;
-    }
-    &:before {
-      background-image: linear-gradient(90deg, var(--hzc-background-700), var(--hzc-primary-700));
-      left: 0;
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
-    }
-
-    &:after {
-      background-image: linear-gradient(270deg, var(--hzc-background-700), var(--hzc-primary-700));
-      right: 0;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
-    }
-
-    &:hover, &.active {
-      @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
-    }
-
-    &.router-link-active {
-      font-weight: bold;
-      background: linear-gradient(45deg, rgba(#11998e, 1), rgba(#23e75e, 1));
-      -webkit-background-clip: text;
-      &:after, &:before {
+      &:before, &:after {
+        position: absolute;
+        height: 3px;
+        bottom: 1px;
+        content: ' ';
+        display: block;
+        width: 12px;
         opacity: 0;
+        transition: 0.4s;
+        z-index: -1;
       }
+      &:before {
+        background-image: linear-gradient(90deg, var(--hzc-background-400), var(--hzc-primary-700));
+        left: 0;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+
+      &:after {
+        background-image: linear-gradient(270deg, var(--hzc-background-400), var(--hzc-primary-700));
+        right: 0;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+
+      &:hover, &.active {
+        @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
+      }
+
+      &.router-link-active {
+        font-weight: 700;
+        background: linear-gradient(45deg, var(--hzc-background-400), var(--hzc-primary-700));
+        -webkit-background-clip: text;
+        &:after, &:before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  a:not(.unstyled), .link:not(.unstyled) {
+    &.router-link-active {
+      font-weight: 700;
     }
   }
 }
