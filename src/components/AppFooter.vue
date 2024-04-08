@@ -110,26 +110,26 @@ const footerSocialLinks = [
 </script>
 
 <template>
-  <footer class="bg-gray-900 pt-16 md:pt-20">
+  <footer class="bg-foreground pt-16 text-background md:pt-20">
     <div class="mx-auto max-w-7xl px-5 sm:px-10 md:px-12 lg:px-5">
-      <nav class="grid grid-cols-2 gap-8 gap-y-10 py-10 text-gray-700 dark:text-gray-300 md:grid-cols-3 lg:grid-cols-4">
+      <nav class="grid grid-cols-2 gap-8 gap-y-10 py-10 md:grid-cols-3 lg:grid-cols-4">
         <div v-for="section of footerSections" :key="section.title" class="space-y-5">
-          <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+          <h4 class="text-lg font-semibold">
             {{ section.title }}
           </h4>
           <ul class="space-y-3">
             <li v-for="(link, i) of section.links" :key="`${i}-${link.link}`">
-              <a :href="link.link" class="duration-200 hover:text-blue-600 dark:hover:text-blue-500">{{ link.text }}</a>
+              <a :href="link.link">{{ link.text }}</a>
             </li>
           </ul>
         </div>
 
         <div class="col-span-2 space-y-5 md:col-span-3 lg:col-span-1">
-          <HnzeLogo class="mx-auto size-52" />
+          <HnzeLogo class="mx-auto size-52 lg:mr-0" />
         </div>
       </nav>
 
-      <div class="flex w-full flex-col items-center justify-between gap-4 border-t border-gray-200 py-3 text-gray-700 dark:border-t-gray-800 dark:text-gray-300 md:flex-row md:flex-wrap">
+      <div class="flex w-full flex-col items-center justify-between gap-4 border-t border-background-100 py-3 md:flex-row md:flex-wrap">
         <div class="order-2 flex text-center sm:min-w-max sm:text-left md:order-none">
           <i18n-t keypath="app.footer.copyright" tag="p">
             <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
@@ -147,7 +147,7 @@ const footerSocialLinks = [
             <UseClipboard v-if="social.isCopyLinkAction" v-slot="{ copy, copied }" :source="discordHandle">
               <button
                 type="button"
-                class="block"
+                class="link block transition-transform duration-200 hover:scale-110"
                 :class="{ 'animate-rubber-band cursor-default': copied, 'cursor-copy': !copied }"
                 :aria-label="social.titleText"
                 :title="social.titleText"
@@ -156,7 +156,14 @@ const footerSocialLinks = [
                 <component :is="social.icon" />
               </button>
             </UseClipboard>
-            <ZLink v-else :to="social.link" :aria-label="social.titleText" :title="social.titleText" target="_blank">
+            <ZLink
+              v-else
+              :to="social.link"
+              :aria-label="social.titleText"
+              :title="social.titleText"
+              target="_blank"
+              class="transition-transform duration-200 hover:scale-110"
+            >
               <component :is="social.icon" />
             </ZLink>
           </template>

@@ -1,0 +1,145 @@
+@layer base {
+  :root {
+    --x: 0;
+    --y: 0;
+    --radial-gradient-circle-size: 300px;
+
+    /* Base colors */
+    --hzcv-foreground: 40 7% 8%;
+    --hzcv-foreground-50: 60 8% 95%;
+    --hzcv-foreground-100: 40 6% 90%;
+    --hzcv-foreground-200: 38 8% 80%;
+    --hzcv-foreground-300: 38 7% 70%;
+    --hzcv-foreground-400: 39 7% 60%;
+    --hzcv-foreground-500: 39 7% 50%;
+    --hzcv-foreground-600: 39 7% 40%;
+    --hzcv-foreground-700: 38 7% 30%;
+    --hzcv-foreground-800: 37 8% 20%;
+    --hzcv-foreground-900: 40 6% 10%;
+    --hzcv-foreground-950: 30 8% 5%;
+
+    --hzcv-background: 97 35% 91%;
+    --hzcv-background-50: 100 36% 95%;
+    --hzcv-background-100: 99 33% 90%;
+    --hzcv-background-200: 97 35% 80%;
+    --hzcv-background-300: 97 35% 70%;
+    --hzcv-background-400: 97 35% 60%;
+    --hzcv-background-500: 97 35% 50%;
+    --hzcv-background-600: 97 35% 40%;
+    --hzcv-background-700: 97 35% 30%;
+    --hzcv-background-800: 97 35% 20%;
+    --hzcv-background-900: 99 33% 10%;
+    --hzcv-background-950: 93 36% 5%;
+
+    --hzcv-primary: 147 89% 40%;
+    --hzcv-primary-foreground: var(--hzcv-foreground);
+    --hzcv-primary-50: 146 92% 95%;
+    --hzcv-primary-100: 147 88% 90%;
+    --hzcv-primary-200: 147 88% 80%;
+    --hzcv-primary-300: 147 90% 70%;
+    --hzcv-primary-400: 147 89% 60%;
+    --hzcv-primary-500: 147 89% 50%;
+    --hzcv-primary-600: var(--hzcv-primary);
+    --hzcv-primary-700: 147 90% 30%;
+    --hzcv-primary-800: 147 88% 20%;
+    --hzcv-primary-900: 147 88% 10%;
+    --hzcv-primary-950: 149 92% 5%;
+
+    --hzcv-secondary: 25 41% 84%;
+    --hzcv-secondary-foreground: var(--hzcv-foreground);
+    --hzcv-secondary-50: 24 38% 95%;
+    --hzcv-secondary-100: 26 41% 90%;
+    --hzcv-secondary-200: 26 41% 80%;
+    --hzcv-secondary-300: 25 41% 70%;
+    --hzcv-secondary-400: 25 41% 60%;
+    --hzcv-secondary-500: 25 41% 50%;
+    --hzcv-secondary-600: 25 41% 40%;
+    --hzcv-secondary-700: 25 41% 30%;
+    --hzcv-secondary-800: 26 41% 20%;
+    --hzcv-secondary-900: 26 41% 10%;
+    --hzcv-secondary-950: 24 38% 5%;
+
+    --hzcv-accent: 25 41% 16%;
+    --hzcv-accent-foreground: var(--hzcv-background);
+    --hzcv-accent-50: 24 38% 95%;
+    --hzcv-accent-100: 26 41% 90%;
+    --hzcv-accent-200: 26 41% 80%;
+    --hzcv-accent-300: 25 41% 70%;
+    --hzcv-accent-400: 25 41% 60%;
+    --hzcv-accent-500: 25 41% 50%;
+    --hzcv-accent-600: 25 41% 40%;
+    --hzcv-accent-700: 25 41% 30%;
+    --hzcv-accent-800: 26 41% 20%;
+    --hzcv-accent-900: 26 41% 10%;
+    --hzcv-accent-950: 24 38% 5%;
+  }
+
+  .dark {
+    /* Base colors */
+    --hzcv-foreground: 97 35% 91%;
+    --hzcv-foreground-50: 100 36% 95%;
+    --hzcv-foreground-100: 99 33% 90%;
+    --hzcv-foreground-200: 98 35% 80%;
+    --hzcv-foreground-300: 98 35% 70%;
+    --hzcv-foreground-400: 98 35% 60%;
+    --hzcv-foreground-500: 98 35% 50%;
+    --hzcv-foreground-600: 98 35% 40%;
+    --hzcv-foreground-700: 98 35% 30%;
+    --hzcv-foreground-800: 98 35% 20%;
+    --hzcv-foreground-900: 99 33% 10%;
+    --hzcv-foreground-950: 93 36% 5%;
+
+    --hzcv-background: 153 9% 24%;
+    --hzcv-background-50: 150 8% 95%;
+    --hzcv-background-100: 156 10% 90%;
+    --hzcv-background-200: 150 10% 80%;
+    --hzcv-background-300: 152 8% 70%;
+    --hzcv-background-400: 153 9% 60%;
+    --hzcv-background-500: 154 9% 50%;
+    --hzcv-background-600: 153 9% 40%;
+    --hzcv-background-700: 152 8% 30%;
+    --hzcv-background-800: 150 10% 20%;
+    --hzcv-background-900: 156 10% 10%;
+    --hzcv-background-950: 150 8% 5%;
+
+    --hzcv-primary: 147 89% 40%;
+    --hzcv-primary-foreground: var(--hzcv-background-900);
+    --hzcv-primary-50: 146 92% 95%;
+    --hzcv-primary-100: 147 88% 90%;
+    --hzcv-primary-200: 147 88% 80%;
+    --hzcv-primary-300: 147 90% 70%;
+    --hzcv-primary-400: 147 89% 60%;
+    --hzcv-primary-500: 147 89% 50%;
+    --hzcv-primary-600: var(--hzcv-primary);
+    --hzcv-primary-700: 147 90% 30%;
+    --hzcv-primary-800: 147 88% 20%;
+    --hzcv-primary-900: 147 88% 10%;
+    --hzcv-primary-950: 149 92% 5%;
+
+    --hzcv-secondary: 147 89% 40%;
+    --hzcv-secondary-50: 24 38% 95%;
+    --hzcv-secondary-100: 26 41% 90%;
+    --hzcv-secondary-200: 26 41% 80%;
+    --hzcv-secondary-300: 25 41% 70%;
+    --hzcv-secondary-400: 25 41% 60%;
+    --hzcv-secondary-500: 25 41% 50%;
+    --hzcv-secondary-600: 25 41% 40%;
+    --hzcv-secondary-700: 25 41% 30%;
+    --hzcv-secondary-800: 26 41% 20%;
+    --hzcv-secondary-900: 26 41% 10%;
+    --hzcv-secondary-950: 24 38% 5%;
+
+    --hzcv-accent: 46 91% 87%;
+    --hzcv-accent-50: 44 92% 95%;
+    --hzcv-accent-100: 46 92% 90%;
+    --hzcv-accent-200: 46 90% 80%;
+    --hzcv-accent-300: 46 91% 70%;
+    --hzcv-accent-400: 46 91% 60%;
+    --hzcv-accent-500: 46 91% 50%;
+    --hzcv-accent-600: 46 91% 40%;
+    --hzcv-accent-700: 46 91% 30%;
+    --hzcv-accent-800: 46 90% 20%;
+    --hzcv-accent-900: 46 92% 10%;
+    --hzcv-accent-950: 47 92% 5%;
+  }
+}

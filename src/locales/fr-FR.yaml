@@ -14,8 +14,8 @@ app.footer.menu.link_texts.uses: Stack Tech
 app.footer.menu.link_titles.contact: Contact
 app.footer.menu.link_titles.content: Contenu
 app.footer.menu.link_titles.general: Général
-app.homepage.tech_showcase: Aller sur le site de {0}
-app.homepage.hello_title: Hi, I am {firstname}!
+shared.goto_website_of: Aller sur le site de {0}
+app.homepage.hello_title: Hi, I am {firstname}.
 app.homepage.hello_paragraph: Autem in qui sit id fuga ea repudiandae molestiae. Accusantium temporibus adipisci eos odit natus. Beatae officia sit non quis.
 
   Laboriosam odit nisi hic ad. Fuga consequatur distinctio fugiat optio qui quia. Eos nihil quos. Nihil dolorem totam iusto. Ut non cum facere alias sint est soluta. Et perferendis et necessitatibus et eveniet nisi nihil corrupti.

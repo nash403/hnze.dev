@@ -4,13 +4,13 @@ const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
-  <div class="flex items-center justify-between divide-x-2">
+  <div class="flex items-center justify-between divide-x-2 divide-foreground-200">
     <ZLink
       v-for="locale in locales"
       :key="locale.code"
       :to="switchLocalePath(locale.code)"
-      class="cursor-not-allowed px-2"
-      disabled
+      :class="['px-2', { 'unstyled cursor-not-allowed': locale.disabled }]"
+      :disabled="locale.disabled"
       :label="locale.name"
     />
   </div>

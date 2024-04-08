@@ -70,8 +70,7 @@ export default defineNuxtConfig({
         strategy: 'prefix_except_default',
         locales: [
           { code: 'fr', iso: 'fr-FR', file: 'fr-FR.yaml', name: 'FR' },
-          // TODO: enable english when implemented
-          // { code: 'en', iso: 'en-US', file: 'en-US.yaml', name: 'EN' },
+          { code: 'en', iso: 'en-US', file: 'en-US.yaml', name: 'EN', disabled: true /* TODO: enable english when implemented */ },
         ],
       },
     ],
@@ -99,6 +98,7 @@ export default defineNuxtConfig({
         autoInstall: true,
         customCollections: {
           hnze: FileSystemIconLoader('./src/assets/icons'), // relative to /<rootDir>
+          'hnze-companies': FileSystemIconLoader('./src/assets/icons/companies'),
         },
       },
     ],

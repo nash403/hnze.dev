@@ -10,8 +10,8 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
 </script>
 
 <template>
-  <div aria-hidden="true" class="fixed inset-0 z-30 bg-gray-800/40" :class="menuOpened ? 'flex md:hidden' : 'hidden'" @click="closeMenu" />
-  <header class="sticky top-0 z-40 w-full select-none bg-[#f3f5f4]/[.4] backdrop-blur-[1.25rem] backdrop-saturate-[180%]">
+  <div aria-hidden="true" class="fixed inset-0 z-30 bg-gray-800/40" :class="menuOpened ? 'flex md:hidden' : 'hidden'" @click="closeMenu"></div>
+  <header class="sticky top-0 z-40 w-full select-none bg-background/[.4] backdrop-blur-[1.25rem] backdrop-saturate-[180%]">
     <div
       class="relative mx-auto flex max-w-fullxl items-center justify-between pr-4 sm:py-0 sm:pr-8 md:px-8"
     >
@@ -19,26 +19,26 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
         class="peer relative border-r-2 border-r-gray-200 p-2 outline-none md:hidden"
         @click="toggleMenuOpen"
       >
-        <input type="checkbox" :aria-label="$t('app.navbar.toggle_menu_label')" class="peer sr-only">
+        <input type="checkbox" :aria-label="$t('app.navbar.toggle_menu_label')" class="peer sr-only" />
         <div
           aria-hidden="true"
           class="h-0.5 w-4 rounded bg-gray-800 transition peer-checked:translate-y-[0.33rem] peer-checked:rotate-45"
-        />
+        ></div>
         <div
           aria-hidden="true"
           class="mt-2 h-0.5 w-4 rounded bg-gray-800 transition peer-checked:translate-y-[-0.33rem] peer-checked:-rotate-45"
-        />
+        ></div>
       </label>
 
       <div class="ml-2 mr-auto flex items-center space-x-10 md:ml-0">
-        <ZLink :to="localePath('index')" :title="$t('app.link_go_home')" class="flex items-center">
+        <ZLink :to="localePath('index')" :title="$t('app.link_go_home')" class="unstyled flex items-center">
           <HnzeLogo class="size-[4.5rem]" />
         </ZLink>
 
         <ZLink
           :to="localePath('lets-meet')"
-          class="text-primary-500 focus-visible:ring-primary-500 hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono
-         text-sm font-medium text-gray-600 focus:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-inset lg:inline-flex lg:items-center"
+          class="unstyled hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium
+         text-foreground-500 focus:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 lg:inline-flex lg:items-center"
         >
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           {{ `@` }} <IconFlagpackCa /> {{ 'Montreal' }}

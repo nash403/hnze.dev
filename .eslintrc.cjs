@@ -46,6 +46,8 @@ module.exports = {
         attributes: {
           '/.+/': [
             'title',
+            'label',
+            'placeholder',
             'aria-label',
             'aria-placeholder',
             'aria-roledescription',
@@ -56,7 +58,7 @@ module.exports = {
         },
         ignoreNodes: [],
         ignorePattern: '^[-#:()&]+$',
-        ignoreText: ['EUR', 'HKD', 'USD'],
+        ignoreText: ['...', 'EUR', 'HKD', 'USD'],
       },
     ],
 

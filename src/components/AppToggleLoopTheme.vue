@@ -51,11 +51,11 @@ watch(() => colorMode.preference, () => {
     :aria-label="t('app.navbar.theming.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
     :title="t('app.navbar.theming.toggle_btn_label', [themeNames[themes[currentThemeIndex]]])"
     :disabled="colorMode.forced"
-    :class="{ 'cursor-not-allowed': colorMode.forced }"
+    :class="['link', { 'unstyled cursor-not-allowed': colorMode.forced }]"
     @click="toggleTheme()"
   >
     <ColorScheme placeholder="..." tag="div" class="size-5">
-      <component :is="themesIcons[themes[currentThemeIndex]]" class="size-5" />
+      <component :is="themesIcons[themes[currentThemeIndex]]" :class="['size-5', { 'hover:animate-[spin_10s_linear_infinite]': colorMode.value === 'light' }]" />
     </ColorScheme>
   </button>
 </template>

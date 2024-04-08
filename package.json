@@ -27,6 +27,7 @@
     "@nuxtjs/i18n": "^8.3.0",
     "@nuxtjs/seo": "^2.0.0-rc.10",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@tailwindcss/typography": "^0.5.12",
     "@types/node": "^20.12.3",
     "@vueuse/components": "^10.9.0",
     "@vueuse/core": "^10.9.0",
