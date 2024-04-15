@@ -1,10 +1,5 @@
 <script lang="ts" setup>
 import ZLogoCloud from './ui/ZLogoCloud.vue'
-import LogoZv from '~icons/hnze-companies/zv'
-import LogoDecat from '~icons/hnze-companies/decathlon'
-import LogoAdeo from '~icons/hnze-companies/adeo'
-import LogoNorauto from '~icons/hnze-companies/norauto'
-import LogoAuchan from '~icons/hnze-companies/auchan'
 
 const { t } = useI18n()
 const techs = [
@@ -12,35 +7,35 @@ const techs = [
     name: 'Zadig & Voltaire',
     title: t('shared.goto_website_of', 'Zadig & Voltaire'),
     link: 'https://zadig-et-voltaire.com',
-    logo: LogoZv,
+    logo: '/img/companies/zv.svg',
     target: '_blank',
   },
   {
     name: 'Decathlon',
     title: t('shared.goto_website_of', 'Decathlon'),
     link: 'https://www.decathlon.fr/',
-    logo: LogoDecat,
+    logo: '/img/companies/decathlon.svg',
     target: '_blank',
   },
   {
     name: 'Norauto',
     title: t('shared.goto_website_of', 'Norauto'),
     link: 'https://www.norauto.fr/',
-    logo: LogoNorauto,
+    logo: '/img/companies/norauto.svg',
     target: '_blank',
   },
   {
     name: 'Adeo',
     title: t('shared.goto_website_of', 'Adeo'),
     link: 'https://www.adeo.com',
-    logo: LogoAdeo,
+    logo: '/img/companies/adeo.svg',
     target: '_blank',
   },
   {
     name: 'Auchan Retail France',
     title: t('shared.goto_website_of', 'Auchan Retail France'),
     link: 'https://www.auchan-retail.com/fr',
-    logo: LogoAuchan,
+    logo: '/img/companies/auchan.svg',
     target: '_blank',
   },
 ] satisfies InstanceType<typeof ZLogoCloud>['$props']['items']
@@ -50,4 +45,4 @@ const techs = [
   <ZLogoCloud :items="techs" />
 </template>
 
-<style scoped></style>
+

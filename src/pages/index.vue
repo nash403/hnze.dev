@@ -33,8 +33,9 @@ const p = 'Dicta et sed. Sunt fuga voluptatem. Consequatur consequatur adipisci 
       </div>
       <div class="mx-auto flex max-w-3xl flex-1 lg:mx-0 lg:w-1/2 lg:max-w-none">
         <NuxtImg
-          src="/profile_picture.jpg"
-          class="rounded-full"
+          src="/img/profile_picture.jpg"
+          alt="Photo de profil de Honoré Nintunze"
+          class="rounded-[50%]"
           width="200"
           height="200"
           quality="90"

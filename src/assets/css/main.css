@@ -36,7 +36,7 @@
     font-weight: normal;
   }
 
-  .prose *:not(h1, h2, h3, h4, h5, h6) > :is(a:not(.unstyled), .link) {
+  .prose *:not(h1, h2, h3, h4, h5, h6) > :is(a:not(.-unglow), .link) {
     border-style: solid;
     border-bottom-width: 1px;
     border-image: radial-gradient(hsl(var(--hzcv-background-700) / 40%), hsl(var(--hzcv-primary-700) / 40%)) 15;
@@ -47,7 +47,7 @@
   }
 
   @media screen(md) {
-    a:not(.unstyled), .link:not(.unstyled) {
+    a:not(.-unglow), .link:not(.-unglow) {
       @apply relative pb-[2px];
 
       &:before, &:after {
@@ -89,7 +89,7 @@
       }
     }
   }
-  a:not(.unstyled), .link:not(.unstyled) {
+  a:not(.-unglow), .link:not(.-unglow) {
     &.router-link-active {
       font-weight: 700;
     }

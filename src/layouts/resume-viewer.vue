@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>
-    Page: affiliate
-  </div>
+  <ZPageLayoutSeo>
+    <slot></slot>
+  </ZPageLayoutSeo>
 </template>
 
 

@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     public: {
       i18n: {
         // should be set by DEFAULT_LOCALE env variable
-        // defaultLocale: 'fr',
+        defaultLocale: 'en',
 
         detectBrowserLanguage: {
           // redirectOn: 'no_prefix',
@@ -68,9 +68,10 @@ export default defineNuxtConfig({
         lazy: true,
         langDir: './locales', // relative to /<srcDir>
         strategy: 'prefix_except_default',
+        // strategy: 'prefix_and_default',
         locales: [
-          { code: 'fr', iso: 'fr-FR', file: 'fr-FR.yaml', name: 'FR' },
-          { code: 'en', iso: 'en-US', file: 'en-US.yaml', name: 'EN', disabled: true /* TODO: enable english when implemented */ },
+          { code: 'fr', iso: 'fr-FR', file: 'fr-FR.json', name: 'FR' },
+          { code: 'en', iso: 'en-US', file: 'en-US.json', name: 'EN', isCatchallLocale: true, disabled: false },
         ],
       },
     ],

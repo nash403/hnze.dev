@@ -100,10 +100,10 @@ export default {
 
         'text-glow': {
           '0%': {
-            filter: 'drop-shadow(0px 0px 4px var(--hzc-primary-900))',
+            filter: 'drop-shadow(0px 1px 6px var(--hzc-primary))',
           },
           '100%': {
-            filter: 'drop-shadow(0px 1px 6px var(--hzc-primary))',
+            filter: 'drop-shadow(0px 0px 4px var(--hzc-primary-900))',
           },
         },
       },
@@ -114,6 +114,23 @@ export default {
       willChange: {
         color: 'color',
       },
+      typography: ({ theme }: any) => ({
+        xs: {
+          css: {
+            fontSize: '0.75rem',
+            lineHeight: '1.66',
+          },
+        },
+        DEFAULT: {
+          css: {
+            a: {
+              '&:hover': {
+                color: theme('colors.primary'),
+              },
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [typography],

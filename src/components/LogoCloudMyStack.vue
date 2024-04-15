@@ -58,4 +58,4 @@ const techs = [
   <ZLogoCloud :items="techs" />
 </template>
 
-<style scoped></style>
+

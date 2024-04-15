@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+definePageMeta({
+  title: 'app.page_hire_me.meta.title',
+})
+
 const contactFormFrameOpened = ref(false)
 const testimonialFormFrameOpened = ref(false)
 </script>
@@ -85,4 +89,4 @@ const testimonialFormFrameOpened = ref(false)
   </main>
 </template>
 
-<style scoped></style>
+

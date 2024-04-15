@@ -31,13 +31,13 @@ const { menuOpened, closeMenu, toggleMenuOpen } = useAppNavbarMenu()
       </label>
 
       <div class="ml-2 mr-auto flex items-center space-x-10 md:ml-0">
-        <ZLink :to="localePath('index')" :title="$t('app.link_go_home')" class="unstyled flex items-center">
-          <HnzeLogo class="size-[4.5rem]" />
+        <ZLink :to="localePath('index')" :title="$t('app.link_go_home')" class="-unglow flex items-center">
+          <HnzeLogo class="size-[4.5rem] hover:animate-text-glow" />
         </ZLink>
 
         <ZLink
           :to="localePath('lets-meet')"
-          class="unstyled hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium
+          class="-unglow hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium
          text-foreground-500 focus:bg-primary-50 focus:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-50 lg:inline-flex lg:items-center"
         >
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->

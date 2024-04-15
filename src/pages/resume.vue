@@ -1,9 +1,13 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'resume-viewer',
+  title: 'app.page_resume.meta.title',
+})
+
+</script>
 
 <template>
-  <div>
-    Page: resume
-  </div>
+  <HMyResume />
 </template>
 
-<style scoped></style>
+

@@ -172,5 +172,3 @@ const footerSocialLinks = [
     </div>
   </footer>
 </template>
-
-<style scoped></style>
