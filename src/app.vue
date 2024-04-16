@@ -1,5 +1,5 @@
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage class="page-enter-active" />
   </NuxtLayout>
 </template>

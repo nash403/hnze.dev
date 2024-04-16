@@ -42,6 +42,7 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s %separator %siteName',
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   runtimeConfig: {
