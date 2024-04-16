@@ -6,6 +6,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import './print.css';
+
 @layer base {
   body {
     background-color: var(--hzc-background);
@@ -36,62 +38,64 @@
     font-weight: normal;
   }
 
-  .prose *:not(h1, h2, h3, h4, h5, h6) > :is(a:not(.-unglow), .link) {
-    border-style: solid;
-    border-bottom-width: 1px;
-    border-image: radial-gradient(hsl(var(--hzcv-background-700) / 40%), hsl(var(--hzcv-primary-700) / 40%)) 15;
+  .hnze-layout-default {
+    .prose *:not(h1, h2, h3, h4, h5, h6) > :is(a:not(.-unglow), .link) {
+      border-style: solid;
+      border-bottom-width: 1px;
+      border-image: radial-gradient(hsl(var(--hzcv-background-700) / 40%), hsl(var(--hzcv-primary-700) / 40%)) 15;
 
-    &:hover {
-      transform: skewX(-5deg);
+      &:hover {
+        transform: skewX(-5deg);
+      }
     }
-  }
 
-  @media screen(md) {
-    a:not(.-unglow), .link:not(.-unglow) {
-      @apply relative pb-[2px];
+    @media screen(md) {
+      a:not(.-unglow), .link:not(.-unglow) {
+        @apply relative pb-[2px];
 
-      &:before, &:after {
-        position: absolute;
-        height: 3px;
-        bottom: 1px;
-        content: ' ';
-        display: block;
-        width: 12px;
-        opacity: 0;
-        transition: 0.4s;
-        z-index: -1;
-      }
-      &:before {
-        background-image: linear-gradient(90deg, var(--hzc-background-400), var(--hzc-primary-700));
-        left: 0;
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
-      }
-
-      &:after {
-        background-image: linear-gradient(270deg, var(--hzc-background-400), var(--hzc-primary-700));
-        right: 0;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-      }
-
-      &:hover, &.active {
-        @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
-      }
-
-      &.router-link-active {
-        font-weight: 700;
-        background: linear-gradient(45deg, var(--hzc-background-400), var(--hzc-primary-700));
-        -webkit-background-clip: text;
-        &:after, &:before {
+        &:before, &:after {
+          position: absolute;
+          height: 3px;
+          bottom: 1px;
+          content: ' ';
+          display: block;
+          width: 12px;
           opacity: 0;
+          transition: 0.4s;
+          z-index: -1;
+        }
+        &:before {
+          background-image: linear-gradient(90deg, var(--hzc-background-400), var(--hzc-primary-700));
+          left: 0;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+
+        &:after {
+          background-image: linear-gradient(270deg, var(--hzc-background-400), var(--hzc-primary-700));
+          right: 0;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+
+        &:hover, &.active {
+          @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
+        }
+
+        &.router-link-active {
+          font-weight: 700;
+          background: linear-gradient(45deg, var(--hzc-background-400), var(--hzc-primary-700));
+          -webkit-background-clip: text;
+          &:after, &:before {
+            opacity: 0;
+          }
         }
       }
     }
-  }
-  a:not(.-unglow), .link:not(.-unglow) {
-    &.router-link-active {
-      font-weight: 700;
+    a:not(.-unglow), .link:not(.-unglow) {
+      &.router-link-active {
+        font-weight: 700;
+      }
     }
   }
 }

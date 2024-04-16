@@ -7,7 +7,5 @@ definePageMeta({
 </script>
 
 <template>
-  <HMyResume />
+  <HCurriculumVitae class="mx-auto max-w-screen-xl" />
 </template>
-
-

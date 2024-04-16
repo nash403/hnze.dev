@@ -9,14 +9,15 @@ export const extractFromDate = (date: Date): string[] =>
     .split(/[^0-9]/)
     .slice(0, -1)
 
-export function caesarCode (encodedText: string, shift: number): string {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-  const decodedTextArray = encodedText.split('').map((char) => {
-    if (char.match(/[a-z]/i)) {
-      const isUpperCase = char === char.toUpperCase()
+export function caesarCode (text: string, shift: number): string {
+  if (!shift) { return text }
+  const alphabet = '0123456789abcdefghijklmnopqrstuvwxyz'
+  const decodedTextArray = text.split('').map((char) => {
+    if (char.match(/[a-z0-9]/i)) {
+      const isUpperCase = !Number(char) && char === char.toUpperCase()
       const index = alphabet.indexOf(char.toLowerCase())
-      let newIndex = (index - shift) % 26
-      if (newIndex < 0) { newIndex += 26 } // Handle negative indices
+      let newIndex = (index - shift) % alphabet.length
+      if (newIndex < 0) { newIndex += alphabet.length }
       const newChar = isUpperCase ? alphabet[newIndex].toUpperCase() : alphabet[newIndex]
       return newChar
     }

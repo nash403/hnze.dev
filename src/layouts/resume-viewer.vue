@@ -1,9 +1,5 @@
-<script lang="ts" setup></script>
-
 <template>
-  <ZPageLayoutSeo>
+  <HPageLayoutSeo>
     <slot></slot>
-  </ZPageLayoutSeo>
+  </HPageLayoutSeo>
 </template>
-
-

@@ -32,16 +32,7 @@ const p = 'Dicta et sed. Sunt fuga voluptatem. Consequatur consequatur adipisci 
         <HLogoCloudMyStack class="text-4xl" />
       </div>
       <div class="mx-auto flex max-w-3xl flex-1 lg:mx-0 lg:w-1/2 lg:max-w-none">
-        <NuxtImg
-          src="/img/profile_picture.jpg"
-          alt="Photo de profil de Honoré Nintunze"
-          class="rounded-[50%]"
-          width="200"
-          height="200"
-          quality="90"
-          format="webp,auto"
-          :modifiers="{ extract: '770_15_900_900' }"
-        />
+        <ZProfilePicture />
       </div>
     </section>
 

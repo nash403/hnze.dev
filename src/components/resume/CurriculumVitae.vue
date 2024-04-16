@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ClarityEmailLine from '~icons/clarity/email-line'
+import ClarityPhoneHandsetLine from '~icons/clarity/phone-handset-line'
 
 import BxlGithub from '~icons/bxl/github'
 import BxlLinkedinSquare from '~icons/bxl/linkedin-square'
@@ -9,16 +10,16 @@ import ClarityMapMarkerLine from '~icons/clarity/map-marker-line'
 import ClarityBriefcaseLine from '~icons/clarity/briefcase-line'
 import ClarityContractLine from '~icons/clarity/contract-line'
 
-const resume = useResume()
+const resume = await useResume()
 const localePath = useLocalePath()
 </script>
 
 <template>
-  <div class="hnze-cv p-4 md:p-16 print:p-8">
+  <div class="p-4 md:p-16 print:p-8">
     <section class="min-[896px]:grid min-[896px]:grid-cols-3 min-[896px]:gap-5 print:grid print:h-screen print:grid-cols-3 print:gap-5">
       <h1 class="min-[896px]:col-span-3 min-[896px]:grid min-[896px]:grid-cols-subgrid print:col-span-3 print:grid print:grid-cols-subgrid">
         <div class="max-w-72 text-6xl font-bold">
-          <NuxtLink :to="localePath('index')">
+          <NuxtLink :to="localePath('index')" class="-no-hover">
             {{ resume.name }}
           </NuxtLink>
         </div>
@@ -28,18 +29,8 @@ const localePath = useLocalePath()
       </h1>
 
       <div class="col-span-3 flex flex-col place-items-center">
-        <NuxtImg
-          v-if="resume.pictureUrl"
-          :src="resume.pictureUrl"
-          :alt="`Photo de profil de ${resume.name}`"
-          width="128"
-          height="128"
-          class="m-8 rounded-[50%]"
-          quality="90"
-          format="webp,auto"
-          :modifiers="{ extract: '770_15_900_900' }"
-        />
-        <p class="prose prose-base">
+        <ZProfilePicture class="m-8" size="180" />
+        <p class="prose prose-base px-8 md:p-0">
           {{ resume.summary }}
         </p>
 
@@ -47,13 +38,17 @@ const localePath = useLocalePath()
           <div>
             <div class="flex items-center">
               <ClarityEmailLine class="mr-2" />
-              <a :href="`mailto:${resume.email}`">{{ resume.email }}</a>
+              <a :href="`mailto:${resume.email}`" target="_blank">{{ resume.email }}</a>
             </div>
-            <div class="flex items-center py-1 text-xl">
-              <a :href="resume.socialProfiles?.linkedin?.url" class="mr-2">
+            <div class="flex items-center">
+              <ClarityPhoneHandsetLine class="mr-2" />
+              <a :href="`tel:${resume.phoneNumber}`" target="_blank">{{ resume.phoneNumberFormatted }}</a>
+            </div>
+            <div class="flex items-center space-x-2 py-1 text-xl">
+              <a :href="resume.socialProfiles?.linkedin?.url" target="_blank">
                 <BxlLinkedinSquare />
               </a>
-              <a :href="resume.socialProfiles?.github.url" class="mr-2">
+              <a :href="resume.socialProfiles?.github.url" target="_blank">
                 <BxlGithub />
               </a>
             </div>
@@ -76,18 +71,18 @@ const localePath = useLocalePath()
 
     <section class="mt-12 break-before-page">
       <h2 class="text-4xl font-bold md:text-6xl print:text-6xl">
-        Expériences
+        {{ $t('app.page_resume.section_work.title') }}
       </h2>
 
       <HResumeLayoutWorkEntry v-for="(work, i) of resume.work" :key="i" class="mt-8">
         <template #title>
-          <h3 class="text-2xl font-bold text-[#3a2618]">
+          <h3 class="text-2xl font-bold text-accent">
             {{ work.position }}
           </h3>
           <div v-if="work.company" class="mt-2 flex flex-wrap gap-2">
-            <ZTag :icon="ClarityBriefcaseLine" :label="work.company" :link="work.url" />
-            <ZTag :icon="ClarityContractLine" :label="work.contractType" />
-            <ZTag :icon="ClarityMapMarkerLine" :label="work.location" />
+            <ZTag class="bg-secondary-100 text-xs" :icon="ClarityBriefcaseLine" :label="work.company" :link="work.url" />
+            <ZTag class="bg-secondary-100 text-xs" :icon="ClarityContractLine" :label="work.contractType" />
+            <ZTag class="bg-secondary-100 text-xs" :icon="ClarityMapMarkerLine" :label="work.location" />
           </div>
         </template>
 
@@ -103,24 +98,25 @@ const localePath = useLocalePath()
         </template>
 
         <template #summary>
-          <div class="print:prose-xs prose prose-base md:prose-sm prose-li:list-[square] prose-li:marker:text-[#3a2618] prose-li:[&_li]:list-['-']" v-html="work.summary"></div>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <div class="prose prose-base md:prose-sm print:prose-xs prose-li:list-[square] prose-li:marker:text-accent prose-li:[&_li]:list-['-']" v-html="work.summary"></div>
         </template>
       </HResumeLayoutWorkEntry>
     </section>
 
     <section class="mt-12">
       <h2 class="text-4xl font-bold md:text-6xl print:text-6xl">
-        Compétences
+        {{ $t('app.page_resume.section_skills.title') }}
       </h2>
 
-      <ul class="mt-8 space-y-4">
+      <ul class="mt-8 max-w-4xl space-y-4">
         <li v-for="(skillThematic, i) of resume.skills" :key="i" class="break-inside-avoid">
           <div class="text-base font-semibold">
             {{ skillThematic.name }}
           </div>
           <ul class="mt-2 flex flex-wrap gap-2 text-sm">
             <li v-for="(skill, j) of skillThematic.keywords" :key="`skill-${i}-${j}`">
-              <ZTag :label="skill" />
+              <ZTag :label="skill" class="bg-secondary-100 text-xs" />
             </li>
           </ul>
         </li>
@@ -129,12 +125,12 @@ const localePath = useLocalePath()
 
     <section class="mt-12 break-before-page">
       <h2 class="text-4xl font-bold md:text-6xl print:text-6xl">
-        Études
+        {{ $t('app.page_resume.section_school.title') }}
       </h2>
 
       <HResumeLayoutEducationEntry v-for="(education, i) of resume.education" :key="i" class="mt-8">
         <template #title>
-          <h3 class="text-2xl font-bold text-[#3a2618]">
+          <h3 class="text-2xl font-bold text-accent">
             {{ education.studyType }}
           </h3>
         </template>
@@ -159,7 +155,7 @@ const localePath = useLocalePath()
 
     <section class="mt-12">
       <h2 class="text-4xl font-bold md:text-6xl print:text-6xl">
-        Loisirs
+        {{ $t('app.page_resume.section_interests.title') }}
       </h2>
 
       <div class="mt-8 md:grid md:grid-cols-3 print:grid print:grid-cols-3">
@@ -170,3 +166,9 @@ const localePath = useLocalePath()
     </section>
   </div>
 </template>
+
+<style lang="postcss" scoped>
+a:hover:not(.-no-hover) {
+  @apply text-primary;
+}
+</style>

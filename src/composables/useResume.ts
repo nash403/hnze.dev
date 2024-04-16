@@ -65,29 +65,35 @@ const resumeStub: Resume = {
   interests: [],
 }
 
-const useLocaleResumeDefinition = (): Ref<Resume> => {
+const loadResume = async (locale?: string): Promise<Resume> => await import(`../assets/resume/resume-${locale}.json`).catch((err) => {
+  console.error(`could not import resume object for lan ${locale}`, err)
+  return resumeStub
+})
+
+const useLocaleResumeDefinition = async (): Promise<Ref<Resume>> => {
   const { localeProperties } = useI18n()
-  const resume: Ref<Resume> = ref(resumeStub)
+  const resume = ref(await loadResume(localeProperties.value.iso))
   watch(localeProperties, async (locale) => {
-    resume.value = await import(`../assets/resume/resume-${locale.iso}.json`)
-      .catch((err) => {
-        console.error(`could not import resume object for lan ${locale.code}`, err)
-        return {}
-      })
-  }, { immediate: true })
+    resume.value = await loadResume(locale.iso)
+  })
 
   return resume
 }
 
-export function useResume () {
-  const resume = useLocaleResumeDefinition()
+export async function useResume () {
   const md = initMd()
+  const { t } = useI18n()
+  const resume = await useLocaleResumeDefinition()
 
   return computed(() => ({
     ...resume.value.basics,
-    email: resume.value.settings?.caesarCodeShift
-      ? caesarCode(resume.value.basics.email!, -resume.value.settings.caesarCodeShift)
-      : resume.value.basics.email,
+    ...(resume.value.settings?.caesarCodeShift
+      ? {
+          email: caesarCode(resume.value.basics.email!, -resume.value.settings.caesarCodeShift),
+          phoneNumber: caesarCode(resume.value.basics.phoneNumber!, -resume.value.settings.caesarCodeShift),
+          phoneNumberFormatted: caesarCode(resume.value.basics.phoneNumberFormatted!, -resume.value.settings.caesarCodeShift),
+        }
+      : {}),
     work: [
       ...resume.value.work.map(work => ({
         ...work,
@@ -99,7 +105,7 @@ export function useResume () {
     ],
     skills: resume.value.skills
       .concat({
-        name: 'Langues parlées',
+        name: t('app.page_resume.section_skills.languages_spoken'),
         level: '',
         keywords: resume.value.languages.map(lang => `${lang.language} (${lang.fluency})`),
       }),

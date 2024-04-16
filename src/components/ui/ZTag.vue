@@ -1,37 +1,40 @@
-<script lang="ts">
+<script lang="ts" setup>
 import type { FunctionalComponent, PropType } from 'vue'
-import ZLink from './ZLink.vue'
+import type { RouteLocationRaw } from 'vue-router'
 
-export default defineComponent({
-  props: {
-    label: {
-      type: String,
-      default: '',
-    },
-    icon: {
-      type: Object as PropType<FunctionalComponent>,
-      required: false,
-      default: undefined,
-    },
-    link: {
-      type: Object,
-      required: false,
-      default: undefined,
-    },
+defineProps({
+  label: {
+    type: String,
+    default: '',
   },
-  render () {
-    const enclosingTag = this.link ? ZLink : 'span'
-    const enclosingAdditionalAttrs = this.link ? { to: this.link, target: '_blank' } : {}
-
-    return (
-      h(enclosingTag as any, {
-        class: 'py-1 px-2 inline-flex items-center font-medium',
-        ...enclosingAdditionalAttrs,
-      }, [
-        ...(this.icon ? [h(this.icon, { class: 'mr-1' })] : []),
-        this.label,
-      ])
-    )
+  icon: {
+    type: Object as PropType<FunctionalComponent>,
+    required: false,
+    default: undefined,
+  },
+  link: {
+    type: [String, Object] as PropType<RouteLocationRaw>,
+    required: false,
+    default: undefined,
   },
 })
+
+const wrapperClasses = 'inline-flex items-center px-2 py-1 font-medium'
 </script>
+
+<script lang="ts">
+export default {
+  inheritAttrs: false,
+}
+</script>
+
+<template>
+  <ZLink v-if="link" :to="link" target="_blank" :class="wrapperClasses" v-bind="$attrs">
+    <component :is="icon" class="mr-1" />
+    <slot>{{ label }}</slot>
+  </ZLink>
+  <span v-else :class="wrapperClasses" v-bind="$attrs">
+    <component :is="icon" class="mr-1" />
+    <slot>{{ label }}</slot>
+  </span>
+</template>

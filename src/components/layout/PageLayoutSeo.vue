@@ -27,5 +27,3 @@ const title = computed(() => t(route.meta.title as string ?? '?? TBD ??'))
     </Html>
   </div>
 </template>
-
-

@@ -114,7 +114,7 @@ export default {
       willChange: {
         color: 'color',
       },
-      typography: ({ theme }: any) => ({
+      typography: ({ theme: _ }: any) => ({
         xs: {
           css: {
             fontSize: '0.75rem',
@@ -125,7 +125,7 @@ export default {
           css: {
             a: {
               '&:hover': {
-                color: theme('colors.primary'),
+                color: 'var(--hzc-primary)',
               },
             },
           },

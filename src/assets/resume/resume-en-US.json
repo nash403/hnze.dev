@@ -6,9 +6,9 @@
     "name": "Honoré Nintunze",
     "jobTitle": "Full-Stack Web Developer",
     "pictureUrl": "/img/profile_picture.jpg",
-    "email": "cjijmz.idiopiuz@bhvdg.xjh",
-    "phoneNumber": "+14383658824",
-    "phoneNumberFormatted": "+1(438)365-8824",
+    "email": "cjijm9.idiopiu9@bh5dg.7jh",
+    "phoneNumber": "+WZY3Y1033XZ",
+    "phoneNumberFormatted": "+W(ZY3)Y10-33XZ",
     "url": "https://hnze.dev",
     "urlText": "hnze.dev",
     "summary": "I am a Web Engineer with expertise in the Vue.js ecosystem but not only. I can craft full-stack applications from the ground up. Passionate about open source development, I actively contribute with various publications. With a strong commitment to staying abreast of emerging technologies, I prioritize implementing best coding practices to ensure project longevity, coherence, and resilience, benefiting both the project and the team. As a self-motivated learner accustomed to wearing multiple hats, I don't hesitate taking initiatives.",
@@ -17,7 +17,7 @@
       "postalCode": "",
       "city": "Montreal H2T 1X2",
       "countryName": "Canada",
-      "regionName": "Québec",
+      "regionName": "QC",
       "mapsUrl": "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
     },
     "socialProfiles": {
@@ -32,6 +32,17 @@
     }
   },
   "work": [{
+    "company": "",
+    "position": "Personnal Projets",
+    "url": "",
+    "startDate": "2023-05-18",
+    "endDate": "Now   ",
+    "logoName": "",
+    "logoExtension": "",
+    "contractType": "",
+    "location": "",
+    "summary": "Sabbatical break to travel, manage family constraints and work on personal projects such as my move to Montreal."
+  },{
     "company": "Zadig & Voltaire",
     "position": "Nuxt.js Developer",
     "url": "https://zadig-et-voltaire.com",
@@ -184,9 +195,9 @@
   "skills": [
     {
       "keywords": [
-        "Typescript / Javascript",
-        "HTML / JSX",
-        "CSS / SCSS / BEM / RSCSS / TailwindCSS",
+        "Typescript / Javascript / JSX",
+        "HTML",
+        "CSS / TailwindCSS",
         "JAVA",
         "Python",
         "GraphQL",
@@ -201,10 +212,9 @@
         "Vue.js / Nuxt.js",
         "Node.js / Bun",
         "Angular",
-        "Prismic / Contentful / Strapi",
+        "Contentful / Prismic / Strapi",
         "Nest.js",
         "Express.js",
-        "JAVA Spring",
         "Ionic",
         "SEO",
         "Core Web Vitals"
@@ -217,9 +227,7 @@
         "Jest",
         "Vitest",
         "ESlint",
-        "Playwright",
         "Cypress",
-        "Puppeteer",
         "Lighthouse",
         "Chai / Mocha / Sinon"
       ],
@@ -229,17 +237,13 @@
     {
       "keywords": [
         "Docker",
-        "Gitlab CI/CD",
-        "Github Actions",
+        "CI/CD",
         "Kubernetes",
         "AWS",
         "GCP",
         "Vercel",
         "Websocket",
         "WebRTC",
-        "Event Sourcing",
-        "Caching",
-        "Serverless",
         "Redis",
         "Postgres",
         "MongoDB",

@@ -121,7 +121,7 @@
     --hzc-background-900: hsl(var(--hzcv-background-900));
     --hzc-background-950: hsl(var(--hzcv-background-950));
 
-    --hzc-primary: hsl(var(--hzcv-primary:));
+    --hzc-primary: hsl(var(--hzcv-primary));
     --hzc-primary-foreground: hsl(var(--hzcv-background-900));
     --hzc-primary-50: hsl(var(--hzcv-primary-50));
     --hzc-primary-100: hsl(var(--hzcv-primary-100));
