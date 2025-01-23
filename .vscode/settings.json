@@ -1,19 +1,19 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#957d90",
-    "activityBar.background": "#957d90",
+    "activityBar.activeBackground": "#c3f9de",
+    "activityBar.background": "#c3f9de",
     "activityBar.foreground": "#15202b",
     "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#bbcf70",
+    "activityBarBadge.background": "#bf8bf3",
     "activityBarBadge.foreground": "#15202b",
-    "sash.hoverBorder": "#957d90",
-    "statusBar.background": "#7b6476",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#957d90",
-    "statusBarItem.remoteBackground": "#7b6476",
-    "statusBarItem.remoteForeground": "#e7e7e7"
+    "sash.hoverBorder": "#c3f9de",
+    "statusBar.background": "#94f5c5",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#65f1ac",
+    "statusBarItem.remoteBackground": "#94f5c5",
+    "statusBarItem.remoteForeground": "#15202b"
   },
-  "peacock.color": "#7b6476",
+  "peacock.color": "#94f5c5",
   "i18n-ally.localesPaths": [
     "src/locales",
     "config/installed-modules/i18n"

@@ -1,11 +1,10 @@
-# Nuxt & modules dev/build outputs
+# Nuxt dev/build outputs
 .output
 .data
 .nuxt
 .nitro
 .cache
 dist
-.unlighthouse
 
 # Node dependencies
 node_modules
@@ -18,12 +17,10 @@ logs
 .DS_Store
 .fleet
 .idea
-.vscode
 
 # Local env files
 .env
 .env.*
 !.env.example
 
-# Project files
-_config
+pnpm-lock.yaml
