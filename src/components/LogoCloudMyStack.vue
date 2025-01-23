@@ -57,5 +57,3 @@ const techs = [
 <template>
   <ZLogoCloud :items="techs" />
 </template>
-
-

@@ -47,6 +47,7 @@
     "vue-tsc": "^2.0.12"
   },
   "dependencies": {
+    "caniuse-lite": "^1.0.30001695",
     "markdown-it": "^14.1.0"
   }
 }

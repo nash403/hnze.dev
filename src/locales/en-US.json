@@ -2,6 +2,11 @@
   "app.page_about.meta.title": "About",
   "app.page_hire_me.meta.title": "Hire me",
   "app.page_lets_meet.meta.title": "Let's meet",
-  "app.page_uses.meta.title": "Tools",
-  "app.page_resume.meta.title": "Curriculum Vitae"
+  "app.page_resume.meta.title": "Curriculum Vitae",
+  "app.page_resume.section_interests.title": "Interests",
+  "app.page_resume.section_school.title": "Education",
+  "app.page_resume.section_skills.languages_spoken": "Spoken Languages",
+  "app.page_resume.section_skills.title": "Skills",
+  "app.page_resume.section_work.title": "Experiences",
+  "app.page_uses.meta.title": "Tools"
 }

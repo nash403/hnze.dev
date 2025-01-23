@@ -29,7 +29,7 @@ const localePath = useLocalePath()
       </h1>
 
       <div class="col-span-3 flex flex-col place-items-center">
-        <ZProfilePicture class="m-8" size="180" />
+        <ZProfilePicture class="invisible m-8" size="180" />
         <p class="prose prose-base px-8 md:p-0">
           {{ resume.summary }}
         </p>
