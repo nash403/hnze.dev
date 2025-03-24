@@ -18,5 +18,6 @@
     "src/locales",
     "config/installed-modules/i18n"
   ],
-  "i18n-ally.sortKeys": true
+  "i18n-ally.sortKeys": true,
+  "peacock.remoteColor": "#21f3ed"
 }
