@@ -1,23 +1,17 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#c3f9de",
-    "activityBar.background": "#c3f9de",
+    "activityBar.activeBackground": "#91cec2",
+    "activityBar.background": "#91cec2",
     "activityBar.foreground": "#15202b",
     "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#bf8bf3",
+    "activityBarBadge.background": "#a965ba",
     "activityBarBadge.foreground": "#15202b",
-    "sash.hoverBorder": "#c3f9de",
-    "statusBar.background": "#94f5c5",
+    "sash.hoverBorder": "#91cec2",
+    "statusBar.background": "#6ebeae",
     "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#65f1ac",
-    "statusBarItem.remoteBackground": "#94f5c5",
+    "statusBarItem.hoverBackground": "#4dac99",
+    "statusBarItem.remoteBackground": "#6ebeae",
     "statusBarItem.remoteForeground": "#15202b"
   },
-  "peacock.color": "#94f5c5",
-  "i18n-ally.localesPaths": [
-    "src/locales",
-    "config/installed-modules/i18n"
-  ],
-  "i18n-ally.sortKeys": true,
-  "peacock.remoteColor": "#21f3ed"
+  "peacock.color": "#6ebeae"
 }
