@@ -1,0 +1,7 @@
+@layer base {
+  :root {
+    --x: 0;
+    --y: 0;
+    --radial-gradient-circle-size: 300px;
+  }
+}

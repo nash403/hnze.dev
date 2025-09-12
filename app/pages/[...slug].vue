@@ -10,7 +10,7 @@ if (!page.value) {
 }
 
 useHead({
-  title: computed(() =>  page.value?.title),
+  title: computed(() => page.value?.title),
 })
 </script>
 
