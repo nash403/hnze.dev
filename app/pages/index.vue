@@ -21,5 +21,8 @@
     <div class="max-w-fit">
       <HLangSwitcher />
     </div>
+    <div class="max-w-fit">
+      <HThemeSwitcher />
+    </div>
   </div>
 </template>

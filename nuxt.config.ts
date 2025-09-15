@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
   ],
+
   devtools: {
     enabled: true,
 
@@ -103,5 +104,26 @@ export default defineNuxtConfig({
         disabled: false,
       },
     ],
+  },
+
+  icon: {
+    cssLayer: 'base',
+    customCollections: [
+      {
+        prefix: 'hnze',
+        dir: './app/assets/icons',
+      },
+    ],
+    clientBundle: {
+      // list of icons to include in the client bundle
+      icons: [],
+      scan: true,
+      // guard for uncompressed bundle size, will fail the build if exceeds
+      sizeLimitKb: 256,
+    },
+    serverBundle: {
+      // list of icon collections to include in the server bundle
+      // collections: [],
+    },
   },
 })
