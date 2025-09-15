@@ -47,6 +47,19 @@ export default defineNuxtConfig({
     storageKey: 'hnze-nuxt-color-mode',
   },
 
+  content: {
+    preview: {
+      // force module initialization on dev env
+      dev: true,
+      api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'hnze.dev',
+        owner: 'nash403',
+        url: 'https://github.com/nash403/hnze.dev/tree/next',
+      },
+    },
+  },
+
   runtimeConfig: {
     public: {
       siteName: 'Honoré Nintunze - Fullstack Web Developer',
