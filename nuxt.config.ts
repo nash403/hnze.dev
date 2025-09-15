@@ -55,7 +55,7 @@ export default defineNuxtConfig({
       gitInfo: {
         name: 'hnze.dev',
         owner: 'nash403',
-        url: 'https://github.com/nash403/hnze.dev/tree/next',
+        url: 'https://github.com/nash403/hnze.dev',
       },
     },
   },
