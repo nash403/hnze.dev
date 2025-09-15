@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@plugin "daisyui" {
+  themes: light, dark;
+}
+
 @plugin "daisyui/theme" {
   name: "light";
   default: false; /* set as default */
@@ -71,11 +75,8 @@
   --noise: 0;
 }
 
-@plugin "daisyui" {
-  themes: light, dark;
-}
-
 @import './variables.css';
+@import './fonts.css';
 @import './print.css';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

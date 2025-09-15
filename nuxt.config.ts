@@ -7,15 +7,16 @@ const { https, defaultColorMode } = defineRuntimeOptions()
 export default defineNuxtConfig({
 
   modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/image',
     '@nuxt/scripts',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxt/icon',
+    '@nuxt/content',
+    '@nuxtjs/seo',
+    '@nuxt/eslint',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
-    '@nuxtjs/seo',
+    '@nuxtjs/i18n',
   ],
   devtools: {
     enabled: true,
@@ -50,15 +51,6 @@ export default defineNuxtConfig({
       siteName: 'Honoré Nintunze - Fullstack Web Developer',
       siteNameSeparator: '|',
       defaultColorMode,
-      i18n: {
-        // should be set by DEFAULT_LOCALE env variable
-        defaultLocale: 'en',
-
-        detectBrowserLanguage: {
-          // redirectOn: 'no_prefix',
-          useCookie: true,
-        },
-      },
     },
   },
 
@@ -84,9 +76,32 @@ export default defineNuxtConfig({
     ],
   },
 
+  debug: ![0, false, '0', 'false'].includes(process.env.DEBUG as any),
+
   eslint: {
     config: {
       stylistic: true,
     },
+  },
+
+  i18n: {
+    defaultLocale: process.env.DEFAULT_LOCALE || 'fr',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+    },
+    strategy: 'prefix_and_default',
+    // customRoutes: 'meta',
+    locales: [
+      {
+        code: 'fr', language: 'fr', file: 'fr-FR.json', name: 'FR',
+        disabled: false /* disable in the language switcher */,
+      },
+      {
+        code: 'en', language: 'en', file: 'en-US.json', name: 'EN',
+        disabled: false,
+      },
+    ],
   },
 })
