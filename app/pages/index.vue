@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-lg">
+  <div>
     <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
     <h1 class="text-3xl font-bold underline">
       Honoré Nintunze
@@ -18,11 +18,5 @@
         >{{ $t('app.footer.clone_website_link') }}</a>
       </template>
     </i18n-t>
-    <div class="max-w-fit">
-      <HLangSwitcher />
-    </div>
-    <div class="max-w-fit">
-      <HThemeSwitcher />
-    </div>
   </div>
 </template>

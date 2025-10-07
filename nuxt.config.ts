@@ -90,7 +90,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  debug: ![0, false, '0', 'false'].includes(process.env.DEBUG as any),
+  debug: ![0, false, '0', 'false'].includes(process.env.DEBUG as any), // TODO: extract falsy helper
 
   eslint: {
     config: {
@@ -110,7 +110,7 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'fr', language: 'fr', file: 'fr-FR.json', name: 'FR',
-        disabled: false /* disable in the language switcher */,
+        disabled: false /* disable in the language switcher UI */,
       },
       {
         code: 'en', language: 'en', file: 'en-US.json', name: 'EN',
