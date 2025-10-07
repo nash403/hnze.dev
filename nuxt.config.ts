@@ -35,7 +35,7 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/main.css'],
 
   colorMode: {
-    preference: 'system', // default value of $colorMode.preference
+    preference: 'light', // default value of $colorMode.preference
     fallback: defaultColorMode, // fallback value if not system preference found
     dataValue: 'theme',
     hid: 'hnze-nuxt-color-mode-script',
