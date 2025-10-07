@@ -13,7 +13,7 @@ const { data: page } = await useAsyncData('blog-page-' + slug.value, async () =>
   const content = await queryCollection(collection).path(slug.value).first()
 
   // Fallback to default locale if content is missing
-  if (!content && 'fr' !== $config.public.i18n.defaultLocale) {
+  if (!content && locale.value !== $config.public.i18n.defaultLocale) {
     return await queryCollection(`blog_${$config.public.i18n.defaultLocale}`).path(slug.value).first()
   }
 
