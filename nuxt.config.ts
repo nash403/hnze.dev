@@ -1,7 +1,7 @@
 import tailwindcss from '@tailwindcss/vite'
 import { defineRuntimeOptions } from './config'
 
-const { https, defaultColorMode } = defineRuntimeOptions()
+const { enableDebugMode, https, defaultColorMode } = defineRuntimeOptions()
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -90,7 +90,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  debug: ![0, false, '0', 'false'].includes(process.env.DEBUG as any), // TODO: extract falsy helper
+  debug: enableDebugMode,
 
   eslint: {
     config: {

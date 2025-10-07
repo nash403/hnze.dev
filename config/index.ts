@@ -13,6 +13,7 @@ export function defineRuntimeOptions() {
     : undefined
 
   return {
+    enableDebugMode: ![0, false, '0', 'false'].includes(process.env.DEBUG as any), // TODO: extract falsy helper
     https,
     defaultColorMode: DEFAULT_THEME,
   }
