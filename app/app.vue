@@ -9,15 +9,10 @@ useHead({
 </script>
 
 <template>
-  <NuxtLayout>
+  <div>
     <NuxtRouteAnnouncer />
-    <HPlayground />
-    <div class="mx-auto max-w-lg">
-      <div class="my-4 flex max-w-fit items-center gap-4">
-        <HLangSwitcher />
-        <HThemeSwitcher />
-      </div>
-    </div>
-    <NuxtPage class="page-enter-active mx-auto max-w-lg pt-5" />
-  </NuxtLayout>
+    <NuxtLayout>
+      <NuxtPage class="page-enter-active mx-auto max-w-lg pt-5" />
+    </NuxtLayout>
+  </div>
 </template>

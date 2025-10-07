@@ -4,14 +4,14 @@ export default defineContentConfig({
   collections: {
 
     // CV
-    cv_fr: defineCollection({
+    resume_fr: defineCollection({
       type: 'page',
       source: {
         include: 'cv/resume_fr.md',
       },
     }),
 
-    cv_en: defineCollection({
+    resume_en: defineCollection({
       type: 'page',
       source: {
         include: 'cv/resume_en.md',

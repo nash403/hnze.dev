@@ -1,6 +1,12 @@
 <template>
   <div>
-    <p>Some default layout content shared across all pages</p>
+    <!-- <HPlayground /> -->
+    <div class="mx-auto max-w-lg">
+      <div class="my-4 flex max-w-fit items-center gap-4">
+        <HLangSwitcher />
+        <HThemeSwitcher />
+      </div>
+    </div>
     <slot></slot>
   </div>
 </template>
