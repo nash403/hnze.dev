@@ -2,7 +2,7 @@
   <div>
     <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
     <h1 class="text-3xl font-bold underline">
-      Honoré Nintunze
+      <nuxt-link :to="$localeRoute({ name: 'resume' })">Honoré Nintunze</nuxt-link>
     </h1>
     <i18n-t
       keypath="app.footer.copyright"
