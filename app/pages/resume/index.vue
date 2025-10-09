@@ -32,11 +32,16 @@ if (!page.value) {
 useHead({
   title: computed(() => page.value?.title),
 })
+
+const mdcVars = {
+  // Add any global variables you want to pass to ContentRenderer here
+}
 </script>
 
 <template>
   <ContentRenderer
     v-if="page"
     :value="page"
+    :data="mdcVars"
   />
 </template>
