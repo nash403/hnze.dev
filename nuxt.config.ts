@@ -65,6 +65,9 @@ export default defineNuxtConfig({
       siteName: 'Honoré Nintunze - Fullstack Web Developer',
       siteNameSeparator: '|',
       defaultColorMode,
+
+      cvEmailAdress: 'honore@example.com',
+      cvPhoneNumber: '+15145551234',
     },
   },
 

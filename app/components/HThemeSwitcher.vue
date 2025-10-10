@@ -59,7 +59,7 @@ watch(() => colorMode.preference, () => {
       <Icon
         :name="supportedThemes[themes[currentThemeIndex]!].icon"
         size="1.25em"
-        :class="['size-5', { 'hover:animate-[spin_10s_linear_infinite]': colorMode.value === 'light' }]"
+        :class="[{ 'hover:animate-[spin_10s_linear_infinite]': colorMode.value === 'light' }]"
       />
     </ColorScheme>
   </button>

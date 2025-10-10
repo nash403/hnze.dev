@@ -35,6 +35,20 @@ useHead({
 
 const mdcVars = {
   // Add any global variables you want to pass to ContentRenderer here
+
+  emailAddress: $config.public.cvEmailAdress,
+  email: {
+    href: `mailto:${$config.public.cvEmailAdress}`,
+    label: $config.public.cvEmailAdress,
+    icon: 'clarity:email-line',
+  },
+
+  phoneNumber: $config.public.cvPhoneNumber,
+  phone: {
+    href: `tel:${$config.public.cvPhoneNumber}`,
+    label: $config.public.cvPhoneNumber, // TODO: Format phone number for display
+    icon: 'clarity:mobile-line',
+  },
 }
 </script>
 
