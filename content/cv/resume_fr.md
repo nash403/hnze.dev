@@ -1,21 +1,6 @@
 ---
 title: "Curriculum Vitae"
 description: "CV d'Honoré Nintunze, développeur web full-stack passionné"
-mainLocation:
-  streetAddress: ""
-  postalCode: ""
-  city: "Montreal H2T 1X2"
-  countryName: Canada
-  regionName: QC
-  mapsUrl: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
-website: "https://hnze.dev"
-socials:
-  linkedin:
-    username: nash403
-    url: "https://www.linkedin.com/in/nash403/"
-  github:
-    username: nash403
-    url: "https://github.com/nash403"
 ---
 
 ::h-resume-front{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
@@ -28,18 +13,20 @@ location:
 
 socialLinks:
   - type: linkedin
-    href: "https://www.linkedin.com/in/honorenintunze"
+    username: nash403
+    href: "https://www.linkedin.com/in/nash403"
     openInNewTab: true
     icon: bxl:linkedin-square
 
   - type: github
-    href: "https://github.com/honorenintunze"
+    username: nash403
+    href: "https://github.com/nash403"
     openInNewTab: true
     icon: bxl:github
 
 websiteLinks:
-  - href: "https://honorenintunze.dev"
-    label: "honorenintunze.dev"
+  - href: "https://hnze.dev"
+    label: "hnze.dev"
     openInNewTab: true
     icon: clarity:link-line
 ---
