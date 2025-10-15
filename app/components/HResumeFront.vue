@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { RouteLocation } from 'vue-router'
+import type { RouteLocationRaw } from 'vue-router'
 
 interface BaseLink {
-  href: string | RouteLocation
+  href: string | RouteLocationRaw
   openInNewTab?: boolean
   label?: string
   icon?: string
