@@ -38,7 +38,7 @@ defineProps<Props>()
     </div>
 
     <!-- Summary Details of the certification -->
-    <div class="mt-2">
+    <div class="print:prose-xs prose prose-base md:prose-sm prose-li:list-[square] prose-li:marker:text-accent prose-li:[&_li]:list-['-']">
       <slot name="summary"></slot>
     </div>
   </div>

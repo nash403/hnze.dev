@@ -75,7 +75,8 @@
   --noise: 0;
 }
 
-@source "../../../content/**/*.md";
+@source "../../../content/**/*";
+@source inline("badge, badge-info"); /* FIXME: workaround for daisyui/tw classes not being detected in md files */
 
 @import './variables.css';
 @import './fonts.css';

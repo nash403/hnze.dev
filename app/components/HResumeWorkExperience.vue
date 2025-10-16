@@ -27,7 +27,7 @@ type WorkLocation = 'onsite' // Sur site
 
 interface Props {
   workPosition: string
-  companyName: string
+  companyName?: string
   companyLogoUrl?: string
   companyLogoAlt?: string
   companyLogoType?: 'image' | 'icon'
