@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { RouteLocationRaw } from 'vue-router'
-import { Fragment } from 'vue/jsx-runtime'
 
 type ContractType = 'fullTimePermanent' // CDI à temps plein
   | 'partTimePermanent' // CDI à temps partiel
@@ -39,49 +38,64 @@ interface Props {
   endDate?: string
 }
 
-withDefaults(defineProps<Props>(), {
-  contractType: 'fullTimePermanent',
-  workLocation: 'onsite',
+const props = withDefaults(defineProps<Props>(), {
   companyLogoType: 'image',
+})
+
+const { t } = useI18n()
+
+const contractDetailTags = computed(() => {
+  const arr: Array<{ href?: RouteLocationRaw, icon: string, label: string }> = []
+  if (props.companyName) {
+    arr.push({
+      href: props.companyUrl,
+      icon: 'clarity:briefcase-line',
+      label: props.companyName,
+    })
+  }
+  if (props.contractType) {
+    arr.push({
+      href: props.companyUrl,
+      icon: 'clarity:contract-line',
+      label: t(`contractTypes.${props.contractType}`, props.contractType),
+    })
+  }
+  if (props.workLocation) {
+    arr.push({
+      href: props.companyUrl,
+      icon: 'clarity:map-marker-line',
+      label: t(`workLocations.${props.workLocation}`, props.workLocation),
+    })
+  }
+  return arr
 })
 </script>
 
 <template>
   <div class="md:grid md:grid-cols-3 md:gap-3 print:grid print:break-inside-avoid print:grid-cols-3 print:gap-3">
     <!-- Dates -->
-    <div :class="{ 'flex items-baseline leading-8 font-bold': !!startDate }">
-      <template v-if="startDate">
-        <span>{{ startDate.slice(0, -3) }}</span>
-        <span
-          v-if="endDate"
-          class="ml-8"
-        >{{ endDate.slice(0, -3) }}</span>
-      </template>
+    <div class="flex items-baseline leading-8 font-bold">
+      <span>{{ startDate.slice(0, -3) }}</span>
+      <span
+        v-if="endDate"
+        class="ml-8"
+      >{{ endDate.slice(0, -3) }}</span>
     </div>
 
-    <component
-      :is="companyName ? 'div' : Fragment"
-      :class="{ 'md:col-span-2 print:col-span-2': !!companyName }"
+    <div
+      class="md:col-span-2 print:col-span-2"
     >
       <!-- Work position -->
       <h3
-        class="text-2xl font-bold text-accent"
-        :class="{ 'md:col-span-2 print:col-span-2': !companyName }"
+        class="text-2xl font-bold text-accent md:col-span-2 print:col-span-2"
       >
         {{ workPosition }}
       </h3>
 
       <!-- Work position contract details -->
-      <div
-        v-if="companyName"
-        class="mt-2 flex flex-wrap gap-2"
-      >
+      <div class="mt-2 flex flex-wrap gap-2">
         <template
-          v-for="(item, i) in [
-            { href: companyUrl, icon: 'clarity:briefcase-line', label: companyName },
-            { href: companyUrl, icon: 'clarity:contract-line', label: $t(`contractTypes.${contractType}`, contractType) },
-            { href: companyUrl, icon: 'clarity:map-marker-line', label: $t(`workLocations.${workLocation}`, workLocation) },
-          ]"
+          v-for="(item, i) in contractDetailTags"
           :key="i"
         >
           <NuxtLink
@@ -108,7 +122,7 @@ withDefaults(defineProps<Props>(), {
           </span>
         </template>
       </div>
-    </component>
+    </div>
 
     <!-- Company Logo -->
     <div>
