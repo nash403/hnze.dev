@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mx-auto max-w-lg pt-5">
     <!-- <HPlayground /> -->
     <div class="mx-auto max-w-lg">
       <div class="my-4 flex max-w-fit items-center gap-4">
