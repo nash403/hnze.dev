@@ -1,54 +1,45 @@
 <script lang="ts" setup>
+import type { RouteLocationRaw } from 'vue-router'
+
 interface Props {
-  institution: string
-  url?: string
-  area?: string
-  studyType?: string
-  startDate?: string
-  endDate?: string
-  score?: string
+  certificationName: string
+  institutionName: string
+  institutionUrl?: RouteLocationRaw
+  dates: string | [string, string]
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 </script>
 
 <template>
   <div>
+    <!-- Certification name -->
     <h3 class="text-xl font-bold text-accent">
-      <a
-        v-if="props.url"
-        :href="props.url"
+      {{ certificationName }}
+    </h3>
+
+    <!-- Start and end date of the formation -->
+    <div
+      class="text-sm text-gray-500"
+    >
+      {{ dates }}
+    </div>
+
+    <!-- Institution name and link -->
+    <div class="text-base font-medium">
+      <NuxtLink
+        v-if="institutionUrl"
+        :to="institutionUrl"
         target="_blank"
         rel="noopener noreferrer"
-      >{{ props.institution }}</a>
-      <span v-else>{{ props.institution }}</span>
-    </h3>
-    <div class="mt-1 text-base font-medium">
-      <span v-if="props.studyType">{{ props.studyType }}</span>
-      <span
-        v-if="props.startDate || props.endDate"
-        class="ml-2 text-sm text-gray-500"
-      >
-        <span v-if="props.startDate">{{ props.startDate }}</span>
-        <span v-if="props.endDate"> - {{ props.endDate }}</span>
-      </span>
+        external
+      >{{ institutionName }}</NuxtLink>
+      <span v-else>{{ institutionName }}</span>
     </div>
-    <div
-      v-if="props.area"
-      class="mt-2 text-base"
-    >
-      {{ props.area }}
-    </div>
-    <div
-      v-if="props.score"
-      class="mt-2 text-base"
-    >
-      <span class="font-semibold">Score:</span> {{ props.score }}
-    </div>
+
+    <!-- Summary Details of the certification -->
     <div class="mt-2">
       <slot name="summary"></slot>
     </div>
   </div>
 </template>
-
-<style scoped></style>

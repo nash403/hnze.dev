@@ -102,6 +102,7 @@ const contractDetailTags = computed(() => {
             v-if="item.href"
             :to="item.href"
             target="_blank"
+            external
             class="inline-flex items-center px-2 py-1 font-medium"
           >
             <Icon

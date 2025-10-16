@@ -232,11 +232,10 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ::h-resume-certification
 ---
-institution: "Université Lille 1 Sciences et Technologies"
-url: "https://www.univ-lille.fr/formations/fr-00002035"
-studyType: "Master E-Services"
-startDate: "2015"
-endDate: "2017"
+certificationName: "Master E-Services"
+institutionName: "Université Lille 1 Sciences et Technologies"
+institutionUrl: "https://www.univ-lille.fr/formations/fr-00002035"
+dates: "2015 / 2017"
 ---
 #summary
 
@@ -245,11 +244,10 @@ Formation spécialisée en développement Web et mobile. Acquis: maquettage, tes
 
 ::h-resume-certification
 ---
-institution: "Université Lille 1 Sciences et Technologies"
-url: "https://www.univ-lille.fr/formations/fr-00002032"
-studyType: "Licence Informatique"
-startDate: "2012"
-endDate: "2015"
+certificationName: "Licence Informatique"
+institutionName: "Université Lille 1 Sciences et Technologies"
+institutionUrl: "https://www.univ-lille.fr/formations/fr-00002032"
+dates: "2012 / 2015"
 ---
 #summary
 
@@ -258,9 +256,9 @@ Programmation, Codage, Algorithmique, développement de sites internet
 
 ::h-resume-certification
 ---
-institution: "École Internationale de Bujumbura"
-studyType: "Baccalauréat Scientifique"
-endDate: "2012"
+certificationName: "Baccalauréat Scientifique"
+institutionName: "École Internationale de Bujumbura"
+dates: "2012"
 ---
 #summary
 
