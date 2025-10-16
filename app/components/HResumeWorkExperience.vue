@@ -49,9 +49,14 @@ withDefaults(defineProps<Props>(), {
 <template>
   <div class="md:grid md:grid-cols-3 md:gap-3 print:grid print:break-inside-avoid print:grid-cols-3 print:gap-3">
     <!-- Dates -->
-    <div class="flex items-baseline leading-8 font-bold">
-      <span class="mr-8">{{ startDate.slice(0, -3) }}</span>
-      <span>{{ endDate?.slice(0, -3) }}</span>
+    <div :class="{ 'flex items-baseline leading-8 font-bold': !!startDate }">
+      <template v-if="startDate">
+        <span>{{ startDate.slice(0, -3) }}</span>
+        <span
+          v-if="endDate"
+          class="ml-8"
+        >{{ endDate.slice(0, -3) }}</span>
+      </template>
     </div>
 
     <component
