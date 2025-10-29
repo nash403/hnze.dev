@@ -232,7 +232,7 @@ Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-s
 
   ### Langues parlées
 
-  :::h-prose-node-unwrap{.flex .flex-wrap .gap-2}
+  :::h-element-tag{.flex .flex-wrap .gap-2}
     [Français (Natif)]{.badge .badge-info}
     [Anglais (Professionnel)]{.badge .badge-info}
     [Kirundi (Élémentaire)]{.badge .badge-info}
@@ -240,7 +240,7 @@ Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-s
 
   ### Programmation
 
-  :::h-prose-node-unwrap{.flex .flex-wrap .gap-2}
+  :::h-element-tag{.flex .flex-wrap .gap-2}
     [Typescript / Javascript / JSX]{.badge .badge-info}
     [HTML]{.badge .badge-info}
     [CSS / TailwindCSS]{.badge .badge-info}
@@ -253,7 +253,7 @@ Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-s
 
   ### Frameworks & Web
 
-  :::h-prose-node-unwrap{.flex .flex-wrap .gap-2}
+  :::h-element-tag{.flex .flex-wrap .gap-2}
     [Vue.js / Nuxt.js]{.badge .badge-info}
     [Node.js / Bun]{.badge .badge-info}
     [Angular]{.badge .badge-info}
@@ -267,7 +267,7 @@ Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-s
 
   ### Testing
 
-  :::h-prose-node-unwrap{.flex .flex-wrap .gap-2}
+  :::h-element-tag{.flex .flex-wrap .gap-2}
     [Jest]{.badge .badge-info}
     [Vitest]{.badge .badge-info}
     [ESlint]{.badge .badge-info}
@@ -278,7 +278,7 @@ Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-s
 
   ### Backend & Devops
 
-  :::h-prose-node-unwrap{.flex .flex-wrap .gap-2}
+  :::h-element-tag{.flex .flex-wrap .gap-2}
     [Docker]{.badge .badge-info}
     [CI/CD]{.badge .badge-info}
     [Kubernetes]{.badge .badge-info}
@@ -295,7 +295,7 @@ Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-s
 
   ### Méthodologie
 
-  :::h-prose-node-unwrap{.flex .flex-wrap .gap-2}
+  :::h-element-tag{.flex .flex-wrap .gap-2}
     [Méthodes Agiles (Scrum / Kanban)]{.badge .badge-info}
     [Tests unitaires]{.badge .badge-info}
     [Pair programming]{.badge .badge-info}
