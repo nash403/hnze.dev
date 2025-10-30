@@ -247,7 +247,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Spoken Languages
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [French (Native)]{.badge .badge-info}
   [English (Professional)]{.badge .badge-info}
   [Kirundi (Elementary)]{.badge .badge-info}
@@ -255,7 +255,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Programming
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Typescript / Javascript / JSX]{.badge .badge-info}
   [HTML]{.badge .badge-info}
   [CSS / TailwindCSS]{.badge .badge-info}
@@ -268,7 +268,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Frameworks & Web
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Vue.js / Nuxt.js]{.badge .badge-info}
   [Node.js / Bun]{.badge .badge-info}
   [Angular]{.badge .badge-info}
@@ -282,7 +282,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Testing
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Jest]{.badge .badge-info}
   [Vitest]{.badge .badge-info}
   [ESlint]{.badge .badge-info}
@@ -293,7 +293,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Backend & Devops
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Docker]{.badge .badge-info}
   [CI/CD]{.badge .badge-info}
   [Kubernetes]{.badge .badge-info}
@@ -310,7 +310,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Methodology
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Agile methodology (Scrum / Kanban)]{.badge .badge-info}
   [Unit Tests]{.badge .badge-info}
   [Pair programming]{.badge .badge-info}

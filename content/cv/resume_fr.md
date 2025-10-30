@@ -234,7 +234,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Langues parlées
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Français (Natif)]{.badge .badge-info}
   [Anglais (Professionnel)]{.badge .badge-info}
   [Kirundi (Élémentaire)]{.badge .badge-info}
@@ -242,7 +242,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Programmation
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Typescript / Javascript / JSX]{.badge .badge-info}
   [HTML]{.badge .badge-info}
   [CSS / TailwindCSS]{.badge .badge-info}
@@ -255,7 +255,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Frameworks & Web
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Vue.js / Nuxt.js]{.badge .badge-info}
   [Node.js / Bun]{.badge .badge-info}
   [Angular]{.badge .badge-info}
@@ -269,7 +269,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Testing
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Jest]{.badge .badge-info}
   [Vitest]{.badge .badge-info}
   [ESlint]{.badge .badge-info}
@@ -280,7 +280,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Backend & Devops
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Docker]{.badge .badge-info}
   [CI/CD]{.badge .badge-info}
   [Kubernetes]{.badge .badge-info}
@@ -297,7 +297,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Méthodologie
 
-::h-element-tag{.flex .flex-wrap .gap-2}
+::h-prose-element{.flex .flex-wrap .gap-2}
   [Méthodes Agiles (Scrum / Kanban)]{.badge .badge-info}
   [Tests unitaires]{.badge .badge-info}
   [Pair programming]{.badge .badge-info}
