@@ -111,112 +111,120 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+@utility link-underline-radiant {
+  text-decoration: none;
+  border-style: solid;
+  border-bottom-width: 2px;
+  border-image: radial-gradient(
+    color-mix(in oklch, var(--color-base-100) 40%, transparent),
+    color-mix(in oklch, var(--color-primary) 40%, transparent)
+  ) 15;
+  transition: color 250ms;
+
+  &:hover, &:focus {
+    /* FIXME: check active condition */
+    color: var(--color-primary);
+    /* FIXME: check why skew not working for link in 1st paragraph of resume */
+    transform: skewX(-5deg);
+  }
+}
+
+@utility link-glow {
+  /* FIXME: check need to limit style for >md screen sizes */
+  @apply relative pb-[2px];
+
+  &:before, &:after {
+    position: absolute;
+    height: 3px;
+    bottom: 1px;
+    content: ' ';
+    display: block;
+    width: 12px;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: -1;
+  }
+  &:before {
+    background-image: linear-gradient(90deg, var(--color-base-300), var(--color-primary));
+    left: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:after {
+    background-image: linear-gradient(270deg, var(--color-base-300), var(--color-primary));
+    right: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &:hover, &.active {
+    /* FIXME: verify need for active class */
+    @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
+  }
+
+  &.router-link-active {
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--color-base-300), var(--color-primary));
+    -webkit-background-clip: text;
+    &:after, &:before {
+      opacity: 0;
+    }
+  }
+}
+
 @layer base {
-  body {
-    @apply font-default-sans text-base;
-    transition: background-color .3s;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* add custom styles to the base layer */
+}
+
+/* Application wide custom styles */
+body {
+  @apply font-default-sans text-base;
+  transition: background-color .3s;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#__hnze-app-nuxt {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+
+.page-enter-active {
+  animation: fadeInUp .6s forwards
+}
+
+.page-leave-active {
+  animation: fadeOutDown .6s backwards;
+}
+
+/* Make all prose links have gradiant underline */
+:is(.prose *:not(h1, h2, h3, h4, h5, h6), .prose:not(h1, h2, h3, h4, h5, h6)) > :is(a, .link) {
+  @apply link-underline-radiant;
+}
+
+/* Keyframes declarations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(.5rem)
   }
 
-  #__hnze-app-nuxt {
-    margin: 0 auto;
-    font-weight: normal;
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(.5rem)
-    }
-
-    to {
-      opacity: 1;
-      transform: none
-    }
-  }
-
-  @keyframes fadeOutDown {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-      transform: translateY(.5rem)
-    }
-  }
-
-
-  .page-enter-active {
-    animation: fadeInUp .6s forwards
-  }
-
-  .page-leave-active {
-    animation: fadeOutDown .6s backwards;
-  }
-
-  .h-layout-default {
-    .prose *:not(h1, h2, h3, h4, h5, h6) > :is(a:not(.-no-glow), .link) {
-      border-style: solid;
-      border-bottom-width: 1px;
-      border-image: radial-gradient(
-        color-mix(in oklch, var(--color-base-100) 40%, transparent),
-        color-mix(in oklch, var(--color-primary) 40%, transparent)
-      ) 15;
-
-      &:hover {
-        transform: skewX(-5deg);
-      }
-    }
-
-    /* @media screen(md) { */
-      a:not(.-no-glow), .link:not(.-no-glow) {
-        @apply relative pb-[2px];
-
-        &:before, &:after {
-          position: absolute;
-          height: 3px;
-          bottom: 1px;
-          content: ' ';
-          display: block;
-          width: 12px;
-          opacity: 0;
-          transition: 0.4s;
-          z-index: -1;
-        }
-        &:before {
-          background-image: linear-gradient(90deg, var(--color-base-300), var(--color-primary));
-          left: 0;
-          border-top-left-radius: 3px;
-          border-bottom-left-radius: 3px;
-        }
-
-        &:after {
-          background-image: linear-gradient(270deg, var(--color-base-300), var(--color-primary));
-          right: 0;
-          border-top-right-radius: 3px;
-          border-bottom-right-radius: 3px;
-        }
-
-        &:hover, &.active {
-          @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
-        }
-
-        &.router-link-active {
-          background: linear-gradient(45deg, var(--color-base-300), var(--color-primary));
-          -webkit-background-clip: text;
-          &:after, &:before {
-            opacity: 0;
-          }
-        }
-      }
-    /* } */
-    a:not(.-no-glow), .link:not(.-no-glow) {
-      &.router-link-active {
-        font-weight: 700;
-      }
-    }
+  to {
+    opacity: 0;
+    transform: translateY(.5rem)
   }
 }
