@@ -48,7 +48,7 @@ watch(() => colorMode.preference, () => {
     :aria-label="t('app.navbar.theme_switcher.toggle_btn_title', [supportedThemes[themes[currentThemeIndex]!].label])"
     :title="t('app.navbar.theme_switcher.toggle_btn_title', [supportedThemes[themes[currentThemeIndex]!].label])"
     :disabled="colorMode.forced"
-    :class="['link', { '-unglow cursor-not-allowed': colorMode.forced }]"
+    :class="['link', { '-no-glow cursor-not-allowed': colorMode.forced }]"
     @click="toggleTheme()"
   >
     <ColorScheme

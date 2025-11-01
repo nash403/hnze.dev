@@ -17,7 +17,7 @@ const switchLocalePath = useSwitchLocalePath()
 
         :to="switchLocalePath(_locale.code)"
         :class="['mx-2 px-0.5 pb-0.5', {
-          '-unglow cursor-not-allowed': _locale.disabled,
+          '-no-glow cursor-not-allowed': _locale.disabled,
           'font-bold': _locale.code == locale,
         }]"
         :disabled="_locale.disabled"
