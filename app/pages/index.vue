@@ -22,5 +22,38 @@
         >{{ $t('app.footer.clone_website_link') }}</a>
       </template>
     </i18n-t>
+    <p class="text-primary-300">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-primary-700">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-primary-900">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-secondary-300">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-secondary-700">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-secondary-900">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-info-300">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-info-700">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <p class="text-info-900">
+      Dolorem et dolore suscipit adipisci et omnis cupiditate quae optio. Aperiam et recusandae aut qui commodi quia quaerat. Omnis nulla dicta cum qui nihil tempore. Illo voluptatum saepe blanditiis autem quae.
+    </p>
+    <button
+      type="button"
+      class="btn btn-primary"
+    >
+      coucou
+    </button>
   </div>
 </template>
