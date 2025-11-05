@@ -23,9 +23,8 @@ const navItems: Ref<NavItem[]> = ref([
 ])
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
-// FIXME: watch resize to automatically close menu when resizing above breakpoint
-
 // FIXME: no links should glow when toggle menu is opened
+// FIXME: watch resize to automatically close menu when resizing above breakpoint
 </script>
 
 <template>
@@ -114,7 +113,7 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
           >
             <NuxtLink
               :to="localePath(nav.slug)"
-              class="group h-link-glow link no-underline"
+              class="group link rounded no-underline"
               :class="{
                 'sm:hidden md:inline': nav.minBreakpoint === 'md',
                 'sm:hidden lg:inline': nav.minBreakpoint === 'lg',
@@ -123,11 +122,19 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
               }"
             >
               <template #default="slot">
-                <span :class="['flex items-center p-1 lg:px-3 lg:py-2', { 'text-base-content-800 md:bg-primary-100': slot?.isActive }]">
+                <span
+                  :class="[
+                    'flex items-center rounded p-1 lg:px-3 lg:py-2',
+                    {
+                      'font-bold text-primary-700 md:bg-primary-200': slot?.isActive,
+                      'h-link-glow': !slot?.isActive,
+                    },
+                  ]"
+                >
                   <Icon
                     v-if="nav.icon"
                     :name="nav.icon"
-                    class="mr-2 inline size-5 items-center text-sm opacity-75 transition group-hover:opacity-100 md:text-base"
+                    class="mr-2 inline size-5 items-center text-sm text-primary-700 opacity-50 transition group-hover:opacity-100"
                     :class="{
                       'opacity-100': slot?.isActive,
                       'inline-flex': !nav.iconMinBreakpoint,
