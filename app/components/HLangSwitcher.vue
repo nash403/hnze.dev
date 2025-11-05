@@ -11,14 +11,14 @@ const switchLocalePath = useSwitchLocalePath()
     >
       <div
         v-if="i"
-        class="border-foreground-200 self-stretch border-r-2"
+        class="self-stretch border-r-2 border-base-content"
       ></div>
       <NuxtLink
 
         :to="switchLocalePath(_locale.code)"
-        :class="['mx-2 px-0.5 pb-0.5', {
-          '-no-glow cursor-not-allowed': _locale.disabled,
-          'font-bold': _locale.code == locale,
+        :class="['mx-2 link link-hover hover:text-primary', {
+          'cursor-not-allowed': _locale.disabled,
+          'font-bold underline': _locale.code == locale,
         }]"
         :disabled="_locale.disabled"
         :label="_locale.name"
