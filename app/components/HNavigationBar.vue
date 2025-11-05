@@ -49,13 +49,13 @@ const closeMenu = () => {
     :class="menuOpened ? 'flex md:hidden' : 'hidden'"
     @click="closeMenu"
   ></div>
-  <header class="bg-background/40 has-[:checked]:bg-background sticky top-0 z-40 w-full backdrop-blur-[1.25rem] backdrop-saturate-[180%] select-none">
+  <header class="sticky top-0 z-40 w-full bg-base-200/40 backdrop-blur-[1.25rem] backdrop-saturate-[180%] select-none has-[:checked]:bg-base-200">
     <div
       class="relative mx-auto flex max-w-wide items-center justify-between pr-4 sm:py-0 sm:pr-8 md:px-8"
     >
       <!-- Menu toggle -->
       <label
-        class="peer border-r-foreground-400 relative border-r-2 p-2 outline-none md:hidden"
+        class="peer relative border-r-2 border-r-base-content-400 p-2 outline-none md:hidden"
         @click="toggleMenuOpen"
       >
         <input
@@ -65,11 +65,11 @@ const closeMenu = () => {
         />
         <div
           aria-hidden="true"
-          class="bg-foreground h-0.5 w-4 rounded transition peer-checked:translate-y-[0.33rem] peer-checked:rotate-45"
+          class="h-0.5 w-4 rounded bg-base-content transition peer-checked:translate-y-[0.33rem] peer-checked:rotate-45"
         ></div>
         <div
           aria-hidden="true"
-          class="bg-foreground mt-2 h-0.5 w-4 rounded transition peer-checked:translate-y-[-0.33rem] peer-checked:-rotate-45"
+          class="mt-2 h-0.5 w-4 rounded bg-base-content transition peer-checked:translate-y-[-0.33rem] peer-checked:-rotate-45"
         ></div>
       </label>
 
@@ -87,7 +87,7 @@ const closeMenu = () => {
 
         <!-- <ZLink
           :to="localePath('lets-meet')"
-          class="-no-glow text-foreground-500 focus:bg-primary-50 focus-visible:ring-primary-50 hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5
+          class="-no-glow text-base-content-500 focus:bg-primary-50 focus-visible:ring-primary-50 hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5
          font-mono text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:outline-0 focus-visible:ring-inset lg:inline-flex lg:items-center"
         >
           !-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text --
@@ -96,7 +96,7 @@ const closeMenu = () => {
       </div>
 
       <!-- <nav
-        class="bg-background invisible absolute inset-x-0 top-full z-50 ml-auto border-b border-b-gray-300/40 pr-4 pl-8 opacity-0 duration-300 ease-linear peer-has-[:checked]:visible peer-has-[:checked]:opacity-100 sm:px-8 md:visible md:relative md:border-b-0 md:bg-transparent md:px-0 md:opacity-100"
+        class="bg-base-200 invisible absolute inset-x-0 top-full z-50 ml-auto border-b border-b-gray-300/40 pr-4 pl-8 opacity-0 duration-300 ease-linear peer-has-[:checked]:visible peer-has-[:checked]:opacity-100 sm:px-8 md:visible md:relative md:border-b-0 md:bg-transparent md:px-0 md:opacity-100"
       >
         <ul class="flex flex-col gap-x-2 pb-4 md:flex-row md:items-center md:justify-between md:p-0 lg:mr-16 lg:gap-x-5">
           <li
@@ -110,7 +110,7 @@ const closeMenu = () => {
               class="relative flex px-2 py-1 md:inline-flex md:p-0"
             >
               <template #default="slot">
-                <span :class="['group flex items-center rounded p-1 lg:px-3 lg:py-2', { 'text-foreground-800 md:bg-primary-50': slot?.isActive }]">
+                <span :class="['group flex items-center rounded p-1 lg:px-3 lg:py-2', { 'text-base-content-800 md:bg-primary-50': slot?.isActive }]">
                   <component
                     :is="nav.icon"
                     class="mr-2 hidden size-5 items-center text-sm opacity-75 transition group-hover:opacity-100 md:text-base xl:inline-flex"
