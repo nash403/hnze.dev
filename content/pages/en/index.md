@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Hnze dev'
 description: Home page of Honoré Nintunze, passionate full-stack web developer
 ---
 

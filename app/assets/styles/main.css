@@ -184,9 +184,9 @@
   prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: "light"; /* color of browser-provided UI */
 
-  --color-base-100: oklch(98% 0.001 106.423); /* card on body, first level of elevation */
-  --color-base-200: var(--color-bg-light); /* page background */
-  --color-base-300: oklch(0.7513 0.0258 119.65); /* borders, depth contrast */
+  --color-base-100: var(--color-bg-light); /* page background */
+  --color-base-200: oklch(98% 0.001 106.423); /* card on body, first level of elevation */
+  --color-base-300: oklch(0.7513 0.0258 119.65); /* borders, depth contrast, more elevation */
   --color-base-content: var(--color-content-dark-on-light);
   --color-primary: oklch(0.7099 0.1912 150.52);
   --color-primary-content: var(--color-content-dark-on-light);
@@ -228,9 +228,9 @@
   prefersdark: true; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: "dark"; /* color of browser-provided UI */
 
-  --color-base-100: oklch(0.4704 0.0147 137.82); /* card on body, first level of elevation */
-  --color-base-200: var(--color-bg-dark); /* page background */
-  --color-base-300: oklch(0.526 0.042 176.0); /* borders, depth contrast */
+  --color-base-100: var(--color-bg-dark); /* page background */
+  --color-base-200: oklch(0.4704 0.0147 137.82); /* card on body, first level of elevation */
+  --color-base-300: oklch(0.526 0.042 176.0); /* borders, depth contrast, more elevation */
   --color-base-content: var(--color-content-light-on-dark);
   --color-primary: oklch(0.7099 0.1912 150.52);
   --color-primary-content: var(--color-content-dark-on-light);
@@ -308,21 +308,13 @@
   transition: color 250ms;
 
   &:hover, &:focus {
-    /* FIXME: check active condition */
     color: var(--color-primary);
     /* FIXME: check why skew not working for link in 1st paragraph of resume */
     transform: skewX(-5deg);
   }
 }
 
-
-@layer base {
-  /* add custom styles to the base layer */
-}
-
-@layer components {
-  .h-link-glow {
-    /* FIXME: check need to limit style for >md screen sizes */
+@utility h-link-glow {
     @apply relative pb-[2px];
 
     &:before, &:after {
@@ -351,7 +343,6 @@
     }
 
     &:hover, &.active {
-      /* FIXME: verify need for active class */
       @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
     }
 
@@ -364,6 +355,13 @@
       }
     }
   }
+
+@layer base {
+  /* add custom styles to the base layer */
+}
+
+@layer components {
+  /* add custom styles to the components layer */
 }
 
 /* Application wide custom styles */

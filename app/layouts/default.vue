@@ -1,13 +1,9 @@
 <template>
-  <div class="h-layout-default mx-auto max-w-lg pt-5">
+  <div class="flex flex-col justify-between">
     <!-- <HPlayground /> -->
     <HNavigationBar />
-    <!-- <div class="mx-auto max-w-lg">
-      <div class="my-4 flex max-w-fit items-center gap-4">
-        <HLangSwitcher />
-        <HThemeSwitcher />
-      </div>
-    </div> -->
-    <slot></slot>
+    <div class="w-full max-w-full px-4 pt-7 pb-10 sm:px-8 sm:pb-16 md:max-w-8xl md:pb-20">
+      <slot></slot>
+    </div>
   </div>
 </template>
