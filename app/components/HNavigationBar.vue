@@ -27,7 +27,7 @@ const navItems: Ref<NavItem[]> = ref([
     >
       <!-- Rest of the code remains the same -->
       <label
-        class="peer group relative cursor-pointer border-r-2 border-r-base-content px-2 py-3 outline-none md:hidden "
+        class="peer group relative cursor-pointer border-r-2 border-r-base-content px-2 py-3 outline-none has-[:focus-visible]:ring-2 md:hidden"
       >
         <!-- @click="toggleMenuOpen" -->
         <input
