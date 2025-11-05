@@ -12,6 +12,7 @@
 
 /* Spacing, Layout, Sizes */
 @theme {
+  --breakpoint-xs: 28rem;
   --breakpoint-2xl: 141rem;
 
   --container-8xl: 88rem;
