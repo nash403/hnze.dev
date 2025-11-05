@@ -24,6 +24,8 @@ const navItems: Ref<NavItem[]> = ref([
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
 // FIXME: watch resize to automatically close menu when resizing above breakpoint
+
+// FIXME: no links should glow when toggle menu is opened
 </script>
 
 <template>
@@ -112,9 +114,7 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
           >
             <NuxtLink
               :to="localePath(nav.slug)"
-              active-class="router-link-active"
-              exact-active-class="router-link-exact-active"
-              class="sm:h-link-glow"
+              class="group h-link-glow link no-underline"
               :class="{
                 'sm:hidden md:inline': nav.minBreakpoint === 'md',
                 'sm:hidden lg:inline': nav.minBreakpoint === 'lg',
@@ -123,7 +123,7 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
               }"
             >
               <template #default="slot">
-                <span :class="['group flex items-center rounded p-1 lg:px-3 lg:py-2', { 'text-base-content-800 md:bg-primary-100': slot?.isActive }]">
+                <span :class="['flex items-center p-1 lg:px-3 lg:py-2', { 'text-base-content-800 md:bg-primary-100': slot?.isActive }]">
                   <Icon
                     v-if="nav.icon"
                     :name="nav.icon"
