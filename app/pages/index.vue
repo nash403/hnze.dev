@@ -4,7 +4,7 @@
     <h1 class="text-3xl font-bold">
       <nuxt-link
         :to="$localeRoute({ name: 'resume' })"
-        class="link-glow"
+        class="h-link-glow"
       >Honoré Nintunze</nuxt-link>
     </h1>
     <i18n-t
@@ -18,7 +18,7 @@
         <a
           href="https://github.com/nash403/hnze.dev"
           target="_blank"
-          class="link-glow"
+          class="h-link-glow"
         >{{ $t('app.footer.clone_website_link') }}</a>
       </template>
     </i18n-t>
