@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncPageContentData('/')
 
-// if (!page.value) {
-//   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
-// }
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
 
 useHead({
   title: computed(() => page.value?.title),

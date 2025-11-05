@@ -1,5 +1,5 @@
 ---
-title: Accueil
+title: ''
 description: Page d'accueil d'Honoré Nintunze, développeur web full-stack passionné
 ---
 

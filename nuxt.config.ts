@@ -62,9 +62,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteName: 'Honoré Nintunze - Fullstack Web Developer',
-      siteNameSeparator: '|',
-      defaultColorMode,
+      siteName: 'Honoré Nintunze (Fullstack Web Developer)',
+      siteNameSeparator: '-',
 
       cvEmailAdress: 'honore@example.com',
       cvPhoneNumber: '+15145551234',
