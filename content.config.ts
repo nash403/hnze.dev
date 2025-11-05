@@ -3,7 +3,24 @@ import { defineContentConfig, defineCollection } from '@nuxt/content'
 export default defineContentConfig({
   collections: {
 
-    // CV
+    // Pages fed with md content
+    pages_fr: defineCollection({
+      type: 'page',
+      source: {
+        include: 'pages/fr/**/*.md',
+        prefix: '',
+      },
+    }),
+
+    pages_en: defineCollection({
+      type: 'page',
+      source: {
+        include: 'pages/en/**/*.md',
+        prefix: '',
+      },
+    }),
+
+    // Single page CV
     resume_fr: defineCollection({
       type: 'page',
       source: {
@@ -18,7 +35,7 @@ export default defineContentConfig({
       },
     }),
 
-    // Blog pages
+    // Blog pages fed with md content
     blog_fr: defineCollection({
       type: 'page',
       source: {
