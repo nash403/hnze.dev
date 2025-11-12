@@ -16,9 +16,9 @@ const switchLocalePath = useSwitchLocalePath()
       <NuxtLink
 
         :to="switchLocalePath(_locale.code)"
-        :class="['mx-2 link link-hover hover:text-primary', {
+        :class="['mx-2 link pb-[2px] no-underline not-[.router-link-active]:h-link-glow hover:[&.router-link-active]:text-primary', {
           'cursor-not-allowed': _locale.disabled,
-          'font-bold underline': _locale.code == locale,
+          'font-bold underline decoration-2': _locale.code == locale,
         }]"
         :disabled="_locale.disabled"
         :label="_locale.name"

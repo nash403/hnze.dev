@@ -10,7 +10,6 @@ type NavItem = {
 const localePath = useLocalePath()
 const navItems: Ref<NavItem[]> = ref([
   {
-    icon: 'mdi:account-circle-outline',
     slug: '/about-me',
     label: 'About',
     minBreakpoint: 'md',
@@ -75,7 +74,8 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
 
         <NuxtLink
           :to="localePath('lets-meet')"
-          class="hidden shrink-0 items-center gap-x-1.5 rounded-md bg-primary-100 px-2.5 py-1.5 font-mono text-sm font-medium text-base-content hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center"
+          class="hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium text-base-content-900 hover:bg-primary-100 focus:bg-primary-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center"
+          active-class="bg-primary-100 hover:ring-2 hover:ring-primary-200"
         >
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           {{ `@` }} <Icon name="flagpack:fr" /> {{ 'Rennes' }}
