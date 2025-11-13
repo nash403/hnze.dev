@@ -3,7 +3,7 @@ title: "Curriculum Vitae"
 description: "Honoré Nintunze's Resume, passionate full-stack web developer"
 ---
 
-::h-resume-front{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
+::h-resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
 ---
 location:
   href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
