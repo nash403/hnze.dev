@@ -3,7 +3,7 @@ title: "Curriculum Vitae"
 description: "CV d'Honoré Nintunze, développeur web full-stack passionné"
 ---
 
-::h-resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
+::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
 ---
 location:
   href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
@@ -38,7 +38,7 @@ Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-s
 
 ## Expériences
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Projets personnels"
 startDate: "2023-05-18"
@@ -48,7 +48,7 @@ endDate: "2024-05-22"
 Pause sabbatique pour voyager, gérer des contraintes familiales et travailler sur des projets personnels tels que mon déménagement à Montréal.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Développeur Nuxt.js"
 companyName: "Zadig & Voltaire"
@@ -66,7 +66,7 @@ endDate: "2023-05-17"
 - Création de modules Nuxt avancés pour la gestion du SEO, des robots.txt, la sitemaps, et d'autres encore.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Ingénieur Web Full-Stack"
 companyName: "Auchan Retail France"
@@ -85,7 +85,7 @@ endDate: "2023-03-10"
 - Architecture du nouveau front en Nuxt 3 en vue de la refonte de applicatif.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Développeur Vue.js/Node.js"
 companyName: "Décathlon"
@@ -101,7 +101,7 @@ endDate: "2022-12-30"
 Mise en place d'une plateforme de fitness pour la marque CORENGTH pour accompagner les utilisateurs à trouver des exercices d'entraînement adaptés à leur matériel. Développement d'une application mobile en Progressive Web App utilisant les technologies de player vidéo de Brightcove, le framework Nuxt, le CMS Strapi et des micro-services Node.js.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Professeur de Programmation"
 companyName: "EFFICOM"
@@ -117,7 +117,7 @@ endDate: "2022-01-18"
 Enseignement de l'initiation à la programmation à des étudiants de seconde année.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Développeur Lead"
 companyName: "Norauto International"
@@ -139,7 +139,7 @@ Leader technique dans la conception et développement d'un nouveau site web e-co
 - Entretien techniques de recrutement, accueil et intégration des nouveaux développeurs. Jusqu'à être référent d'une équipe de 9 développeurs.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Développeur Web"
 companyName: "Auchan Retail France"
@@ -156,7 +156,7 @@ endDate: "2020-10-30"
 - Harmonisation des pratiques chez Auchan: création de templates, librairies, guides.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Développeur d'Applications Web"
 companyName: "Adeo"
@@ -177,7 +177,7 @@ Développement de MDHData, un catalogue produit interne pour les unités busines
 - Dévelopments de endpoints backend avec la philosophie clean architecture en Nest.js, du CQRS, DDD, Event Sourcing, Elastic Search. Le tout en Typescript de bout en bout.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Consultant Ingénieur Logiciel"
 companyName: "Auchan Retail France"
@@ -195,7 +195,7 @@ endDate: "2019-05-17"
 - Refonte totale de l'application Pilot de visualisation de chiffre d'affaire et volume de vente utilisée par près de 11.000 employés.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Alternant Développeur Full-Stack"
 companyName: "Urbilog"
@@ -211,7 +211,7 @@ endDate: "2017-06-30"
 En tant qu'alternant à Urbilog, conception et développement de prototypes innovants autour des technologies web en intégrant l'accessibilité numérique.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Stagiaire en développement Web"
 companyName: "Urbilog"
@@ -234,7 +234,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Langues parlées
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Français (Natif)]{.badge .badge-info}
   [Anglais (Professionnel)]{.badge .badge-info}
   [Kirundi (Élémentaire)]{.badge .badge-info}
@@ -242,7 +242,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Programmation
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Typescript / Javascript / JSX]{.badge .badge-info}
   [HTML]{.badge .badge-info}
   [CSS / TailwindCSS]{.badge .badge-info}
@@ -255,7 +255,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Frameworks & Web
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Vue.js / Nuxt.js]{.badge .badge-info}
   [Node.js / Bun]{.badge .badge-info}
   [Angular]{.badge .badge-info}
@@ -269,7 +269,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Testing
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Jest]{.badge .badge-info}
   [Vitest]{.badge .badge-info}
   [ESlint]{.badge .badge-info}
@@ -280,7 +280,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Backend & Devops
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Docker]{.badge .badge-info}
   [CI/CD]{.badge .badge-info}
   [Kubernetes]{.badge .badge-info}
@@ -297,7 +297,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ### Méthodologie
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Méthodes Agiles (Scrum / Kanban)]{.badge .badge-info}
   [Tests unitaires]{.badge .badge-info}
   [Pair programming]{.badge .badge-info}
@@ -312,7 +312,7 @@ Développement d'une plateforme web de communication multi-canal à destination 
 
 ## Scolarité
 
-::h-resume-certification
+::resume-certification
 ---
 certificationName: "Master E-Services"
 institutionName: "Université Lille 1 Sciences et Technologies"
@@ -324,7 +324,7 @@ dates: "2015 / 2017"
 Formation spécialisée en développement Web et mobile. Acquis: maquettage, tests unitaire et d'interface, Android, Angular, Java EE, etc...
 ::
 
-::h-resume-certification
+::resume-certification
 ---
 certificationName: "Licence Informatique"
 institutionName: "Université Lille 1 Sciences et Technologies"
@@ -336,7 +336,7 @@ dates: "2012 / 2015"
 Programmation, Codage, Algorithmique, développement de sites internet
 ::
 
-::h-resume-certification
+::resume-certification
 ---
 certificationName: "Baccalauréat Scientifique"
 institutionName: "École Internationale de Bujumbura"

@@ -14,11 +14,8 @@ Vous pouvez trouver un exemple de requête de contenus et de rendu dans une [pag
 
 ## Intégrer un composant Vue
 
-::h-alert{class="alert-warning"}
-L’[alerte](https://github.com/larbish/starter/blob/content/app/components/Alert.vue) actuelle et le [compteur](https://github.com/larbish/starter/blob/content/app/components/Counter.vue) ci-dessous sont des composants `Vue` intégrés au Markdown.
-::
-
-::h-counter
+::div{class="alert alert-warning"}
+Ceci est une alerte.
 ::
 
 Consultez la [documentation](https://content.nuxt.com/docs/getting-started) pour en savoir plus.

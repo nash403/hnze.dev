@@ -3,31 +3,34 @@ title: 'Hnze dev'
 description: Home page of Honoré Nintunze, passionate full-stack web developer
 ---
 
-::h-homepage-hero{profilePicture="/img/profile_picture.jpg"}
+::homepage-hero{profilePicture="/img/profile_picture.jpg"}
 ---
 technologies:
   -
-    name: Vue
+    name: Vue.js - Frontend Framework
     icon: logos:vue
     to: https://vuejs.org
   -
-    name: Nuxt
+    name: Nuxt.js - Vue.js Meta Framework
     icon: logos:nuxt-icon
     to: https://nuxt.com
   -
-    name: Tailwind CSS
+    name: Tailwind CSS - Utility-First & Responsive Styling
     icon: devicon:tailwindcss
     to: https://tailwindcss.com
   -
-    name: TypeScript
+    name: TypeScript - Typed JavaScript paired with Linters & Best practices
     icon: logos:typescript-icon
     to: https://www.typescriptlang.org
   -
-    name: Node.js
+    name: Node.js - Backend JS runtime
     icon: logos:nodejs-icon
     to: https://nodejs.org
   -
-    name: Docker
+    name: SQL & NoSQL - Database Management
+    icon: bi:filetype-sql
+  -
+    name: Docker - Devops & Containerization
     icon: logos:docker-icon
     to: https://www.docker.com
 ---

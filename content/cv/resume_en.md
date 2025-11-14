@@ -3,7 +3,7 @@ title: "Curriculum Vitae"
 description: "Honoré Nintunze's Resume, passionate full-stack web developer"
 ---
 
-::h-resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
+::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
 ---
 location:
   href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
@@ -38,7 +38,7 @@ I am a Web Engineer with expertise in the Vue.js ecosystem but not only. I can c
 
 ## Experience
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Personal Projects"
 startDate: "2023-05-18"
@@ -48,7 +48,7 @@ endDate: "2024-05-22"
 Sabbatical break to travel, manage family constraints and work on personal projects such as my move to Montreal.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Nuxt.js Developer"
 companyName: "Zadig & Voltaire"
@@ -66,7 +66,7 @@ endDate: "2023-05-17"
 - Creation of new nuxt modules for an advanced management of SEO, robots.txt, security, etc.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Full Stack Engineer"
 companyName: "Auchan Retail France"
@@ -85,7 +85,7 @@ endDate: "2023-03-10"
 - Guarantor of quality and design (Tailwind, Jest, etc...)
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Vue.js/Node.js Developer"
 companyName: "Décathlon"
@@ -103,7 +103,7 @@ Participation in building a fitness platform for the CORENGTH brand consisting m
 Users would be accompanied to find relevant exercises / workouts and build their own daily training matching the fitness products they own.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Programming Teacher"
 companyName: "EFFICOM"
@@ -121,7 +121,7 @@ I taught initiation to programming to 2nd grade students during one semester at 
 The course consisted in an introduction to algorithms, pseudo-code, variables and expressions, flow control, functions, inputs / outputs, code execution.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Lead Developer"
 companyName: "Norauto International"
@@ -142,7 +142,7 @@ Conception and development of a new multi-countries / multi-languages e-commerce
 - Onboard and help new developers on the project to grow their skills
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Web Developer"
 companyName: "Auchan Retail France"
@@ -160,7 +160,7 @@ As a tech leader, I participated in the development of multiple web applications
 I brought my expertise in Vue.js, Nest.js, Clean Architecture, Google Cloud Platform, Gitlab CI/CD, TailwindCSS, etc...
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Web Application Developer"
 companyName: "Adeo"
@@ -183,7 +183,7 @@ I brought my expertise in the Vue.js ecosystem during the development of two mai
     - A backend with a clean architecture philosophy built in Nest.js, using CQRS, DDD, Event Sourcing, Elastic Search. With Typescript on the whole stack.
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Software Engineer Consultant"
 companyName: "Auchan Retail France"
@@ -206,7 +206,7 @@ Tech environment:
 - VSCode, IntelliJ, GitLab, GitLabCI, NPM, Yarn, Maven, EsLint, Jest, AVA
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Full-Stack developer intern"
 companyName: "Urbilog"
@@ -222,7 +222,7 @@ endDate: "2017-06-30"
 In a work-study program at Urbilog, I've worked within the R&D department participating in the conception and development of innovative prototypes around modern web technologies such as: Angularjs, Angular 2+, Vuejs, WebSockets, WebRTC, Ionic, various CSS frameworks, etc...
 ::
 
-::h-resume-work-experience
+::resume-work-experience
 ---
 workPosition: "Web developer trainee"
 companyName: "Urbilog"
@@ -247,7 +247,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Spoken Languages
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [French (Native)]{.badge .badge-info}
   [English (Professional)]{.badge .badge-info}
   [Kirundi (Elementary)]{.badge .badge-info}
@@ -255,7 +255,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Programming
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Typescript / Javascript / JSX]{.badge .badge-info}
   [HTML]{.badge .badge-info}
   [CSS / TailwindCSS]{.badge .badge-info}
@@ -268,7 +268,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Frameworks & Web
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Vue.js / Nuxt.js]{.badge .badge-info}
   [Node.js / Bun]{.badge .badge-info}
   [Angular]{.badge .badge-info}
@@ -282,7 +282,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Testing
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Jest]{.badge .badge-info}
   [Vitest]{.badge .badge-info}
   [ESlint]{.badge .badge-info}
@@ -293,7 +293,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Backend & Devops
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Docker]{.badge .badge-info}
   [CI/CD]{.badge .badge-info}
   [Kubernetes]{.badge .badge-info}
@@ -310,7 +310,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ### Methodology
 
-::h-prose-element{.flex .flex-wrap .gap-2}
+::prose-element{.flex .flex-wrap .gap-2}
   [Agile methodology (Scrum / Kanban)]{.badge .badge-info}
   [Unit Tests]{.badge .badge-info}
   [Pair programming]{.badge .badge-info}
@@ -325,7 +325,7 @@ Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electro
 
 ## Education
 
-::h-resume-certification
+::resume-certification
 ---
 certificationName: "Master's degree of IT E-Services"
 institutionName: "Lille 1 Sciences and Technologies University"
@@ -336,7 +336,7 @@ dates: "2015 / 2017"
 Specialized training in web and mobile development. Acquired: modeling, unit and interface tests, Android, Angular, Java EE, etc...
 ::
 
-::h-resume-certification
+::resume-certification
 ---
 certificationName: "Bachelor's degree in Computer Science"
 institutionName: "Lille 1 Sciences and Technologies University"
@@ -347,7 +347,7 @@ dates: "2012 / 2015"
 Programming, Coding, Algorithmics, website development
 ::
 
-::h-resume-certification
+::resume-certification
 ---
 certificationName: "General Certificate of Education in Science"
 institutionName: "International School of Bujumbura"

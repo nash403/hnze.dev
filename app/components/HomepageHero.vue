@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { LogoCloudItem } from './HLogoCloud.vue'
+import type { LogoCloudItem } from '~/components/LogoCloud.vue'
 
 interface Props {
   profilePicture: string
@@ -45,9 +45,9 @@ withDefaults(defineProps<Props>(), { technologies: () => [] })
         <li
           v-for="item of technologies"
           :key="item.name"
-          class="flex flex-1 items-stretch"
+          class="flex flex-1 items-stretch justify-center"
         >
-          <HLogoCloud
+          <LogoCloud
             v-bind="item"
             class="flex place-items-center"
           />

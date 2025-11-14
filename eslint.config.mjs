@@ -40,6 +40,9 @@ export default withNuxt(
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
 
       // Vue
+      'vue/multi-word-component-names': ['off', { // only because it's my personal project
+        ignores: [],
+      }],
       'vue/block-order': ['error', {
         order: ['script', 'template', 'style'],
       }],

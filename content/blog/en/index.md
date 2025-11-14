@@ -14,11 +14,8 @@ You can find an example of querying contents and rendering them in a [catch-all 
 
 ## Integrate Vue Component
 
-::h-alert{class="alert-warning"}
-The current [alert](https://github.com/larbish/starter/blob/content/app/components/Alert.vue) and the [counter](https://github.com/larbish/starter/blob/content/app/components/Counter.vue) below are `Vue` components integrated into the Markdown.
-::
-
-::h-counter
+::div{class="alert alert-warning"}
+This is an alert
 ::
 
 Checkout out the [documentation](https://content.nuxt.com/docs/getting-started) to learn more.

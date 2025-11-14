@@ -16,7 +16,7 @@ const navItems: Ref<NavItem[]> = ref([
     minBreakpoint: 'md',
   },
   {
-    icon: 'line-md/coffee-loop',
+    icon: 'line-md:coffee-half-empty-filled-loop',
     slug: '/your-needs',
     label: 'Pause café',
     minBreakpoint: 'md',
@@ -163,8 +163,8 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
       <div
         class="ml-4 flex items-center space-x-4 lg:space-x-10"
       >
-        <HLangSwitcher />
-        <HThemeSwitcher />
+        <LangSwitcher />
+        <ThemeSwitcher />
       </div>
     </div>
   </header>
