@@ -11,9 +11,10 @@ withDefaults(defineProps<Props>(), { technologies: () => [] })
 
 <template>
   <section class="mx-auto flex w-full flex-col gap-10 px-5 sm:px-10 md:px-12 lg:max-w-wide lg:flex-row lg:gap-12 lg:px-5">
+    <!-- FIXME: translate alt attr -->
     <NuxtImg
       :src="profilePicture"
-      alt="Photo de profil de Honoré Nintunze"
+      alt="Ma photo de profil"
       width="200"
       height="200"
       class="mx-auto flex-1"

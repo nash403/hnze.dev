@@ -35,7 +35,7 @@ technologies:
     to: https://www.docker.com
 ---
 #headline
-Salut, mon nom est Honoré.
+Salut, je m'appelle [Honoré]{.bg-gradient-to-br .from-primary.to-accent.bg-clip-text.text-transparent}.
 #intro
 Autem in qui sit id fuga ea repudiandae molestiae. Accusantium temporibus adipisci eos odit natus. Beatae officia sit non quis. Laboriosam odit nisi hic ad. Fuga consequatur distinctio fugiat optio qui quia. Eos nihil quos. Nihil dolorem totam iusto. Ut non cum facere alias sint est soluta. Et perferendis et necessitatibus et eveniet nisi nihil corrupti. Dicta eum id itaque alias tempore. Nesciunt quidem laborum nostrum ut consequatur. Corrupti libero odit nisi est distinctio quas qui facilis dolorum.
 ::

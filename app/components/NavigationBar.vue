@@ -18,13 +18,13 @@ const navItems: Ref<NavItem[]> = ref([
   {
     icon: 'line-md:coffee-half-empty-filled-loop',
     slug: '/your-needs',
-    label: 'Pause café',
+    label: 'Discutons-en',
     minBreakpoint: 'md',
   },
   {
     icon: 'line-md:clipboard-list',
     slug: '/resume',
-    label: 'Mon CV',
+    label: 'CV',
   },
 ])
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
