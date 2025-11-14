@@ -11,7 +11,7 @@ const switchLocalePath = useSwitchLocalePath()
     >
       <div
         v-if="i"
-        class="self-stretch border-r-2 border-base-content"
+        class="self-stretch border-r-2 border-base-content-600"
       ></div>
       <NuxtLink
 

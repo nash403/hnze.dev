@@ -1,5 +1,5 @@
 ---
-title: Allons discuter !
+title: Discutons de votre projet !
 description: N'hésitez pas à me contacter pour toute question ou collaboration.
 ---
 

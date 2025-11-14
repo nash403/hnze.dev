@@ -12,7 +12,7 @@ useHead({
   <div>
     <NuxtRouteAnnouncer />
     <NuxtLayout>
-      <NuxtPage class="page-enter-active" />
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>

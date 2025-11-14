@@ -10,7 +10,7 @@ const handleError = () => clearError({ redirect: '/' })
 
 <template>
   <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
-  <div>
+  <NuxtLayout name="default">
     <h2>{{ error?.statusCode }}</h2>
     <button
       type="button"
@@ -19,5 +19,5 @@ const handleError = () => clearError({ redirect: '/' })
     >
       Go back to the homepage
     </button>
-  </div>
+  </NuxtLayout>
 </template>

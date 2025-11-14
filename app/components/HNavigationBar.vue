@@ -10,14 +10,21 @@ type NavItem = {
 const localePath = useLocalePath()
 const navItems: Ref<NavItem[]> = ref([
   {
-    slug: '/about-me',
-    label: 'About',
+    icon: 'mdi:rocket-launch',
+    slug: '/why-hire-me',
+    label: 'Mes super-pouvoirs',
     minBreakpoint: 'md',
   },
   {
-    icon: 'mdi:briefcase-outline',
-    slug: '/career',
-    label: 'Career',
+    icon: 'line-md/coffee-loop',
+    slug: '/your-needs',
+    label: 'Pause café',
+    minBreakpoint: 'md',
+  },
+  {
+    icon: 'line-md:clipboard-list',
+    slug: '/resume',
+    label: 'Mon CV',
   },
 ])
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
