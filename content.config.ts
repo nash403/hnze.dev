@@ -3,6 +3,21 @@ import { defineContentConfig, defineCollection } from '@nuxt/content'
 export default defineContentConfig({
   collections: {
 
+    // Navigation data
+    navigation_fr: defineCollection({
+      type: 'data',
+      source: {
+        include: 'data/navigation.fr.yml',
+      },
+    }),
+
+    navigation_en: defineCollection({
+      type: 'data',
+      source: {
+        include: 'data/navigation.en.yml',
+      },
+    }),
+
     // Pages fed with md content
     pages_fr: defineCollection({
       type: 'page',
@@ -51,5 +66,6 @@ export default defineContentConfig({
         prefix: '',
       },
     }),
+
   },
 })

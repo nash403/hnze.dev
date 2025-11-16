@@ -1,0 +1,14 @@
+items:
+  - icon: mdi:rocket-launch
+    slug: /why-hire-me
+    label: My superpowers
+    minBreakpoint: md
+  - icon: line-md:coffee-half-empty-filled-loop
+    slug: /your-needs
+    label: Let's discuss
+    minBreakpoint: md
+  - icon: line-md:clipboard-list
+    slug: /resume
+    label: Resume
+
+showLetsMeetLink: true
