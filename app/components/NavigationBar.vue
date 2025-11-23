@@ -34,13 +34,15 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
 </script>
 
 <template>
-  <header class="sticky top-0 z-40 w-full backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-[:checked]:[mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-[:checked]:after:via-primary has-[:checked]:bg-base-200 supports-[backdrop-filter]:backdrop-saturate-[180%]">
+  <header
+    class="sticky top-0 z-40 w-full backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-[:checked]:[mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-[:checked]:after:via-primary has-[:checked]:bg-base-200 supports-[backdrop-filter]:backdrop-saturate-[180%]"
+  >
     <div
       class="relative mx-auto flex max-w-6xl items-center justify-between pr-4 sm:py-0 sm:pr-8 md:px-8"
     >
-      <!-- Rest of the code remains the same -->
+      <!-- Burger menu icon as checkbox input -->
       <label
-        class="peer group relative cursor-pointer border-r-2 border-r-base-content px-2 py-3 outline-none has-[:focus-visible]:ring-2 md:hidden"
+        class="peer group relative mr-2 cursor-pointer border-r-2 border-r-base-content-600 px-2 py-3 outline-none has-[:focus-visible]:ring-2"
         :class="{
           'hidden': !toggleMenuMaxBreakpointVisible,
           'xs:hidden': toggleMenuMaxBreakpointVisible === 'xs',
@@ -67,15 +69,25 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
       </label>
 
       <!-- Logo & Let's meet CTA -->
-      <div class="mr-auto ml-2 flex items-center space-x-10 py-[4px] md:ml-0">
+      <div class="mr-auto flex items-center space-x-10">
         <NuxtLink
           :to="localePath('index')"
           :title="$t('app.link_go_home')"
           class="flex items-center"
         >
-          <Icon
+          <!-- <Icon
             name="hnze:hnze-logo"
-            class="size-[4.5rem] hover:animate-text-glow"
+            class="size-(--header-h) hover:animate-text-glow"
+          /> -->
+          <NuxtImg
+            src="/img/hnze.svg"
+            fit="inside"
+            class="object-contain hover:animate-text-glow"
+            style="height: var(--header-h); width: var(--header-h)"
+            height="72"
+            width="72"
+            quality="90"
+            format="webp,auto"
           />
         </NuxtLink>
 
@@ -91,6 +103,7 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
 
       <!-- Site navigation links -->
       <nav
+        v-if="navItems.length > 0"
         class="invisible absolute inset-x-0 top-full z-50 ml-auto bg-base-200 pr-4 pl-8 opacity-0 duration-300 ease-linear peer-has-[:checked]:visible peer-has-[:checked]:opacity-100 xs:visible xs:px-8"
         :class="{
           'relative bg-transparent opacity-100': !toggleMenuMaxBreakpointVisible,
