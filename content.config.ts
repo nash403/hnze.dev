@@ -40,38 +40,21 @@ export default defineContentConfig({
     }),
 
     // Pages fed with md content
-    pages_fr: defineCollection({
+    pages: defineCollection({
       type: 'page',
       source: {
-        include: 'pages/fr/**/*.md',
-        prefix: '',
-      },
-    }),
-
-    pages_en: defineCollection({
-      type: 'page',
-      source: {
-        include: 'pages/en/**/*.md',
+        include: 'pages/**/*.md',
         prefix: '',
       },
     }),
 
     // Blog pages fed with md content
-    blog_fr: defineCollection({
+    blog: defineCollection({
       type: 'page',
       source: {
-        include: 'blog/fr/**/*.md',
+        include: 'blog/**/*.md',
         prefix: '',
       },
     }),
-
-    blog_en: defineCollection({
-      type: 'page',
-      source: {
-        include: 'blog/en/**/*.md',
-        prefix: '',
-      },
-    }),
-
   },
 })

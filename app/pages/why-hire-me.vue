@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { PagesEnCollectionItem, PagesFrCollectionItem } from '@nuxt/content'
+import type { PagesCollectionItem } from '@nuxt/content'
 
-const { data: page } = await useAsyncPageContentData('/why-hire-me')
+const { data: page } = await useAsyncPageContentData('why-hire-me')
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 }
 
 useHead({
-  title: computed(() => (page.value as PagesFrCollectionItem | PagesEnCollectionItem).title),
+  title: computed(() => (page.value as PagesCollectionItem).title),
 })
 </script>
 

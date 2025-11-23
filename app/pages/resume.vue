@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PagesEnCollectionItem, PagesFrCollectionItem } from '@nuxt/content'
+import type { PagesCollectionItem } from '@nuxt/content'
 
 definePageMeta({
   layout: 'resume',
@@ -7,14 +7,14 @@ definePageMeta({
 
 const $config = useRuntimeConfig()
 
-const { data: page } = await useAsyncPageContentData('/resume')
+const { data: page } = await useAsyncPageContentData('resume')
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
 useHead({
-  title: computed(() => (page.value as PagesFrCollectionItem | PagesEnCollectionItem).title),
+  title: computed(() => (page.value as PagesCollectionItem).title),
 })
 
 const mdcVars = {
