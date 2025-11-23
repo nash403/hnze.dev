@@ -1,3 +1,6 @@
+showLetsMeetLink: true
+currentCountryFlag: flagpack:fr
+currentCity: Rennes
 items:
   - icon: mdi:rocket-launch
     slug: /why-hire-me
@@ -11,7 +14,3 @@ items:
     slug: /resume
     label: CV
 
-showLetsMeetLink: true
-
-currentCountryFlag: flagpack:fr
-currentCity: Rennes

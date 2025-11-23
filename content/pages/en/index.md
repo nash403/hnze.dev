@@ -29,6 +29,7 @@ technologies:
   -
     name: SQL & NoSQL - Database Management
     icon: bi:filetype-sql
+    to: https://en.wikipedia.org/wiki/SQL
   -
     name: Docker - Devops & Containerization
     icon: logos:docker-icon

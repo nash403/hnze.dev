@@ -23,3 +23,5 @@ type DD = `${0}${FigureOneToNine}` | `${1 | 2}${FigureZeroToNine}` | `3${0 | 1}`
 export type DateStringDashed = `${YYYY}-${MM}-${DD}`
 
 export type ExternalURL = `http${'s' | ''}://${string}`
+
+export * from './content'

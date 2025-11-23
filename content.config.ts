@@ -1,22 +1,43 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content'
+import { z } from 'zod/v4'
+
+// Schéma réutilisable pour les données de navigation (fr/en)
+export const navigationBarSchema = z.object({
+  items: z
+    .array(
+      z.object({
+        icon: z.string().optional(),
+        slug: z.string(),
+        label: z.string(),
+        minBreakpoint: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl']).optional(),
+        iconMinBreakpoint: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl']).optional(),
+      }),
+    )
+    .optional(),
+  showLetsMeetLink: z.boolean().optional(),
+  currentCountryFlag: z.string().optional(),
+  currentCity: z.string().optional(),
+})
 
 export default defineContentConfig({
   collections: {
 
     // Navigation data
-    // navigation_fr: defineCollection({
-    //   type: 'data',
-    //   source: {
-    //     include: 'data/navigation.fr.yml',
-    //   },
-    // }),
+    navigation_fr: defineCollection({
+      type: 'data',
+      source: {
+        include: 'data/navigation.fr.yml',
+      },
+      schema: navigationBarSchema,
+    }),
 
-    // navigation_en: defineCollection({
-    //   type: 'data',
-    //   source: {
-    //     include: 'data/navigation.en.yml',
-    //   },
-    // }),
+    navigation_en: defineCollection({
+      type: 'data',
+      source: {
+        include: 'data/navigation.en.yml',
+      },
+      schema: navigationBarSchema,
+    }),
 
     // Pages fed with md content
     pages_fr: defineCollection({
@@ -32,21 +53,6 @@ export default defineContentConfig({
       source: {
         include: 'pages/en/**/*.md',
         prefix: '',
-      },
-    }),
-
-    // Single page CV
-    resume_fr: defineCollection({
-      type: 'page',
-      source: {
-        include: 'cv/resume_fr.md',
-      },
-    }),
-
-    resume_en: defineCollection({
-      type: 'page',
-      source: {
-        include: 'cv/resume_en.md',
       },
     }),
 

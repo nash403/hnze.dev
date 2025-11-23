@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
+import type { BlogEnCollectionItem, BlogFrCollectionItem, Collections } from '@nuxt/content'
 import { withLeadingSlash } from 'ufo'
 
 const $config = useRuntimeConfig()
@@ -27,7 +27,7 @@ if (!page.value) {
 }
 
 useHead({
-  title: computed(() => page.value?.title),
+  title: computed(() => (page.value as BlogFrCollectionItem | BlogEnCollectionItem).title),
 })
 </script>
 

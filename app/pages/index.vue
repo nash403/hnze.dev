@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { PagesEnCollectionItem, PagesFrCollectionItem } from '@nuxt/content'
+
 const { data: page } = await useAsyncPageContentData('/')
 
 if (!page.value) {
@@ -6,7 +8,7 @@ if (!page.value) {
 }
 
 useHead({
-  title: computed(() => page.value?.title),
+  title: computed(() => (page.value as PagesFrCollectionItem | PagesEnCollectionItem).title),
 })
 </script>
 

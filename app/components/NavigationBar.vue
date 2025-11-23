@@ -1,34 +1,30 @@
 <script lang="ts" setup>
-// import type { Collections } from '@nuxt/content'
+import type { Collections, NavigationEnCollectionItem, NavigationFrCollectionItem } from '@nuxt/content'
 
-// // const $config = useRuntimeConfig()
+const $config = useRuntimeConfig()
 const localePath = useLocalePath()
-// const { locale } = useI18n()
+const { locale } = useI18n()
 
-// // Fetch navigation data based on current locale
-// const { data: navigationData } = await useAsyncData(
-//   `navigation-${locale.value}`,
-//   async () => {
-//     // Build collection name based on current locale
-//     const content = await queryCollection((`navigation_${locale.value}`) as keyof Collections).path(`/data/navigation.${locale.value}`).first()
+// Fetch navigation data based on current locale
+const { data: navigationData } = await useAsyncData(
+  `navigation-${locale.value}`,
+  async () => {
+    // Build collection name based on current locale
+    const content = await queryCollection((`navigation_${locale.value}`) as keyof Collections).first()
 
-//     // Fallback to default locale if content is missing
-//     // if (!content && locale.value !== $config.public.i18n.defaultLocale) {
-//     //   return await queryCollection((`navigation_${$config.public.i18n.defaultLocale}`) as keyof Collections).path(`/data/navigation.${$config.public.i18n.defaultLocale}`).first()
-//     // }
-//     console.log('cwew', content)
-//     return content
-//   },
-//   { watch: [locale] },
-// )
+    // Fallback to default locale if content is missing
+    if (!content && locale.value !== $config.public.i18n.defaultLocale) {
+      return await queryCollection((`navigation_${$config.public.i18n.defaultLocale}`) as keyof Collections).first()
+    }
 
-// const navItems = computed(() => navigationData.value?.items || [])
-// const showLetsMeetLink = computed(() => navigationData.value?.showLetsMeetLink ?? true)
-// const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
+    return content as NavigationFrCollectionItem | NavigationEnCollectionItem
+  },
+  { watch: [locale] },
+)
 
-const navItems = ref([])
-const showLetsMeetLink = ref(true)
-const toggleMenuMaxBreakpointVisible = ref('md')
+const navItems = computed(() => (navigationData.value?.meta as NavigationBar)?.items || [])
+const showLetsMeetLink = computed(() => (navigationData.value?.meta as NavigationBar).showLetsMeetLink ?? true)
+const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
 // FIXME: no links should glow when toggle menu is opened
 // FIXME: watch resize to automatically close menu when resizing above breakpoint

@@ -29,6 +29,7 @@ technologies:
   -
     name: SQL & NoSQL - Gestion de bases de données
     icon: bi:filetype-sql
+    to: https://fr.wikipedia.org/wiki/Structured_Query_Language
   -
     name: Docker - Devops & Conteneurisation
     icon: logos:docker-icon
