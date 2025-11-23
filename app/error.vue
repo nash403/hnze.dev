@@ -42,8 +42,10 @@ const message = computed(
   () => t(`app.error.message.${code.value}`) || t('app.error.message.500'),
 )
 
-const handleHome = () => clearError({ redirect: '/' })
+const localePath = useLocalePath()
+const handleHome = () => clearError({ redirect: localePath('index') })
 const handleRefresh = () => window.location.reload()
+const handleContactMe = () => clearError({ redirect: localePath('lets-meet') })
 </script>
 
 <template>
@@ -103,12 +105,13 @@ const handleRefresh = () => window.location.reload()
             {{ t("app.error.button.refresh") }}
           </button>
 
-          <NuxtLink
-            to="/lets-meet"
+          <button
+            type="button"
             class="btn btn-ghost"
+            @click="handleContactMe"
           >
             {{ t("app.error.button.contact") }}
-          </NuxtLink>
+          </button>
         </div>
       </div>
     </div>
