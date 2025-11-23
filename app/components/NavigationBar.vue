@@ -1,33 +1,34 @@
 <script lang="ts" setup>
-type NavItem = {
-  icon?: string
-  slug: string
-  label: string
-  minBreakpoint?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  iconMinBreakpoint?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-}
+// import type { Collections } from '@nuxt/content'
 
+// // const $config = useRuntimeConfig()
 const localePath = useLocalePath()
-const navItems: Ref<NavItem[]> = ref([
-  {
-    icon: 'mdi:rocket-launch',
-    slug: '/why-hire-me',
-    label: 'Mes super-pouvoirs',
-    minBreakpoint: 'md',
-  },
-  {
-    icon: 'line-md:coffee-half-empty-filled-loop',
-    slug: '/your-needs',
-    label: 'Discutons-en',
-    minBreakpoint: 'md',
-  },
-  {
-    icon: 'line-md:clipboard-list',
-    slug: '/resume',
-    label: 'CV',
-  },
-])
-const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
+// const { locale } = useI18n()
+
+// // Fetch navigation data based on current locale
+// const { data: navigationData } = await useAsyncData(
+//   `navigation-${locale.value}`,
+//   async () => {
+//     // Build collection name based on current locale
+//     const content = await queryCollection((`navigation_${locale.value}`) as keyof Collections).path(`/data/navigation.${locale.value}`).first()
+
+//     // Fallback to default locale if content is missing
+//     // if (!content && locale.value !== $config.public.i18n.defaultLocale) {
+//     //   return await queryCollection((`navigation_${$config.public.i18n.defaultLocale}`) as keyof Collections).path(`/data/navigation.${$config.public.i18n.defaultLocale}`).first()
+//     // }
+//     console.log('cwew', content)
+//     return content
+//   },
+//   { watch: [locale] },
+// )
+
+// const navItems = computed(() => navigationData.value?.items || [])
+// const showLetsMeetLink = computed(() => navigationData.value?.showLetsMeetLink ?? true)
+// const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
+
+const navItems = ref([])
+const showLetsMeetLink = ref(true)
+const toggleMenuMaxBreakpointVisible = ref('md')
 
 // FIXME: no links should glow when toggle menu is opened
 // FIXME: watch resize to automatically close menu when resizing above breakpoint
@@ -92,6 +93,7 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
         </NuxtLink>
 
         <NuxtLink
+          v-if="showLetsMeetLink"
           :to="localePath('lets-meet')"
           class="hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium text-base-content-900 hover:bg-primary-100 focus:bg-primary-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center"
           active-class="bg-primary-100 hover:ring-2 hover:ring-primary-200"
