@@ -101,7 +101,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    defaultLocale: process.env.DEFAULT_LOCALE || 'fr',
+    defaultLocale: process.env.DEFAULT_LOCALE || 'en',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -111,12 +111,12 @@ export default defineNuxtConfig({
     // customRoutes: 'meta',
     locales: [
       {
-        code: 'fr', language: 'fr', file: 'fr-FR.json', name: 'FR',
-        disabled: false /* disable in the language switcher UI */,
-      },
-      {
         code: 'en', language: 'en', file: 'en-US.json', name: 'EN',
         disabled: false,
+      },
+      {
+        code: 'fr', language: 'fr', file: 'fr-FR.json', name: 'FR',
+        disabled: false /* disable in the language switcher UI */,
       },
     ],
   },
