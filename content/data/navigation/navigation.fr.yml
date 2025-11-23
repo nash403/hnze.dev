@@ -8,7 +8,7 @@ items:
     minBreakpoint: md
   - icon: line-md:chat-round-dots
     slug: /your-needs
-    label: Engagez-moi
+    label: Me contacter
     minBreakpoint: md
   - icon: line-md:clipboard-list
     slug: /resume
