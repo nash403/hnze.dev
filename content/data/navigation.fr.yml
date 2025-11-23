@@ -12,3 +12,6 @@ items:
     label: CV
 
 showLetsMeetLink: true
+
+currentCountryFlag: flagpack:fr
+currentCity: Rennes

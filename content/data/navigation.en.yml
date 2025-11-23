@@ -12,3 +12,6 @@ items:
     label: Resume
 
 showLetsMeetLink: true
+
+currentCountryFlag: flagpack:fr
+currentCity: Rennes
