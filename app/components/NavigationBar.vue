@@ -26,6 +26,14 @@ const navItems = computed(() => (navigationData.value?.meta as NavigationBar)?.i
 const showLetsMeetLink = computed(() => (navigationData.value?.meta as NavigationBar).showLetsMeetLink ?? true)
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
+// Track whether the burger menu is open and close it when navigation occurs
+const menuOpen = ref(false)
+const route = useRoute()
+
+watch([() => route.fullPath, navigationData], () => {
+  menuOpen.value = false
+})
+
 // FIXME: no links should glow when toggle menu is opened
 // FIXME: watch resize to automatically close menu when resizing above breakpoint
 </script>
@@ -51,6 +59,7 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
         }"
       >
         <input
+          v-model="menuOpen"
           type="checkbox"
           :aria-label="$t('app.navbar.toggle_menu_label')"
           class="peer sr-only"

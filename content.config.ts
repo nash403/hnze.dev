@@ -26,7 +26,7 @@ export default defineContentConfig({
     navigation_fr: defineCollection({
       type: 'data',
       source: {
-        include: 'data/navigation.fr.yml',
+        include: 'data/navigation/navigation.fr.yml',
       },
       schema: navigationBarSchema, // FIXME: fix TS error on Zod type
     }),
@@ -34,7 +34,7 @@ export default defineContentConfig({
     navigation_en: defineCollection({
       type: 'data',
       source: {
-        include: 'data/navigation.en.yml',
+        include: 'data/navigation/navigation.en.yml',
       },
       schema: navigationBarSchema, // FIXME: fix TS error on Zod type
     }),

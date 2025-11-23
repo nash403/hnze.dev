@@ -4,11 +4,11 @@ currentCity: Rennes
 items:
   - icon: mdi:rocket-launch
     slug: /why-hire-me
-    label: My superpowers
+    label: My super-powers
     minBreakpoint: md
-  - icon: line-md:coffee-half-empty-filled-loop
+  - icon: line-md:chat-filled
     slug: /your-needs
-    label: Let's discuss
+    label: Hire me!
     minBreakpoint: md
   - icon: line-md:clipboard-list
     slug: /resume

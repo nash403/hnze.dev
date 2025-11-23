@@ -39,5 +39,6 @@ technologies:
 Hi, my name is [Honoré]{.bg-gradient-to-br .from-primary.to-accent.bg-clip-text.text-transparent}.
 #intro
 I am a passionate full-stack web developer with expertise in modern web technologies. I create high-performance, scalable applications using Vue.js, Nuxt, and the broader JavaScript ecosystem. With a strong commitment to code quality, accessibility, and user experience, I help turn ideas into exceptional digital solutions. Whether working on complex full-stack applications or optimizing web performance, I bring technical excellence and innovative thinking to every project.
+Let's talk about your project
 ::
 

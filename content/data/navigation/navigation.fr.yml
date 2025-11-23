@@ -6,9 +6,9 @@ items:
     slug: /why-hire-me
     label: Mes super-pouvoirs
     minBreakpoint: md
-  - icon: line-md:coffee-half-empty-filled-loop
+  - icon: line-md:chat-filled
     slug: /your-needs
-    label: Discutons-en
+    label: Engagez-moi!
     minBreakpoint: md
   - icon: line-md:clipboard-list
     slug: /resume
