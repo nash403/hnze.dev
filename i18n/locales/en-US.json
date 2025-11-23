@@ -10,5 +10,15 @@
   "app.page_resume.section_skills.languages_spoken": "Spoken Languages",
   "app.page_resume.section_skills.title": "Skills",
   "app.page_resume.section_work.title": "Experiences",
-  "app.page_uses.meta.title": "Tools"
+  "app.page_uses.meta.title": "Tools",
+  "app.error.title": "{code} - {type}",
+  "app.error.type.404": "Not Found",
+  "app.error.type.500": "Server Error",
+  "app.error.type.503": "Maintenance",
+  "app.error.message.404": "Oh no! The page you are looking for doesn't exist or\nhas been removed. Maybe a ghost took it — try going back home.",
+  "app.error.message.500": "Oops — something went wrong. Try refreshing this page later or\nfeel free to contact me if the problem persists.",
+  "app.error.message.503": "This page is under maintenance. Try refreshing this page later or\nfeel free to contact me if the problem persists.",
+  "app.error.button.home": "Go back to the homepage",
+  "app.error.button.refresh": "Refresh",
+  "app.error.button.contact": "Contact me"
 }

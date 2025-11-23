@@ -26,6 +26,11 @@ const navItems = computed(() => (navigationData.value?.meta as NavigationBar)?.i
 const showLetsMeetLink = computed(() => (navigationData.value?.meta as NavigationBar).showLetsMeetLink ?? true)
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
+// FIXME: remove when error page fully tested for 500 errors
+// onMounted(() => {
+//   navItems.value.split()
+// })
+
 // Track whether the burger menu is open and close it when navigation occurs
 const menuOpen = ref(false)
 const route = useRoute()
@@ -34,7 +39,7 @@ watch([() => route.fullPath, navigationData], () => {
   menuOpen.value = false
 })
 
-// FIXME: no links should glow when toggle menu is opened
+// FIXME: links should not glow when mobile menu is opened
 // FIXME: watch resize to automatically close menu when resizing above breakpoint
 </script>
 

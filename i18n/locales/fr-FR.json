@@ -47,5 +47,15 @@
   "shared.social.names.gitlab": "Gitlab",
   "shared.social.names.instagram": "Instagram",
   "shared.social.names.linkedin": "LinkedIn",
-  "shared.social.names.x": "Twitter / X"
+  "shared.social.names.x": "Twitter / X",
+  "app.error.title": "{code} - {type}",
+  "app.error.type.404": "Page introuvable",
+  "app.error.type.500": "Erreur serveur",
+  "app.error.type.503": "Maintenance",
+  "app.error.message.404": "Oh non ! La page que vous cherchez n'existe pas ou\na été supprimée. Peut-être qu'un fantôme l'a emportée — retournez à l'accueil.",
+  "app.error.message.500": "Oups — quelque chose s'est mal passé. Essayez de rafraîchir cette page plus tard ou\nn'hésitez pas à me contacter si le problème persiste.",
+  "app.error.message.503": "Cette page est en maintenance. Essayez de rafraîchir la page plus tard ou\nn'hésitez pas à me contacter si le problème persiste.",
+  "app.error.button.home": "Retour à l'accueil",
+  "app.error.button.refresh": "Rafraîchir",
+  "app.error.button.contact": "Me contacter"
 }
