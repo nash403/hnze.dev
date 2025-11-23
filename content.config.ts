@@ -28,7 +28,7 @@ export default defineContentConfig({
       source: {
         include: 'data/navigation.fr.yml',
       },
-      schema: navigationBarSchema,
+      schema: navigationBarSchema, // FIXME: fix TS error on Zod type
     }),
 
     navigation_en: defineCollection({
@@ -36,7 +36,7 @@ export default defineContentConfig({
       source: {
         include: 'data/navigation.en.yml',
       },
-      schema: navigationBarSchema,
+      schema: navigationBarSchema, // FIXME: fix TS error on Zod type
     }),
 
     // Pages fed with md content
