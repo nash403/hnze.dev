@@ -81,19 +81,11 @@ watch([() => route.fullPath, navigationData], () => {
           :title="$t('app.link_go_home')"
           class="flex items-center"
         >
-          <!-- <Icon
+          <!-- aria-label="Logo Hnze"
+        title="Logo Hnze" -->
+          <Icon
             name="hnze:hnze-logo"
             class="size-(--header-h) hover:animate-text-glow"
-          /> -->
-          <NuxtImg
-            src="/img/hnze.svg"
-            fit="inside"
-            class="object-contain hover:animate-text-glow"
-            style="height: var(--header-h); width: var(--header-h)"
-            height="72"
-            width="72"
-            quality="90"
-            format="webp,auto"
           />
         </NuxtLink>
 
