@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-default-sans">
     <PageSeoWrapper>
       <slot></slot>
     </PageSeoWrapper>

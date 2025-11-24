@@ -1,5 +1,6 @@
 /* Fonts */
 @theme {
+  --font-default-sans: Inter, system-ui, sans-serif;
   --font-body: "DM Sans", Inter, system-ui, sans-serif;
   --font-nav: Inter;
   --font-footer: Inter;
