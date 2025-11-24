@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const localePath = useLocalePath()
 
-const { data: navigationData } = useAsyncNavigationContentData()
+const { data: navigationData } = await useAsyncNavigationContentData()
 
 const navItems = computed(() => navigationData.value?.items || [])
 const showLetsMeetLink = computed(() => navigationData.value?.showLetsMeetLink ?? true)
@@ -21,14 +21,14 @@ watch([() => route.fullPath, navigationData], () => {
 
 <template>
   <header
-    class="sticky top-0 z-40 w-full backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-[:checked]:[mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-[:checked]:after:via-primary has-[:checked]:bg-base-200 supports-[backdrop-filter]:backdrop-saturate-[150%]"
+    class="sticky top-0 z-40 w-full backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-checked:mask-[linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:bg-linear-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-checked:after:via-primary has-checked:bg-base-200 supports-backdrop-filter:backdrop-saturate-150"
   >
     <div
       class="relative mx-auto flex max-w-6xl items-center justify-between pr-4 sm:py-0 sm:pr-8 md:px-8"
     >
       <!-- Burger menu icon as checkbox input -->
       <label
-        class="peer group relative mr-2 cursor-pointer border-r-2 border-r-base-content-600 px-2 py-3 outline-none has-[:focus-visible]:ring-2"
+        class="peer group relative mr-2 cursor-pointer border-r-2 border-r-base-content-600 px-2 py-3 outline-none has-focus-visible:ring-2"
         :class="{
           'hidden': !toggleMenuMaxBreakpointVisible,
           'xs:hidden': toggleMenuMaxBreakpointVisible === 'xs',
@@ -83,8 +83,7 @@ watch([() => route.fullPath, navigationData], () => {
 
       <!-- Site navigation links -->
       <nav
-        v-if="navItems.length > 0"
-        class="invisible absolute inset-x-0 top-full z-50 ml-auto bg-base-200 pr-4 pl-8 opacity-0 duration-300 ease-linear peer-has-[:checked]:visible peer-has-[:checked]:opacity-100 xs:visible xs:px-8"
+        class="invisible absolute inset-x-0 top-full z-50 ml-auto bg-base-200 pr-4 pl-8 opacity-0 duration-300 ease-linear peer-has-checked:visible peer-has-checked:opacity-100 xs:visible xs:px-8"
         :class="{
           'relative bg-transparent opacity-100': !toggleMenuMaxBreakpointVisible,
           'xs:relative xs:bg-transparent xs:opacity-100': toggleMenuMaxBreakpointVisible === 'xs',

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { UseClipboard } from '@vueuse/components'
 
-const { data: navigationData } = useAsyncNavigationContentData()
+const { data: navigationData } = await useAsyncNavigationContentData()
 
 const socialLinks = computed(() => navigationData.value?.socialLinks || [])
 </script>
