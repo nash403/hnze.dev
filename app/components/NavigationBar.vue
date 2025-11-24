@@ -1,29 +1,10 @@
 <script lang="ts" setup>
-import type { Collections, NavigationEnCollectionItem, NavigationFrCollectionItem } from '@nuxt/content'
-
-const $config = useRuntimeConfig()
 const localePath = useLocalePath()
-const { locale } = useI18n()
 
-// Fetch navigation data based on current locale
-const { data: navigationData } = await useAsyncData(
-  `navigation-${locale.value}`,
-  async () => {
-    // Build collection name based on current locale
-    const content = await queryCollection((`navigation_${locale.value}`) as keyof Collections).first()
+const { data: navigationData } = useAsyncNavigationContentData()
 
-    // Fallback to default locale if content is missing
-    if (!content && locale.value !== $config.public.i18n.defaultLocale) {
-      return await queryCollection((`navigation_${$config.public.i18n.defaultLocale}`) as keyof Collections).first()
-    }
-
-    return content as NavigationFrCollectionItem | NavigationEnCollectionItem
-  },
-  { watch: [locale] },
-)
-
-const navItems = computed(() => (navigationData.value?.meta as NavigationBar)?.items || [])
-const showLetsMeetLink = computed(() => (navigationData.value?.meta as NavigationBar).showLetsMeetLink ?? true)
+const navItems = computed(() => navigationData.value?.items || [])
+const showLetsMeetLink = computed(() => navigationData.value?.showLetsMeetLink ?? true)
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
 // FIXME: remove when error page fully tested for 500 errors
