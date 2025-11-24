@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
+    'unplugin-info',
   ],
 
   imports: {
@@ -111,11 +112,11 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
+      // Example declaration. Normally no need, just defining `font-family: MyFont;` in CSS should suffice.
       {
         name: 'Inter',
-        provider: 'google', // prend la font chez Google Fonts
-        weights: [400, 600, 700, 800], // choisis ce dont tu as besoin
-        subsets: ['latin'],
+        provider: 'google',
+        weights: [400, 800],
       },
     ],
   },

@@ -27,7 +27,7 @@ withDefaults(defineProps<Props>(), { technologies: () => [] })
         lg:w-1/2 lg:max-w-none lg:flex-1 lg:py-7 xl:py-8"
       >
         <div class="flex grow flex-col items-center text-center md:items-start md:text-left">
-          <h1 class="mb-4 text-3xl font-bold sm:text-4xl md:mb-6 md:text-5xl">
+          <h1 class="mb-4 font-headline text-3xl font-bold sm:text-4xl md:mb-6 md:text-5xl">
             <slot
               name="headline"
               mdc-unwrap="p"

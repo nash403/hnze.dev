@@ -1,14 +1,33 @@
 <script lang="ts" setup>
+import { useStorage } from '@vueuse/core'
 import { UseClipboard } from '@vueuse/components'
+import { LS_APP_BUILD_VERSION_KEY } from '~/lib/constants'
 
 const props = withDefaults(defineProps<{
   navigationData?: NavigationBar
 }>(), {})
 const socialLinks = computed(() => props.navigationData?.socialLinks || [])
+
+const build = useBuildInfos()
+const currentVersion = build.git?.abbreviatedSha
+
+const appState = useAppStateStore()
+const storedVersion = useStorage<string | null>(LS_APP_BUILD_VERSION_KEY, null)
+if (currentVersion !== storedVersion.value) {
+  if (storedVersion.value) {
+    appState.value.hasNewVersionAvailable = true
+  }
+  storedVersion.value = currentVersion
+}
+
+const reloadPage = async () => {
+  appState.value.hasNewVersionAvailable = false
+  window.location.reload()
+}
 </script>
 
 <template>
-  <div class="space-y-5 p-4 text-center sm:p-8 md:max-w-8xl">
+  <div class="space-y-5 p-4 text-center font-footer sm:p-8 md:max-w-8xl">
     <!-- Separator line -->
     <div
       role="separator"
@@ -82,6 +101,21 @@ const socialLinks = computed(() => props.navigationData?.socialLinks || [])
             class="text-base sm:text-xl"
           />
         </NuxtLink>
+      </template>
+    </div>
+    <div class="flex flex-col items-center gap-2">
+      <p class="text-xs text-base-content-700">
+        {{ $t('app.footer.version_uid', { version: currentVersion }) }}
+      </p>
+      <template v-if="appState.hasNewVersionAvailable">
+        <p>{{ $t('app.footer.new_version_available') }}</p>
+        <button
+          type="button"
+          class="btn btn-accent"
+          @click="reloadPage"
+        >
+          {{ $t('app.footer.btn_reload_page') }}
+        </button>
       </template>
     </div>
   </div>

@@ -364,7 +364,7 @@
 
 /* Application wide custom styles */
 body {
-  @apply font-default-sans text-base;
+  @apply font-body text-base;
   transition: background-color .3s;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

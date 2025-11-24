@@ -1,6 +1,10 @@
 {
   "app.footer.clone_website_link": "Fork-le!",
   "app.footer.copyright": "{copyrightDate} Honoré Nintunze. Tous droits reservés. Tu aimes ce site? {cloneIt}",
+  "app.footer.version_uid": "Version: {version}",
+  "app.footer.new_version_available": "Une nouvelle version est disponible! Rechargez la page :)",
+  "app.footer.btn_reload_page": "Recharger la page",
+  "app.footer.reload": "Fork-le!",
   "app.footer.menu.link_texts.about": "Mon profil",
   "app.footer.menu.link_texts.affiliation": "Liens affiliés",
   "app.footer.menu.link_texts.blog": "Blog",
