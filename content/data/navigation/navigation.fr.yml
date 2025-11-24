@@ -6,10 +6,11 @@ items:
     slug: /why-hire-me
     label: Mes super-pouvoirs
     minBreakpoint: md
-  - icon: line-md:chat-round-dots
-    slug: /your-needs
-    label: Me contacter
-    minBreakpoint: md
+  # TODO: implement this page later
+  # - icon: line-md:chat-round-dots
+  #   slug: /your-needs
+  #   label: Me contacter
+  #   minBreakpoint: md
   - icon: line-md:clipboard-list
     slug: /resume
     label: CV

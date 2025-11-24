@@ -50,70 +50,19 @@ const handleContactMe = () => clearError({ redirect: localePath('lets-meet') })
 
 <template>
   <NuxtLayout name="default">
-    <div class="flex min-h-[60vh] items-center justify-center px-6">
-      <div class="max-w-2xl text-center">
-        <!-- Error Icon -->
-        <div class="mb-6 flex items-center justify-center">
-          <div
-            class="flex h-40 w-40 items-center justify-center rounded-full"
-            :class="entry.bgColor[0]"
-          >
-            <div
-              class="flex h-28 w-28 items-center justify-center rounded-full"
-              :class="entry.bgColor[1]"
-            >
-              <div
-                class="flex h-20 w-20 items-center justify-center rounded-full"
-                :class="entry.bgColor[2]"
-              >
-                <Icon
-                  :name="entry.icon"
-                  class="text-6xl hover:animate-rubber-band"
-                  :class="entry.color"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Error title and description -->
-        <h2 class="mb-3 text-4xl font-extrabold">
-          {{ title }}
-        </h2>
-
-        <p
-          class="mb-6 text-lg whitespace-pre-line text-slate-600 dark:text-slate-300"
-        >
-          {{ message }}
-        </p>
-
-        <!-- Error actions -->
-        <div class="flex flex-wrap items-center justify-center gap-3">
-          <button
-            type="button"
-            class="btn btn-primary"
-            @click="handleHome"
-          >
-            {{ t("app.error.button.home") }}
-          </button>
-
-          <button
-            type="button"
-            class="btn btn-accent"
-            @click="handleRefresh"
-          >
-            {{ t("app.error.button.refresh") }}
-          </button>
-
-          <button
-            type="button"
-            class="btn btn-ghost btn-secondary"
-            @click="handleContactMe"
-          >
-            {{ t("app.error.button.contact") }}
-          </button>
-        </div>
-      </div>
-    </div>
+    <ErrorPanel
+      class="min-h-[60vh] px-6"
+      :title
+      :description="message"
+      :icon="entry.icon"
+      :icon-classes="entry.color"
+      :bg-classes="entry.bgColor"
+      :btn-primary-label="t('app.error.button.home')"
+      :btn-secondary-label="t('app.error.button.refresh')"
+      :btn-other-label="t('app.error.button.contact')"
+      @click-primary="handleHome"
+      @click-secondary="handleRefresh"
+      @click-other="handleContactMe"
+    />
   </NuxtLayout>
 </template>

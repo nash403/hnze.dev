@@ -316,7 +316,7 @@
 }
 
 @utility h-link-glow {
-    @apply relative pb-[2px];
+    @apply relative pb-0.5;
 
     &:before, &:after {
       position: absolute;
@@ -344,7 +344,7 @@
     }
 
     &:hover, &.active {
-      @apply animate-text-glow translate-y-[-1px] after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
+      @apply animate-text-glow -translate-y-px after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
     }
 
     /* &.router-link-active {
