@@ -44,9 +44,9 @@ withDefaults(defineProps<Props>(), { technologies: () => [] })
       </div>
       <ul class="flex flex-wrap gap-4">
         <li
-          v-for="item of technologies"
+          v-for="item of technologies.slice(0, 7)"
           :key="item.name"
-          class="flex flex-1 items-stretch justify-center"
+          class="flex flex-1 items-stretch justify-center text-lg 2xs:text-2xl xs:text-3xl sm:text-4xl"
         >
           <LogoCloud
             v-bind="item"

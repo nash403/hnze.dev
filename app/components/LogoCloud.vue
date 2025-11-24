@@ -8,10 +8,10 @@ export interface LogoCloudItem {
   icon?: IconifyIconName
   to?: string | RouteLocationRaw
   target?: HTMLAnchorElement['target']
-  sizeClass?: string
+  imgWidth?: string
 }
 
-withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', sizeClass: 'text-5xl sm:text-[56px]' })
+withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', imgWidth: '60' })
 </script>
 
 <template>
@@ -28,7 +28,7 @@ withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', sizeClass: 'text-
       v-if="src"
       :src="src"
       class="opacity-50 grayscale transition-all hover:opacity-100 hover:filter-none"
-      width="200"
+      :width="imgWidth"
       quality="90"
       format="webp,auto"
     />
@@ -36,7 +36,6 @@ withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', sizeClass: 'text-
       v-else-if="icon"
       :name="icon"
       class=" opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:drop-shadow-lg hover:grayscale-0 hover:filter-none "
-      :class="sizeClass"
     />
   </NuxtLink>
   <span
@@ -48,7 +47,7 @@ withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', sizeClass: 'text-
       v-if="src"
       :src="src"
       class=" opacity-50 grayscale transition-all hover:opacity-100 hover:filter-none"
-      width="200"
+      :width="imgWidth"
       quality="90"
       format="webp,auto"
     />
@@ -56,7 +55,6 @@ withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', sizeClass: 'text-
       v-else-if="icon"
       :name="icon"
       class="opacity-50 grayscale transition-all hover:opacity-100 hover:filter-none "
-      :class="sizeClass"
     />
   </span>
 </template>
