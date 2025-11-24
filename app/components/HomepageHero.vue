@@ -34,7 +34,7 @@ withDefaults(defineProps<Props>(), { technologies: () => [] })
             ></slot>
           </h1>
 
-          <p class="mb-8 max-w-lg text-base leading-relaxed text-base-content/75 sm:text-lg md:mb-10">
+          <p class="mb-8 max-w-lg text-xs leading-relaxed text-base-content/75 xs:text-base md:mb-10 md:text-lg">
             <slot
               name="intro"
               mdc-unwrap="p"

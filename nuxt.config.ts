@@ -116,7 +116,17 @@ export default defineNuxtConfig({
       {
         name: 'Inter',
         provider: 'google',
-        weights: [400, 800],
+        weights: [400, 500, 800],
+      },
+      {
+        name: 'DM Sans',
+        provider: 'google',
+        weights: [200, 400, 500, 800],
+      },
+      {
+        name: 'Merienda',
+        provider: 'google',
+        weights: [400, 500, 800],
       },
     ],
   },
