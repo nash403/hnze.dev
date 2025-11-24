@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-defineEmits(['click-primary', 'click-secondary', 'click-other']) // FIXME: add props for action handler when btn clicked and no event listener registered
+defineEmits(['click-primary', 'click-secondary', 'click-other'])
 
 withDefaults(defineProps<{
-  bgClasses?: string[]
+  bgClasses?: [string, string, string]
+  sizeClasses?: [string, string, string, string]
   icon: string
   iconClasses?: string
   title?: string
@@ -10,10 +11,13 @@ withDefaults(defineProps<{
   btnPrimaryLabel?: string
   btnSecondaryLabel?: string
   btnOtherLabel?: string
+  btnClickedHandler?: (clickedBtnName: string) => void
 }>(), {
+  sizeClasses: () => ['h-40 w-40', 'h-28 w-28', 'h-20 w-20', 'text-6xl'],
   btnPrimaryLabel: '',
   btnSecondaryLabel: '',
   btnOtherLabel: '',
+  btnClickedHandler: () => {},
 })
 </script>
 
@@ -24,21 +28,21 @@ withDefaults(defineProps<{
       <div class="mb-6 flex items-center justify-center">
         <!-- TODO: create component with a prop that says "render root node if true otherwise only slot content" -->
         <div
-          class="flex h-40 w-40 items-center justify-center rounded-full"
-          :class="bgClasses?.[0] ?? ''"
+          class="flex items-center justify-center rounded-full"
+          :class="[bgClasses?.[0] ?? '', sizeClasses[0]]"
         >
           <div
-            class="flex h-28 w-28 items-center justify-center rounded-full"
-            :class="bgClasses?.[1] ?? ''"
+            class="flex items-center justify-center rounded-full"
+            :class="[bgClasses?.[1] ?? '', sizeClasses[1]]"
           >
             <div
-              class="flex h-20 w-20 items-center justify-center rounded-full"
-              :class="bgClasses?.[2] ?? ''"
+              class="flex items-center justify-center rounded-full"
+              :class="[bgClasses?.[2] ?? '', sizeClasses[2]]"
             >
               <Icon
                 :name="icon"
-                class="text-6xl hover:animate-rubber-band"
-                :class="iconClasses ?? ''"
+                class="hover:animate-rubber-band"
+                :class="[iconClasses ?? '', sizeClasses[3]]"
               />
             </div>
           </div>
@@ -72,7 +76,7 @@ withDefaults(defineProps<{
           v-if="btnPrimaryLabel"
           type="button"
           class="btn btn-primary"
-          @click="$emit('click-primary')"
+          @click="() => { $emit('click-primary'); btnClickedHandler?.('primary') }"
         >
           {{ btnPrimaryLabel }}
         </button>
@@ -81,7 +85,7 @@ withDefaults(defineProps<{
           v-if="btnSecondaryLabel"
           type="button"
           class="btn btn-accent"
-          @click="$emit('click-secondary')"
+          @click="() => { $emit('click-secondary'); btnClickedHandler?.('secondary') }"
         >
           {{ btnSecondaryLabel }}
         </button>
@@ -90,7 +94,7 @@ withDefaults(defineProps<{
           v-if="btnOtherLabel"
           type="button"
           class="btn btn-ghost hover:bg-secondary"
-          @click="$emit('click-other')"
+          @click="() => { $emit('click-other'); btnClickedHandler?.('other') }"
         >
           {{ btnOtherLabel }}
         </button>

@@ -20,5 +20,7 @@
   "app.error.message.503": "This page is under maintenance. Try refreshing this page later or\nfeel free to contact me if the problem persists.",
   "app.error.button.home": "Go back to the homepage",
   "app.error.button.refresh": "Refresh",
-  "app.error.button.contact": "Contact me"
+  "app.error.button.contact": "Contact me",
+  "shared.element_under_construction_panel.title": "I am still building this!",
+  "shared.element_under_construction_panel.description": "This page is a work in progress. Check back soon for something cool!"
 }
