@@ -7,11 +7,6 @@ const navItems = computed(() => navigationData.value?.items || [])
 const showLetsMeetLink = computed(() => navigationData.value?.showLetsMeetLink ?? true)
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
-// FIXME: remove when error page fully tested for 500 errors
-// onMounted(() => {
-//   navItems.value.split()
-// })
-
 // Track whether the burger menu is open and close it when navigation occurs
 const menuOpen = ref(false)
 const route = useRoute()
