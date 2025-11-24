@@ -23,6 +23,10 @@ socialLinks:
     icon: mingcute:linkedin-fill
     label: Connectez-vous avec moi sur LinkedIn
     href: https://linkedin.com/in/nash403/
+  - id: malt
+    icon: hnze:malt
+    label: Engagez moi sur Malt
+    href: https://www.malt.fr/profile/honorenintunze1
   - id: github
     icon: mingcute:github-fill
     label: Retrouvez-moi sur GitHub
