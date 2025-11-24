@@ -68,7 +68,7 @@ const handleContactMe = () => clearError({ redirect: localePath('lets-meet') })
               >
                 <Icon
                   :name="entry.icon"
-                  class="text-6xl"
+                  class="text-6xl hover:animate-rubber-band"
                   :class="entry.color"
                 />
               </div>
@@ -88,7 +88,7 @@ const handleContactMe = () => clearError({ redirect: localePath('lets-meet') })
         </p>
 
         <!-- Error actions -->
-        <div class="flex items-center justify-center gap-3">
+        <div class="flex flex-wrap items-center justify-center gap-3">
           <button
             type="button"
             class="btn btn-primary"
@@ -99,7 +99,7 @@ const handleContactMe = () => clearError({ redirect: localePath('lets-meet') })
 
           <button
             type="button"
-            class="btn btn-outline"
+            class="btn btn-accent"
             @click="handleRefresh"
           >
             {{ t("app.error.button.refresh") }}
@@ -107,7 +107,7 @@ const handleContactMe = () => clearError({ redirect: localePath('lets-meet') })
 
           <button
             type="button"
-            class="btn btn-ghost"
+            class="btn btn-ghost btn-secondary"
             @click="handleContactMe"
           >
             {{ t("app.error.button.contact") }}
