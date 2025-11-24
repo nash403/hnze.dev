@@ -48,7 +48,6 @@ export default defineNuxtConfig({
     preference: 'light', // default value of $colorMode.preference
     fallback: defaultColorMode, // fallback value if not system preference found
     dataValue: 'theme',
-    hid: 'hnze-nuxt-color-mode-script',
     globalName: '__NUXT_COLOR_MODE__',
     componentName: 'ColorScheme',
     classPrefix: '',
@@ -108,6 +107,17 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
+  },
+
+  fonts: {
+    families: [
+      {
+        name: 'Inter',
+        provider: 'google', // prend la font chez Google Fonts
+        weights: [400, 600, 700, 800], // choisis ce dont tu as besoin
+        subsets: ['latin'],
+      },
+    ],
   },
 
   i18n: {

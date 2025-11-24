@@ -21,7 +21,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
 
 <template>
   <header
-    class="sticky top-0 z-40 w-full backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-checked:mask-[linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:bg-linear-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-checked:after:via-primary has-checked:bg-base-200 supports-backdrop-filter:backdrop-saturate-150"
+    class="sticky top-0 z-40 w-full font-mono text-sm backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-checked:mask-[linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:bg-linear-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-checked:after:via-primary has-checked:bg-base-200 supports-backdrop-filter:backdrop-saturate-150"
   >
     <div
       class="relative mx-auto flex max-w-6xl items-center justify-between pr-4 sm:py-0 sm:pr-8 md:px-8"
@@ -73,7 +73,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
         <NuxtLink
           v-if="navigationData?.showLetsMeetLink ?? true"
           :to="localePath('lets-meet')"
-          class="hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 font-mono text-sm font-medium text-base-content-900 hover:bg-primary-100 focus:bg-primary-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center"
+          class="hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 text-base-content-900 hover:bg-primary-100 focus:bg-primary-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center"
           active-class="bg-primary-100 hover:ring-2 hover:ring-primary-200"
         >
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->

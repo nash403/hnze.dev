@@ -5,11 +5,6 @@
   themes: light, dark;
 }
 
-/* Fonts */
-@theme {
-  --font-default-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 /* Spacing, Layout, Sizes */
 @theme {
   --breakpoint-2xs: 23rem;
@@ -289,12 +284,13 @@
   }
 }
 
-@source "../../../content/**/*";
-@source inline("badge, badge-info"); /* FIXME: workaround for daisyui/tw classes not being detected in md files */
-
 @import './variables.css';
 @import './fonts.css';
 @import './print.css';
+
+@source "../../../content/**/*";
+@source inline("badge, badge-info"); /* FIXME: workaround for daisyui/tw classes not being detected in md files */
+
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 @custom-variant light (&:where([data-theme=light], [data-theme=light] *));
