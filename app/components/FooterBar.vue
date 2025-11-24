@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import { UseClipboard } from '@vueuse/components'
 
-const { data: navigationData } = await useAsyncNavigationContentData()
-
-const socialLinks = computed(() => navigationData.value?.socialLinks || [])
+const props = withDefaults(defineProps<{
+  navigationData?: NavigationBar
+}>(), {})
+const socialLinks = computed(() => props.navigationData?.socialLinks || [])
 </script>
 
 <template>

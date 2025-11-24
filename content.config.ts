@@ -1,6 +1,6 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content'
 // Using relative paths as nuxt aliases and auto-import paths are not available in this file's context
-import { navigationBarSchema } from './shared/types/content'
+import { navigationBarSchema } from './shared/types'
 
 export default defineContentConfig({
   collections: {

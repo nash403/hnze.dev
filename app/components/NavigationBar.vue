@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-const localePath = useLocalePath()
+const props = withDefaults(defineProps<{
+  navigationData?: NavigationBar
+}>(), {})
 
-const { data: navigationData } = await useAsyncNavigationContentData()
+const localePath = useLocalePath()
 
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
@@ -9,7 +11,7 @@ const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg'
 const menuOpen = ref(false)
 const route = useRoute()
 
-watch([() => route.fullPath, navigationData], () => {
+watch([() => route.fullPath, () => props.navigationData], () => {
   menuOpen.value = false
 })
 
