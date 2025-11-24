@@ -1,5 +1,5 @@
 ---
-title: "Let's meet!"
+title: "Let's go grab a coffee!"
 description: "Let's discuss your projects and see how I can help"
 ---
 

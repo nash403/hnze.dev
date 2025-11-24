@@ -129,6 +129,7 @@ export default defineNuxtConfig({
         disabled: false /* disable in the language switcher UI */,
       },
     ],
+    // baseUrl: 'https://hnze.dev', // Use NUXT_PUBLIC_I18N_BASE_URL to configure
   },
 
   icon: {

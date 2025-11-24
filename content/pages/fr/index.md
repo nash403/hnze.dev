@@ -1,5 +1,5 @@
 ---
-title: 'Hnze dev'
+title: 'hnze.dev'
 description: Page d'accueil d'Honoré Nintunze, développeur web full-stack passionné
 ---
 
