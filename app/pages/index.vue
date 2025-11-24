@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import type { PagesCollectionItem } from '@nuxt/content'
 
-definePageMeta({
-  layout: 'home',
-})
-
 const { data: page } = await useAsyncPageContentData('')
 
 if (!page.value) {
