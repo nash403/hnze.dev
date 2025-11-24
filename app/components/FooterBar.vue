@@ -28,6 +28,7 @@ const socialLinks = computed(() => navigationData.value?.socialLinks || [])
     <i18n-t
       keypath="app.footer.copyright"
       tag="p"
+      class="text-sm"
     >
       <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
       <template #copyrightDate>
