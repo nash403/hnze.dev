@@ -7,6 +7,7 @@
 
 <template>
   <div>
+    <!-- <slot></slot> -->
     <!-- <Html
       :lang="head.htmlAttrs.lang"
       :dir="head.htmlAttrs.dir"
@@ -35,9 +36,11 @@
           />
         </template>
       </Head>
-      <Body> -->
-    <slot></slot>
-    <!-- </Body>
+      <Body>
+        <div>
+          <slot></slot>
+        </div>
+      </Body>
     </Html> -->
   </div>
 </template>

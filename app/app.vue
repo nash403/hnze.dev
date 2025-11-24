@@ -1,14 +1,14 @@
 <script setup lang="ts">
-const config = useRuntimeConfig()
+const $config = useRuntimeConfig()
 
 // const route = useRoute()
-// const head = useLocaleHead()
+// const _head = useLocaleHead()
 // const { t } = useI18n()
-// const title = computed(() => t(route.meta.title as string, route.meta.title as string))
+// const _title = computed(() => t(route.meta.title as string, route.meta.title as string))
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} ${config.public.siteNameSeparator} ${config.public.siteName}` : `${config.public.siteName}`
+    return titleChunk ? `${titleChunk} ${$config.public.siteNameSeparator} ${$config.public.siteName}` : `${$config.public.siteName}`
   },
 })
 </script>
