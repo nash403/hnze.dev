@@ -42,7 +42,7 @@ withDefaults(defineProps<Props>(), { technologies: () => [] })
           </p>
         </div>
       </div>
-      <ul class="flex flex-wrap gap-4">
+      <ul class="flex max-w-lg flex-wrap gap-4">
         <li
           v-for="item of technologies.slice(0, 7)"
           :key="item.name"
