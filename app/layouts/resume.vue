@@ -7,7 +7,7 @@
 
 <template>
   <div>
-    <!-- <slot></slot> -->
+    <slot></slot>
     <!-- <Html
       :lang="head.htmlAttrs.lang"
       :dir="head.htmlAttrs.dir"
