@@ -19,7 +19,8 @@ interface Props {
   fullName: string
   jobTitle: string
   avatarUrl?: string
-  phone: BaseLink
+  phones: string[]
+  phonesIcon: string
   email: BaseLink
   location?: BaseLink
   socialLinks?: SocialLink[]
@@ -33,7 +34,14 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
-  const firstGroupLinks: ContactLinks = [props.email, props.phone]
+  const firstGroupLinks: ContactLinks = [
+    props.email,
+    ...props.phones.map(p => ({
+      href: `tel:${p}`,
+      label: p,
+      icon: props.phonesIcon,
+    })),
+  ]
   const secondGroupLinks: ContactLinks = [...(props.websiteLinks || [])]
 
   if (props.location) {

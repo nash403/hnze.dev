@@ -19,6 +19,16 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
 
+  imports: {
+    presets: [
+      // Example
+      // {
+      //   from: '@vueuse/components',
+      //   imports: ['UseClipboard'],
+      // },
+    ],
+  },
+
   devtools: {
     enabled: true,
 
@@ -65,8 +75,8 @@ export default defineNuxtConfig({
       siteName: 'Honoré Nintunze (Fullstack Web Developer)',
       siteNameSeparator: '-',
 
-      cvEmailAdress: 'honore@example.com',
-      cvPhoneNumber: '+15145551234',
+      frPhoneNumber: '+33633221100',
+      caPhoneNumber: '+15145551234',
     },
   },
 

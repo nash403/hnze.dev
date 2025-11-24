@@ -13,4 +13,45 @@ items:
   - icon: line-md:clipboard-list
     slug: /resume
     label: CV
-
+socialLinks:
+  - id: mail
+    icon: mingcute:mail-send-line
+    label: Envoyez-moi un email à l'adresse h.onorenintu.nze@proton.me
+    href: mailto:h.onorenintu.nze@proton.me
+  - id: linkedin
+    icon: mingcute:linkedin-fill
+    label: Connectez-vous avec moi sur LinkedIn
+    href: https://linkedin.com/in/nash403/
+  - id: github
+    icon: mingcute:github-fill
+    label: Retrouvez-moi sur GitHub
+    href: https://github.com/nash403
+  - id: gitlab
+    icon: mingcute:git-lab-line
+    label: Retrouvez-moi sur GitLab
+    href: https://gitlab.com/hnze
+  - id: discord
+    icon: mingcute:discord-line
+    label: Envoyez-moi une invitation sur Discord à nash403#2186
+    href: nash403
+    isCopyLinkAction: true
+  - id: instagram
+    icon: mingcute:ins-line
+    label: Suivez-moi sur Instagram
+    href: https://instagram.com/nash403/
+  - id: tiktok
+    icon: mingcute:tiktok-fill
+    label: Suivez-moi sur TikTok
+    href: https://tiktok.com/@nash403.0
+  - id: twitter
+    icon: mingcute:social-x-line
+    label: Suivez-moi sur X
+    href: https://twitter.com/nash_403
+  - id: youtube
+    icon: mingcute:youtube-fill
+    label: Suivez-moi sur YouTube
+    href: https://youtube.com/@nash403
+  - id: facebook
+    icon: mingcute:facebook-fill
+    label: Envoyez-moi un message sur Facebook
+    href: https://facebook.com/nash403

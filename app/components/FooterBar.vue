@@ -1,8 +1,14 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { UseClipboard } from '@vueuse/components'
+
+const { data: navigationData } = useAsyncNavigationContentData()
+
+const socialLinks = computed(() => navigationData.value?.socialLinks || [])
+</script>
 
 <template>
-  <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
-  <div class="p-4 text-center sm:p-8 md:max-w-8xl">
+  <div class="space-y-5 p-4 text-center sm:p-8 md:max-w-8xl">
+    <!-- Separator line -->
     <div
       role="separator"
       aria-orientation="horizontal"
@@ -17,11 +23,64 @@
       </div>
       <div class="h-px flex-1 bg-base-content-600"></div>
     </div>
-    <p>coucou ici un footer</p>
-    <div>
-      social icons here
+
+    <!-- Copyright notice -->
+    <i18n-t
+      keypath="app.footer.copyright"
+      tag="p"
+    >
+      <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+      <template #copyrightDate>
+        &copy;{{ (new Date()).getFullYear() }}
+      </template>
+      <template #cloneIt>
+        <NuxtLink
+          href="https://github.com/nash403/hnze.dev"
+          target="_blank"
+          class="h-link-glow"
+        >{{ $t('app.footer.clone_website_link') }}</NuxtLink>
+      </template>
+    </i18n-t>
+
+    <!-- Social links -->
+    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+      <template
+        v-for="(social, i) of socialLinks"
+        :key="i"
+      >
+        <UseClipboard
+          v-if="social.isCopyLinkAction"
+          v-slot="{ copy, copied }"
+          :source="social.href"
+        >
+          <button
+            type="button"
+            class="h-link-glow link transition-transform duration-200 hover:scale-110"
+            :class="{ 'animate-rubber-band cursor-default': copied, 'cursor-copy': !copied }"
+            :aria-label="social.label"
+            :title="social.label"
+            @click="copy()"
+          >
+            <Icon
+              :name="social.icon"
+              class="text-base sm:text-xl"
+            />
+          </button>
+        </UseClipboard>
+        <NuxtLink
+          v-else
+          :to="social.href"
+          :aria-label="social.label"
+          :title="social.label"
+          target="_blank"
+          class="h-link-glow link transition-transform duration-200 hover:scale-110"
+        >
+          <Icon
+            :name="social.icon"
+            class="text-base sm:text-xl"
+          />
+        </NuxtLink>
+      </template>
     </div>
   </div>
 </template>
-
-<style scoped></style>

@@ -1,23 +1,6 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content'
-import { z } from 'zod/v4'
-
-// Schéma réutilisable pour les données de navigation (fr/en)
-export const navigationBarSchema = z.object({
-  items: z
-    .array(
-      z.object({
-        icon: z.string().optional(),
-        slug: z.string(),
-        label: z.string(),
-        minBreakpoint: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl']).optional(),
-        iconMinBreakpoint: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl']).optional(),
-      }),
-    )
-    .optional(),
-  showLetsMeetLink: z.boolean().optional(),
-  currentCountryFlag: z.string().optional(),
-  currentCity: z.string().optional(),
-})
+// Using relative paths as nuxt aliases and auto-import paths are not available in this file's context
+import { navigationBarSchema } from './shared/types/content'
 
 export default defineContentConfig({
   collections: {

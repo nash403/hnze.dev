@@ -3,8 +3,13 @@ title: "Curriculum Vitae"
 description: "Honoré Nintunze's Resume, passionate full-stack web developer"
 ---
 
-::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phone="phone" :email="email" }
+::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phones="phones" }
 ---
+email:
+  href: 'mailto:h.onorenintu.nze@proton.me'
+  label: 'h.onorenintu.nze@proton.me'
+  icon: 'clarity:email-line'
+phonesIcon: 'clarity:mobile-line'
 location:
   href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
   label: "Montreal H2T 1X2, QC, Canada"
