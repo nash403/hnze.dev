@@ -7,9 +7,9 @@ description: N'hésitez pas à me contacter pour toute question ou collaboration
 ---
 src: "https://placecats.com/320/320"
 width: 320
-height: 320
+height: 180
 alt: "picture of me in a cool yet-to-be-defined situation"
-class: "mask mask-squircle aspect-video object-cover"
+class: "mask-[url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjAwIj4KICAgIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNIDQwIDEwIGggMjYwIGMgMjQuMzc1IDAgMzAgNS42MjUgMzAgMzAgdiAxMjAgYyAwIDI0LjM3NSAtNS42MjUgMzAgLTMwIDMwIGggLTI2MCBjIC0yNC4zNzUgMCAtMzAgLTUuNjI1IC0zMCAtMzAgdiAtMTIwIGMgMCAtMjQuMzc1IDUuNjI1IC0zMCAzMCAtMzAiLz4KIDwvc3ZnPg==)] mask-no-repeat mask-size-[100%_100%] aspect-video object-cover w-80"
 quality: 90
 format: webp,auto
 ---
