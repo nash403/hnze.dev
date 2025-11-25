@@ -41,7 +41,7 @@ technologies:
 ---
 Autem in qui sit id fuga ea repudiandae molestiae. Accusantium temporibus adipisci eos odit natus.
 
-::bracket-quote{class="justify-center my-4 ml-4"}
+::bracket-quote{class="justify-center mx-4"}
 this is a quote
 ::
 

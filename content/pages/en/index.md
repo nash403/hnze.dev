@@ -46,7 +46,7 @@ technologies:
 ---
 I am a passionate full-stack web developer with expertise in modern web technologies.
 
-::bracket-quote{class="justify-center my-4 ml-4"}
+::bracket-quote{class="justify-center mx-4"}
 this is a
 ::
 

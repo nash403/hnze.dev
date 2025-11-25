@@ -23,6 +23,7 @@ useHead({
   >
     <ContentRenderer
       :value="page"
+      class="prose"
     />
   </MainHeroSection>
 </template>

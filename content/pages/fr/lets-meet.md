@@ -1,42 +1,20 @@
 ---
 title: Prenons un café ensemble!
 description: N'hésitez pas à me contacter pour toute question ou collaboration.
+pictureSrc: https://placecats.com/320/320
+pictureAlt: picture of me in a cool yet-to-be-defined situation
 ---
 
-::nuxt-img
----
-src: "https://placecats.com/320/320"
-width: 320
-height: 180
-alt: "picture of me in a cool yet-to-be-defined situation"
-class: "mask-[url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjAwIj4KICAgIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNIDQwIDEwIGggMjYwIGMgMjQuMzc1IDAgMzAgNS42MjUgMzAgMzAgdiAxMjAgYyAwIDI0LjM3NSAtNS42MjUgMzAgLTMwIDMwIGggLTI2MCBjIC0yNC4zNzUgMCAtMzAgLTUuNjI1IC0zMCAtMzAgdiAtMTIwIGMgMCAtMjQuMzc1IDUuNjI1IC0zMCAzMCAtMzAiLz4KIDwvc3ZnPg==)] mask-no-repeat mask-size-[100%_100%] aspect-video object-cover w-80"
-quality: 90
-format: webp,auto
----
-::
+Après le travail, quand je suis chez moi, je suis souvent en train d'apprendre un truc grâce à un YouTubeur *STEM (sciences, techno, ingénierie, maths)*… ou en train de rire (parfois pleurer 👀) devant une série ou un film.
+Et quand j'ai du temps, j'aime enfiler mon tablier et essayer une recette de cuisine. Je suis aussi ton homme si tu aimes les jeux de société !
 
-<br/>
+Quand je sors, tu peux me trouver en train de faire un petit footing, profiter d'une bière en terrasse, ou partir en vadrouille pour découvrir le monde et ses cultures. Le contact avec les autres m'inspire et nourrit ma créativité au quotidien.
 
-# Allons prendre un café ensemble :icon{name="line-md:coffee-half-empty-twotone-loop"}
+Un de mes plaisir est de m'installer dans un café, laptop ouvert, pour avancer sur des projets perso. Le combo [café + code]{.whitespace-nowrap} reste une valeur sûre.
 
-<br/>
+## Allons prendre un café ensemble :icon{name="line-md:coffee-half-empty-twotone-loop" .align-middle}
 
-Quand je suis chez moi, j'aime apprendre un truc grâce à un youtubeur *STEM (sciences, techno, ingénierie, maths)*… ou juste rire (et parfois pleurer 👀) devant une série ou un film.
-Et quand j'ai vraiment beaucoup de temps, je me lance dans des recettes qui demandent une patience presque artistique.
+Mes amis me décrivent comme jovial et toujours open pour tout !<br/>
+Donc si tu veux papoter, que ce soit pour un projet ou juste faire connaissance, tu peux checker mes réseaux dans le [footer :icon{name="hugeicons:arrow-down-02" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} ou simplement [m'envoyer un mail :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:h.onore.nintu.nze@proton.me){.h-link.h-link-glow.whitespace-nowrap}
 
-<br/>
-
-Quand je sors, tu peux me trouver en train de faire un footing, profiter d'une bière en terrasse, ou partir en vadrouille pour découvrir le monde et ses cultures. Tout ça m'inspire énormément et nourrit ma créativité dans mon travail.
-
-<br/>
-
-Il y a aussi les moments où je m'installe dans un café, laptop ouvert, pour avancer sur des projets perso. Le combo café + code reste une valeur sûre.
-
-<br/>
-
-Mes amis me décrivent comme jovial et toujours open pour tout !
-Donc si tu veux papoter — que ce soit pour un projet ou juste faire connaissance — tu peux checker mes réseaux dans le footer ou simplement [m'envoyer un mail](mailto:h.onore.nintu.nze@proton.me){.h-link.h-link-glow}.
-
-<br/>
-
-À bientôt autour d'un cappuccino ☕✨
+À bientôt autour d'un Latte ✨
