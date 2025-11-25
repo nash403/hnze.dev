@@ -16,5 +16,6 @@ useHead({
   <ContentRenderer
     v-if="page"
     :value="page"
+    class="self-start"
   />
 </template>

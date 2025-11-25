@@ -13,8 +13,8 @@ const { data: navigationData } = await useAsyncNavigationContentData()
         class="shrink-0"
       />
       <main
-        class="w-full flex-1 p-4 sm:p-8 md:max-w-8xl"
-        :class="{ 'flex min-h-[calc(100dvh-calc(var(--header-h,72px)*2))]': route.path === localePath('index') }"
+        class="flex w-full flex-1 flex-col items-center p-4 sm:p-8 md:max-w-8xl"
+        :class="{ 'min-h-[calc(100dvh-calc(var(--header-h,72px)*2))]': route.path === localePath('index') }"
       >
         <slot></slot>
       </main>
