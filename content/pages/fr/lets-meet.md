@@ -1,8 +1,9 @@
 ---
 title: Prenons un café ensemble!
 description: N'hésitez pas à me contacter pour toute question ou collaboration.
-pictureSrc: https://placecats.com/320/320
-pictureAlt: picture of me in a cool yet-to-be-defined situation
+# pictureSrc: https://placecats.com/320/320
+pictureSrc: /img/meet-me.jpg
+pictureAlt: Moi souriant parce que je suis entouré de mes amis
 ---
 
 Après le travail, quand je suis chez moi, je suis souvent en train d'apprendre un truc grâce à un YouTubeur *STEM (sciences, techno, ingénierie, maths)*… ou en train de rire (parfois pleurer 👀) devant une série ou un film.

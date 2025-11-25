@@ -1,8 +1,9 @@
 ---
 title: "Let's grab a coffee together!"
 description: "Let's discuss your projects and see how I can help"
-pictureSrc: https://placecats.com/320/320
-pictureAlt: picture of me in a cool yet-to-be-defined situation
+# pictureSrc: https://placecats.com/320/320
+pictureSrc: /img/meet-me.jpg
+pictureAlt: Me smiling because I'm surrounded by my friends.
 ---
 
 After hours, at home, you'll often find me learning something new from a STEM YouTuber *(science, tech, engineering, math)*… or laughing (sometimes crying 👀) in front of a movie or a show.
