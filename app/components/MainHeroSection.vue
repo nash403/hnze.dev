@@ -62,7 +62,7 @@ const localePath = useLocalePath()
         <div class="mt-4 flex flex-wrap items-center justify-center gap-5 text-lg lg:text-xl">
           <NuxtLink
             class="group btn relative overflow-hidden btn-accent"
-            :to="localePath('why-hire-me')"
+            :to="localePath('contact-me')"
           >
             <div class="flex items-center gap-2">
               <div

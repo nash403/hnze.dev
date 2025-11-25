@@ -59,7 +59,7 @@ const reloadPage = async () => {
         <NuxtLink
           href="https://github.com/nash403/hnze.dev"
           target="_blank"
-          class="h-link-glow"
+          class="h-link-glow h-link"
         >{{ $t('app.footer.clone_website_link') }}</NuxtLink>
       </template>
     </i18n-t>

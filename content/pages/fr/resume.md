@@ -6,8 +6,8 @@ description: "CV d'Honoré Nintunze, développeur web full-stack passionné"
 ::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phones="phones" }
 ---
 email:
-  href: 'mailto:h.onorenintu.nze@proton.me'
-  label: 'h.onorenintu.nze@proton.me'
+  href: 'mailto:h.onore.nintu.nze@proton.me'
+  label: 'h.onore.nintu.nze@proton.me'
   icon: 'clarity:email-line'
 phonesIcon: 'clarity:mobile-line'
 location:

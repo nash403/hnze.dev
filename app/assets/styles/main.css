@@ -313,7 +313,7 @@
 }
 
 @utility h-link-glow {
-    @apply relative pb-0.5;
+    @apply relative;
 
     &:before, &:after {
       position: absolute;

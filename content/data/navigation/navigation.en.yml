@@ -16,8 +16,8 @@ items:
 socialLinks:
   - id: mail
     icon: mingcute:mail-send-line
-    label: Envoyez moi un email à l'adresse h.onorenintu.nze@proton.me
-    href: mailto:h.onorenintu.nze@proton.me
+    label: Envoyez moi un email à l'adresse h.onore.nintu.nze@proton.me
+    href: mailto:h.onore.nintu.nze@proton.me
   - id: linkedin
     icon: mingcute:linkedin-fill
     label: Conect with me on LinkedIn
