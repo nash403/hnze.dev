@@ -21,6 +21,19 @@ export const useAsyncNavigationContentData = (options = {}) => {
       // FIXME: merge FR & EN collection and query content with appropriate locale-based id
       return content as NavigationFrCollectionItem | NavigationEnCollectionItem
     },
-    { watch: [locale], transform: input => input ? input?.meta?.body as NavigationBar : null, ...options },
+    {
+      default() {
+        return {
+          items: [],
+          showLetsMeetLink: true,
+          currentCountryFlag: 'flagpack:fr',
+          currentCity: 'Paris',
+          socialLinks: [],
+        }
+      },
+      watch: [locale],
+      transform: input => input ? input?.meta?.body as NavigationBar : null,
+      ...options,
+    },
   )
 }

@@ -116,7 +116,7 @@ export default defineNuxtConfig({
       {
         name: 'Inter',
         provider: 'google',
-        weights: [400, 500, 800],
+        weights: [400, 500, 600, 800],
       },
       {
         name: 'DM Sans',

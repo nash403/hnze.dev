@@ -263,10 +263,18 @@
   --noise: 0;
 }
 
+@import './variables.css';
+@import './fonts.css';
+@import './print.css';
+
+@source "../../../content/**/*";
+@source inline("badge, badge-info"); /* FIXME: workaround for daisyui/tw classes not being detected in md files */
+
 /* Animations */
 @theme {
   --animate-rubber-band: rubberBand 300ms ease-in-out;
   --animate-text-glow: textGlow 1.5s alternate infinite ease-in-out;
+  --animate-blob-shape: blobShape 5s linear infinite;
 
   @keyframes rubberBand {
     0% { transform: scale3d(1, 1, 1); }
@@ -283,14 +291,6 @@
     100% { filter: drop-shadow(0px 0px 4px var(--color-success)); }
   }
 }
-
-@import './variables.css';
-@import './fonts.css';
-@import './print.css';
-
-@source "../../../content/**/*";
-@source inline("badge, badge-info"); /* FIXME: workaround for daisyui/tw classes not being detected in md files */
-
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 @custom-variant light (&:where([data-theme=light], [data-theme=light] *));
@@ -373,6 +373,7 @@ body {
 }
 
 #__hnze-app-nuxt {
+  @apply min-h-dvh;
   margin: 0 auto;
   font-weight: normal;
 }
@@ -413,5 +414,24 @@ body {
   to {
     opacity: 0;
     transform: translateY(.5rem)
+  }
+}
+
+/* blob animation */
+@keyframes blobShape {
+  0%,100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
   }
 }

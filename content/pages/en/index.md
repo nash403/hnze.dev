@@ -3,7 +3,7 @@ title: 'hnze.dev'
 description: Home page of Honoré Nintunze, passionate full-stack web developer
 ---
 
-::homepage-hero{profilePicture="/img/profile_picture.jpg"}
+::homepage-hero{profilePicture="/img/profile_picture.jpg" profilePictureAlt="My profile picture" .h-full.mx-auto primaryActionLabel="Let's work together" secondaryActionLabel="My experiences"}
 ---
 technologies:
   -
@@ -36,9 +36,16 @@ technologies:
     to: https://www.docker.com
 ---
 #headline
-Hi, my name is [Honoré]{.bg-gradient-to-br .text-5xl.font-headline-name.from-primary.to-accent.bg-clip-text.text-transparent}.
+Hi, I'm [Honoré]{.bg-gradient-to-br.font-headline-name.from-primary.to-accent.bg-clip-text.text-transparent}.
 #intro
-I am a passionate full-stack web developer with expertise in modern web technologies. I create high-performance, scalable applications using Vue.js, Nuxt, and the broader JavaScript ecosystem. With a strong commitment to code quality, accessibility, and user experience, I help turn ideas into exceptional digital solutions. Whether working on complex full-stack applications or optimizing web performance, I bring technical excellence and innovative thinking to every project.
-Let's talk about your project
+I am a passionate full-stack web developer with expertise in modern web technologies.
+
+::bracket-quote{.font-semibold.my-4.pl-4.light:text-black.dark:text-white}
+this is a quote
+::
+
+I create high-performance, scalable applications using Vue.js, Nuxt, and the broader JavaScript ecosystem. With a strong commitment to code quality, accessibility, and user experience, I help turn ideas into exceptional digital solutions. Whether working on complex full-stack applications or optimizing web performance, I bring technical excellence and innovative thinking to every project.
+
+<!-- [ [My experiences]{.group-hover:opacity-70.transition-all.bg-gradient-to-br.from-primary.to-accent.bg-clip-text.text-transparent} <Icon name="gravity-ui:arrow-shape-turn-up-right" />](/resume){.flex.link.link-hover.items-center.group.font-semibold.gap-1.hover:gap-2.transition-all} -->
 ::
 

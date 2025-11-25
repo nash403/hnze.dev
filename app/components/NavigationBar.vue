@@ -95,7 +95,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
         }"
       >
         <ul
-          class="flex flex-col gap-x-2 pb-4 lg:mr-16 lg:gap-x-5"
+          class="flex flex-col gap-x-2 pb-4 lg:gap-x-5"
           :class="{
             '': !toggleMenuMaxBreakpointVisible,
             'xs:flex-row xs:items-center xs:justify-between xs:p-0': toggleMenuMaxBreakpointVisible === 'xs',

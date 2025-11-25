@@ -3,7 +3,7 @@ title: 'hnze.dev'
 description: Page d'accueil d'Honoré Nintunze, développeur web full-stack passionné
 ---
 
-::homepage-hero{profilePicture="/img/profile_picture.jpg"}
+::homepage-hero{profilePicture="/img/profile_picture.jpg" profilePictureAlt="Ma photo de profil" .h-full.mx-auto primaryActionLabel="Travaillons ensemble" secondaryActionLabel="Mes expériences"}
 ---
 technologies:
   -
@@ -36,8 +36,15 @@ technologies:
     to: https://www.docker.com
 ---
 #headline
-Hey! Moi c'est [Honoré]{.bg-gradient-to-br .text-5xl.font-headline-name.from-primary.to-accent.bg-clip-text.text-transparent}.
+Hey! Moi c'est [Honoré]{.bg-gradient-to-br.font-headline-name.from-primary.to-accent.bg-clip-text.text-transparent}.
 #intro
-Autem in qui sit id fuga ea repudiandae molestiae. Accusantium temporibus adipisci eos odit natus. Beatae officia sit non quis. Laboriosam odit nisi hic ad. Fuga consequatur distinctio fugiat optio qui quia. Eos nihil quos. Nihil dolorem totam iusto. Ut non cum facere alias sint est soluta. Et perferendis et necessitatibus et eveniet nisi nihil corrupti. Dicta eum id itaque alias tempore. Nesciunt quidem laborum nostrum ut consequatur. Corrupti libero odit nisi est distinctio quas qui facilis dolorum.
-Parlez moi de votre projet
+Autem in qui sit id fuga ea repudiandae molestiae. Accusantium temporibus adipisci eos odit natus.
+
+::bracket-quote{.font-semibold.my-4.pl-4.light:text-black.dark:text-white}
+this is a quote
+::
+
+Beatae officia sit non quis. Laboriosam odit nisi hic ad. Fuga consequatur distinctio fugiat optio qui quia. Eos nihil quos. Nihil dolorem totam iusto. Ut non cum facere alias sint est soluta. Et perferendis et necessitatibus et eveniet nisi nihil corrupti. Dicta eum id itaque alias tempore. Nesciunt quidem laborum nostrum ut consequatur. Corrupti libero odit nisi est distinctio quas qui facilis dolorum.
+
+<!-- [ [Mes expériences]{.group-hover:opacity-70.transition-all.bg-gradient-to-br.from-primary.to-accent.bg-clip-text.text-transparent} <Icon name="gravity-ui:arrow-shape-turn-up-right" />](/fr/resume){.flex.link.link-hover.items-center.group.font-semibold.gap-1.hover:gap-2.transition-all} -->
 ::
