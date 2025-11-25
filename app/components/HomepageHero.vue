@@ -22,6 +22,7 @@ const localePath = useLocalePath()
     <div
       class="mx-auto aspect-square h-25 w-25 animate-blob-shape overflow-hidden rounded-[62%_47%_82%_35%/45%_45%_80%_66%] will-change-[border-radius,transform,opacity,left,top] xs:h-40 xs:w-40 sm:mx-0"
     >
+      <!-- Profile picture with animated blob border shape -->
       <NuxtImg
         :src="profilePicture"
         :alt="profilePictureAlt"
@@ -33,10 +34,11 @@ const localePath = useLocalePath()
       />
     </div>
 
-    <div class="space-y-7">
+    <div class="space-y-10">
       <div
         class="space-y-4 text-center md:text-left"
       >
+        <!-- Headline -->
         <h1 class="font-headline text-3xl font-semibold md:text-4xl">
           <slot
             name="headline"
@@ -44,28 +46,56 @@ const localePath = useLocalePath()
           ></slot>
         </h1>
 
+        <!-- Intro paragraph -->
         <p class="max-w-lg text-sm leading-relaxed text-base-content/75 xs:text-base md:text-lg">
           <slot
             name="intro"
             mdc-unwrap="p"
           ></slot>
         </p>
-        <div class="mt-4 flex flex-wrap items-center gap-5">
+
+        <!-- Main CTAs -->
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-5 text-lg">
           <NuxtLink
-            class="btn btn-accent"
+            class="group btn relative w-auto overflow-hidden p-2 px-6 text-center text-lg font-semibold btn-accent"
             :to="localePath('why-hire-me')"
           >
-            {{ primaryActionLabel }}
+            <div class="flex items-center gap-2">
+              <div
+                class="size-2 scale-100 animate-pulse rounded-lg bg-secondary transition-all duration-300 group-hover:scale-[100.8] group-hover:animate-none group-focus:scale-[100.8] group-focus:animate-none"
+              ></div>
+              <span
+                class="inline-block whitespace-nowrap transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0 group-focus:translate-x-12 group-focus:opacity-0"
+              >
+                {{ primaryActionLabel }}
+              </span>
+            </div>
+
+            <div
+              class="absolute top-0 z-10 flex size-full translate-x-18 items-center justify-center gap-2 text-base-content opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100"
+            >
+              <span class="whitespace-nowrap">{{ primaryActionLabel }}</span>
+              <Icon
+                name="hugeicons:arrow-right-01"
+                class="text-2xl"
+              />
+            </div>
           </NuxtLink>
 
           <NuxtLink
-            class="group flex link items-center gap-1 font-semibold link-hover transition-all hover:gap-2"
+            class="group flex link items-center gap-1 font-semibold link-hover transition-all"
             :to="localePath('why-hire-me')"
           >
-            <span class="bg-linear-to-br from-primary to-accent bg-clip-text text-transparent transition-all group-hover:opacity-70">{{ secondaryActionLabel }}</span>  <Icon name="gravity-ui:arrow-shape-turn-up-right" />
+            <span class="bg-linear-to-br from-primary to-accent bg-clip-text text-transparent transition-all group-hover:opacity-70 group-focus:opacity-70">{{ secondaryActionLabel }}</span>
+            <Icon
+              name="gravity-ui:arrow-shape-turn-up-right"
+              class="transition-transform group-hover:translate-x-1 group-focus:translate-x-1"
+            />
           </NuxtLink>
         </div>
       </div>
+
+      <!-- Logos cloud -->
       <ul class="flex max-w-lg flex-wrap gap-4">
         <li
           v-for="item of technologies.slice(0, 7)"

@@ -45,6 +45,4 @@ this is a quote
 ::
 
 Beatae officia sit non quis. Laboriosam odit nisi hic ad. Fuga consequatur distinctio fugiat optio qui quia. Eos nihil quos. Nihil dolorem totam iusto. Ut non cum facere alias sint est soluta. Et perferendis et necessitatibus et eveniet nisi nihil corrupti. Dicta eum id itaque alias tempore. Nesciunt quidem laborum nostrum ut consequatur. Corrupti libero odit nisi est distinctio quas qui facilis dolorum.
-
-<!-- [ [Mes expériences]{.group-hover:opacity-70.transition-all.bg-gradient-to-br.from-primary.to-accent.bg-clip-text.text-transparent} <Icon name="gravity-ui:arrow-shape-turn-up-right" />](/fr/resume){.flex.link.link-hover.items-center.group.font-semibold.gap-1.hover:gap-2.transition-all} -->
 ::

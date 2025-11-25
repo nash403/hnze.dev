@@ -45,7 +45,5 @@ this is a quote
 ::
 
 I create high-performance, scalable applications using Vue.js, Nuxt, and the broader JavaScript ecosystem. With a strong commitment to code quality, accessibility, and user experience, I help turn ideas into exceptional digital solutions. Whether working on complex full-stack applications or optimizing web performance, I bring technical excellence and innovative thinking to every project.
-
-<!-- [ [My experiences]{.group-hover:opacity-70.transition-all.bg-gradient-to-br.from-primary.to-accent.bg-clip-text.text-transparent} <Icon name="gravity-ui:arrow-shape-turn-up-right" />](/resume){.flex.link.link-hover.items-center.group.font-semibold.gap-1.hover:gap-2.transition-all} -->
 ::
 
