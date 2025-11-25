@@ -46,6 +46,7 @@ const reloadPage = async () => {
 
     <!-- Copyright notice -->
     <i18n-t
+      scope="global"
       keypath="app.footer.copyright"
       tag="p"
       class="text-sm"

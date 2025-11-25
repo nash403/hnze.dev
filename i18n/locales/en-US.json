@@ -1,4 +1,5 @@
 {
+  "app.main_hero.headline": "Hi, I'm {firstName}.",
   "app.footer.clone_website_link": "Fork-it!",
   "app.footer.copyright": "{copyrightDate} Honoré Nintunze. All rights reserved. Do you like this website? {cloneIt}",
   "app.footer.new_version_available": "A new version is available! Reload the page :)",

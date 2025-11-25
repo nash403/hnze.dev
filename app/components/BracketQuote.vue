@@ -9,7 +9,7 @@ defineProps<{
     <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
     <span class="shrink-0">「</span>
     <span
-      class="text-center"
+      class="text-center data-wide:flex-1"
       :class="{ 'flex-1': wide }"
     >
       <slot mdc-unwrap="p"></slot>

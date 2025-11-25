@@ -1,8 +1,8 @@
 /* Fonts */
 @theme {
   --font-default-sans: Inter, system-ui, sans-serif;
-  /* --font-body: "DM Sans", Inter, system-ui, sans-serif; */
-  --font-body: var(--font-default-sans);
+  --font-body: "DM Sans", Inter, system-ui, sans-serif;
+  /* --font-body: var(--font-default-sans); */
   --font-nav: var(--font-default-sans);
   --font-footer: var(--font-default-sans);
   --font-headline: var(--font-default-sans);

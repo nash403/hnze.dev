@@ -2,6 +2,7 @@
 import type { LogoCloudItem } from '~/components/LogoCloud.vue'
 
 interface Props {
+  headlineI18nKey: string
   profilePicture: string
   profilePictureAlt: string
   primaryActionLabel: string
@@ -35,30 +36,32 @@ const localePath = useLocalePath()
       />
     </div>
 
-    <div class="flex-1 space-y-10">
+    <div class="max-w-lg flex-1 space-y-10">
       <div
         class="space-y-4 text-center md:text-left"
       >
         <!-- Headline -->
-        <h1 class="font-headline text-3xl font-semibold md:text-4xl">
-          <slot
-            name="headline"
-            mdc-unwrap="p"
-          ></slot>
-        </h1>
+        <i18n-t
+          scope="global"
+          :keypath="headlineI18nKey || 'app.main_hero.headline'"
+          tag="h1"
+          class="font-headline text-3xl font-semibold md:text-4xl"
+        >
+          <template #firstName>
+            <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+            <span class="bg-linear-to-br from-primary to-accent bg-clip-text font-headline-name text-transparent">Honoré</span>
+          </template>
+        </i18n-t>
 
         <!-- Intro paragraph -->
-        <p class="max-w-lg text-sm leading-relaxed text-base-content/75 xs:text-base md:text-lg">
-          <slot
-            name="intro"
-            mdc-unwrap="p"
-          ></slot>
-        </p>
+        <div class=" text-sm leading-relaxed xs:text-base lg:text-lg">
+          <slot></slot>
+        </div>
 
         <!-- Main CTAs -->
-        <div class="mt-4 flex flex-wrap items-center justify-center gap-5 text-lg">
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-5 text-lg lg:text-xl">
           <NuxtLink
-            class="group btn relative w-auto overflow-hidden p-2 px-6 text-center text-lg font-semibold btn-accent"
+            class="group btn relative overflow-hidden btn-accent"
             :to="localePath('why-hire-me')"
           >
             <div class="flex items-center gap-2">
@@ -84,7 +87,7 @@ const localePath = useLocalePath()
           </NuxtLink>
 
           <NuxtLink
-            class="group flex link items-center gap-1 font-semibold link-hover transition-all"
+            class="group flex link items-center gap-1 link-hover transition-all"
             :to="localePath('resume')"
           >
             <span class="bg-linear-to-br from-primary to-accent bg-clip-text text-transparent transition-all group-hover:opacity-70 group-focus:opacity-70">{{ secondaryActionLabel }}</span>
@@ -99,7 +102,7 @@ const localePath = useLocalePath()
       <!-- Logos cloud -->
       <ul class="flex max-w-lg flex-wrap gap-4">
         <li
-          v-for="item of technologies.slice(0, 7)"
+          v-for="item of technologies"
           :key="item.name"
           class="flex flex-1 items-stretch justify-center text-lg 2xs:text-2xl xs:text-3xl sm:text-4xl"
         >

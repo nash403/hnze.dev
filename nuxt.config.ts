@@ -114,19 +114,21 @@ export default defineNuxtConfig({
     families: [
       // Example declaration. Normally no need, just defining `font-family: MyFont;` in CSS should suffice.
       {
-        name: 'Inter',
+        name: 'Merienda', // for my first name on homepage
         provider: 'google',
-        weights: [400, 500, 600, 800],
+        weights: [600],
+        preload: true,
       },
       {
-        name: 'DM Sans',
+        name: 'DM Sans', // normal
         provider: 'google',
-        weights: [200, 400, 500, 800],
+        weights: [400, 600, 700, 800],
+        preload: true,
       },
       {
-        name: 'Merienda',
+        name: 'Inter', // navbar, footer, resume page & default fallback
         provider: 'google',
-        weights: [400, 500, 800],
+        weights: [400, 600, 700, 800],
       },
     ],
   },

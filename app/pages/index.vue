@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import type { PagesCollectionItem } from '@nuxt/content'
+import type { MainHeroSection } from '#build/components'
+
+type HeroSectionProps = InstanceType<typeof MainHeroSection>['$props']
 
 const { data: page } = await useAsyncPageContentData('')
 
@@ -13,9 +16,13 @@ useHead({
 </script>
 
 <template>
-  <ContentRenderer
+  <MainHeroSection
     v-if="page"
-    :value="page"
-    class="flex flex-1 items-center justify-center first:grow"
-  />
+    v-bind="((page as PagesCollectionItem).meta as unknown as HeroSectionProps)"
+    class="flex flex-1 items-center justify-center"
+  >
+    <ContentRenderer
+      :value="page"
+    />
+  </MainHeroSection>
 </template>

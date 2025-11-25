@@ -2,15 +2,14 @@ showLetsMeetLink: true
 currentCountryFlag: flagpack:fr
 currentCity: Rennes
 items:
-  # TODO: implement these pages later
-  # - icon: mdi:rocket-launch
-  #   slug: /why-hire-me
-  #   label: Mes super-pouvoirs
-  #   minBreakpoint: md
-  # - icon: line-md:chat-round-dots
-  #   slug: /your-needs
-  #   label: Me contacter
-  #   minBreakpoint: md
+  - icon: mdi:rocket-launch
+    slug: /why-hire-me
+    label: Mes super-pouvoirs
+    minBreakpoint: md
+  - icon: line-md:chat-round-dots
+    slug: /contact-me
+    label: Me contacter
+    minBreakpoint: md
   - icon: line-md:clipboard-list
     slug: /resume
     label: CV

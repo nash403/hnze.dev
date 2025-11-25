@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { PagesCollectionItem } from '@nuxt/content'
 
-const { data: page } = await useAsyncPageContentData('your-needs')
+const { data: page } = await useAsyncPageContentData('contact-me')
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
