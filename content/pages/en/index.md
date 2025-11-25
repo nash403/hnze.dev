@@ -3,7 +3,7 @@ title: 'hnze.dev'
 description: Home page of Honoré Nintunze, passionate full-stack web developer
 ---
 
-::homepage-hero{profilePicture="/img/profile_picture.jpg" profilePictureAlt="My profile picture" .h-full.mx-auto primaryActionLabel="Let's work together" secondaryActionLabel="My experiences"}
+::homepage-hero{profilePicture="/img/profile_picture.jpg" profilePictureAlt="My profile picture" primaryActionLabel="Let's work together" primaryActionHoverLabel="Hire me" secondaryActionLabel="Download my Resume"}
 ---
 technologies:
   -
@@ -14,6 +14,10 @@ technologies:
     name: Nuxt.js - Vue.js Meta Framework
     icon: logos:nuxt-icon
     to: https://nuxt.com
+  -
+    name: React.js - Frontend Framework
+    icon: logos:react
+    to: https://react.dev
   -
     name: Tailwind CSS - Utility-First & Responsive Styling
     icon: devicon:tailwindcss
@@ -26,10 +30,10 @@ technologies:
     name: Node.js - Backend JS runtime
     icon: logos:nodejs-icon
     to: https://nodejs.org
-  -
-    name: SQL & NoSQL - Database Management
-    icon: bi:filetype-sql
-    to: https://en.wikipedia.org/wiki/SQL
+#  -
+#    name: SQL & NoSQL - Database Management
+#    icon: bi:filetype-sql
+#    to: https://en.wikipedia.org/wiki/SQL
   -
     name: Docker - Devops & Containerization
     icon: logos:docker-icon
@@ -40,7 +44,7 @@ Hi, I'm [Honoré]{.bg-gradient-to-br.font-headline-name.from-primary.to-accent.b
 #intro
 I am a passionate full-stack web developer with expertise in modern web technologies.
 
-::bracket-quote{.font-semibold.my-4.pl-4.light:text-black.dark:text-white}
+::bracket-quote{.my-4.ml-4}
 this is a quote
 ::
 

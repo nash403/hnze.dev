@@ -16,6 +16,6 @@ useHead({
   <ContentRenderer
     v-if="page"
     :value="page"
-    class="flex flex-1 items-center justify-center"
+    class="flex flex-1 items-center justify-center first:grow"
   />
 </template>
