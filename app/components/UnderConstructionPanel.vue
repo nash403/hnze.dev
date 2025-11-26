@@ -3,7 +3,7 @@
 <template>
   <ErrorPanel
     :title="$t('shared.element_under_construction_panel.title')"
-    icon="mdi:construction-outline"
+    icon="mingcute:puzzled-line"
     icon-classes="text-info-900 dark:text-info-900"
     :bg-classes="['bg-info-300/30', 'bg-info-300/60', 'bg-info-300']"
   >

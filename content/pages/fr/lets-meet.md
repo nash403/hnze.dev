@@ -16,6 +16,6 @@ Un de mes plaisir est de m'installer dans un café, laptop ouvert, pour avancer 
 ## Allons prendre un café ensemble :icon{name="line-md:coffee-half-empty-twotone-loop" .align-middle}
 
 Mes amis me décrivent comme jovial et toujours open pour tout !<br/>
-Donc si tu veux papoter, que ce soit pour un projet ou juste faire connaissance, tu peux checker mes réseaux dans le [footer :icon{name="hugeicons:arrow-down-02" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} ou simplement [m'envoyer un mail :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:h.onore.nintu.nze@proton.me){.h-link.h-link-glow.whitespace-nowrap}
+Donc si tu veux papoter, que ce soit pour un projet ou juste faire connaissance, tu peux checker mes réseaux dans le [footer :icon{name="mingcute:arrows-down-line" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} ou simplement [m'envoyer un mail :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:h.onore.nintu.nze@proton.me){.h-link.h-link-glow.whitespace-nowrap}
 
 À bientôt autour d'un Latte ✨

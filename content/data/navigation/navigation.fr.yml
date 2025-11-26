@@ -2,17 +2,18 @@ showLetsMeetLink: true
 currentCountryFlag: flagpack:fr
 currentCity: Rennes
 items:
-  - icon: mdi:rocket-launch
+  - icon: mingcute:magic-hat-line
     slug: /why-hire-me
     label: Mes super-pouvoirs
     minBreakpoint: md
-  - icon: line-md:chat-round-dots
+  - icon: mingcute:wechat-line
     slug: /contact-me
     label: Me contacter
     minBreakpoint: md
-  - icon: line-md:clipboard-list
+  - icon: mingcute:clipboard-line
     slug: /resume
     label: CV
+
 socialLinks:
   - id: mail
     icon: mingcute:mail-send-line
@@ -22,14 +23,14 @@ socialLinks:
     icon: mingcute:linkedin-fill
     label: Connectez-vous avec moi sur LinkedIn
     href: https://linkedin.com/in/nash403/
+  - id: github
+    icon: mingcute:github-2-fill
+    label: Retrouvez-moi sur GitHub
+    href: https://github.com/nash403
   - id: malt
     icon: hnze:malt
     label: Engagez moi sur Malt
     href: https://www.malt.fr/profile/honorenintunze1
-  - id: github
-    icon: mingcute:github-fill
-    label: Retrouvez-moi sur GitHub
-    href: https://github.com/nash403
   - id: gitlab
     icon: mingcute:git-lab-line
     label: Retrouvez-moi sur GitLab

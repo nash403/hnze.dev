@@ -16,6 +16,6 @@ I also love chilling in a café with my laptop to tackle some personal projects.
 ## Let's grab a coffee together :icon{name="line-md:coffee-half-empty-twotone-loop" .align-middle}
 
 My friends say I'm cheerful and always up for anything!<br/>
-So if you'd like to chat, about a project or just to meet, checkout the [footer :icon{name="hugeicons:arrow-down-02" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} for my socials or simply [email me :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:h.onore.nintu.nze@proton.me){.h-link.h-link-glow.whitespace-nowrap}
+So if you'd like to chat, about a project or just to meet, checkout the [footer :icon{name="mingcute:arrows-down-line" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} for my socials or simply [email me :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:h.onore.nintu.nze@proton.me){.h-link.h-link-glow.whitespace-nowrap}
 
 See you around a Latte ✨

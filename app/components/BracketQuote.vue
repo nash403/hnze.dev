@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  wide?: boolean
+  block?: boolean
 }>()
 </script>
 
@@ -9,8 +9,8 @@ defineProps<{
     <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
     <span class="shrink-0">「</span>
     <span
-      class="text-center data-wide:flex-1"
-      :class="{ 'flex-1': wide }"
+      class="text-center data-block:flex-1"
+      :class="{ 'flex-1': block }"
     >
       <slot mdc-unwrap="p"></slot>
     </span>

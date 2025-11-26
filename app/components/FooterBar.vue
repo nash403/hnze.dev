@@ -24,6 +24,10 @@ const reloadPage = async () => {
   appState.value.hasNewVersionAvailable = false
   window.location.reload()
 }
+
+const ignoreVersion = async () => {
+  appState.value.hasNewVersionAvailable = false
+}
 </script>
 
 <template>
@@ -108,16 +112,35 @@ const reloadPage = async () => {
       <p class="text-xs text-base-content-700">
         {{ $t('app.footer.version_uid', { version: currentVersion }) }}
       </p>
-      <template v-if="appState.hasNewVersionAvailable">
-        <p>{{ $t('app.footer.new_version_available') }}</p>
-        <button
-          type="button"
-          class="btn btn-accent"
-          @click="reloadPage"
+      <ClientOnly>
+        <div
+          v-if="appState.hasNewVersionAvailable"
+          class="card w-80 bg-neutral text-neutral-content card-xs card-border"
         >
-          {{ $t('app.footer.btn_reload_page') }}
-        </button>
-      </template>
+          <div class="card-body items-center text-center">
+            <div class="card-actions w-full justify-end">
+              <button
+                type="button"
+                class="btn btn-square btn-xs btn-secondary"
+                :title="$t('app.footer.btn_ignore_new_version_title')"
+                @click="ignoreVersion"
+              >
+                <Icon name="mingcute:close-line" />
+                <span class="sr-only">{{ $t('app.footer.btn_ignore_new_version_title') }}</span>
+              </button>
+            </div>
+
+            <p>{{ $t('app.footer.new_version_available') }}</p>
+            <button
+              type="button"
+              class="btn btn-sm btn-accent"
+              @click="reloadPage"
+            >
+              {{ $t('app.footer.btn_reload_page') }}
+            </button>
+          </div>
+        </div>
+      </ClientOnly>
     </div>
   </div>
 </template>

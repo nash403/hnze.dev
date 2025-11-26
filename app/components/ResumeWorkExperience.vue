@@ -49,21 +49,21 @@ const contractDetailTags = computed(() => {
   if (props.companyName) {
     arr.push({
       href: props.companyUrl,
-      icon: 'clarity:briefcase-line',
+      icon: 'mingcute:briefcase-line',
       label: props.companyName,
     })
   }
   if (props.contractType) {
     arr.push({
       href: props.companyUrl,
-      icon: 'clarity:contract-line',
+      icon: 'mingcute:file-check-line',
       label: t(`contractTypes.${props.contractType}`, props.contractType),
     })
   }
   if (props.workLocation) {
     arr.push({
       href: props.companyUrl,
-      icon: 'clarity:map-marker-line',
+      icon: 'mingcute:map-pin-line',
       label: t(`workLocations.${props.workLocation}`, props.workLocation),
     })
   }

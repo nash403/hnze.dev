@@ -14,15 +14,13 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "postinstall": "nuxt prepare",
-    "prepare": "(husky && nuxt prepare) || true"
+    "prepare": "husky || true"
   },
   "dependencies": {
-    "@iconify-json/bi": "^1.2.6",
-    "@iconify-json/devicon": "^1.2.50",
     "@iconify-json/flagpack": "^1.2.6",
     "@iconify-json/line-md": "^1.2.11",
     "@iconify-json/logos": "^1.2.10",
-    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/mingcute": "^1.2.5",
     "@nuxt/content": "3.8.2",
     "@nuxt/eslint": "1.10.0",
     "@nuxt/fonts": "0.12.1",

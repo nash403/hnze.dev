@@ -24,7 +24,7 @@ technologies:
     to: https://react.dev
   -
     name: Tailwind CSS - Styling Utilitaire & Responsive
-    icon: devicon:tailwindcss
+    icon: logos:tailwindcss-icon
     to: https://tailwindcss.com
   -
     name: TypeScript - JavaScript Typé utilisé avec Linters & Bonnes pratiques

@@ -8,32 +8,32 @@ description: "Honoré Nintunze's Resume, passionate full-stack web developer"
 email:
   href: 'mailto:h.onore.nintu.nze@proton.me'
   label: 'h.onore.nintu.nze@proton.me'
-  icon: 'clarity:email-line'
-phonesIcon: 'clarity:mobile-line'
+  icon: 'mingcute:mail-line'
+phonesIcon: 'mingcute:cellphone-line'
 location:
   href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
   label: "Montreal H2T 1X2, QC, Canada"
   openInNewTab: true
-  icon: clarity:map-marker-line
+  icon: mingcute:map-pin-line
 
 socialLinks:
   - type: linkedin
     username: nash403
     href: "https://www.linkedin.com/in/nash403"
     openInNewTab: true
-    icon: bxl:linkedin-square
+    icon: mingcute:linkedin-fill
 
   - type: github
     username: nash403
     href: "https://github.com/nash403"
     openInNewTab: true
-    icon: bxl:github
+    icon: mingcute:github-2-fill
 
 websiteLinks:
   - href: "https://hnze.dev"
     label: "hnze.dev"
     openInNewTab: true
-    icon: clarity:link-line
+    icon: mingcute:link-line
 ---
 #goal
 I am a Web Engineer with expertise in the Vue.js ecosystem but not only. I can craft full-stack applications from the ground up. Passionate about open source development, I actively contribute with various publications. With a strong commitment to staying abreast of emerging technologies, I prioritize implementing best coding practices to ensure project longevity, coherence, and resilience, benefiting both the project and the team. As a self-motivated learner accustomed to wearing multiple hats, I don't hesitate taking initiatives.

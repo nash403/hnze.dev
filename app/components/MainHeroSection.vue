@@ -80,7 +80,7 @@ const localePath = useLocalePath()
             >
               <span class="whitespace-nowrap">{{ primaryActionHoverLabel || primaryActionLabel }}</span>
               <Icon
-                name="hugeicons:arrow-right-01"
+                name="mingcute:wechat-line"
                 class="text-2xl"
               />
             </div>
@@ -92,7 +92,7 @@ const localePath = useLocalePath()
           >
             <span class="bg-linear-to-br from-primary to-accent bg-clip-text text-transparent transition-all group-hover:opacity-70 group-focus:opacity-70">{{ secondaryActionLabel }}</span>
             <Icon
-              name="gravity-ui:arrow-shape-turn-up-right"
+              name="mingcute:share-forward-line"
               class="text-accent transition-transform group-hover:translate-x-1 group-focus:translate-x-1"
             />
           </NuxtLink>

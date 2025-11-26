@@ -12,23 +12,23 @@ function getEntry(status: number) {
     case 404:
       return {
         typeKey: 'app.error.type.404',
-        icon: 'mdi:ghost',
-        bgColor: ['bg-warning-300/30', 'bg-warning-300/60', 'bg-warning-300'],
+        icon: 'mingcute:ghost-line',
+        bgColor: ['bg-warning-300/30', 'bg-warning-300/60', 'bg-warning-300'] as [string, string, string],
         color: 'text-warning-900 dark:text-warning-900',
       }
     case 503:
       return {
         typeKey: 'app.error.type.503',
-        icon: 'mdi:wrench',
-        bgColor: ['bg-info-300/30', 'bg-info-300/60', 'bg-info-300'],
+        icon: 'mingcute:sleep-line',
+        bgColor: ['bg-info-300/30', 'bg-info-300/60', 'bg-info-300'] as [string, string, string],
         color: 'text-info-900 dark:text-info-900',
       }
     case 500:
     default:
       return {
         typeKey: 'app.error.type.500',
-        icon: 'mdi:server',
-        bgColor: ['bg-error-300/30', 'bg-error-300/60', 'bg-error-300'],
+        icon: 'mingcute:unhappy-dizzy-line',
+        bgColor: ['bg-error-300/30', 'bg-error-300/60', 'bg-error-300'] as [string, string, string],
         color: 'text-error-900 dark:text-error-900',
       }
   }
