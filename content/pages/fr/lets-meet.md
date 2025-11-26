@@ -9,7 +9,7 @@ pictureAlt: Moi souriant parce que je suis entouré de mes amis
 Après le travail, quand je suis chez moi, je suis souvent en train d'apprendre un truc grâce à un YouTubeur *STEM (sciences, techno, ingénierie, maths)*… ou en train de rire (parfois pleurer 👀) devant une série ou un film.
 Et quand j'ai du temps, j'aime enfiler mon tablier et essayer une recette de cuisine. Je suis aussi ton homme si tu aimes les jeux de société !
 
-Quand je sors, tu peux me trouver en train de faire un petit footing, profiter d'une bière en terrasse, ou partir en vadrouille pour découvrir le monde et ses cultures. Le contact avec les autres m'inspire et nourrit ma créativité au quotidien.
+Quand je sors, tu peux me trouver en train de faire un petit footing, profiter d'une bière en terrasse, ou partir en vadrouille pour découvrir le monde et ses cultures. Étant moi-même bi-national (français 🇫🇷 + burundais 🇧🇮), le contact avec les autres m'inspire et nourrit ma créativité au quotidien.
 
 Un de mes plaisir est de m'installer dans un café, laptop ouvert, pour avancer sur des projets perso. Le combo [café + code]{.whitespace-nowrap} reste une valeur sûre.
 
