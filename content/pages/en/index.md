@@ -44,11 +44,13 @@ technologies:
 #    icon: bi:filetype-sql
 #    to: https://en.wikipedia.org/wiki/SQL
 ---
-I am a passionate full-stack web developer with expertise in modern web technologies.
 
-::bracket-quote{class="justify-center mx-4"}
-this is a
+Senior Full-stack Web Engineer with **7+ years** of experience creating scalable, reliable product-driven web apps and platforms for everything from fast-moving startups to major e-commerce brands.
+
+::bracket-quote{class="justify-center mx-auto w-fit gap-2"}
+From concept to impact — built fast, built right.
 ::
 
-I create high-performance, scalable applications using Vue.js, Nuxt, and the broader JavaScript ecosystem. With a strong commitment to code quality, accessibility, and user experience, I help turn ideas into exceptional digital solutions. Whether working on complex full-stack applications or optimizing web performance, I bring technical excellence and innovative thinking to every project.
+I specialize in *:text-hint{text="Vue.js" tip="JavaScript framework for building user interfaces"}* and *:text-hint{text="Nuxt.js" tip="Vue.js Meta Framework"}*, building high-performance products in *:text-hint{text="JS/TS" tip="JavaScript & TypeScript"}* across the full web stack, from frontend to backend to cloud workflows. I deliver value quickly with a strong commitment to *:text-hint{text="A11y" tip="Accessibility"}* and *:text-hint{text="UX" tip="User Experience"}* without compromising quality, leveraging solid fundamentals and *:text-hint{text="AI tools" tip="LLM, automations, etc..."}* to strengthen my process. I choose the technologies that best fit each project and continuously grow my skills. My current goal is expanding deeper into *:text-hint{text="Python" tip="Data & AI-friendly language"}*, *:text-hint{text="Go" tip="Fast & performant language for backend APIs"}*, *:text-hint{text="Rust" tip="Language for safety & performance"}*, and advanced *:text-hint{text="databases" tip="SQL/NoSQL systems for data storage & queries"}* expertise.
+
 

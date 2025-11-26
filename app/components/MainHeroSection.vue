@@ -36,7 +36,7 @@ const localePath = useLocalePath()
       />
     </div>
 
-    <div class="max-w-lg flex-1 space-y-10">
+    <div class="flex-1 space-y-10">
       <div
         class="space-y-4 text-center md:text-left"
       >
@@ -100,7 +100,7 @@ const localePath = useLocalePath()
       </div>
 
       <!-- Logos cloud -->
-      <ul class="flex max-w-lg flex-wrap gap-4">
+      <ul class="flex flex-wrap gap-4">
         <li
           v-for="item of technologies"
           :key="item.name"

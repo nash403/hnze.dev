@@ -39,10 +39,13 @@ technologies:
     icon: logos:docker-icon
     to: https://www.docker.com
 ---
-Autem in qui sit id fuga ea repudiandae molestiae. Accusantium temporibus adipisci eos odit natus.
 
-::bracket-quote{class="justify-center mx-4"}
-this is a quote
+Ingénieur Web Full-stack Senior, avec **7+ ans** d'expérience à concevoir des applications web fiables, scalables et orientées usage, pour des startups et de grands acteurs du e-commerce.
+
+::bracket-quote{class="justify-center mx-auto w-fit gap-2"}
+Du concept à l'impact — livré vite, livré juste.
 ::
 
-Beatae officia sit non quis. Laboriosam odit nisi hic ad. Fuga consequatur distinctio fugiat optio qui quia. Eos nihil quos. Nihil dolorem totam iusto. Ut non cum facere alias sint est soluta. Et perferendis et necessitatibus et eveniet nisi nihil corrupti. Dicta eum id itaque alias tempore. Nesciunt quidem laborum nostrum ut consequatur. Corrupti libero odit nisi est distinctio quas qui facilis dolorum.
+<!-- Je suis spécialisé dans Vue.js et Nuxt, et je développe des produits performants en JS/TS sur toute la stack web — du frontend au backend jusqu'aux workflows cloud. Je livre vite tout en restant exigeant sur la qualité, l'accessibilité et l'UX, en m'appuyant sur de solides bases théoriques et l'IA pour me booster. Je choisis les technologies les plus adaptées à chaque projet et élargis mes compétences. Mon objectif actuel est d'approfondir Python, Go, Rust et mes connaissances en bases de données. -->
+
+Je suis spécialisé en *:text-hint{text="Vue.js" tip="Framework JavaScript pour créer des interfaces"}* et *:text-hint{text="Nuxt.js" tip="Meta-framework basé sur Vue.js"}*, et je consois des produits performants en *:text-hint{text="JS/TS" tip="JavaScript & TypeScript"}* sur toute la stack web, du frontend au backend jusqu'aux workflows cloud. Je livre vite tout en restant exigeant sur l'accessibilité et l'*:text-hint{text="UX" tip="Expérience utilisateur"}*, en m'appuyant sur de solides bases théoriques et l'*:text-hint{text="IA" tip="LLM, automatisations, etc..."}* pour me booster. Je choisis les technologies les plus adaptées à chaque projet et élargis mes compétences en continu. Mon objectif actuel est d'approfondir *:text-hint{text="Python" tip="Langage adapté à la Data & l'IA"}*, *:text-hint{text="Go" tip="Langage rapide pour APIs backend"}*, *:text-hint{text="Rust" tip="Langage axé performance & sécurité"}* et mes connaissances en *:text-hint{text="bases de données" tip="Systèmes SQL/NoSQL pour stockage & requêtes"}*.

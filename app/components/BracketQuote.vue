@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <p class="flex items-center gap-1.5 font-semibold italic dark:text-white light:text-black">
+  <p class="flex items-center font-semibold italic dark:text-white light:text-black">
     <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
     <span class="shrink-0">「</span>
     <span
