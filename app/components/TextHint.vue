@@ -13,7 +13,7 @@ const shouldForceTooltipOpen = ref(false)
 <template>
   <component
     :is="tag"
-    tabindex="0"
+    :tabindex="tip ? 0 : undefined"
     role="tooltip"
     :data-tip="tip"
     class="underline decoration-dotted hover:text-primary focus:text-primary"
