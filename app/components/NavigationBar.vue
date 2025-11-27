@@ -21,7 +21,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
 
 <template>
   <header
-    class="sticky top-0 z-40 w-full font-nav text-sm font-medium backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-checked:mask-[linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:bg-linear-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-checked:after:via-primary has-checked:bg-base-200 supports-backdrop-filter:backdrop-saturate-150 md:text-base"
+    class="sticky top-0 z-40 font-nav text-sm font-medium backdrop-blur-[1.25rem] duration-300 ease-linear select-none not-has-checked:mask-[linear-gradient(to_bottom,black_90%,transparent_100%)] after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:bg-linear-to-r after:from-transparent after:to-transparent after:blur-sm after:content-[''] not-has-checked:after:via-primary has-checked:bg-base-200 supports-backdrop-filter:backdrop-saturate-150 md:text-base"
   >
     <div
       class="relative mx-auto flex max-w-6xl items-center justify-between pr-4 sm:py-0 sm:pr-8 md:px-8"

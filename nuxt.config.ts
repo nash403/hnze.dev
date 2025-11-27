@@ -21,6 +21,9 @@ export default defineNuxtConfig({
   ],
 
   imports: {
+    dirs: [
+      './types',
+    ],
     presets: [
       // Example
       // {

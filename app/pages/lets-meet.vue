@@ -15,7 +15,7 @@ useHead({
 <template>
   <div
     v-if="page"
-    class="mx-auto self-start"
+    class="mx-auto max-w-5xl p-4 sm:p-8"
   >
     <NuxtImg
       :src="(page.meta.pictureSrc as unknown as string)"
@@ -29,7 +29,7 @@ useHead({
     <ContentRenderer
 
       :value="page"
-      class="prose max-w-5xl prose-headings:font-bold prose-headings:text-accent prose-h2:text-2xl"
+      class="prose prose-headings:font-bold prose-headings:text-accent prose-h2:text-2xl"
     />
   </div>
 </template>

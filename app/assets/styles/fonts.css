@@ -1,10 +1,12 @@
 /* Fonts */
 @theme {
-  --font-default-sans: Inter, system-ui, sans-serif;
-  --font-body: "DM Sans", Inter, system-ui, sans-serif;
-  /* --font-body: var(--font-default-sans); */
-  --font-nav: var(--font-default-sans);
-  --font-footer: var(--font-default-sans);
-  --font-headline: var(--font-default-sans);
-  --font-headline-name: "Merienda", Inter, system-ui;
+  --font-inter-sans: Inter, system-ui, sans-serif;
+  --font-merienda: "Merienda", Inter, system-ui;
+  --font-dm-sans: "DM Sans", Inter, system-ui, sans-serif;
+  --font-body: var(--font-dm-sans);
+  --font-nav: var(--font-inter-sans);
+  --font-footer: var(--font-inter-sans);
+  --font-headline: var(--font-inter-sans);
+  --font-headline-name: var(--font-merienda);
+  --font-resume-body: var(--font-inter-sans);
 }

@@ -14,7 +14,7 @@ const { data: navigationData } = await useAsyncNavigationContentData()
       />
       <main
         id="main-content"
-        class="flex w-full flex-1 flex-col items-center p-4 sm:p-8 md:max-w-8xl"
+        class="flex flex-1 *:flex-1"
         :class="{ 'min-h-[calc(100dvh-calc(var(--header-h,72px)*2))]': route.path === localePath('index') }"
       >
         <slot></slot>

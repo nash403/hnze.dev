@@ -19,7 +19,7 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-center gap-4 sm:gap-7 md:flex-row md:gap-12 lg:max-w-5xl ">
+  <section class="flex flex-col items-center justify-center gap-4 sm:gap-7 md:flex-row md:gap-12">
     <!-- NOTE: Credits to https://github.com/zyyv/zyyv.dev/ for the homepage style. I shamelessly copied from it. -->
     <div
       class="mx-auto aspect-square h-25 w-25 shrink-0 animate-blob-shape overflow-hidden rounded-[62%_47%_82%_35%/45%_45%_80%_66%] will-change-[border-radius,transform,opacity,left,top] xs:h-40 xs:w-40 sm:mx-0"
@@ -49,12 +49,12 @@ const localePath = useLocalePath()
         >
           <template #firstName>
             <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-            <span class="bg-linear-to-br from-primary to-accent bg-clip-text font-headline-name text-transparent">Honoré</span>
+            <span class="h-text-gradiant font-headline-name">Honoré</span>
           </template>
         </i18n-t>
 
         <!-- Intro paragraph -->
-        <div class=" text-sm leading-relaxed xs:text-base lg:text-lg">
+        <div class="prose text-sm leading-relaxed xs:text-base lg:text-lg">
           <slot></slot>
         </div>
 
@@ -90,7 +90,7 @@ const localePath = useLocalePath()
             class="group flex link items-center gap-1 link-hover transition-all"
             :to="localePath('resume')"
           >
-            <span class="bg-linear-to-br from-primary to-accent bg-clip-text text-transparent transition-all group-hover:opacity-70 group-focus:opacity-70">{{ secondaryActionLabel }}</span>
+            <span class="h-text-gradiant transition-all group-hover:opacity-70 group-focus:opacity-70">{{ secondaryActionLabel }}</span>
             <Icon
               name="mingcute:share-forward-line"
               class="text-accent transition-transform group-hover:translate-x-1 group-focus:translate-x-1"

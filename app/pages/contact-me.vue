@@ -16,6 +16,5 @@ useHead({
   <ContentRenderer
     v-if="page"
     :value="page"
-    class="prose"
   />
 </template>

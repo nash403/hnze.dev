@@ -1,5 +1,5 @@
 <template>
-  <div class="font-default-sans">
+  <div class="font-resume-body">
     <PageSeoWrapper>
       <slot></slot>
     </PageSeoWrapper>
