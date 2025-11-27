@@ -313,46 +313,50 @@
 }
 
 @utility h-link-glow {
-    @apply relative;
+  @apply relative;
 
-    &:before, &:after {
-      position: absolute;
-      height: 3px;
-      bottom: 1px;
-      content: ' ';
-      display: block;
-      width: 12px;
-      opacity: 0;
-      transition: 0.4s;
-      z-index: -1;
-    }
-    &:before {
-      background-image: linear-gradient(90deg, var(--color-base-300), var(--color-primary));
-      left: 0;
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
-    }
-
-    &:after {
-      background-image: linear-gradient(270deg, var(--color-base-300), var(--color-primary));
-      right: 0;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
-    }
-
-    &:hover, &.active {
-      @apply animate-text-glow -translate-y-px after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
-    }
-
-    /* &.router-link-active {
-      font-weight: 700;
-      background: linear-gradient(45deg, var(--color-base-300), var(--color-primary));
-      -webkit-background-clip: text;
-      &:after, &:before {
-        opacity: 0;
-      }
-    } */
+  &:before, &:after {
+    position: absolute;
+    height: 3px;
+    bottom: 1px;
+    content: ' ';
+    display: block;
+    width: 12px;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: -1;
   }
+  &:before {
+    background-image: linear-gradient(90deg, var(--color-base-300), var(--color-primary));
+    left: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:after {
+    background-image: linear-gradient(270deg, var(--color-base-300), var(--color-primary));
+    right: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &:hover, &.active {
+    @apply animate-text-glow -translate-y-px after:opacity-100 after:w-1/2 before:opacity-100 before:w-1/2;
+  }
+
+  /* &.router-link-active {
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--color-base-300), var(--color-primary));
+    -webkit-background-clip: text;
+    &:after, &:before {
+      opacity: 0;
+    }
+  } */
+}
+
+@utility h-text-gradiant {
+  @apply bg-linear-to-br from-primary to-accent bg-clip-text text-transparent;
+}
 
 @layer base {
   /* add custom styles to the base layer */
