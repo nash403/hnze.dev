@@ -48,25 +48,34 @@ const ignoreVersion = async () => {
       <div class="h-px flex-1 bg-base-content-600"></div>
     </div>
 
-    <!-- Copyright notice -->
-    <i18n-t
-      scope="global"
-      keypath="app.footer.copyright"
-      tag="p"
-      class="text-sm"
-    >
-      <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-      <template #copyrightDate>
-        &copy;{{ (new Date()).getFullYear() }}
-      </template>
-      <template #cloneIt>
-        <NuxtLink
-          href="https://github.com/nash403/hnze.dev"
-          target="_blank"
-          class="h-link-glow h-link"
-        >{{ $t('app.footer.clone_website_link') }}</NuxtLink>
-      </template>
-    </i18n-t>
+    <div>
+      <!-- Copyright notice -->
+      <i18n-t
+        scope="global"
+        keypath="app.footer.copyright"
+        tag="p"
+        class="text-sm"
+      >
+        <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+        <template #copyrightDate>
+          &copy;{{ (new Date()).getFullYear() }}
+        </template>
+      </i18n-t>
+      <i18n-t
+        scope="global"
+        keypath="app.footer.clone_this_website"
+        tag="p"
+        class="m-0 text-sm"
+      >
+        <template #cloneIt>
+          <NuxtLink
+            href="https://github.com/nash403/hnze.dev"
+            target="_blank"
+            class="h-link-glow h-link"
+          >{{ $t('app.footer.clone_website_link') }}</NuxtLink>
+        </template>
+      </i18n-t>
+    </div>
 
     <!-- Social links -->
     <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5">

@@ -31,10 +31,6 @@ socialLinks:
     icon: hnze:malt
     label: Hire me on Malt
     href: https://www.malt.fr/profile/honorenintunze1
-  - id: gitlab
-    icon: mingcute:git-lab-line
-    label: Find me on Gitlab
-    href: https://gitlab.com/hnze
   - id: discord
     icon: mingcute:discord-line
     label: Send me an invite on my Discord handle nash403#2186
@@ -48,6 +44,14 @@ socialLinks:
     icon: mingcute:tiktok-fill
     label: Follow me on TikTok
     href: https://tiktok.com/@nash403.0
+  - id: spotify
+    icon: mingcute:spotify-fill
+    label: View my Spotify playlists
+    href: https://open.spotify.com/user/1156652914?si=b7c0919c2fb94c81
+  - id: gitlab
+    icon: mingcute:git-lab-line
+    label: Find me on Gitlab
+    href: https://gitlab.com/hnze
   - id: twitter
     icon: mingcute:social-x-line
     label: Follow me on X
