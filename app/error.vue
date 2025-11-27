@@ -51,7 +51,7 @@ const handleContactMe = () => clearError({ redirect: localePath('lets-meet') })
 <template>
   <NuxtLayout name="default">
     <ErrorPanel
-      class="min-h-[60vh] px-6"
+      class="min-h-[45vh] px-6"
       :title
       :description="message"
       :icon="entry.icon"
