@@ -17,7 +17,7 @@ withDefaults(defineProps<{
         <div class="card-body">
           <ul
             v-if="tags.length > 0"
-            class="m-0 flex items-center gap-2 p-0"
+            class="m-0 flex flex-wrap items-center gap-2 p-0"
           >
             <li
               v-for="(tag, i) of tags"

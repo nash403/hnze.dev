@@ -198,7 +198,7 @@
   --color-success: oklch(51% 0.096 186.391);
   --color-success-content: var(--color-content-light-on-dark);
   --color-warning: oklch(68% 0.162 75.834);
-  --color-warning-content: var(--color-content-dark-on-light);
+  --color-warning-content: black;
   --color-error: oklch(64% 0.222 41.116);
   --color-error-content: var(--color-content-dark-on-light);
 

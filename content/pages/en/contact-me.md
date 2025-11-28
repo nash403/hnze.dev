@@ -1,21 +1,20 @@
 ---
-title: Let's talk about your need!
+title: Let's Build Something Great Together
 description: Learn more about Honoré Nintunze, passionate full-stack web developer
-headerTitle: test title
-headerSubTitle: lorem ipsum bnfvkqh f weqjkhbfkeqwgv kjbekwq gv ew,jfbeqw,hj
+headerTitle: Let's Build Something Great Together
+headerSubTitle: Have a project in mind? Don't hesitate to reach out. I'd love to hear about it!
 headerTags:
-  - text: badge1
-    className: ''
-  - text: badge2
-    className: ''
+  - text: MVP
+    className: bg-accent text-accent-content
+  - text: Landing Page
+    className: bg-secondary text-secondary-content
+  - text: SAAS
+    className: bg-info text-info-content
+  - text: Staff Support
+    className: bg-warning text-warning-content
+# - text: Coaching
+#   className: bg-accent text-accent-content
 ---
-
-MVP
-Landing page
-SAAS
-Renfort d'équipe
-Coaching
-
 Have a project in mind? Don't hesitate to reach out. I'd love to hear about it!
 Download My CV | Contact Me
 
