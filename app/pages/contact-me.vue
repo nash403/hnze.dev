@@ -13,8 +13,15 @@ useHead({
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-  />
+  <div v-if="page">
+    <HeaderTitle
+      :title="(page.meta.headerTitle as unknown as string)"
+      :subtitle="(page.meta.headerSubTitle as unknown as string)"
+      :tags="(page.meta.headerTags as unknown as any[])"
+    />
+    <UnderConstructionPanel class="min-h-[25vh] p-6" />
+    <ContentRenderer
+      :value="page"
+    />
+  </div>
 </template>

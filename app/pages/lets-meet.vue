@@ -27,7 +27,6 @@ useHead({
       format="webp,auto"
     />
     <ContentRenderer
-
       :value="page"
       class="prose prose-headings:font-bold prose-headings:text-accent prose-h2:text-2xl"
     />
