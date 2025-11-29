@@ -40,7 +40,7 @@ technologies:
     to: https://www.docker.com
 ---
 
-[&#x3C;Ingénieur Web Full-stack /&#x3E;]{.h-text-gradiant.font-merienda} :text-hint{text="senior"}, avec **10+ ans** d'expérience à concevoir des applications web fiables, scalables et orientées usage, pour des startups et de grands acteurs du e-commerce.
+[&#x3C;Ingénieur Web Full-stack /&#x3E;]{.h-text-gradiant.font-merienda} :text-hint{text="senior"}, avec **10 ans** d'expérience à concevoir des applications web fiables, scalables et orientées usage, pour des startups et de grands acteurs du e-commerce.
 
 ::bracket-quote{class="justify-center mx-auto w-fit gap-2"}
 Du concept à l'impact — livré vite, livré juste.
