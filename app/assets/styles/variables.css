@@ -1,0 +1,8 @@
+@layer base {
+  :root {
+    --header-h: calc(var(--spacing) * 18);
+    --x: 0;
+    --y: 0;
+    --radial-gradient-circle-size: 300px;
+  }
+}

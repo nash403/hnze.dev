@@ -1,133 +1,196 @@
-import { FileSystemIconLoader } from 'unplugin-icons/dist/loaders.js'
-import { consola } from 'consola'
-import { freezeColorModeOnEveryPages } from './src/hooks/freezeColorMode'
-import { DEFAULT_THEME } from './config/contants'
+import tailwindcss from '@tailwindcss/vite'
+import { defineRuntimeOptions } from './config'
+
+const { enableDebugMode, https, defaultColorMode } = defineRuntimeOptions()
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  srcDir: 'src/',
 
-  devServer: {
-    host: import.meta.env.HOST ?? '0.0.0.0',
-    port: +(import.meta.env.PORT ?? 3000),
-    https: import.meta.env.WEBAPP_LOCAL_CERTS_PATH
-      ? {
-          key: import.meta.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA-key.pem',
-          cert: import.meta.env.WEBAPP_LOCAL_CERTS_PATH + '/rootCA.pem',
-        }
-      : false,
+  modules: [
+    '@nuxt/scripts',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxt/icon',
+    '@nuxt/content',
+    '@nuxtjs/seo',
+    '@nuxt/eslint',
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+    'unplugin-info',
+  ],
+
+  ssr: true,
+
+  imports: {
+    dirs: [
+      './types',
+    ],
+    presets: [
+      // Example
+      // {
+      //   from: '@vueuse/components',
+      //   imports: ['UseClipboard'],
+      // },
+    ],
   },
 
   devtools: {
-    enabled: false,
+    enabled: true,
+
     timeline: {
       enabled: true,
     },
   },
 
-  css: ['~/assets/css/main.css'],
-
-  nitro: {
-    serveStatic: true,
-  },
-
-  components: [
-    { path: '~/components/ui', prefix: '', pathPrefix: false },
-    { path: '~/components/layout', prefix: 'H', pathPrefix: false },
-    { path: '~/components', prefix: 'H', pathPrefix: false },
-  ],
-
   app: {
     rootId: '__hnze-app-nuxt',
-    head: {
-      titleTemplate: '%s %separator %siteName',
-    },
     pageTransition: { name: 'page', mode: 'out-in' },
+  },
+
+  css: ['~/assets/styles/main.css'],
+
+  colorMode: {
+    preference: 'light', // default value of $colorMode.preference
+    fallback: defaultColorMode, // fallback value if not system preference found
+    dataValue: 'theme',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storage: 'cookie', // or 'sessionStorage' or 'cookie'
+    storageKey: 'hnze-nuxt-color-mode',
+  },
+
+  content: {
+    preview: {
+      // force module initialization on dev env
+      dev: true,
+      api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'hnze.dev',
+        owner: 'nash403',
+        url: 'https://github.com/nash403/hnze.dev',
+      },
+    },
   },
 
   runtimeConfig: {
     public: {
-      i18n: {
-        // should be set by DEFAULT_LOCALE env variable
-        defaultLocale: 'en',
+      siteName: 'Honoré Nintunze (Fullstack Web Developer)',
+      siteNameSeparator: '-',
 
-        detectBrowserLanguage: {
-          // redirectOn: 'no_prefix',
-          useCookie: true,
-        },
-      },
+      defaultSocialHandle: 'myHandle',
+      contactEmail: 'hello@example.com',
+      frPhoneNumber: '+33633221100',
+      caPhoneNumber: '+15145551234',
     },
   },
 
-  modules: [
-    [
-      '@nuxtjs/i18n',
-      {
-        vueI18n: './i18n.config.ts', // relative to /<rootDir>
+  devServer: {
+    port: +(process.env.PORT ?? 3000),
+    https,
+  },
+  compatibilityDate: '2025-11-11',
 
-        types: 'composition',
+  nitro: {
+    // static: true,
+    preset: 'vercel_static',
+    // serveStatic: true,
+    // prerender: {
+    //   crawlLinks: true,
+    //   // routes: ['/sitemap.xml', '/robots.txt'],
+    // },
+  },
 
-        lazy: true,
-        langDir: './locales', // relative to /<srcDir>
-        strategy: 'prefix_except_default',
-        // strategy: 'prefix_and_default',
-        locales: [
-          { code: 'fr', iso: 'fr-FR', file: 'fr-FR.json', name: 'FR' },
-          { code: 'en', iso: 'en-US', file: 'en-US.json', name: 'EN', isCatchallLocale: true, disabled: false },
-        ],
+  vite: {
+    server: {
+      https,
+      hmr: {
+        protocol: process.env.WEBAPP_LOCAL_USE_SSL ? 'wss' : 'ws',
       },
+    },
+    plugins: [
+      tailwindcss(),
     ],
+  },
 
-    '@nuxtjs/seo',
+  debug: enableDebugMode,
 
-    [
-      '@nuxtjs/tailwindcss',
-      {
-        configPath: '~~/tailwind.config', // uses nuxt alias to /<rootDir>
-      },
-    ],
-
-    [
-      '@nuxtjs/color-mode',
-      {
-        fallback: DEFAULT_THEME,
-        classSuffix: '',
-      },
-    ],
-
-    [
-      'unplugin-icons/nuxt',
-      {
-        autoInstall: true,
-        customCollections: {
-          hnze: FileSystemIconLoader('./src/assets/icons'), // relative to /<rootDir>
-          'hnze-companies': FileSystemIconLoader('./src/assets/icons/companies'),
-        },
-      },
-    ],
-
-    [
-      '@nuxt/image',
-      {
-        domains: [],
-      },
-    ],
-
-    '@vueuse/nuxt',
-  ],
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+  eslint: {
+    config: {
+      stylistic: true,
     },
   },
 
-  hooks: {
-    'pages:extend' (pages) {
-      // TODO: remove this hook when dark mode is supported
-      consola.warn(`[nuxt.config][hook(pages:extend)] Forcing all pages to use ${DEFAULT_THEME} color mode`)
-      freezeColorModeOnEveryPages(pages, DEFAULT_THEME)
+  fonts: {
+    families: [
+      // Example declaration. Normally no need, just defining `font-family: MyFont;` in CSS should suffice.
+      {
+        name: 'Merienda', // for my first name on homepage
+        provider: 'google',
+        weights: [600],
+        preload: true,
+      },
+      {
+        name: 'DM Sans', // normal
+        provider: 'google',
+        weights: [400, 600, 700, 800],
+        preload: true,
+      },
+      {
+        name: 'Inter', // navbar, footer, resume page & default fallback
+        provider: 'google',
+        weights: [400, 600, 700, 800],
+      },
+    ],
+  },
+
+  i18n: {
+    defaultLocale: process.env.DEFAULT_LOCALE || 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
     },
+    strategy: 'prefix_and_default',
+    // customRoutes: 'meta',
+    locales: [
+      {
+        code: 'en', language: 'en', file: 'en-US.json', name: 'EN',
+        disabled: false,
+      },
+      {
+        code: 'fr', language: 'fr', file: 'fr-FR.json', name: 'FR',
+        disabled: false /* disable in the language switcher UI */,
+      },
+    ],
+    // baseUrl: 'https://hnze.dev', // Use NUXT_PUBLIC_I18N_BASE_URL to configure
+  },
+
+  icon: {
+    cssLayer: 'base',
+    customCollections: [
+      {
+        prefix: 'hnze',
+        dir: './app/assets/icons',
+      },
+    ],
+    clientBundle: {
+      // list of icons to include in the client bundle
+      icons: [],
+      scan: true,
+      // guard for uncompressed bundle size, will fail the build if exceeds
+      sizeLimitKb: 256,
+    },
+    serverBundle: {
+      // list of icon collections to include in the server bundle
+      // collections: [],
+    },
+  },
+
+  image: {
+    quality: 80,
+    format: ['webp', 'avif'],
   },
 })

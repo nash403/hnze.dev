@@ -1,0 +1,66 @@
+showLetsMeetLink: true
+currentCountryFlag: flagpack:fr
+currentCity: Rennes
+items:
+  - icon: mingcute:magic-hat-line
+    slug: /why-hire-me
+    label: My super-powers
+    minBreakpoint: md
+  - icon: mingcute:wechat-line
+    slug: /contact-me
+    label: Hire me
+    minBreakpoint: md
+  - icon: mingcute:clipboard-line
+    slug: /resume
+    label: Resume
+
+socialLinks:
+  - id: mail
+    icon: mingcute:mail-send-line
+    label: Email me
+    href: mailto:hello@hnze.dev
+  - id: linkedin
+    icon: mingcute:linkedin-fill
+    label: Conect with me on LinkedIn
+    href: https://linkedin.com/in/nash403/
+  - id: github
+    icon: mingcute:github-2-fill
+    label: Find me on GitHub
+    href: https://github.com/nash403
+  - id: malt
+    icon: hnze:malt
+    label: Hire me on Malt
+    href: https://www.malt.fr/profile/honorenintunze1
+  - id: discord
+    icon: mingcute:discord-line
+    label: Send me an invite on my Discord handle nash403#2186
+    href: nash403
+    isCopyLinkAction: true
+  - id: instagram
+    icon: mingcute:ins-line
+    label: Follow me on Instagram
+    href: https://instagram.com/nash403/
+  - id: tiktok
+    icon: mingcute:tiktok-fill
+    label: Follow me on TikTok
+    href: https://tiktok.com/@nash403.0
+  - id: spotify
+    icon: mingcute:spotify-fill
+    label: View my Spotify playlists
+    href: https://open.spotify.com/user/1156652914?si=b7c0919c2fb94c81
+  - id: gitlab
+    icon: mingcute:git-lab-line
+    label: Find me on Gitlab
+    href: https://gitlab.com/hnze
+  - id: twitter
+    icon: mingcute:social-x-line
+    label: Follow me on X
+    href: https://twitter.com/nash_403
+  - id: youtube
+    icon: mingcute:youtube-fill
+    label: Follow me on YouTube
+    href: https://youtube.com/@nash403
+  - id: facebook
+    icon: mingcute:facebook-fill
+    label: Message me on Facebook
+    href: https://facebook.com/nash403
