@@ -28,7 +28,7 @@ useHead({
     />
     <ContentRenderer
       :value="page"
-      class="prose prose-headings:font-bold prose-headings:text-accent prose-h2:text-2xl"
+      class="prose prose-headings:prose-a:text-accent prose-headings:prose-a:no-underline"
     />
   </div>
 </template>
