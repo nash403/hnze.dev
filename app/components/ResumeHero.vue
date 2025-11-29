@@ -83,7 +83,6 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
         width="200"
         height="200"
         quality="90"
-        format="webp,auto"
         :modifiers="{ extract: '770_15_900_900' }"
       />
 

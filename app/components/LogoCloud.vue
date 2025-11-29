@@ -30,7 +30,6 @@ withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', imgWidth: '60' })
       class="opacity-50 grayscale transition-all hover:opacity-100 hover:filter-none"
       :width="imgWidth"
       quality="90"
-      format="webp,auto"
     />
     <Icon
       v-else-if="icon"
@@ -49,7 +48,6 @@ withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', imgWidth: '60' })
       class=" opacity-50 grayscale transition-all hover:opacity-100 hover:filter-none"
       :width="imgWidth"
       quality="90"
-      format="webp,auto"
     />
     <Icon
       v-else-if="icon"

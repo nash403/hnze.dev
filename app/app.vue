@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt'
+
 const $config = useRuntimeConfig()
 
 useHead({
@@ -14,5 +16,6 @@ useHead({
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+    <Analytics />
   </div>
 </template>

@@ -133,7 +133,6 @@ const contractDetailTags = computed(() => {
         :alt="companyLogoAlt || `Logo de ${companyName}`"
         width="128px"
         quality="90"
-        format="webp,auto"
       />
     </div>
 

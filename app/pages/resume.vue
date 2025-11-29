@@ -19,6 +19,11 @@ useHead({
 
 const mdcVars = {
   // Add any global variables you want to pass to ContentRenderer here
+  email: {
+    href: `mailto:${$config.public.contactEmail}`,
+    label: $config.public.contactEmail,
+    icon: 'mingcute:mail-line',
+  },
   phones: [$config.public.frPhoneNumber, $config.public.caPhoneNumber],
 }
 </script>

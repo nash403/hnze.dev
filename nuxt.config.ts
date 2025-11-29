@@ -20,6 +20,8 @@ export default defineNuxtConfig({
     'unplugin-info',
   ],
 
+  ssr: true,
+
   imports: {
     dirs: [
       './types',
@@ -78,6 +80,8 @@ export default defineNuxtConfig({
       siteName: 'Honoré Nintunze (Fullstack Web Developer)',
       siteNameSeparator: '-',
 
+      defaultSocialHandle: 'myHandle',
+      contactEmail: 'hello@example.com',
       frPhoneNumber: '+33633221100',
       caPhoneNumber: '+15145551234',
     },
@@ -87,10 +91,16 @@ export default defineNuxtConfig({
     port: +(process.env.PORT ?? 3000),
     https,
   },
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2025-11-11',
 
   nitro: {
-    serveStatic: true,
+    // static: true,
+    preset: 'vercel_static',
+    // serveStatic: true,
+    // prerender: {
+    //   crawlLinks: true,
+    //   // routes: ['/sitemap.xml', '/robots.txt'],
+    // },
   },
 
   vite: {
@@ -177,5 +187,10 @@ export default defineNuxtConfig({
       // list of icon collections to include in the server bundle
       // collections: [],
     },
+  },
+
+  image: {
+    quality: 80,
+    format: ['webp', 'avif'],
   },
 })

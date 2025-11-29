@@ -32,7 +32,6 @@ const localePath = useLocalePath()
         height="120"
         class="aspect-square size-full object-cover"
         quality="90"
-        format="webp,auto"
       />
     </div>
 
