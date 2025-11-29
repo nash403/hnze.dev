@@ -19,7 +19,6 @@ useHead({
       :subtitle="(page.meta.headerSubTitle as unknown as string)"
       :tags="(page.meta.headerTags as unknown as any[])"
     />
-    <UnderConstructionPanel class="min-h-[25vh] p-6" />
     <ContentRenderer
       :value="page"
     />

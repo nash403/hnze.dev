@@ -13,9 +13,12 @@ useHead({
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    class="p-4 sm:p-8"
-  />
+  <div v-if="page">
+    <UnderConstructionPanel class="h-full min-h-[45vh] px-6">
+      <!-- <ContentRenderer
+      v-if="page"
+      :value="page"
+      /> -->
+    </UnderConstructionPanel>
+  </div>
 </template>

@@ -2,7 +2,7 @@
 title: Let's Build Something Great Together
 description: Learn more about Honoré Nintunze, passionate full-stack web developer
 headerTitle: Let's Build Something Great Together
-headerSubTitle: Have a project in mind? Don't hesitate to reach out. I'd love to hear about it!
+headerSubTitle: Looking for expert support? Need help launching, improving, or scaling your product? I'd love to hear about it, I can help.
 headerTags:
   - text: MVP
     className: bg-accent text-accent-content

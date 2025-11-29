@@ -15,7 +15,7 @@ useHead({
 <template>
   <div
     v-if="page"
-    class="mx-auto max-w-5xl p-4 sm:p-8"
+    class="mx-auto max-w-(--breakpoint-nav) h-navbar-padding px-4 pt-4 sm:pt-8"
   >
     <NuxtImg
       :src="(page.meta.pictureSrc as unknown as string)"

@@ -2,7 +2,7 @@
 title: Discutons de votre Projet
 description: N'hésitez pas à me contacter pour toute question ou collaboration.
 headerTitle: Discutons de votre Projet
-headerSubTitle: Vous voulez un accompagnement ? Lancer, améliorer ou scaler votre produit ? Racontez-moi tout, je suis à l'écoute.
+headerSubTitle: Vous voulez un accompagnement ? Lancer, améliorer ou scaler votre produit ? Racontez-moi tout, je peux vous aider.
 headerTags:
   - text: MVP
     className: bg-accent text-accent-content

@@ -31,12 +31,12 @@ const ignoreVersion = async () => {
 </script>
 
 <template>
-  <div class="space-y-5 p-4 text-center font-footer sm:p-8 md:max-w-8xl">
+  <div class="space-y-5 p-4 text-center font-footer sm:p-8">
     <!-- Separator line -->
     <div
       role="separator"
       aria-orientation="horizontal"
-      class="mx-auto flex max-w-2xl items-center xl:max-w-4xl"
+      class="mx-auto flex max-w-(--breakpoint-nav) items-center"
     >
       <div class="h-px flex-1 bg-base-content-600"></div>
       <div class="mx-4 flex items-center rounded-full p-1 shadow-sm dark:bg-bg-light/80 dark:text-content-dark-on-light light:bg-bg-dark/80 light:text-content-light-on-dark">
