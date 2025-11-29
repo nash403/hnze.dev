@@ -25,7 +25,7 @@ Pour en savoir plus sur mon parcours, [consultez mon CV](/fr/resume){.h-link}. E
 
 
 
-## My services
+## Mes services
 Une offre adaptée à chaque situation. Le plus simple, c'est de se rencontrer !
 
 ::my-services{class="mx-auto max-w-5xl mt-0 prose-li:my-5"}
