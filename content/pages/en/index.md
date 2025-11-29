@@ -45,7 +45,7 @@ technologies:
 #    to: https://en.wikipedia.org/wiki/SQL
 ---
 
-:text-hint{text="Senior"} [&#x3C;Full-stack Web Engineer /&#x3E;]{.h-text-gradiant.font-merienda} with **7+ years** of experience creating scalable, reliable product-driven web apps and platforms for everything from fast-moving startups to major e-commerce brands.
+:text-hint{text="Senior"} [&#x3C;Full-stack Web Engineer /&#x3E;]{.h-text-gradiant.font-merienda} with **8+ years** of experience creating scalable, reliable product-driven web apps and platforms for everything from fast-moving startups to major e-commerce brands.
 
 ::bracket-quote{class="justify-center mx-auto w-fit gap-2"}
 From concept to impact — built fast, built right.
