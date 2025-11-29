@@ -19,6 +19,6 @@ I also love chilling in a café with my laptop to tackle some personal projects.
 My friends say I'm cheerful and always up for anything!<br/>
 Meeting new people is one of my favourite parts of both travelling and being a dev. I love talking about the latest tech trends, open-source, business ideas, and all kinds of random life experiences.
 
-If you'd like to chat, checkout the [footer :icon{name="mingcute:arrows-down-line" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} for my socials or simply [email me :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:h.onore.nintu.nze@proton.me){.h-link.h-link-glow.whitespace-nowrap}
+If you'd like to chat, checkout the [footer :icon{name="mingcute:arrows-down-line" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} for my socials or simply [email me :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:hello@hnze.dev){.h-link.h-link-glow.whitespace-nowrap}
 
 See you around a Latte ✨

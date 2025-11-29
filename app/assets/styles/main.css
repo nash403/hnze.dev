@@ -393,12 +393,6 @@ body {
   animation: fadeOutDown .6s backwards;
 }
 
-/* Make all prose links have gradiant underline */
-:is(.prose *:not(h1, h2, h3, h4, h5, h6),
-.prose:not(h1, h2, h3, h4, h5, h6)) > :is(a, .link) {
-  @apply h-link;
-}
-
 /* Keyframes declarations */
 @keyframes fadeInUp {
   from {

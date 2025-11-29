@@ -21,6 +21,7 @@ useHead({
     />
     <ContentRenderer
       :value="page"
+      class="mx-auto prose max-w-(--breakpoint-nav) px-4 pt-4 sm:px-8 sm:pt-8 nav:px-0 prose-headings:prose-a:text-accent prose-headings:prose-a:no-underline"
     />
   </div>
 </template>

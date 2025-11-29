@@ -16,27 +16,41 @@ headerTags:
 #   className: bg-accent text-accent-content
 ---
 
-Have a project in mind? Don't hesitate to reach out. I'd love to hear about it!
-Download My CV | Contact Me
+## Ma mission: Relier UX, stratégie produit et excellence technique
+Je travaille avec une approche pragmatique : comprendre votre contexte, identifier ce qui apporte réellement de la valeur, et livrer des interfaces et des systèmes fiables. Mes décisions techniques sont guidées par l'usage et les objectifs business, avec une adaptation totale à vos outils et technologies existants.
 
-Thank you for considering my profile!
+Je délivre vite, sans compromis sur la qualité, et j'optimise pour le long terme.
 
-Tell me about your project
-
-form contact ici.
-
-Stack
-
-Some of the software and technologies I use on a daily basis
--
--
--
--
+Pour en savoir plus sur mon parcours, [consultez mon CV](/fr/resume){.h-link}. Et si vous souhaitez discuter directement de votre projet, [contactez-moi par email](mailto:hello@hnze.dev){.h-link}.
 
 
 
-My services
+## My services
+Une offre adaptée à chaque situation. Le plus simple, c'est de se rencontrer !
 
-Une offre adaptée à chaque situation. Sinon, le plus simple c'est de se rencontrer ! Email me
+::my-services{class="mx-auto max-w-5xl mt-0 prose-li:my-5"}
+---
+mailto: hello@hnze.dev
+services:
+  - title: Un Développeur pour votre équipe
+    ctaText: Travailler avec moi
+    ctaToSubject: Demande de collaboration - Front-end Senior
+  - title: "PoC, MVP ou SaaS : du concept au produit"
+    ctaText: Demander un devis
+    ctaToSubject: Projet SaaS / MVP / PoC - Prise de contact
+  - title: "Besoin ponctuel: Coaching ou question technique Front-end"
+    ctaText: Travailler avec moi
+    ctaToSubject: Support technique - Besoin d'aide Front-end
+---
+#description-0
+Besoin d'un renfort front-end sur Vue, Nuxt ou React ? Je prends en main vos features, refontes ou chantiers complexes.
 
+#description-1
+Architecture, design system, API, front-end, déploiement : je prends en charge la chaîne complète, du prototype à la v1.
+
+#description-2
+Expliquez-moi votre situation et je vous accompagne sur Vue/Nuxt, bonnes pratiques, problèmes de performance, refactorisation ou montée en compétence.
+::
+
+<!-- Ajouter companies logo cloud -->
 
