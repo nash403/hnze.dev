@@ -49,3 +49,28 @@ Architecture, design system, API, front-end and deployment — I take care of th
 #description-2
 Tell me what you're facing and I'll support you with Vue/Nuxt best practices, performance issues, refactoring or skill development.
 ::
+
+## Rejoignez la liste des clients qui m'ont fait confiance
+::my-success-stories{class="mx-auto max-w-5xl mt-0"}
+---
+companies:
+  - name: Zadig & Voltaire
+    to: https://zadig-et-voltaire.com
+    src: /img/companies/zv.svg
+  - name: Decathlon
+    to: https://www.decathlon.fr/
+    src: /img/companies/decathlon.svg
+  - name: Norauto
+    to: https://www.norauto.fr/
+    src: /img/companies/norauto.svg
+  - name: Carelancer
+    to: https://carelancer.com
+    src: /img/companies/carelancer.png
+  - name: Adeo
+    to: https://www.adeo.com
+    src: /img/companies/adeo.svg
+  - name: Auchan Retail France
+    to: https://www.auchan-retail.com/fr
+    src: /img/companies/auchan.svg
+---
+::

@@ -22,7 +22,7 @@ withDefaults(defineProps<LogoCloudItem>(), { target: '_blank', imgWidth: '60' })
     external
     class="inline-flex items-center justify-center transition-all duration-300"
     :title="name"
-    :aria-label="`Visit ${name} website`"
+    :aria-label="name"
   >
     <NuxtImg
       v-if="src"

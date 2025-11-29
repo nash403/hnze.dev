@@ -357,7 +357,10 @@
 }
 
 @utility h-navbar-padding {
-  @apply px-1 sm:px-4 nav:px-0;
+  @apply px-1 sm:px-4;
+  @media (width >= 74rem) {
+    @apply px-0;
+  }
 }
 
 @layer base {
