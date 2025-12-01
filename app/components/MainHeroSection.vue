@@ -14,8 +14,6 @@ interface Props {
 withDefaults(defineProps<Props>(), {
   technologies: () => [],
 })
-
-const localePath = useLocalePath()
 </script>
 
 <template>
@@ -59,9 +57,9 @@ const localePath = useLocalePath()
 
         <!-- Main CTAs -->
         <div class="mt-4 flex flex-wrap items-center justify-center gap-5 text-lg lg:text-xl">
-          <NuxtLink
+          <NuxtLinkLocale
             class="group btn relative overflow-hidden btn-accent"
-            :to="localePath('contact-me')"
+            to="contact-me"
           >
             <div class="flex items-center gap-2">
               <div
@@ -83,18 +81,18 @@ const localePath = useLocalePath()
                 class="text-2xl"
               />
             </div>
-          </NuxtLink>
+          </NuxtLinkLocale>
 
-          <NuxtLink
+          <NuxtLinkLocale
             class="group flex link items-center gap-1 link-hover transition-all"
-            :to="localePath('resume')"
+            to="resume"
           >
             <span class="h-text-gradiant transition-all group-hover:opacity-70 group-focus:opacity-70">{{ secondaryActionLabel }}</span>
             <Icon
               name="mingcute:share-forward-line"
               class="text-accent transition-transform group-hover:translate-x-1 group-focus:translate-x-1"
             />
-          </NuxtLink>
+          </NuxtLinkLocale>
         </div>
       </div>
 
