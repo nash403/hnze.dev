@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/relay-ph-An1toEu/static/(.*)",
+      "destination": "https://us-assets.i.posthog.com/static/$1"
+    },
+    {
+      "source": "/relay-ph-An1toEu/(.*)",
+      "destination": "https://us.i.posthog.com/$1"
+    }
+  ]
+}
