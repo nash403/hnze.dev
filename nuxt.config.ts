@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     'unplugin-info',
+    '@posthog/nuxt',
   ],
 
   ssr: true,
@@ -85,6 +86,11 @@ export default defineNuxtConfig({
       frPhoneNumber: '+33633221100',
       caPhoneNumber: '+15145551234',
     },
+  },
+
+  routeRules: {
+    '/relay-ph-An1toEu/static/**': { proxy: 'https://eu-assets.i.posthog.com/static/**' },
+    '/relay-ph-An1toEu/**': { proxy: 'https://eu.i.posthog.com/**' },
   },
 
   devServer: {
@@ -192,5 +198,14 @@ export default defineNuxtConfig({
   image: {
     quality: 80,
     format: ['webp', 'avif'],
+  },
+
+  posthogConfig: {
+    publicKey: 'phc_Di7yAGY4Uo22AGvJiyamhlTnkDK3GGgxk71it9vFn1m', // Find it in project settings https://app.posthog.com/settings/project
+    host: 'https://eu.i.posthog.com', // Optional: defaults to https://us.i.posthog.com. Use https://eu.i.posthog.com for EU region
+    clientConfig: {
+      // Optional: PostHog client configuration options
+      api_host: `/relay-ph-An1toEu`,
+    },
   },
 })
