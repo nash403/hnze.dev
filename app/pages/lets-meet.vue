@@ -27,7 +27,7 @@ useHead({
     />
     <ContentRenderer
       :value="page"
-      class="prose prose-headings:prose-a:text-accent prose-headings:prose-a:no-underline"
+      class="prose prose-headings:prose-a:text-accent prose-headings:prose-a:no-underline prose-h2:nth-of-type-1:[&>a]:h-link-glow"
     />
   </div>
 </template>

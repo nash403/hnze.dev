@@ -19,6 +19,6 @@ Un de mes plaisir est de m'installer dans un café, laptop ouvert, pour avancer 
 Mes amis me décrivent comme jovial et toujours open pour tout !<br/>
 Rencontrer de nouvelles personnes est l'un de mes aspects préférés du voyage et du métier de développeur. J'adore discuter des dernières tendances tech, d'open-source, d'idées business, et de tout un tas d'expériences de vie.
 
-Si tu veux papoter, tu peux checker mes réseaux dans le [footer :icon{name="mingcute:arrows-down-line" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} ou simplement [m'envoyer un mail :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:hello@hnze.dev){.h-link.h-link-glow.whitespace-nowrap}
+Je vis à Rennes aujourd'hui. Si tu veux papoter, tu peux checker mes réseaux dans le [footer :icon{name="mingcute:arrows-down-line" .text-accent.align-middle.animate-bounce}]{.whitespace-nowrap} ou simplement [m'envoyer un mail :icon{name="mingcute:mail-send-line" .text-accent.align-middle}](mailto:hello@hnze.dev){.h-link.h-link-glow.whitespace-nowrap}
 
 À bientôt autour d'un Latte ✨

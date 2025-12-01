@@ -50,7 +50,7 @@ Architecture, design system, API, front-end and deployment — I take care of th
 Tell me what you're facing and I'll support you with Vue/Nuxt best practices, performance issues, refactoring or skill development.
 ::
 
-## Rejoignez la liste des clients qui m'ont fait confiance
+## Join the teams that trust my work
 ::my-success-stories{class="mx-auto max-w-5xl mt-0"}
 ---
 companies:

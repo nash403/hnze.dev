@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "hnze-dev",
   "type": "module",
   "private": true,
   "version": "2.0.0",
@@ -13,7 +13,7 @@
     "generate": "bun run --bun nuxt generate",
     "preview": "bun run --bun nuxt preview",
     "serve": "npx serve .vercel/output/static ",
-    "deploy": "bunx vercel deploy --prebuilt",
+    "deploy": "bunx vercel deploy --archive=tgz --logs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "postinstall": "bun run --bun nuxt prepare",
@@ -36,7 +36,6 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.17",
     "@unhead/vue": "^2.0.19",
-    "@vercel/analytics": "^1.5.0",
     "@vueuse/components": "^14.0.0",
     "@vueuse/nuxt": "14.0.0",
     "better-sqlite3": "^12.4.6",
