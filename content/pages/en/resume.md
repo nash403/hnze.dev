@@ -5,10 +5,6 @@ description: "Honoré Nintunze's Resume, passionate full-stack web developer"
 
 ::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phones="phones" :email="email" }
 ---
-# email:
-#   href: 'mailto:hello@hnze.dev'
-#   label: 'hello@hnze.dev'
-#   icon: 'mingcute:mail-line'
 phonesIcon: 'mingcute:cellphone-line'
 location:
   href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"

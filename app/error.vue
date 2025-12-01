@@ -39,7 +39,11 @@ const title = computed(() =>
   t('app.error.title', { code: code.value, type: t(entry.value.typeKey) }),
 )
 const message = computed(
-  () => t(`app.error.message.${code.value}`) || t('app.error.message.500'),
+  () => t(({
+    404: 'app.error.message.404',
+    500: 'app.error.message.500',
+    503: 'app.error.message.503',
+  })[code.value] || 'app.error.message.500'),
 )
 
 const localePath = useLocalePath()
