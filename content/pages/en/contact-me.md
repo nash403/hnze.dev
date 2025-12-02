@@ -1,6 +1,7 @@
 ---
-title: Let's Build Something Great Together
-description: Learn more about Honoré Nintunze, passionate full-stack web developer
+title: Hire a Senior Full-Stack Vue.js/Nuxt.js Developer | Honoré Nintunze
+description: Work with Honoré Nintunze for expert web development, product engineering, and technical consulting.
+
 headerTitle: Let's Build Something Great Together
 headerSubTitle: Looking for expert support? Need help launching, improving, or scaling your product? I'd love to hear about it, I can help.
 headerTags:

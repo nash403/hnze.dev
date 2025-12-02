@@ -16,6 +16,7 @@
   "app.footer.copyright": "{copyrightDate} Honoré Nintunze. All rights reserved.",
   "app.footer.new_version_available": "A new version is available! Reload the page :)",
   "app.footer.version_uid": "Version: {version}",
+  "app.link_go_home": "Go to home page",
   "app.main_hero.headline": "Hi, I'm {firstName}.",
   "shared.element_under_construction_panel.description": "This page is a work in progress. Check back soon for something cool!",
   "shared.element_under_construction_panel.title": "I am still building this!"

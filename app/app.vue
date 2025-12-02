@@ -3,7 +3,8 @@ const $config = useRuntimeConfig()
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} ${$config.public.siteNameSeparator} ${$config.public.siteName}` : `${$config.public.siteName}`
+    return titleChunk || `${$config.public.siteName}`
+    // titleChunk ? `${titleChunk} ${$config.public.siteNameTemplateSeparator} ${$config.public.siteName}` : `${$config.public.siteName}`
   },
 })
 </script>

@@ -9,6 +9,12 @@ if (!page.value) {
 
 useHead({
   title: computed(() => (page.value as PagesCollectionItem).title),
+  meta: [
+    {
+      name: 'description',
+      content: computed(() => (page.value as PagesCollectionItem).description),
+    },
+  ],
 })
 </script>
 
@@ -24,6 +30,7 @@ useHead({
       :alt="page.meta.pictureAlt"
       class="aspect-video w-105 mask-[url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjAwIj4KICAgIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNIDQwIDEwIGggMjYwIGMgMjQuMzc1IDAgMzAgNS42MjUgMzAgMzAgdiAxMjAgYyAwIDI0LjM3NSAtNS42MjUgMzAgLTMwIDMwIGggLTI2MCBjIC0yNC4zNzUgMCAtMzAgLTUuNjI1IC0zMCAtMzAgdiAtMTIwIGMgMCAtMjQuMzc1IDUuNjI1IC0zMCAzMCAtMzAiLz4KIDwvc3ZnPg==)] mask-size-[100%_100%] mask-no-repeat object-cover"
       quality="90"
+      preload
     />
     <ContentRenderer
       :value="page"

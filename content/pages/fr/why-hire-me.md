@@ -1,6 +1,6 @@
 ---
-title: "Pourquoi me choisir ?"
-description: "Découvrez ce qui fait ma force en tant que développeur full-stack"
+title : Compétences & Expertise en Développement Web | Honoré Nintunze
+description : "Découvrez mes compétences, forces et expertises : Vue.js, Nuxt.js, APIs, JavaScript moderne et ingénierie web avancée."
 ---
 
 du contenu

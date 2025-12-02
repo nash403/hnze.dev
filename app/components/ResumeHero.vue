@@ -84,6 +84,7 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
         height="200"
         quality="90"
         :modifiers="{ extract: '770_15_900_900' }"
+        preload
       />
 
       <!-- Goal / Summary -->

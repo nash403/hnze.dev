@@ -1,7 +1,7 @@
 ---
-title: Prenons un café ensemble!
-description: N'hésitez pas à me contacter pour toute question ou collaboration.
-# pictureSrc: https://placecats.com/320/320
+title : Rencontrons-nous à Rennes — Prenons un café | Honoré Nintunze
+description : Disponible pour discuter de vos projets, idées produit ou opportunités de collaboration à Rennes.
+
 pictureSrc: /img/meet-me.jpg
 pictureAlt: Moi souriant parce que je suis entouré de mes amis
 ---

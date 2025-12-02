@@ -78,8 +78,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteName: 'Honoré Nintunze (Fullstack Web Developer)',
-      siteNameSeparator: '-',
+      siteName: 'Honoré Nintunze - Senior Full-Stack Web Developer',
+      siteNameTemplateSeparator: '-',
 
       defaultSocialHandle: 'myHandle',
       contactEmail: 'hello@example.com',
@@ -165,7 +165,7 @@ export default defineNuxtConfig({
       redirectOn: 'root', // recommended
     },
     strategy: 'prefix_and_default',
-    // customRoutes: 'meta',
+    customRoutes: 'meta',
     locales: [
       {
         code: 'en', language: 'en', file: 'en-US.json', name: 'EN',

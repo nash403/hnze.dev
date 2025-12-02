@@ -30,6 +30,7 @@ withDefaults(defineProps<Props>(), {
         height="120"
         class="aspect-square size-full object-cover"
         quality="90"
+        preload
       />
     </div>
 
@@ -60,6 +61,7 @@ withDefaults(defineProps<Props>(), {
           <NuxtLinkLocale
             class="group btn relative overflow-hidden btn-accent"
             to="contact-me"
+            prefetch-on="interaction"
           >
             <div class="flex items-center gap-2">
               <div
@@ -86,6 +88,7 @@ withDefaults(defineProps<Props>(), {
           <NuxtLinkLocale
             class="group flex link items-center gap-1 link-hover transition-all"
             to="resume"
+            prefetch-on="interaction"
           >
             <span class="h-text-gradiant transition-all group-hover:opacity-70 group-focus:opacity-70">{{ secondaryActionLabel }}</span>
             <Icon

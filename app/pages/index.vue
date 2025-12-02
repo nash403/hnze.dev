@@ -12,6 +12,12 @@ if (!page.value) {
 
 useHead({
   title: computed(() => (page.value as PagesCollectionItem).title),
+  meta: [
+    {
+      name: 'description',
+      content: computed(() => (page.value as PagesCollectionItem).description),
+    },
+  ],
 })
 </script>
 
