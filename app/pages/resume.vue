@@ -36,9 +36,11 @@ const mdcVars = {
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    :data="mdcVars"
-  />
+  <div class="p-4 font-resume-body md:p-16 print:min-h-screen print:p-[1.5cm]">
+    <ContentRenderer
+      v-if="page"
+      :value="page"
+      :data="mdcVars"
+    />
+  </div>
 </template>
