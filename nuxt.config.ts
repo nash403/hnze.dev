@@ -78,7 +78,6 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteName: 'Honoré Nintunze - Senior Full-Stack Web Developer',
       siteNameTemplateSeparator: '-',
 
       defaultSocialHandle: 'myHandle',
