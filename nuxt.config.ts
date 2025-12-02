@@ -203,6 +203,7 @@ export default defineNuxtConfig({
   },
 
   image: {
+    provider: 'ipxStatic',
     quality: 80,
     format: ['webp', 'avif'],
   },
