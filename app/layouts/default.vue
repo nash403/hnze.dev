@@ -6,8 +6,8 @@ const { data: navigationData } = await useAsyncNavigationContentData()
 </script>
 
 <template>
-  <div class="flex min-h-dvh flex-col">
-    <PageSeoWrapper>
+  <PageSeoWrapper>
+    <div class="flex min-h-dvh flex-col">
       <NavigationBar
         :navigation-data="navigationData!"
         class="shrink-0"
@@ -23,6 +23,6 @@ const { data: navigationData } = await useAsyncNavigationContentData()
         :navigation-data="navigationData!"
         class="shrink-0"
       />
-    </PageSeoWrapper>
-  </div>
+    </div>
+  </PageSeoWrapper>
 </template>

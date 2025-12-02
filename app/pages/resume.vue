@@ -3,6 +3,7 @@ import type { PagesCollectionItem } from '@nuxt/content'
 
 definePageMeta({
   layout: 'resume',
+  scrollToTop: true,
 })
 
 const $config = useRuntimeConfig()
@@ -15,6 +16,12 @@ if (!page.value) {
 
 useHead({
   title: computed(() => (page.value as PagesCollectionItem).title),
+  meta: [
+    {
+      name: 'description',
+      content: computed(() => (page.value as PagesCollectionItem).description),
+    },
+  ],
 })
 
 const mdcVars = {

@@ -381,7 +381,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#__hnze-app-nuxt {
+#__hnze-app-nuxt, html, body {
   @apply min-h-dvh;
   margin: 0 auto;
   font-weight: normal;

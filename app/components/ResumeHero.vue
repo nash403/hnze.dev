@@ -61,12 +61,12 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
     <!-- Resume header title with full name & position -->
     <h1>
       <div class="max-w-72 text-6xl font-bold">
-        <NuxtLink
-          :to="$localePath('index')"
+        <NuxtLinkLocale
+          to="index"
           class="-no-hover"
         >
           {{ fullName }}
-        </NuxtLink>
+        </NuxtLinkLocale>
       </div>
       <div class="col-span-2 max-w-40 text-4xl print:max-w-44 print:pl-3">
         {{ jobTitle }}
@@ -84,6 +84,7 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
         height="200"
         quality="90"
         :modifiers="{ extract: '770_15_900_900' }"
+        preload
       />
 
       <!-- Goal / Summary -->

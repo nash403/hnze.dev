@@ -5,7 +5,8 @@ import { withLeadingSlash } from 'ufo'
 const $config = useRuntimeConfig()
 const route = useRoute()
 const { locale } = useI18n()
-const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const routeParams = route.params as any // FIXME: TS is not recognizing slug ¯\_ツ_/¯
+const slug = computed(() => withLeadingSlash(String(routeParams.slug)))
 
 const { data: page } = await useAsyncData('blog-page-' + slug.value, async () => {
   // Build collection name based on current locale
@@ -27,6 +28,12 @@ if (!page.value) {
 
 useHead({
   title: computed(() => (page.value as BlogCollectionItem).title),
+  meta: [
+    {
+      name: 'description',
+      content: computed(() => (page.value as BlogCollectionItem).description),
+    },
+  ],
 })
 </script>
 

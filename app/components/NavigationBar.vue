@@ -3,8 +3,6 @@ const props = withDefaults(defineProps<{
   navigationData?: NavigationBar
 }>(), {})
 
-const localePath = useLocalePath()
-
 const toggleMenuMaxBreakpointVisible = ref<undefined | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md')
 
 // Track whether the burger menu is open and close it when navigation occurs
@@ -57,8 +55,8 @@ watch([() => route.fullPath, () => props.navigationData], () => {
 
       <!-- Logo & Let's meet CTA -->
       <div class="mr-auto flex items-center space-x-10">
-        <NuxtLink
-          :to="localePath('index')"
+        <NuxtLinkLocale
+          to="index"
           :title="$t('app.link_go_home')"
           class="flex items-center"
         >
@@ -68,17 +66,18 @@ watch([() => route.fullPath, () => props.navigationData], () => {
             name="hnze:hnze-logo"
             class="size-(--header-h) hover:animate-text-glow"
           />
-        </NuxtLink>
+        </NuxtLinkLocale>
 
-        <NuxtLink
+        <NuxtLinkLocale
           v-if="navigationData?.showLetsMeetLink ?? true"
-          :to="localePath('lets-meet')"
+          to="lets-meet"
           class="hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 text-base-content-900 hover:bg-primary-100 focus:bg-primary-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center"
           active-class="bg-primary-100 hover:ring-2 hover:ring-primary-200"
+          prefetch-on="interaction"
         >
           <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
           {{ `@` }} <Icon name="flagpack:fr" /> {{ 'Rennes' }}
-        </NuxtLink>
+        </NuxtLinkLocale>
       </div>
 
       <!-- Site navigation links -->
@@ -110,9 +109,9 @@ watch([() => route.fullPath, () => props.navigationData], () => {
             v-for="(nav, index) of navigationData?.items || []"
             :key="index"
           >
-            <NuxtLink
+            <NuxtLinkLocale
               v-slot="{ isActive }"
-              :to="localePath(nav.slug)"
+              :to="nav.slug as any"
               class="group link rounded no-underline"
               :class="{
                 'sm:hidden md:inline': nav.minBreakpoint === 'md',
@@ -120,6 +119,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
                 'sm:hidden xl:inline': nav.minBreakpoint === 'xl',
                 'sm:hidden 2xl:inline': nav.minBreakpoint === '2xl',
               }"
+              prefetch-on="interaction"
             >
               <span
                 :class="[
@@ -145,7 +145,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
                 />
                 {{ nav.label }}
               </span>
-            </NuxtLink>
+            </NuxtLinkLocale>
           </li>
         </ul>
       </nav>

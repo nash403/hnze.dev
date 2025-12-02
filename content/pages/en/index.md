@@ -1,6 +1,6 @@
 ---
-title: 'hnze.dev'
-description: Home page of Honoré Nintunze, passionate full-stack web developer
+title: Honoré Nintunze — Senior Full-Stack Vue.js/Nuxt.js Developer
+description: Senior Full-stack JavaScript developer specializing in Vue.js, Nuxt.js, and modern product engineering.
 
 headlineI18nKey: "app.main_hero.headline"
 profilePicture: "/img/profile_picture.jpg"

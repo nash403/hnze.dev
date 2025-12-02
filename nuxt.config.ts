@@ -78,8 +78,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteName: 'Honoré Nintunze (Fullstack Web Developer)',
-      siteNameSeparator: '-',
+      siteNameTemplateSeparator: '-',
 
       defaultSocialHandle: 'myHandle',
       contactEmail: 'hello@example.com',
@@ -97,6 +96,11 @@ export default defineNuxtConfig({
     port: +(process.env.PORT ?? 3000),
     https,
   },
+
+  experimental: {
+    typedPages: true,
+  },
+
   compatibilityDate: '2025-11-11',
 
   nitro: {
@@ -160,7 +164,7 @@ export default defineNuxtConfig({
       redirectOn: 'root', // recommended
     },
     strategy: 'prefix_and_default',
-    // customRoutes: 'meta',
+    customRoutes: 'meta',
     locales: [
       {
         code: 'en', language: 'en', file: 'en-US.json', name: 'EN',
@@ -171,7 +175,9 @@ export default defineNuxtConfig({
         disabled: false /* disable in the language switcher UI */,
       },
     ],
-    // baseUrl: 'https://hnze.dev', // Use NUXT_PUBLIC_I18N_BASE_URL to configure
+    experimental: {
+      typedOptionsAndMessages: 'default',
+    },
   },
 
   icon: {
@@ -196,6 +202,7 @@ export default defineNuxtConfig({
   },
 
   image: {
+    provider: process.env.NODE_ENV === 'production' ? 'ipxStatic' : 'ipx',
     quality: 80,
     format: ['webp', 'avif'],
   },

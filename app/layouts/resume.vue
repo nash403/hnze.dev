@@ -1,7 +1,7 @@
 <template>
-  <div class="font-resume-body">
-    <PageSeoWrapper>
+  <PageSeoWrapper>
+    <div class="p-4 font-resume-body md:p-16 print:p-8">
       <slot></slot>
-    </PageSeoWrapper>
-  </div>
+    </div>
+  </PageSeoWrapper>
 </template>

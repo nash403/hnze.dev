@@ -1,14 +1,10 @@
 ---
-title: "Curriculum Vitae"
-description: "Honoré Nintunze's Resume, passionate full-stack web developer"
+title: Resume - Honoré Nintunze, Senior Full-Stack Vue.js/Nuxt.js Developer
+description: Senior Full-Stack Web Developer with expertise in Vue.js, Nuxt.js, JavaScript, TypeScript, and cloud workflows.
 ---
 
 ::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phones="phones" :email="email" }
 ---
-# email:
-#   href: 'mailto:hello@hnze.dev'
-#   label: 'hello@hnze.dev'
-#   icon: 'mingcute:mail-line'
 phonesIcon: 'mingcute:cellphone-line'
 location:
   href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"

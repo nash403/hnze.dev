@@ -1,6 +1,7 @@
 ---
-title: Discutons de votre Projet
-description: N'hésitez pas à me contacter pour toute question ou collaboration.
+title : Engagez un Développeur Full-Stack Vue.js/Nuxt.js Senior | Honoré Nintunze
+description : Collaborez avec Honoré Nintunze pour du développement web expert, de l'ingénierie produit et du conseil technique.
+
 headerTitle: Discutons de votre Projet
 headerSubTitle: Vous voulez un accompagnement ? Lancer, améliorer ou scaler votre produit ? Racontez-moi tout, je peux vous aider.
 headerTags:

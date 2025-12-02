@@ -1,7 +1,7 @@
 ---
-title: "Let's grab a coffee together!"
-description: "Let's discuss your projects and see how I can help"
-# pictureSrc: https://placecats.com/320/320
+title: Meet me in Rennes — Let's Grab a Coffee | Honoré Nintunze
+description: Available for in-person chats in Rennes. Let's discuss your project, product ideas, or collaboration opportunities.
+
 pictureSrc: /img/meet-me.jpg
 pictureAlt: Me smiling because I'm surrounded by my friends.
 ---
