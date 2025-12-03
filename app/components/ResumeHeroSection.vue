@@ -66,18 +66,18 @@ const print = () => window?.print?.()
     class="flex print:break-after-page"
   >
     <!-- Hero: Nom + Titre -->
-    <h1 class="not-prose h-resume-hero-title flex shrink-0 flex-col gap-4 sm:grid sm:grid-cols-[min-content_1fr_min-content] sm:items-center sm:gap-6">
+    <h1 class="not-prose h-resume-hero-title flex shrink-0 flex-col gap-4 sm:grid sm:grid-cols-[min-content_1fr_minmax(100px,max-content)] sm:items-center sm:gap-6">
       <div class="h-resume-hero-title-name w-min text-4xl font-bold sm:text-5xl md:text-6xl">
         <NuxtLinkLocale to="index">
           <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="fullName"></span>
         </NuxtLinkLocale>
       </div>
-      <div class="h-resume-hero-title-job w-min grow text-xl sm:text-2xl md:text-4xl">
+      <div class="h-resume-hero-title-job w-min text-xl sm:text-2xl md:text-4xl">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <span v-html="jobTitle"></span>
       </div>
-      <div class="h-resume-hero-title-actions flex w-max items-center gap-4 self-start justify-self-end sm:flex-col sm:items-end sm:justify-end print:hidden">
+      <div class="h-resume-hero-title-actions flex w-max max-w-full flex-wrap items-center gap-4 self-start justify-self-end sm:flex-col sm:items-end sm:justify-end print:hidden">
         <button
           type="button"
           class="btn btn-sm btn-secondary"
@@ -96,7 +96,7 @@ const print = () => window?.print?.()
         </button>
         <I18nInterpolated
           tag="span"
-          class="text-sm text-base-content-900"
+          class="text-end text-sm text-base-content-900"
           keypath="i18n.resume_hero_section.actions.kbd_hint.text"
           :interpolations="[kbdHelp]"
           interpolations-class-name="kbd kbd-sm"
