@@ -89,7 +89,6 @@ const switchLocale = () => {
         <NuxtLinkLocale
           to="index"
           class="btn btn-sm btn-secondary"
-          @click="$router.back()"
         >
           <Icon name="mingcute:back-2-line" />
           {{ $t('i18n.resume_hero_section.actions.exit.text') }}
@@ -115,6 +114,7 @@ const switchLocale = () => {
             </template>
           </i18n-t>
         </button>
+
         <I18nInterpolated
           tag="span"
           class="text-end text-sm text-base-content-900"
