@@ -27,5 +27,6 @@
   "i18n.resume_hero_section.actions.print.text": "Save",
   "i18n.shared.link_back_to_home_title": "Go to home page",
   "i18n.under_construction_panel.description": "This page is a work in progress. Check back soon for something cool!",
-  "i18n.under_construction_panel.title_text": "I am still building this!"
+  "i18n.under_construction_panel.title_text": "I am still building this!",
+  "i18n.shared.switch_to_locale": "Switch to {locale}"
 }

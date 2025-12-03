@@ -20,7 +20,7 @@ defineProps<Props>()
     <div></div>
 
     <!-- Contenu sur 2 colonnes -->
-    <div class="space-y-2 md:col-span-2">
+    <div class="col-span-2 space-y-2">
       <h3>
         {{ certificationName }}
       </h3>

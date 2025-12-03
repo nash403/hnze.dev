@@ -27,5 +27,6 @@
   "i18n.resume_hero_section.actions.print.text": "Sauvegarder",
   "i18n.shared.link_back_to_home_title": "Aller à la page d'acceuil",
   "i18n.under_construction_panel.description": "Cette page est en cours de fabrication. Repasse bientôt pour découvrir la suite !",
-  "i18n.under_construction_panel.title_text": "Ça construit encore ici !"
+  "i18n.under_construction_panel.title_text": "Ça construit encore ici !",
+  "i18n.shared.switch_to_locale": "Version {locale}"
 }

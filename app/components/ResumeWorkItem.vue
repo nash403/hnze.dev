@@ -102,14 +102,10 @@ const contractDetailTags = computed(() => {
     </div>
 
     <!-- Work details -->
-    <div class="space-y-4 md:col-span-2">
-      <div
-        class="md:col-span-2 print:col-span-2"
-      >
+    <div class="col-span-2 space-y-4">
+      <div>
         <!-- Work position -->
-        <h3
-          class="md:col-span-2 print:col-span-2"
-        >
+        <h3>
           {{ workPosition }}
         </h3>
 

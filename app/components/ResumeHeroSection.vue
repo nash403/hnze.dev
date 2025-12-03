@@ -58,7 +58,17 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
   return [firstGroupLinks, secondGroupLinks]
 })
 
+const { locale, localeCodes } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+const router = useRouter()
+const toggleLocale = computed(() => localeCodes.value.filter(code => code !== locale.value)[0])
+
 const print = () => window?.print?.()
+const switchLocale = () => {
+  if (toggleLocale.value) {
+    router.replace(switchLocalePath(toggleLocale.value))
+  }
+}
 </script>
 
 <template>
@@ -66,7 +76,7 @@ const print = () => window?.print?.()
     class="flex print:break-after-page"
   >
     <!-- Hero: Nom + Titre -->
-    <h1 class="not-prose h-resume-hero-title flex shrink-0 flex-col gap-4 sm:grid sm:grid-cols-[min-content_1fr_minmax(100px,max-content)] sm:items-center sm:gap-6">
+    <h1 class="not-prose h-resume-hero-title flex shrink-0 flex-col items-start gap-4 sm:grid sm:grid-cols-[min-content_1fr_minmax(100px,max-content)] sm:gap-6">
       <div class="h-resume-hero-title-name w-min text-4xl font-bold sm:text-5xl md:text-6xl">
         <NuxtLinkLocale to="index">
           <!-- eslint-disable-next-line vue/no-v-html -->
@@ -93,6 +103,18 @@ const print = () => window?.print?.()
         >
           <Icon name="mingcute:arrow-to-down-line" />
           {{ $t('i18n.resume_hero_section.actions.print.text') }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline btn-sm btn-accent"
+          @click="switchLocale"
+        >
+          <Icon name="mingcute:refresh-3-line" />
+          <i18n-t keypath="i18n.shared.switch_to_locale">
+            <template #locale>
+              {{ toggleLocale?.toUpperCase() }}
+            </template>
+          </i18n-t>
         </button>
         <I18nInterpolated
           tag="span"
