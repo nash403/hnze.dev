@@ -2,7 +2,9 @@
 import type { LogoCloudItem } from '~/components/LogoCloud.vue'
 
 interface Props {
-  headlineI18nKey: string
+  prefixText?: string
+  emphasizedText?: string
+  suffixText?: string
   profilePicture: string
   profilePictureAlt: string
   primaryActionLabel: string
@@ -39,17 +41,12 @@ withDefaults(defineProps<Props>(), {
         class="space-y-4 text-center md:text-left"
       >
         <!-- Headline -->
-        <i18n-t
-          scope="global"
-          :keypath="headlineI18nKey || 'app.main_hero.headline'"
-          tag="h1"
+        <I18nInterpolated
           class="font-headline text-3xl font-semibold md:text-4xl"
-        >
-          <template #firstName>
-            <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-            <span class="h-text-gradiant font-headline-name">Honoré</span>
-          </template>
-        </i18n-t>
+          keypath="i18n.main_hero_section.headline"
+          :interpolations="[prefixText, emphasizedText, suffixText]"
+          :interpolations-class-name="[false, 'h-text-gradiant font-headline-name', false]"
+        />
 
         <!-- Intro paragraph -->
         <div class="prose text-sm leading-relaxed xs:text-base lg:text-lg">

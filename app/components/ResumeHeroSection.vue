@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { RouteLocationRaw } from 'vue-router'
 
-interface BaseLink {
+interface BaseLink extends Record<any, any> {
   href: string | RouteLocationRaw
   openInNewTab?: boolean
   label?: string
@@ -16,9 +16,11 @@ interface SocialLink extends BaseLink {
 type ContactLinks = Array<BaseLink | { links: BaseLink[] }>
 
 interface Props {
+  kbdHelp?: string
   fullName: string
   jobTitle: string
   avatarUrl?: string
+  avatarAlt?: string
   phones: string[]
   phonesIcon: string
   email: BaseLink
@@ -28,6 +30,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  kbdHelp: 'CTRL/CMD+P',
   avatarUrl: '/img/profile_picture.jpg',
   socialLinks: () => [],
   websiteLinks: () => [],
@@ -54,59 +57,108 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
 
   return [firstGroupLinks, secondGroupLinks]
 })
+
+const { locale, localeCodes } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+const router = useRouter()
+const toggleLocale = computed(() => localeCodes.value.filter(code => code !== locale.value)[0])
+
+const print = () => window?.print?.()
+const switchLocale = () => {
+  if (toggleLocale.value) {
+    router.replace(switchLocalePath(toggleLocale.value))
+  }
+}
 </script>
 
 <template>
-  <section>
-    <!-- Resume header title with full name & position -->
-    <h1>
-      <div class="max-w-72 text-6xl font-bold">
-        <NuxtLinkLocale
-          to="index"
-          class="-no-hover"
-        >
+  <section
+    class="flex print:break-after-page"
+  >
+    <!-- Hero: Nom + Titre -->
+    <h1 class="not-prose h-resume-hero-title flex shrink-0 flex-col items-start gap-4 sm:grid sm:grid-cols-[min-content_1fr_minmax(100px,max-content)] sm:gap-6">
+      <div class="h-resume-hero-title-name w-min text-4xl font-bold sm:text-5xl md:text-6xl">
+        <NuxtLinkLocale to="index">
           <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="fullName"></span>
         </NuxtLinkLocale>
       </div>
-      <div class="col-span-2 max-w-40 text-4xl print:max-w-44 print:pl-3">
+      <div class="h-resume-hero-title-job w-min text-xl sm:text-2xl md:text-4xl">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <span v-html="jobTitle"></span>
       </div>
+      <div class="h-resume-hero-title-actions flex w-max max-w-full flex-wrap items-center gap-4 self-start justify-self-end sm:flex-col sm:items-end sm:justify-end print:hidden">
+        <button
+          type="button"
+          class="btn btn-sm btn-secondary"
+          @click="$router.back()"
+        >
+          <Icon name="mingcute:back-2-line" />
+          {{ $t('i18n.resume_hero_section.actions.exit.text') }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-neutral"
+          @click="print()"
+        >
+          <Icon name="mingcute:arrow-to-down-line" />
+          {{ $t('i18n.resume_hero_section.actions.print.text') }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline btn-sm btn-accent"
+          @click="switchLocale"
+        >
+          <Icon name="mingcute:refresh-3-line" />
+          <i18n-t keypath="i18n.shared.switch_to_locale">
+            <template #locale>
+              {{ toggleLocale?.toUpperCase() }}
+            </template>
+          </i18n-t>
+        </button>
+        <I18nInterpolated
+          tag="span"
+          class="text-end text-sm text-base-content-900"
+          keypath="i18n.resume_hero_section.actions.kbd_hint.text"
+          :interpolations="[kbdHelp]"
+          interpolations-class-name="kbd kbd-sm"
+        />
+      </div>
     </h1>
 
-    <div class="col-span-3 flex flex-col place-items-center">
+    <!-- Photo + Intro + Links -->
+    <div class="flex flex-1 flex-col items-center justify-center gap-8 text-center">
       <!-- Profile picture -->
       <NuxtImg
         v-if="avatarUrl"
         :src="avatarUrl"
-        alt="Photo portrait de Honoré Nintunze"
-        class="rounded-[50%]"
-        width="200"
-        height="200"
+        :alt="avatarAlt"
+        class="h-resume-hero-img rounded-[50%]"
+        width="120"
+        height="120"
         quality="90"
-        :modifiers="{ extract: '770_15_900_900' }"
         preload
       />
 
-      <!-- Goal / Summary -->
-      <p class="prose prose-base px-8 md:p-0">
+      <!-- Intro paragraph -->
+      <p class="h-resume-hero-intro prose px-8 text-balance md:p-0">
         <slot
-          name="goal"
+          name="intro"
           mdc-unwrap="p"
         ></slot>
       </p>
 
-      <!-- Social links -->
-      <div class="prose prose-base mt-8 w-full md:grid md:grid-cols-2 print:grid print:grid-cols-2">
+      <!-- Links -->
+      <div class="h-resume-hero-links justify-center-items-center grid w-full max-w-xl grid-cols-1 gap-4 px-8 sm:grid-cols-[repeat(2,minmax(min-content,1fr))] md:gap-6 print:grid print:grid-cols-[repeat(2,minmax(min-content,1fr))]">
         <div
           v-for="(contactLinkItem, i) in contactLinksColumns"
           :key="`${i}-social-links-group`"
+          class="flex w-max flex-col gap-x-2 gap-y-1.5"
         >
           <div
             v-for="(socialLink, j) in contactLinkItem"
             :key="`${i}-social-links-group-item-${j}`"
-            class="flex items-center"
+            class="flex items-center gap-2"
             :class="{ 'space-x-2 py-1 text-xl': 'links' in socialLink }"
           >
             <!-- Grouped social link with icon only -->
@@ -129,11 +181,11 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
               <Icon
                 v-if="socialLink.icon"
                 :name="socialLink.icon"
-                class="mr-2"
               />
               <NuxtLink
                 :to="socialLink.href"
                 :target="socialLink.openInNewTab ? '_blank' : '_self'"
+                class="h-link"
               >
                 {{ socialLink.label }}
               </NuxtLink>
@@ -144,3 +196,5 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
     </div>
   </section>
 </template>
+
+<style scoped></style>

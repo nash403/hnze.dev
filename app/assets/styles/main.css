@@ -263,6 +263,7 @@
 
 @import './variables.css';
 @import './fonts.css';
+@import './typography.css';
 @import './print.css';
 
 @source "../../../content/**/*";

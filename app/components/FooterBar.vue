@@ -52,7 +52,7 @@ const ignoreVersion = async () => {
       <!-- Copyright notice -->
       <i18n-t
         scope="global"
-        keypath="app.footer.copyright"
+        keypath="i18n.footer.copyright"
         tag="p"
         class="text-sm"
       >
@@ -63,7 +63,7 @@ const ignoreVersion = async () => {
       </i18n-t>
       <i18n-t
         scope="global"
-        keypath="app.footer.clone_this_website"
+        keypath="i18n.footer.clone_this_website"
         tag="p"
         class="m-0 text-sm"
       >
@@ -72,7 +72,7 @@ const ignoreVersion = async () => {
             href="https://github.com/nash403/hnze.dev"
             target="_blank"
             class="h-link-glow h-link"
-          >{{ $t('app.footer.clone_website_link') }}</NuxtLink>
+          >{{ $t('i18n.footer.clone_website_link_text') }}</NuxtLink>
         </template>
       </i18n-t>
     </div>
@@ -119,7 +119,7 @@ const ignoreVersion = async () => {
     </div>
     <div class="flex flex-col items-center gap-2">
       <p class="text-xs text-base-content-700">
-        {{ $t('app.footer.version_uid', { version: currentVersion }) }}
+        {{ $t('i18n.footer.version_uid', { version: currentVersion }) }}
       </p>
       <ClientOnly>
         <div
@@ -131,21 +131,21 @@ const ignoreVersion = async () => {
               <button
                 type="button"
                 class="btn btn-square btn-xs btn-secondary"
-                :title="$t('app.footer.btn_ignore_new_version_title')"
+                :title="$t('i18n.footer.btn_ignore_new_version_title')"
                 @click="ignoreVersion"
               >
                 <Icon name="mingcute:close-line" />
-                <span class="sr-only">{{ $t('app.footer.btn_ignore_new_version_title') }}</span>
+                <span class="sr-only">{{ $t('i18n.footer.btn_ignore_new_version_title') }}</span>
               </button>
             </div>
 
-            <p>{{ $t('app.footer.new_version_available') }}</p>
+            <p>{{ $t('i18n.footer.new_version_available') }}</p>
             <button
               type="button"
               class="btn btn-sm btn-accent"
               @click="reloadPage"
             >
-              {{ $t('app.footer.btn_reload_page') }}
+              {{ $t('i18n.footer.btn_reload_page') }}
             </button>
           </div>
         </div>

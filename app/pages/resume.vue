@@ -38,6 +38,7 @@ const mdcVars = {
 <template>
   <ContentRenderer
     v-if="page"
+    class="space-y-12 p-4 font-resume-body prose-base-content sm:p-8 md:p-16 print:p-[1.5cm] prose-headings:font-bold prose-h2:text-4xl prose-h3:text-2xl prose-h3:text-accent"
     :value="page"
     :data="mdcVars"
   />
