@@ -177,6 +177,7 @@ export default defineNuxtConfig({
         disabled: false /* disable in the language switcher UI */,
       },
     ],
+    skipSettingLocaleOnNavigate: true,
     experimental: {
       typedOptionsAndMessages: 'default',
     },

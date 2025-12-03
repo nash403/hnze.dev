@@ -10,12 +10,19 @@ useHead({
   },
 })
 
+const { finalizePendingLocaleChange } = useI18n()
+
+const onBeforeEnter = async () => {
+  await finalizePendingLocaleChange()
+}
+
 const { isPageTransitionDisabled } = usePageTransition()
 const pageTransition = computed<boolean | TransitionProps | undefined>(() => {
   if (isPageTransitionDisabled.value) return undefined
   return {
     name: 'page',
     mode: 'out-in',
+    onBeforeEnter,
   }
 })
 </script>
