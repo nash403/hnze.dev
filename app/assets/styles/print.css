@@ -1,7 +1,13 @@
 @media print {
   @page {
     margin: 0;
+
+    @bottom-left {
+      /* FIXME: this doesn't look like it's working */
+      content: "Page " counter(page);
+    }
   }
+
   body {
     print-color-adjust: exact;
   }

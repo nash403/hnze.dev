@@ -3,12 +3,17 @@ title : CV - Honoré Nintunze, Développeur Full-Stack Vue.js/Nuxt.js Senior
 description : Développeur web full-stack senior spécialisé en Vue.js, Nuxt.js, JavaScript, TypeScript et workflows cloud.
 ---
 
-::resume-hero{fullName="Honoré Nintunze" jobTitle="Full-Stack Web Developer" avatarUrl="/img/profile_picture.jpg" :phones="phones" :email="email" }
+::resume-hero{:phones="phones" :email="email" }
 ---
+class: "min-h-[calc(100dvh-calc(var(--spacing)*4))] flex-col gap-8 sm:min-h-[calc(100dvh-calc(var(--spacing)*8))] md:min-h-[calc(100dvh-calc(var(--spacing)*16))]"
+fullName: "Honoré Nintunze"
+jobTitle: "Ingénieur Web Full&#8209;Stack"
+avatarUrl: /img/profile_picture.jpg
+avatarAlt: Photo portrait de Honoré Nintunze
 phonesIcon: 'mingcute:cellphone-line'
 location:
-  href: "https://maps.app.goo.gl/DpqeMMUGK5MJGYXd8"
-  label: "Montreal H2T 1X2, QC, Canada"
+  href: https://maps.app.goo.gl/vKPrM2ZXYdqK1CHh9
+  label: "Rennes (35000), Bretagne, France"
   openInNewTab: true
   icon: mingcute:map-pin-line
 
