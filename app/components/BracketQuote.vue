@@ -7,14 +7,14 @@ defineProps<{
 <template>
   <p class="flex items-center font-semibold italic dark:text-white light:text-black">
     <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
-    <span class="shrink-0">「</span>
+    <span class="shrink-0 self-start">「</span>
     <span
       class="text-center data-block:flex-1"
       :class="{ 'flex-1': block }"
     >
       <slot mdc-unwrap="p"></slot>
     </span>
-    <span class="shrink-0">」</span>
+    <span class="shrink-0 self-end">」</span>
   </p>
 </template>
 

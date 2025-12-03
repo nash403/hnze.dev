@@ -2,7 +2,9 @@
 title: Honoré Nintunze — Senior Full-Stack Vue.js/Nuxt.js Developer
 description: Senior Full-stack JavaScript developer specializing in Vue.js, Nuxt.js, and modern product engineering.
 
-headlineI18nKey: "app.main_hero.headline"
+prefixText: "Hi, I'm "
+emphasizedText: Honoré
+suffixText: "."
 profilePicture: "/img/profile_picture.jpg"
 profilePictureAlt: "My profile picture"
 primaryActionLabel: "Let's work together"

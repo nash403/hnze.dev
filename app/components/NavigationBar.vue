@@ -40,7 +40,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
         <input
           v-model="menuOpen"
           type="checkbox"
-          :aria-label="$t('app.navbar.toggle_menu_label')"
+          :aria-label="$t('i18n.navbar.toggle_menu_btn.title')"
           class="peer sr-only"
         />
         <div
@@ -57,7 +57,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
       <div class="mr-auto flex items-center space-x-10">
         <NuxtLinkLocale
           to="index"
-          :title="$t('app.link_go_home')"
+          :title="$t('i18n.shared.link_back_to_home_title')"
           class="flex items-center"
         >
           <!-- aria-label="Logo Hnze"

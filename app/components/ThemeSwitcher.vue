@@ -8,15 +8,15 @@ const route = useRoute()
 const supportedThemes: { [theme in ColorTheme]: { icon: IconifyIconName, label: string } } = {
   system: {
     icon: 'line-md:computer',
-    label: t('app.navbar.theme_switcher.system.name'),
+    label: t('i18n.comp.theme_switcher.system.name'),
   },
   light: {
     icon: 'line-md:sunny-outline',
-    label: t('app.navbar.theme_switcher.light.name'),
+    label: t('i18n.comp.theme_switcher.light.name'),
   },
   dark: {
     icon: 'line-md:moon',
-    label: t('app.navbar.theme_switcher.dark.name'),
+    label: t('i18n.comp.theme_switcher.dark.name'),
   },
 }
 
@@ -45,8 +45,8 @@ watch(() => colorMode.preference, () => {
 
 <template>
   <button
-    :aria-label="t('app.navbar.theme_switcher.toggle_btn_title', [supportedThemes[themes[currentThemeIndex]!].label])"
-    :title="t('app.navbar.theme_switcher.toggle_btn_title', [supportedThemes[themes[currentThemeIndex]!].label])"
+    :aria-label="t('i18n.comp.theme_switcher.toggle_btn_title', [supportedThemes[themes[currentThemeIndex]!].label])"
+    :title="t('i18n.comp.theme_switcher.toggle_btn_title', [supportedThemes[themes[currentThemeIndex]!].label])"
     :disabled="colorMode.forced"
     :class="['inline-flex link items-center hover:text-primary', { 'cursor-not-allowed': colorMode.forced }]"
     @click="toggleTheme()"
