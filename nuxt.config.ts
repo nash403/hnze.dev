@@ -167,11 +167,13 @@ export default defineNuxtConfig({
     customRoutes: 'meta',
     locales: [
       {
-        code: 'en', language: 'en', file: 'en-US.json', name: 'EN',
+        code: 'en', language: 'en', file: 'en-GB.json', name: 'EN',
+        icon: 'flagpack:gb-ukm',
         disabled: false,
       },
       {
         code: 'fr', language: 'fr', file: 'fr-FR.json', name: 'FR',
+        icon: 'flagpack:fr',
         disabled: false /* disable in the language switcher UI */,
       },
     ],
