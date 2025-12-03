@@ -41,10 +41,11 @@ withDefaults(defineProps<Props>(), {
         class="space-y-4 text-center md:text-left"
       >
         <!-- Headline -->
-        <EmphasisTitle
-          :emphasized-text
-          :prefix-text
-          :suffix-text
+        <I18nInterpolated
+          class="font-headline text-3xl font-semibold md:text-4xl"
+          keypath="i18n.main_hero_section.headline"
+          :interpolations="[prefixText, emphasizedText, suffixText]"
+          :interpolations-class-name="[false, 'h-text-gradiant font-headline-name', false]"
         />
 
         <!-- Intro paragraph -->
