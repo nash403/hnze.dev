@@ -7,7 +7,7 @@ description: Ingénieur web full-stack spécialisé en Vue.js, Nuxt.js, JavaScri
 ---
 class: "min-h-[calc(100dvh-calc(var(--spacing)*4))] flex-col gap-8 sm:min-h-[calc(100dvh-calc(var(--spacing)*8))] md:min-h-[calc(100dvh-calc(var(--spacing)*16))]"
 fullName: "Honoré Nintunze"
-jobTitle: "Ingénieur Web Full&#8209;Stack"
+jobTitle: "Développeur Web Full&#8209;Stack"
 avatarUrl: /img/profile_picture.jpg
 avatarAlt: "Portrait d'Honoré Nintunze"
 phonesIcon: 'mingcute:cellphone-line'

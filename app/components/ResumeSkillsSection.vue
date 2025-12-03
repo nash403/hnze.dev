@@ -20,7 +20,7 @@ withDefaults(defineProps<Props>(), {
     <div
       v-for="(category, cIndex) in skills"
       :key="cIndex"
-      class="break-inside-avoid"
+      class="print:break-inside-avoid"
     >
       <h3>
         {{ category.title }}
