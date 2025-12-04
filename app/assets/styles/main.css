@@ -368,6 +368,10 @@
   }
 }
 
+@utility auto-fit-cols-none {
+  grid-template-columns: none;
+}
+
 @utility auto-fit-cols-* {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, --value([dimension])), 1fr));
   grid-template-columns: repeat(auto-fit, minmax(min(100%, --value(percentage)), 1fr));
