@@ -19,7 +19,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-center gap-12">
+  <section class="flex flex-col items-center justify-center space-y-12">
     <div class="flex flex-col items-center justify-center gap-4 sm:gap-7 md:flex-row md:gap-12">
       <!-- NOTE: Credits to https://github.com/zyyv/zyyv.dev/ for the homepage style. I shamelessly copied from it. -->
       <div
@@ -95,16 +95,16 @@ withDefaults(defineProps<Props>(), {
       </div>
     </div>
     <ul
-      class="grid w-full max-w-full min-w-2/3 auto-fit-cols gap-x-3 gap-y-8 [--col-size:40%] xs:[--col-size:100px] sm:max-w-xl sm:auto-fit-cols-15 sm:gap-x-6"
+      class="mx-auto grid w-full auto-fit-cols gap-x-3 gap-y-8 [--col-size:100px] sm:auto-fit-cols-15 sm:gap-x-6 md:max-w-2xl"
     >
       <li
         v-for="item of technologies"
         :key="item.name"
-        class="flex max-w-full items-center justify-center"
+        class="flex items-center justify-center"
       >
         <LogoCloud
           v-bind="item"
-          class="flex place-items-center text-6xl"
+          class="flex place-items-center text-4xl sm:text-5xl"
         />
       </li>
     </ul>
