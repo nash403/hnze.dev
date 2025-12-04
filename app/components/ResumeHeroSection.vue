@@ -75,15 +75,17 @@ const switchLocale = () => {
   <section
     class="flex print:break-after-page"
   >
-    <!-- Hero: Nom + Titre -->
+    <!-- eslint-disable vue/no-v-html -->
     <h1 class="not-prose h-resume-hero-title flex shrink-0 flex-col items-start gap-4 sm:grid sm:grid-cols-[min-content_1fr_minmax(100px,max-content)] sm:gap-6">
-      <div class="h-resume-hero-title-name w-min text-4xl font-bold sm:text-5xl md:text-6xl">
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <span v-html="fullName"></span>
+      <div
+        class="h-resume-hero-title-name w-min text-4xl font-bold sm:text-5xl md:text-6xl"
+        v-html="fullName"
+      >
       </div>
-      <div class="h-resume-hero-title-job w-min text-xl sm:text-2xl md:text-4xl">
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <span v-html="jobTitle"></span>
+      <div
+        class="h-resume-hero-title-job w-min text-xl sm:text-2xl md:text-4xl"
+        v-html="jobTitle"
+      >
       </div>
       <div class="h-resume-hero-title-actions flex w-max max-w-full flex-wrap items-center gap-4 self-start justify-self-end sm:flex-col sm:items-end sm:justify-end print:hidden">
         <NuxtLinkLocale
@@ -128,9 +130,7 @@ const switchLocale = () => {
       </div>
     </h1>
 
-    <!-- Photo + Intro + Links -->
     <div class="flex flex-1 flex-col items-center justify-center gap-8 text-center">
-      <!-- Profile picture -->
       <NuxtImg
         v-if="avatarUrl"
         :src="avatarUrl"
@@ -142,7 +142,6 @@ const switchLocale = () => {
         preload
       />
 
-      <!-- Intro paragraph -->
       <p class="h-resume-hero-intro prose px-8 text-balance md:p-0">
         <slot
           name="intro"
@@ -150,7 +149,6 @@ const switchLocale = () => {
         ></slot>
       </p>
 
-      <!-- Links -->
       <div class="h-resume-hero-links justify-center-items-center grid w-full max-w-xl grid-cols-1 gap-4 px-8 sm:grid-cols-[repeat(2,minmax(min-content,1fr))] md:gap-6 print:grid print:grid-cols-[repeat(2,minmax(min-content,1fr))]">
         <div
           v-for="(contactLinkItem, i) in contactLinksColumns"
@@ -163,22 +161,17 @@ const switchLocale = () => {
             class="flex items-center gap-2"
             :class="{ 'space-x-2 py-1 text-xl': 'links' in socialLink }"
           >
-            <!-- Grouped social link with icon only -->
             <template v-if="'links' in socialLink">
-              <template
+              <NuxtLink
                 v-for="(iconOnlySocialLink, k) in socialLink.links"
                 :key="`${i}-social-links-group-item-grouped-${j}-link-${k}`"
+                :to="iconOnlySocialLink.href"
+                :target="iconOnlySocialLink.openInNewTab ? '_blank' : '_self'"
               >
-                <NuxtLink
-                  :to="iconOnlySocialLink.href"
-                  :target="iconOnlySocialLink.openInNewTab ? '_blank' : '_self'"
-                >
-                  <Icon :name="iconOnlySocialLink.icon!" />
-                </NuxtLink>
-              </template>
+                <Icon :name="iconOnlySocialLink.icon!" />
+              </NuxtLink>
             </template>
 
-            <!-- Social link item with label -->
             <template v-else>
               <Icon
                 v-if="socialLink.icon"

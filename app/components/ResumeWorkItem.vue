@@ -30,8 +30,8 @@ interface Props {
   companyUrl?: RouteLocationRaw
   workLocation?: WorkLocation | [WorkLocation, ...any[]]
   contractType?: ContractType | [ContractType, ...any[]]
-  startDate?: string
-  endDate?: string
+  startDate?: number | string
+  endDate?: number | string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -105,15 +105,17 @@ const contractDetailTags = computed(() => {
   <article
     class="grid grid-cols-1 gap-4 md:grid-cols-3 print:break-inside-avoid print:grid-cols-3"
   >
-    <!-- Dates + Company Logo -->
     <div class="space-y-4">
       <p class="flex items-center leading-8 font-bold">
-        <slot name="dates">
-          <span v-if="startDate">{{ startDate.slice(0, -3) }}</span>
+        <slot
+          name="dates"
+          mdc-unwrap="p"
+        >
+          <span v-if="startDate">{{ String(startDate).slice(0, -3) }}</span>
           <span
             v-if="endDate"
             class="ml-8"
-          >{{ endDate.slice(0, -3) }}</span>
+          >{{ String(endDate).slice(0, -3) }}</span>
         </slot>
       </p>
       <div>
@@ -131,15 +133,12 @@ const contractDetailTags = computed(() => {
       </div>
     </div>
 
-    <!-- Work details -->
     <div class="col-span-2 space-y-4">
       <div>
-        <!-- Work position -->
         <h3>
           {{ workPosition }}
         </h3>
 
-        <!-- Work position contract details -->
         <div class="mt-2 flex flex-wrap gap-2">
           <template
             v-for="(tag, i) in contractDetailTags"
@@ -157,15 +156,12 @@ const contractDetailTags = computed(() => {
                 : {}"
               class="badge gap-x-1 badge-ghost badge-md"
             >
-              <Icon
-                :name="tag.icon"
-              />
+              <Icon :name="tag.icon" />
               {{ tag.label }}
             </component>
           </template>
         </div>
       </div>
-      <!-- Summary -->
       <div class="print:prose-xs prose prose-base max-w-none md:prose-sm prose-li:list-[square] prose-li:marker:text-accent prose-li:[&_li]:list-['-']">
         <slot></slot>
       </div>

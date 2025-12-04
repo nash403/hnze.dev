@@ -25,7 +25,7 @@ useHead({
   <MainHeroSection
     v-if="page"
     v-bind="((page as PagesCollectionItem).meta as unknown as HeroSectionProps)"
-    class="mx-auto flex max-w-5xl items-center justify-center p-4 sm:p-8"
+    class="mx-auto max-w-5xl p-4 sm:p-8"
   >
     <ContentRenderer
       :value="page"

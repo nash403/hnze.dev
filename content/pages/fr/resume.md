@@ -289,11 +289,17 @@ items:
   - certificationName: "Master E-Services"
     institutionName: "Université Lille 1 Sciences et Technologies"
     institutionUrl: "https://www.univ-lille.fr/formations/fr-00002035"
+    startYear: 2015
+    endYear: 2017
   - certificationName: "Licence Informatique"
     institutionName: "Université Lille 1 Sciences et Technologies"
     institutionUrl: "https://www.univ-lille.fr/formations/fr-00002032"
+    startYear: 2012
+    endYear: 2015
   - certificationName: "Baccalauréat Scientifique"
     institutionName: "École Internationale de Bujumbura"
+    startYear: ''
+    endYear: 2012
 ---
 
 #item-0-dates

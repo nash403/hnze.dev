@@ -290,11 +290,17 @@ items:
   - certificationName: "Master's degree of IT E-Services"
     institutionName: "Lille 1 Sciences and Technologies University"
     institutionUrl: "https://www.univ-lille.fr/formations/fr-00002035"
+    startYear: 2015
+    endYear: 2017
   - certificationName: "Bachelor's degree in Computer Science"
     institutionName: "Lille 1 Sciences and Technologies University"
     institutionUrl: "https://www.univ-lille.fr/formations/fr-00002032"
+    startYear: 2012
+    endYear: 2015
   - certificationName: "General Certificate of Education in Science"
     institutionName: "International School of Bujumbura"
+    startYear: ''
+    endYear: 2012
 ---
 
 #item-0-dates

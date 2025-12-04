@@ -14,7 +14,7 @@ withDefaults(defineProps<{
         {{ title }}
       </slot>
     </h2>
-    <div class="space-y-6">
+    <div class="space-y-6 divide-y divide-base-content-600 sm:divide-none print:divide-none">
       <slot></slot>
     </div>
   </section>

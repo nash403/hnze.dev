@@ -5,8 +5,8 @@ interface Props {
   certificationName: string
   institutionName: string
   institutionUrl?: RouteLocationRaw
-  endYear?: string
-  startYear?: string
+  endYear?: number | string
+  startYear?: number | string
 }
 
 defineProps<Props>()
@@ -14,23 +14,23 @@ defineProps<Props>()
 
 <template>
   <article
-    class="grid grid-cols-1 gap-4 md:grid-cols-3 print:break-inside-avoid print:grid-cols-3"
+    class="contents print:break-inside-avoid"
   >
-    <!-- Col 1 vide -->
-    <div></div>
-
-    <!-- Contenu sur 2 colonnes -->
-    <div class="col-span-2 space-y-2">
+    <div class="col-span-2 col-start-2 space-y-2">
       <h3>
         {{ certificationName }}
       </h3>
       <p class="flex items-center leading-8">
-        <slot name="dates">
-          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-          <span v-if="startYear">{{ startYear }}</span>/<span v-if="endYear">{{ endYear }}</span>
+        <slot
+          name="dates"
+          mdc-unwrap="p"
+        >
+          <template v-if="startYear || endYear">
+            {{ [startYear, endYear].filter(s => s).join(' / ') }}
+          </template>
         </slot>
       </p>
-      <!-- Institution name and link -->
+
       <div class="text-base font-medium italic">
         <NuxtLink
           v-if="institutionUrl"
