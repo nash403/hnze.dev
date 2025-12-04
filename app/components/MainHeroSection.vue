@@ -95,8 +95,7 @@ withDefaults(defineProps<Props>(), {
       </div>
     </div>
     <ul
-      class="grid w-full max-w-full min-w-2/3 auto-fit-cols gap-x-3 gap-y-8 sm:max-w-xl sm:auto-fit-cols-15 sm:gap-x-6"
-      :style="{ '--col-size': '100px' }"
+      class="grid w-full max-w-full min-w-2/3 auto-fit-cols gap-x-3 gap-y-8 [--col-size:40%] xs:[--col-size:100px] sm:max-w-xl sm:auto-fit-cols-15 sm:gap-x-6"
     >
       <li
         v-for="item of technologies"
