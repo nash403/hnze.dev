@@ -39,6 +39,27 @@ const props = withDefaults(defineProps<Props>(), {
 
 const { t } = useI18n()
 
+const i18nContractTypesMapping: Record<ContractType, string> = {
+  fullTimePermanent: 'i18n.work_contract_types.full_time_permanent',
+  partTimePermanent: 'i18n.work_contract_types.part_time_permanent',
+  fullTimeFixedTerm: 'i18n.work_contract_types.full_time_fixed_term',
+  partTimeFixedTerm: 'i18n.work_contract_types.part_time_fixed_term',
+  freelance: 'i18n.work_contract_types.freelance',
+  internship: 'i18n.work_contract_types.internship',
+  apprenticeship: 'i18n.work_contract_types.apprenticeship',
+  seasonal: 'i18n.work_contract_types.seasonal',
+  temporary: 'i18n.work_contract_types.temporary',
+  volunteer: 'i18n.work_contract_types.volunteer',
+  selfEmployed: 'i18n.work_contract_types.self_employed',
+}
+
+const i18nWorkLocationMapping: Record<WorkLocation, string> = {
+  onsite: 'i18n.work_locations.onsite',
+  remote: 'i18n.work_locations.remote',
+  hybrid: 'i18n.work_locations.hybrid',
+  flexible: 'i18n.work_locations.flexible',
+}
+
 const contractDetailTags = computed(() => {
   const arr: Array<{ href?: RouteLocationRaw, icon: string, label: string }> = []
   if (props.companyName) {
@@ -49,17 +70,19 @@ const contractDetailTags = computed(() => {
     })
   }
   if (props.contractType) {
+    const i18nKey = i18nContractTypesMapping[props.contractType as keyof typeof i18nContractTypesMapping]
     arr.push({
       href: props.companyUrl,
       icon: 'mingcute:file-check-line',
-      label: t(`contractTypes.${props.contractType}`, props.contractType),
+      label: t(i18nKey || props.contractType),
     })
   }
   if (props.workLocation) {
+    const i18nKey = i18nWorkLocationMapping[props.workLocation as keyof typeof i18nWorkLocationMapping]
     arr.push({
       href: props.companyUrl,
       icon: 'mingcute:map-pin-line',
-      label: t(`workLocations.${props.workLocation}`, props.workLocation),
+      label: t(i18nKey || props.workLocation),
     })
   }
   return arr
