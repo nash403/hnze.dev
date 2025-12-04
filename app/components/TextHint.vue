@@ -27,7 +27,7 @@ const shouldForceTooltipOpen = ref(false)
     <slot>{{ text }}</slot>
     <span
       v-if="tip"
-      class="sr-only"
+      class="sr-only select-none"
     >{{ tip }}</span>
   </component>
 </template>

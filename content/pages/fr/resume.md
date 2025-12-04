@@ -37,12 +37,23 @@ websiteLinks:
     icon: mingcute:link-line
 ---
 #intro
-Je suis un Ingénieur Web chevronné, spécialisé dans le développement full-stack. Passionné par l'open source, je contribue activement à la communauté et j'applique des bonnes pratiques pour garantir la maintenabilité, la cohérence et la robustesse des projets. Autodidacte et polyvalent, j'interviens sur des sujets front, back et devops.
+Ingénieur Web Full-Stack avec 10 ans d'expérience dans la création de produits web fiables et évolutifs. Bien que spécialisé en Vue.js et Nuxt, je travaille sur l'ensemble de la stack, de l'architecture front-end et des design systems aux APIs backend, workflows cloud et applications mobiles hybrides. J'adopte une approche pragmatique et axée sur la valeur : comprendre le contexte, livrer rapidement sans compromettre la qualité, et optimiser pour la maintenabilité à long terme. Ouvert aux opportunités avec des startups, scale-ups et équipes produit, que ce soit pour renforcer une équipe existante, mener un projet freelance ou construire un produit from scratch.
 ::
 
 ::resume-experience-section{title="Expériences"}
 ---
 items:
+  - workPosition: "Développeur Front-End"
+    companyName: "Carelancer"
+    companyLogoUrl: "/img/companies/carelancer.svg"
+    companyLogoAlt: "Logo de Carelancer"
+    companyUrl: "https://carelancer.com"
+    workLocation:
+      - "remote_from"
+      - location: "Montréal"
+    contractType: "fullTimePermanent"
+    startDate: "2024-05-22"
+    endDate: "2025-09-05"
   - workPosition: "Projets personnels"
     startDate: "2023-05-18"
     endDate: "2024-05-22"
@@ -55,7 +66,7 @@ items:
     contractType: "freelance"
     startDate: "2023-03-27"
     endDate: "2023-05-17"
-  - workPosition: "Ingénieur Web Full-Stack"
+  - workPosition: "Ingénieur Full Stack"
     companyName: "Auchan Retail France"
     companyLogoUrl: "/img/companies/auchan.svg"
     companyLogoAlt: "Logo de Auchan Retail France"
@@ -115,7 +126,7 @@ items:
     companyLogoAlt: "Logo de Auchan Retail France"
     companyUrl: "https://www.auchan-retail.com/fr"
     workLocation: "Villeneuve d'Ascq (59), France"
-    contractType: "CDI"
+    contractType: "fullTimePermanent"
     startDate: "2017-09-04"
     endDate: "2019-05-17"
   - workPosition: "Alternant Développeur Full-Stack"
@@ -124,7 +135,7 @@ items:
     companyLogoAlt: "Logo de Urbilog"
     companyUrl: "https://urbilog.com/"
     workLocation: "Villeneuve d'Ascq (59), France"
-    contractType: "Alternance"
+    contractType: "apprenticeship"
     startDate: "2015-09-01"
     endDate: "2017-06-30"
   - workPosition: "Stagiaire en développement Web"
@@ -133,49 +144,74 @@ items:
     companyLogoAlt: "Logo de Urbilog"
     companyUrl: "https://urbilog.com/"
     workLocation: "Villeneuve d'Ascq (59), France"
-    contractType: "Stage"
+    contractType: "internship"
     startDate: "2015-03-30"
     endDate: "2015-07-31"
 ---
 #item-0
-  Pause sabbatique pour voyager, gérer des contraintes familiales et travailler sur des projets personnels, notamment mon déménagement à Montréal.
+  Chez la startup Carelancer, j'ai dirigé le développement front-end d'une plateforme de santé à la demande connectant les patients avec des professionnels agréés au Canada et aux États-Unis, ciblant une utilisation à grande échelle dans les populations sous-assurées.
+  - Travail au sein d'une équipe basée à Toronto, entièrement anglophone, collaborant quotidiennement en anglais avec les équipes produit, marketing et backend.
+  - Stabilisation et refonte d'une base de code Quasar legacy. Mise à niveau vers la dernière version et modernisation de l'architecture pour la maintenabilité et les performances à long terme.
+  - Introduction de Tailwind CSS v3 (migration depuis une ancienne version d'UnoCSS), PrimeVue, amélioration de l'architecture des composants et standardisation des patterns UI.
+  - Renforcement de la qualité du code avec linting complet, Husky + lint-staged, et contrôles CI robustes.
+  - Livraison d'une application mobile hybride production-ready utilisant Capacitor, assurant une compatibilité fluide iOS et Android.
 
 #item-1
-  - Mise en place de l'architecture frontend pour la refonte e-commerce de Zadig & Voltaire. Migration de Vue Storefront 2 vers Nuxt 3.
-  - Développement des composants du design system.
-  - Création de modules Nuxt pour la gestion avancée du SEO, robots.txt et sécurité.
+  Une année sabbatique dédiée aux voyages, projets personnels et contraintes familiales, logistique de déménagement à Montréal. Maintien des compétences à jour en prototypant avec des frameworks modernes, explorant les nouvelles fonctionnalités et en restant à jour avec les technologies web et cloud.
 
 #item-2
-<!--  -->
-- Maintenance et ajout de fonctionnalités à l'application logistique Odyssée.
-- Création de micro-services Node.js (Nest.js) pour traiter en masse des événements via GCP Pub/Sub.
-- Architecture du nouveau front en Nuxt 3.
-- Garant de la qualité (Tailwind, Jest, bonnes pratiques).
+  Création des fondations front-end pour la nouvelle plateforme e-commerce de Zadig & Voltaire, migration de Vue Storefront 2 vers Nuxt 3.
+  - Développement de composants production-ready construits sur le design system. Contribution également à des améliorations du système lui-même pour améliorer la cohérence et la maintenabilité de l'application.
+  - Implémentation de pages de listing produits optimisées avec virtualisation, lazy loading et stratégies de prefetch intelligentes pour améliorer les performances sur les pages à fort trafic.
+  - Création de modules Nuxt pour la gestion SEO, robots.txt, sécurité et plugins framework avancés.
 
 #item-3
-  Participation à la mise en place d'une plateforme de fitness (CORENGTH) avec une PWA mobile : Brightcove, Nuxt, Strapi et micro-services Node.js.
+  Maintenance et extension d'_Odyssée_, l'application supply-chain qui alimente tous les magasins Auchan.
+  - Création de microservices Nest.js traitant des événements logistiques en temps réel (création de produits, changements fournisseurs, mises à jour entrepôts) via GCP Pub/Sub.
+  - Mise en place du front-end nouvelle génération Nuxt 3 + Tailwind remplaçant une application Vue 2 legacy.
+  - Garantie de la qualité et cohérence du code via une architecture solide, pratiques de tests et standards de composants.
 
 #item-4
-  Enseignement d'une initiation à la programmation (algorithmes, variables, structures de contrôle, fonctions) à des étudiants d'EFFICOM Lille.
+  Contribution à la plateforme fitness pour _CORENGTH_, une PWA mobile-first construite from scratch avec Nuxt, Node.js et PostgreSQL.
+  - Livraison de fonctionnalités aidant les utilisateurs à parcourir les exercices, suivre des entraînements guidés et recevoir des recommandations basées sur l'équipement qu'ils possèdent ou les produits qu'ils pourraient acheter.
+  - Intégration de Brightcove Video Player et optimisation du chargement média pour des sessions d'entraînement fluides.
 
 #item-5
-  Lead technique sur la conception et le développement d'un site e-commerce multi-pays / multi-langues pour Norauto International.
-  - Choix techniques, prototypage, Contentful, Nuxt 2, Tailwind, tests.
+  Enseignement des fondamentaux de la programmation à des étudiants de deuxième année : algorithmes, pseudo-code, structures de contrôle, fonctions, entrée / sortie et exécution de scripts. Conception de sessions pratiques pour développer les compétences de raisonnement et introduire les bases de la programmation.
 
 #item-6
-  Participation au développement d'applications internes chez Auchan : visualisation de données, harmonisation des pratiques, templates et librairies.
+  Développeur lead pour la nouvelle plateforme e-commerce multi-marques et multi-pays de Norauto (10M+ de visiteurs mensuels).
+  - Conception des fondations techniques : composants core, couche de service GraphQL, architecture Nuxt 2 évolutive (Composition API-ready pour migration Nuxt 3), et Tailwind CSS.
+  - Création de listing produits complexe avec recherche à facettes optimisée pour correspondre au catalogue complexe de l'entreprise.
+  - Conception de composants UI CMS pour Contentful et coordination de la gouvernance avec les équipes API et les parties prenantes marketing.
+  - Collaboration avec des équipes internationales en Allemagne, Portugal et Belgique, travaillant en anglais pour aligner les équipes des différents marchés.
+  - Mentorat et onboarding de développeurs, soutien à la croissance de l'équipe et à l'alignement technique.
 
 #item-7
-  Travail sur Hommy (PWA mobile) et MDHData (catalogue interne) : refactor, design system, Nuxt, Ionic, Nest.js, DDD/CQRS.
+  Leader technique contribuant à plusieurs applications internes pour le siège d'Auchan.
+  - Migration d'applications Angular 2/4 vers Vue 2 et livraison de nouvelles applications Vue pour le suivi des stocks, opérations de cartes cadeaux/fidélité, monitoring des ventes en temps réel, données de référence magasin, et plus.
+  - Travail en étroite collaboration avec les équipes backend (Java Spring, Node.js) et gestion des pipelines CI/CD, décisions d'architecture et bibliothèques de composants.
+  - Expertise fournie sur Vue.js, Nest.js, Clean Architecture, GCP, Firebase, GitLab CI/CD et pratiques front-end modernes.
 
 #item-8
-  Développement et encadrement d'applications pour les équipes Auchan (visualisation, outillage) ; méthodes agiles et CI/CD.
+  Contribution à deux produits majeurs d'ADEO :
+  - _Hommy_ (nouvelle app), le carnet de santé numérique de votre maison — PWA construite avec Vue 2 et Ionic ; livraison d'améliorations continues et raffinements architecturaux.
+  - _MDHData_ (1K utilisateurs uniques mensuels), le catalogue produits interne construit avec Nuxt SSR avec Tailwind, Vuetify, Storybook. Le backend est construit en Nest.js avec CQRS, DDD, Event Sourcing et Elasticsearch. Renforcement des fondations sur l'ensemble de la stack en TypeScript.
 
 #item-9
-  Conception et prototypage R&D chez Urbilog : Angular, Vue, WebRTC, WebSockets, Ionic.
+  Contributeur clé puis lead technique au sein de l'écosystème d'applications internes d'Auchan.
+  - Création et modernisation d'applications de visualisation de données utilisées quotidiennement par 15 000+ employés pour monitorer les ventes, opérations et performances des magasins.
+  - Pilotage des migrations d'Angular vers Vue 2 sur plusieurs applications majeures et introduction de standards de qualité, performance et architecture.
+  - Collaboration avec les Product Owners pour aligner les choix techniques avec les objectifs business.
+  - Stack technique incluant Vue.js 2, Angular 2 à 4, Java, Node.js, SQL et outillage Gitlab CI/CD moderne.
 
 #item-10
-  Développement d'une plateforme de communication multi-canal pour personnes malvoyantes/malentendantes (WebRTC, AngularJS, Ionic, Node.js).
+  Au sein de l'équipe R&D d'Urbilog, création de prototypes utilisant des technologies web modernes : AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic et multiples frameworks CSS. Exposition précoce à l'exploration produit full-stack et au prototypage rapide.
+
+  - Conception d'une navigation axées sur l'accessibilité dans une application mobile Ionic, permettant aux utilisateurs malvoyants de recevoir un guidage dans le métro parisien.
+
+#item-11
+  Développement d'une plateforme de communication multi-canal pour utilisateurs malentendants utilisant WebRTC, AngularJS, Ionic, Node.js et Electron. Contribution à l'UX axée sur l'accessibilité et aux fonctionnalités de communication en temps réel.
 ::
 
 ::resume-skills-section{title="Compétences"}
@@ -189,54 +225,55 @@ skills:
 
   - title: "Programmation"
     items:
-      - "Typescript / Javascript / JSX"
+      - "JS / TS / JSX"
       - "HTML"
-      - "CSS / TailwindCSS"
-      - "JAVA"
+      - "TailwindCSS / DaisyUI"
       - "Python"
-      - "GraphQL"
-      - "REST API"
+      - "JAVA"
+      - "GraphQL / REST"
       - "SQL / NoSQL"
 
   - title: "Frameworks & Web"
     items:
       - "Vue.js / Nuxt.js"
+      - "NuxtUI"
+      - "Quasar"
+      - "PrimeVue"
+      - "Pinia"
       - "Node.js / Bun"
-      - "Angular"
-      - "Contentful / Prismic / Strapi"
       - "Nest.js"
       - "Express.js"
+      - "React.js"
+      - "Angular"
+      - "Capacitor"
       - "Ionic"
+      - "Contentful / Prismic / Strapi"
       - "SEO"
-      - "Core Web Vitals"
 
-  - title: "Testing"
+  - title: "Tests & Qualité"
     items:
-      - "Jest"
       - "Vitest"
-      - "ESlint"
-      - "Cypress"
+      - "Jest"
+      - "ESlint / Prettier"
       - "Lighthouse"
-      - "Chai / Mocha / Sinon"
+      - "Husky / lint-staged"
 
-  - title: "Backend & Devops"
+  - title: "Backend & DevOps"
     items:
       - "Docker"
-      - "CI/CD"
+      - "GitLab CI/CD"
+      - "GitHub Actions"
       - "Kubernetes"
-      - "AWS"
-      - "GCP"
-      - "Vercel"
-      - "Websocket"
-      - "WebRTC"
-      - "Redis"
-      - "Postgres"
-      - "MongoDB"
+      - "GCP / AWS / Vercel"
       - "SQLite"
+      - "Redis"
+      - "MongoDB"
+      - "PostgreSQL"
 
   - title: "Méthodologie"
     items:
       - "Méthodes Agiles (Scrum / Kanban)"
+      - "Figma"
       - "Tests unitaires"
       - "Pair programming"
       - "Code reviews"

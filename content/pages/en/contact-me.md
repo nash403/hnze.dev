@@ -66,7 +66,7 @@ companies:
     src: /img/companies/norauto.svg
   - name: Carelancer
     to: https://carelancer.com
-    src: /img/companies/carelancer.png
+    src: /img/companies/carelancer.svg
   - name: Adeo
     to: https://www.adeo.com
     src: /img/companies/adeo.svg

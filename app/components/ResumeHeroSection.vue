@@ -107,7 +107,10 @@ const switchLocale = () => {
           @click="switchLocale"
         >
           <Icon name="mingcute:refresh-3-line" />
-          <i18n-t keypath="i18n.shared.switch_to_locale">
+          <i18n-t
+            keypath="i18n.shared.switch_to_locale"
+            tag="span"
+          >
             <template #locale>
               {{ toggleLocale?.code?.toUpperCase() }}
               <Icon :name="toggleLocale?.icon as IconifyIconName" />
@@ -117,7 +120,7 @@ const switchLocale = () => {
 
         <I18nInterpolated
           tag="span"
-          class="text-end text-sm text-base-content-900"
+          class="hidden text-end text-sm text-base-content-900 not-[@media_all_and_(hover:none)]:inline"
           keypath="i18n.resume_hero_section.actions.kbd_hint.text"
           :interpolations="[kbdHelp]"
           interpolations-class-name="kbd kbd-sm"

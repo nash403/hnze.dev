@@ -1,22 +1,18 @@
 <script lang="ts" setup>
 import type { RouteLocationRaw } from 'vue-router'
+import { NuxtLink } from '#components'
 
 type ContractType = 'fullTimePermanent' // CDI à temps plein
   | 'partTimePermanent' // CDI à temps partiel
   | 'fullTimeFixedTerm' // CDD à temps plein
   | 'partTimeFixedTerm' // CDD à temps partiel
   | 'freelance' // Freelance / Indépendant
-  | 'contractor' // Contrat de prestation (souvent B2B)
   | 'internship' // Stage
   | 'apprenticeship' // Alternance / Apprentissage
   | 'seasonal' // Saisonnier
   | 'temporary' // Intérim
   | 'volunteer' // Bénévolat
-  | 'selfEmployed' // Auto-entrepreneur / Entrepreneur individuel
-  | 'remoteFullTime' // Temps plein en télétravail
-  | 'remotePartTime' // Temps partiel en télétravail
-  | 'hybrid' // Mode hybride (présentiel + télétravail)
-  | 'casual' // Occasionnel / Travail à la tâche
+  | 'selfEmployed' // À mon compte / Projet perso
   | string // Fallback value
 
 type WorkLocation = 'onsite' // Sur site
@@ -32,8 +28,8 @@ interface Props {
   companyLogoAlt?: string
   companyLogoType?: 'image' | 'icon'
   companyUrl?: RouteLocationRaw
-  workLocation?: WorkLocation
-  contractType?: ContractType
+  workLocation?: WorkLocation | [WorkLocation, ...any[]]
+  contractType?: ContractType | [ContractType, ...any[]]
   startDate?: string
   endDate?: string
 }
@@ -43,6 +39,28 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { t } = useI18n()
+
+const i18nContractTypesMapping: Record<ContractType, string> = {
+  fullTimePermanent: 'i18n.work_contract_types.full_time_permanent',
+  partTimePermanent: 'i18n.work_contract_types.part_time_permanent',
+  fullTimeFixedTerm: 'i18n.work_contract_types.full_time_fixed_term',
+  partTimeFixedTerm: 'i18n.work_contract_types.part_time_fixed_term',
+  freelance: 'i18n.work_contract_types.freelance',
+  internship: 'i18n.work_contract_types.internship',
+  apprenticeship: 'i18n.work_contract_types.apprenticeship',
+  seasonal: 'i18n.work_contract_types.seasonal',
+  temporary: 'i18n.work_contract_types.temporary',
+  volunteer: 'i18n.work_contract_types.volunteer',
+  selfEmployed: 'i18n.work_contract_types.self_employed',
+}
+
+const i18nWorkLocationMapping: Record<WorkLocation, string> = {
+  onsite: 'i18n.work_locations.onsite',
+  remote: 'i18n.work_locations.remote',
+  remote_from: 'i18n.work_locations.remote_from',
+  hybrid: 'i18n.work_locations.hybrid',
+  flexible: 'i18n.work_locations.flexible',
+}
 
 const contractDetailTags = computed(() => {
   const arr: Array<{ href?: RouteLocationRaw, icon: string, label: string }> = []
@@ -54,17 +72,29 @@ const contractDetailTags = computed(() => {
     })
   }
   if (props.contractType) {
+    const isArray = Array.isArray(props.contractType)
+    const contractTypeKey = isArray ? props.contractType[0] : props.contractType
+    const interpolationValues = isArray ? props.contractType.slice(1) : []
+    const i18nKey = i18nContractTypesMapping[contractTypeKey as keyof typeof i18nContractTypesMapping]
+
     arr.push({
-      href: props.companyUrl,
       icon: 'mingcute:file-check-line',
-      label: t(`contractTypes.${props.contractType}`, props.contractType),
+      label: interpolationValues.length === 1
+        ? t(i18nKey || contractTypeKey, interpolationValues[0])
+        : t(i18nKey || contractTypeKey, contractTypeKey),
     })
   }
   if (props.workLocation) {
+    const isArray = Array.isArray(props.workLocation)
+    const workLocationKey = isArray ? props.workLocation[0] : props.workLocation
+    const interpolationValues = isArray ? props.workLocation.slice(1) : []
+    const i18nKey = i18nWorkLocationMapping[workLocationKey as keyof typeof i18nWorkLocationMapping]
+
     arr.push({
-      href: props.companyUrl,
       icon: 'mingcute:map-pin-line',
-      label: t(`workLocations.${props.workLocation}`, props.workLocation),
+      label: interpolationValues.length === 1
+        ? t(i18nKey || workLocationKey, interpolationValues[0])
+        : t(i18nKey || workLocationKey, workLocationKey),
     })
   }
   return arr
@@ -115,29 +145,23 @@ const contractDetailTags = computed(() => {
             v-for="(tag, i) in contractDetailTags"
             :key="i"
           >
-            <NuxtLink
-              v-if="tag.href"
-              :to="tag.href"
-              target="_blank"
-              external
-              class="badge badge-ghost badge-md"
+            <component
+              :is="tag.href ? NuxtLink : 'span'"
+              v-bind="tag.href
+                ? {
+                  to: tag.href,
+                  target: '_blank',
+                  external:
+                    true,
+                }
+                : {}"
+              class="badge gap-x-1 badge-ghost badge-md"
             >
               <Icon
                 :name="tag.icon"
-                class="mr-1"
               />
               {{ tag.label }}
-            </NuxtLink>
-            <span
-              v-else
-              class="inline-flex items-center px-2 py-1 font-medium"
-            >
-              <Icon
-                :name="tag.icon"
-                class="mr-1"
-              />
-              {{ tag.label }}
-            </span>
+            </component>
           </template>
         </div>
       </div>

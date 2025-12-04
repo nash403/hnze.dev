@@ -37,12 +37,23 @@ websiteLinks:
     icon: mingcute:link-line
 ---
 #intro
-I am a Web Engineer with expertise in the Vue.js ecosystem but not only. I can craft full-stack applications from the ground up. Passionate about open source development, I actively contribute with various publications. With a strong commitment to staying abreast of emerging technologies, I prioritize implementing best coding practices to ensure project longevity, coherence, and resilience, benefiting both the project and the team. As a self-motivated learner accustomed to wearing multiple hats, I don't hesitate taking initiatives.
+Full-Stack Web Engineer with 10 years of experience building reliable and scalable web products. While specializing in Vue.js and Nuxt, I work across the entire stack, from any front-end framework architecture and design systems to backend APIs, cloud workflows, and hybrid mobile apps. I take a pragmatic, value-driven approach: understanding the context, delivering quickly without compromising quality, and optimizing for long-term maintainability. Open to opportunities with startups, scale-ups, and product teams, whether it's strengthening an existing team, leading a freelance project, or building a product from the ground up.
 ::
 
 ::resume-experience-section{title="Experiences"}
 ---
 items:
+  - workPosition: "Front-End Developer"
+    companyName: "Carelancer"
+    companyLogoUrl: "/img/companies/carelancer.svg"
+    companyLogoAlt: "Carelancer Logo"
+    companyUrl: "https://carelancer.com"
+    workLocation:
+      - "remote_from"
+      - location: "Montreal"
+    contractType: "fullTimePermanent"
+    startDate: "2024-05-22"
+    endDate: "2025-09-05"
   - workPosition: "Personal Projects"
     startDate: "2023-05-18"
     endDate: "2024-05-22"
@@ -115,7 +126,7 @@ items:
     companyLogoAlt: "Auchan Retail France Logo"
     companyUrl: "https://www.auchan-retail.com/fr"
     workLocation: "Villeneuve d'Ascq (59), France"
-    contractType: "Permanent contract"
+    contractType: "fullTimePermanent"
     startDate: "2017-09-04"
     endDate: "2019-05-17"
   - workPosition: "Full-Stack developer intern"
@@ -124,7 +135,7 @@ items:
     companyLogoAlt: "Urbilog Logo"
     companyUrl: "https://urbilog.com/"
     workLocation: "Villeneuve d'Ascq (59), France"
-    contractType: "Work-Study program"
+    contractType: "apprenticeship"
     startDate: "2015-09-01"
     endDate: "2017-06-30"
   - workPosition: "Web developer trainee"
@@ -133,75 +144,74 @@ items:
     companyLogoAlt: "Urbilog Logo"
     companyUrl: "https://urbilog.com/"
     workLocation: "Villeneuve d'Ascq (59), France"
-    contractType: "Internship"
+    contractType: "internship"
     startDate: "2015-03-30"
     endDate: "2015-07-31"
 ---
 #item-0
-  Sabbatical break to travel, manage family constraints and work on personal projects such as my move to Montreal.
+  At the Carelancer startup, I Led front-end development of a healthcare on-demand platform connecting patients with licensed providers across Canada and the U.S., targeting large-scale usage in underinsured populations.
+  - Worked in a fully English-speaking, Toronto-based engineering team, collaborating daily in English across product, marketing, and backend.
+  - Stabilized and refactored a legacy Quasar codebase. I upgraded to the latest version and modernized architecture for long-term maintainability and performance.
+  - Introduced Tailwind CSS v3 (migrating from an old UnoCSS version), PrimeVue, improved component architecture, and standardized UI patterns.
+  - Hardened code quality with comprehensive linting, Husky + lint-staged, and strong CI checks.
+  - Delivered a production-ready hybrid mobile app using Capacitor, ensuring smooth iOS and Android compatibility.
 
 #item-1
-  - Foundational technical architecture of the new frontend for Zadig&Voltaire e-commerce website. Migration from Vue Storefront 2 to Nuxt 3.
-  - Creation of the components from the design system
-  - Creation of new nuxt modules for an advanced management of SEO, robots.txt, security, etc.
+  A one-year sabbatical focused on travelling, personal projects and family constraints, relocation to Montreal logistics. Kept skills sharp by prototyping with modern frameworks, exploring new features, and staying up to date with web and cloud technologies.
 
 #item-2
-<!--  -->
-  - Maintaining and adding new features to the supply chain web application Odyssée that deserves all Auchan selling points.
-  - Creation of Node.js (Nest.js) micro services to mass process logistics chain creation or modification events in real time via GCP Pub/Sub.
-  - Architecture of the new Nuxt3 front with a view to refactor the old application.
-  - Guarantor of quality and design (Tailwind, Jest, etc...)
+  Built the core front-end foundations for the new Zadig & Voltaire e-commerce platform, migrating from Vue Storefront 2 to Nuxt 3.
+  - Developed production-ready components built on top of the design system. Also contributed enhancements to the system itself to improve consistency and maintainability across the app.
+  - Implemented optimized product listing pages with virtualization, lazy loading, and smart prefetch strategies to improve performance on high-traffic pages.
+  - Built Nuxt modules for SEO management, robots.txt, security headers, and advanced framework plugins.
 
 #item-3
-  Participation in building a fitness platform for the CORENGTH brand consisting mainly of a mobile Progressive Web App using web technologies such as the Brighcove Video Player, Nuxt Framework and Node.js.
-
-  Users would be accompanied to find relevant exercises / workouts and build their own daily training matching the fitness products they own.
+  Maintained and extended _Odyssée_, the supply-chain application powering all Auchan stores.
+  - Built Nest.js microservices processing real-time logistics events (product creation, supplier changes, warehouse updates) using GCP Pub/Sub.
+  - Scaffolded the next-gen Nuxt 3 + Tailwind front-end replacing a legacy Vue 2 application.
+  - Ensured code quality and consistency through solid architecture, testing practices, and component standards.
 
 #item-4
-  I taught initiation to programming to 2nd grade students during one semester at EFFICOM Lille (France).
-
-  The course consisted in an introduction to algorithms, pseudo-code, variables and expressions, flow control, functions, inputs / outputs, code execution.
+  Contributed to the fitness platform for _CORENGTH_, a mobile-first PWA built from scratch with Nuxt, Node.js and PostgreSQL.
+  - Delivered features helping users browse exercises, follow guided workouts, and receive recommendations based on equipment they own or products they could buy.
+  - Integrated Brightcove Video Player and optimized media loading for smooth training sessions.
 
 #item-5
-  Conception and development of a new multi-countries / multi-languages e-commerce website for Norauto International as the lead developer of a team of 9 other developers.
-
-  - In charge of making structural technical choices
-  - Developing the platform on a Nuxt2 stack (using composition API to prepare migration to Nuxt3), Tailwind, Nest.js, GraphQL, Typescript, Jest
-  - Proof of Concept and set up Contentful CMS
-  - Onboard and help new developers on the project to grow their skills
+  Taught programming fundamentals to second-year students: algorithms, pseudo-code, flow control, functions, I/O handling, and script execution. Designed practical sessions to build reasoning skills and introduce programming basics.
 
 #item-6
-  As a tech leader, I participated in the development of multiple web applications targeting store employees and/or managers at the Auchan Retail France headquarters.
-
-  I brought my expertise in Vue.js, Nest.js, Clean Architecture, Google Cloud Platform, Gitlab CI/CD, TailwindCSS, etc...
+  Lead developer for Norauto's new multi-brand and multi-country e-commerce platform (10M+ monthly visitors).
+  - Designed technical foundations: core components, GraphQL service layer, scalable Nuxt 2 architecture (Composition API-ready for Nuxt 3 migration), and Tailwind CSS.
+  - Built complex product listing with faceted search optimized to match the business's complex catalog.
+  - Designed CMS UI components for Contentful and coordinated governance with API teams and marketing stakeholders.
+  - Collaborated with international teams in Germany, Portugal and Belgium, working in English to align teams across the different markets.
+  - Mentored and onboarded developers, supporting team growth and technical alignment.
 
 #item-7
-  I brought my expertise in the Vue.js ecosystem during the development of two main projects:
-
-  - Hommy, the digital health book of your house
-      - mobile progressive web application (PWA) in Vue.JS and Ionic
-      - Refactor and continuous improvement of the tech stack
-  - MDHData, the internal product catalog for ADEO business units
-      - Nuxt.js SSR web application with Tailwind, Vuetify, Storybook, a design system,
-      - A backend with a clean architecture philosophy built in Nest.js, using CQRS, DDD, Event Sourcing, Elastic Search. With Typescript on the whole stack.
+  Technical leader contributing to multiple internal applications for Auchan HQ.
+  - Migrated Angular 2/4 apps to Vue 2 and delivered new Vue applications for stock tracking, loyalty/gift card operations, live sales monitoring, store reference data, and more.
+  - Worked closely with backend teams (Java Spring, Node.js) and handled CI/CD pipelines, architecture decisions, and component libraries.
+  - Provided expertise on Vue.js, Nest.js, Clean Architecture, GCP, Firebase, GitLab CI/CD, and modern front-end practices.
 
 #item-8
-  As a developer then tech leader, I participated in the development of various web applications targeting store employees and/or managers at the Auchan Retail France headquarters. It was mostly data visualization apps to help pilot the activity.
-
-  I brought my expertise in Vue.js, vanilla JS and Angular to help the Product Owners in their continuous improvement process. I've made technical choices and advised on quality and performance of the webapps.
-
-  Tech environment:
-  - Vue.js, Java, Javascript, Angular, HTML, CSS, Node.js
-  - Agile Scrum and Kanban
-  - VSCode, IntelliJ, GitLab, GitLabCI, NPM, Yarn, Maven, EsLint, Jest, AVA
+  Contributed to two major ADEO products:
+  - _Hommy_ (new app), the digital health record of your home — PWA built with Vue 2 and Ionic; delivered continuous improvements and architectural refinements.
+  - _MDHData_ (1K unique monthly users), the internal product catalog built using Nuxt SSR with Tailwind, Vuetify, Storybook. The backend is built in Nest.js with CQRS, DDD, Event Sourcing, and Elasticsearch. Strengthened foundations across the stack in TypeScript.
 
 #item-9
-  In a work-study program at Urbilog, I've worked within the R&D department participating in the conception and development of innovative prototypes around modern web technologies such as: Angularjs, Angular 2+, Vuejs, WebSockets, WebRTC, Ionic, various CSS frameworks, etc...
+  Key contributor and later technical lead within Auchan's internal apps ecosystem.
+  - Built and modernized data-visualization apps used daily by 15,000+ employees to monitor sales, operations, and store performance.
+  - Led migrations from Angular to Vue 2 across several major applications and introduced quality, performance, and architecture standards.
+  - Collaborated with Product Owners to align technical choices with business goals.
+  - Tech stack included Vue.js 2, Angular 2 to 4, Java, Node.js, SQL, and modern Gitlab CI/CD tooling.
 
 #item-10
-  Development of a multi-channel communication web platform for visually and hearing impaired persons.
+  As part of Urbilog's R&D team, built prototypes using modern web technologies: AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic, and multiple CSS frameworks. Gained early exposure to full-stack product exploration and rapid prototyping.
 
-  Technologies used include WebRTC, AngularJS, Ionic Framework, NodeJS and Electron.
+  - Built accessibility-first navigation flows in an Ionic mobile app, enabling visually impaired users to receive guided map directions in the parisian subway network.
+
+#item-11
+  Developed a multi-channel communication platform for hearing-impaired users using WebRTC, AngularJS, Ionic, Node.js, and Electron. Contributed to accessibility-focused UX and real-time communication features.
 ::
 
 ::resume-skills-section{title="Skills"}
@@ -215,54 +225,55 @@ skills:
 
   - title: "Programming"
     items:
-      - "Typescript / Javascript / JSX"
+      - "JS / TS / JSX"
       - "HTML"
-      - "CSS / TailwindCSS"
-      - "JAVA"
+      - "TailwindCSS / DaisyUI"
       - "Python"
-      - "GraphQL"
-      - "REST API"
+      - "JAVA"
+      - "GraphQL / REST"
       - "SQL / NoSQL"
 
   - title: "Frameworks & Web"
     items:
       - "Vue.js / Nuxt.js"
+      - "NuxtUI"
+      - "Quasar"
+      - "PrimeVue"
+      - "Pinia"
       - "Node.js / Bun"
-      - "Angular"
-      - "Contentful / Prismic / Strapi"
       - "Nest.js"
       - "Express.js"
+      - "React.js"
+      - "Angular"
+      - "Capacitor"
       - "Ionic"
+      - "Contentful / Prismic / Strapi"
       - "SEO"
-      - "Core Web Vitals"
 
-  - title: "Testing"
+  - title: "Testing & Quality"
     items:
-      - "Jest"
       - "Vitest"
-      - "ESlint"
-      - "Cypress"
+      - "Jest"
+      - "ESlint / Prettier"
       - "Lighthouse"
-      - "Chai / Mocha / Sinon"
+      - "Husky / lint-staged"
 
-  - title: "Backend & Devops"
+  - title: "Backend & DevOps"
     items:
       - "Docker"
-      - "CI/CD"
+      - "GitLab CI/CD"
+      - "GitHub Actions"
       - "Kubernetes"
-      - "AWS"
-      - "GCP"
-      - "Vercel"
-      - "Websocket"
-      - "WebRTC"
-      - "Redis"
-      - "Postgres"
-      - "MongoDB"
+      - "GCP / AWS / Vercel"
       - "SQLite"
+      - "Redis"
+      - "MongoDB"
+      - "PostgreSQL"
 
   - title: "Methodology"
     items:
       - "Agile methodology (Scrum / Kanban)"
+      - "Figma"
       - "Unit Tests"
       - "Pair programming"
       - "Code reviews"

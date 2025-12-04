@@ -3,7 +3,7 @@ import type { HTMLAttributes } from 'vue'
 
 // TODO: check slot passthrough from reka-ui to pass arbitrary slots here
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
     keypath: string
     tag?: keyof HTMLElementTagNameMap
@@ -12,7 +12,12 @@ withDefaults(
   }>(), {
     tag: 'h1',
     interpolations: () => [],
-  })
+  },
+)
+
+function getTextInterpolationClassName(index: number) {
+  return Array.isArray(props.interpolationsClassName) ? props.interpolationsClassName[index] ?? props.interpolationsClassName : props.interpolationsClassName
+}
 </script>
 
 <template>
@@ -26,12 +31,17 @@ withDefaults(
       #[`emphasis${interpolationIndex}`]
       :key="interpolationIndex"
     >
-      <span
-        :class="Array.isArray(interpolationsClassName) ? interpolationsClassName[interpolationIndex] ?? interpolationsClassName : interpolationsClassName"
+      <slot
+        :text-interpolation-class-name="getTextInterpolationClassName(interpolationIndex)"
+        :text-interpolation="textInterpolation"
+        :text-interpolation-index="interpolationIndex"
       >
-
-        {{ textInterpolation }}
-      </span>
+        <span
+          :class="getTextInterpolationClassName(interpolationIndex)"
+        >
+          {{ textInterpolation }}
+        </span>
+      </slot>
     </template>
   </i18n-t>
 </template>
