@@ -195,8 +195,8 @@ items:
 
 #item-8
   Contributed to two major ADEO products:
-  - _Hommy_, the digital health record of your home — PWA built with Vue 2 and Ionic; delivered continuous improvements and architectural refinements.
-  - _MDHData_, the internal product catalog built using Nuxt SSR with Tailwind, Vuetify, Storybook. The backend is built in Nest.js with CQRS, DDD, Event Sourcing, and Elasticsearch. Strengthened foundations across the stack in TypeScript.
+  - _Hommy_ (new app), the digital health record of your home — PWA built with Vue 2 and Ionic; delivered continuous improvements and architectural refinements.
+  - _MDHData_ (1K unique monthly users), the internal product catalog built using Nuxt SSR with Tailwind, Vuetify, Storybook. The backend is built in Nest.js with CQRS, DDD, Event Sourcing, and Elasticsearch. Strengthened foundations across the stack in TypeScript.
 
 #item-9
   Key contributor and later technical lead within Auchan's internal apps ecosystem.
@@ -208,7 +208,7 @@ items:
 #item-10
   As part of Urbilog's R&D team, built prototypes using modern web technologies: AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic, and multiple CSS frameworks. Gained early exposure to full-stack product exploration and rapid prototyping.
 
-  - Built accessibility-first navigation flows in an Ionic mobile app, enabling visually impaired users to receive guided map directions.
+  - Built accessibility-first navigation flows in an Ionic mobile app, enabling visually impaired users to receive guided map directions in the parisian subway network.
 
 #item-11
   Developed a multi-channel communication platform for hearing-impaired users using WebRTC, AngularJS, Ionic, Node.js, and Electron. Contributed to accessibility-focused UX and real-time communication features.
