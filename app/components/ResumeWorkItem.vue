@@ -6,17 +6,12 @@ type ContractType = 'fullTimePermanent' // CDI à temps plein
   | 'fullTimeFixedTerm' // CDD à temps plein
   | 'partTimeFixedTerm' // CDD à temps partiel
   | 'freelance' // Freelance / Indépendant
-  | 'contractor' // Contrat de prestation (souvent B2B)
   | 'internship' // Stage
   | 'apprenticeship' // Alternance / Apprentissage
   | 'seasonal' // Saisonnier
   | 'temporary' // Intérim
   | 'volunteer' // Bénévolat
-  | 'selfEmployed' // Auto-entrepreneur / Entrepreneur individuel
-  | 'remoteFullTime' // Temps plein en télétravail
-  | 'remotePartTime' // Temps partiel en télétravail
-  | 'hybrid' // Mode hybride (présentiel + télétravail)
-  | 'casual' // Occasionnel / Travail à la tâche
+  | 'selfEmployed' // À mon compte / Projet perso
   | string // Fallback value
 
 type WorkLocation = 'onsite' // Sur site
