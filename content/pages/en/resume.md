@@ -37,7 +37,7 @@ websiteLinks:
     icon: mingcute:link-line
 ---
 #intro
-I am a Web Engineer with expertise in the Vue.js ecosystem but not only. I can craft full-stack applications from the ground up. Passionate about open source development, I actively contribute with various publications. With a strong commitment to staying abreast of emerging technologies, I prioritize implementing best coding practices to ensure project longevity, coherence, and resilience, benefiting both the project and the team. As a self-motivated learner accustomed to wearing multiple hats, I don't hesitate taking initiatives.
+Full-Stack Web Engineer with 10 years of experience building reliable and scalable web products. While specializing in Vue.js and Nuxt, I work across the entire stack, from any front-end framework architecture and design systems to backend APIs, cloud workflows, and hybrid mobile apps. I take a pragmatic, value-driven approach: understanding the context, delivering quickly without compromising quality, and optimizing for long-term maintainability. Open to opportunities with startups, scale-ups, and product teams, whether it's strengthening an existing team, leading a freelance project, or building a product from the ground up.
 ::
 
 ::resume-experience-section{title="Experiences"}
@@ -48,7 +48,9 @@ items:
     companyLogoUrl: "/img/companies/carelancer.svg"
     companyLogoAlt: "Carelancer Logo"
     companyUrl: "https://carelancer.com"
-    workLocation: "remote"
+    workLocation:
+      - "remote_from"
+      - location: "Montreal"
     contractType: "fullTimePermanent"
     startDate: "2024-05-22"
     endDate: "2025-09-05"
@@ -148,6 +150,7 @@ items:
 ---
 #item-0
   At the Carelancer startup, I Led front-end development of a healthcare on-demand platform connecting patients with licensed providers across Canada and the U.S., targeting large-scale usage in underinsured populations.
+  - Worked in a fully English-speaking, Toronto-based engineering team, collaborating daily in English across product, marketing, and backend.
   - Stabilized and refactored a legacy Quasar codebase. I upgraded to the latest version and modernized architecture for long-term maintainability and performance.
   - Introduced Tailwind CSS v3 (migrating from an old UnoCSS version), PrimeVue, improved component architecture, and standardized UI patterns.
   - Hardened code quality with comprehensive linting, Husky + lint-staged, and strong CI checks.
@@ -181,6 +184,7 @@ items:
   - Designed technical foundations: core components, GraphQL service layer, scalable Nuxt 2 architecture (Composition API-ready for Nuxt 3 migration), and Tailwind CSS.
   - Built complex product listing with faceted search optimized to match the business's complex catalog.
   - Designed CMS UI components for Contentful and coordinated governance with API teams and marketing stakeholders.
+  - Collaborated with international teams in Germany, Portugal and Belgium, working in English to align teams across the different markets.
   - Mentored and onboarded developers, supporting team growth and technical alignment.
 
 #item-7
