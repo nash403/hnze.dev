@@ -31,7 +31,10 @@ const ignoreVersion = async () => {
 </script>
 
 <template>
-  <div class="space-y-5 p-4 text-center font-footer sm:p-8">
+  <div
+    id="footer-content"
+    class="space-y-5 p-4 text-center font-footer sm:p-8"
+  >
     <!-- Separator line -->
     <div
       role="separator"

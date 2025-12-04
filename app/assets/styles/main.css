@@ -390,16 +390,26 @@ body {
 
 
 .page-enter-active {
-  animation: fadeInUp .6s forwards
+  animation: fadeInUp .6s forwards;
 }
 
 .page-leave-active {
   animation: fadeOutDown .6s backwards;
 }
 
+#main-content:has(.page-enter-active, .page-leave-active) {
+  /* min-height: calc(100dvh - calc(var(--header-h,72px) * 2)); */
+  min-height: 45dvh;
+}
+
+#footer-content:has(.page-enter-active, .page-leave-active) {
+  visibility: hidden;
+}
+
 /* Keyframes declarations */
 @keyframes fadeInUp {
   from {
+    min-height: 45dvh;
     opacity: 0;
     transform: translateY(.5rem)
   }
