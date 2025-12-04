@@ -318,10 +318,10 @@ Burundi State Diploma, with honors "Grand Fruit" (= Very Good).
 
 ::resume-interests-section{title="Interests"}
 #default
-- Travel (Working Holiday Visa in Montreal, USA road trip, Europe, etc.)
-- Technology watch (Newsletters, tech personalities on social networks)
-- Open Source contributions
-- Meetups
-- YouTube channels (Micode, Science Étonnante, Stupid Economics, etc.)
-- TV Shows and documentaries
+- Travel and cultural exploration (bi-national French/Burundian heritage, always curious about new places)
+- STEM YouTube channels (science, tech, engineering, math)
+- Coffee + code sessions in cafés
+- Cooking projects (and sometimes crying in front of movies)
+- Soccer fan and board games nights
+- Open Source contributions and Meetups
 ::
