@@ -317,10 +317,10 @@ Diplôme d'État du Burundi, mention "Grand Fruit" (Très Bien).
 
 ::resume-interests-section{title="Intérêts"}
 #default
-- Voyages (PVT à Montréal, road trips)
-- Veille technologique
-- Contributions Open Source
-- Meetups
-- Chaînes YouTube techniques
-- Séries TV et documentaires
+- Voyages et découvertes culturelles (bi-national français/burundais, toujours curieux de nouvelles cultures)
+- YouTubeurs STEM (sciences, techno, ingénierie, maths)
+- Sessions café + code dans les cafés
+- Projets de cuisine (et parfois pleurer devant un bon film)
+- Fan de Football et soirées jeux de société
+- Contributions Open Source et Meetups
 ::
