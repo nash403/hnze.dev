@@ -29,6 +29,11 @@ socialLinks:
     href: "https://github.com/nash403"
     openInNewTab: true
     icon: mingcute:github-2-fill
+  - type: malt
+    username: honorenintunze1
+    href: https://www.malt.fr/profile/honorenintunze1
+    openInNewTab: true
+    icon: hnze:malt
 
 websiteLinks:
   - href: "https://hnze.dev"
@@ -38,6 +43,18 @@ websiteLinks:
 ---
 #intro
 Full-Stack Web Engineer with 10 years of experience building reliable and scalable web products. While specializing in Vue.js and Nuxt, I work across the entire stack, from any front-end framework architecture and design systems to backend APIs, cloud workflows, and hybrid mobile apps. I take a pragmatic, value-driven approach: understanding the context, delivering quickly without compromising quality, and optimizing for long-term maintainability. Open to opportunities with startups, scale-ups, and product teams, whether it's strengthening an existing team, leading a freelance project, or building a product from the ground up.
+
+<!-- NOTE: The following is my Linkedin intro. Keep commented
+
+Full-Stack Web Engineer 🦄 | I code to make people's life easier 👨🏾‍💻 | Curious  🔎 | Agile & Open source enthusiast 🐧 | I enjoy Travelling 🌍, a good TV shows 🎬 and quality time with loved ones 🫶🏾
+
+Specialized in the full JavaScript stack, from any front-end framework architecture and design systems to backend APIs, cloud workflows, and hybrid mobile apps. I take a pragmatic, value-driven approach: understanding the context, delivering quickly without compromising quality, and optimizing for long-term maintainability.
+
+I just moved to Rennes (France) after a beautiful experience of almost 2 years in Montreal (QC, Canada) and and 10 years in Lille (France) before that.
+
+Currently open to opportunities with startups, scale-ups, and product teams, whether it's strengthening an existing team, leading a freelance project, or building a product from the ground up.
+
+If we've worked together in the past, I'd be thrilled if you could fill out this testimonial form for me, thank you: https://airtable.com/appoxLPEkRqpdwcZx/pag7qloiDWr3kZ7Af/form -->
 ::
 
 ::resume-experience-section{title="Experiences"}
@@ -84,6 +101,16 @@ items:
     contractType: "freelance"
     startDate: "2022-09-26"
     endDate: "2022-12-30"
+  - workPosition: "Volunteer"
+    experienceCategory: 'volunteering.not-paid'
+    companyName: "Utopia56"
+    companyLogoUrl: "/img/companies/utopia56.png"
+    companyLogoAlt: "Utopia56 Logo"
+    companyUrl: "https://utopia56.org/"
+    workLocation: "Grande-Synthe (59), France"
+    contractType: "volunteer"
+    startDate: "2022-03-01"
+    endDate: "2022-03-30"
   - workPosition: "Programming Teacher"
     companyName: "EFFICOM"
     companyLogoUrl: "/img/companies/efficom.png"
@@ -138,6 +165,16 @@ items:
     contractType: "apprenticeship"
     startDate: "2015-09-01"
     endDate: "2017-06-30"
+  - workPosition: "Animator - Adapted Summer Camp"
+    experienceCategory: 'associative.paid'
+    companyName: "Éclaireuses et Éclaireurs de France"
+    companyLogoUrl: "/img/companies/EEDF.svg"
+    companyLogoAlt: "EEDF Logo"
+    companyUrl: "https://www.eedf.fr/"
+    workLocation: "Saint-Cyprien (66), France"
+    contractType: "seasonal"
+    startDate: "2015-08-01"
+    endDate: "2015-08-24"
   - workPosition: "Web developer trainee"
     companyName: "Urbilog"
     companyLogoUrl: "/img/companies/urbilog.png"
@@ -147,6 +184,16 @@ items:
     contractType: "internship"
     startDate: "2015-03-30"
     endDate: "2015-07-31"
+  - workPosition: "Animator - Adapted Summer Camp"
+    experienceCategory: 'associative.paid'
+    companyName: "Éclaireuses et Éclaireurs de France"
+    companyLogoUrl: "/img/companies/EEDF.svg"
+    companyLogoAlt: "EEDF Logo"
+    companyUrl: "https://www.eedf.fr/"
+    workLocation: "Montbrison (42), France"
+    contractType: "seasonal"
+    startDate: "2014-08-02"
+    endDate: "2014-08-25"
 ---
 #item-0
   At the Carelancer startup, I Led front-end development of a healthcare on-demand platform connecting patients with licensed providers across Canada and the U.S., targeting large-scale usage in underinsured populations.
@@ -177,9 +224,12 @@ items:
   - Integrated Brightcove Video Player and optimized media loading for smooth training sessions.
 
 #item-5
-  Taught programming fundamentals to second-year students: algorithms, pseudo-code, flow control, functions, I/O handling, and script execution. Designed practical sessions to build reasoning skills and introduce programming basics.
+  Provided on-site support to migrants in the Grande-Synthe camps. Conducted field rounds to identify individuals in distress, distributed emergency supplies (survival blankets, multilingual information sheets), and acted as a liaison with specialized partner organizations (food distribution, water access, phone charging, asylum law support). Assisted with transport and accompaniment to medical, legal, and urgent appointments.
 
 #item-6
+  Taught programming fundamentals to second-year students: algorithms, pseudo-code, flow control, functions, I/O handling, and script execution. Designed practical sessions to build reasoning skills and introduce programming basics.
+
+#item-7
   Lead developer for Norauto's new multi-brand and multi-country e-commerce platform (10M+ monthly visitors).
   - Designed technical foundations: core components, GraphQL service layer, scalable Nuxt 2 architecture (Composition API-ready for Nuxt 3 migration), and Tailwind CSS.
   - Built complex product listing with faceted search optimized to match the business's complex catalog.
@@ -187,31 +237,41 @@ items:
   - Collaborated with international teams in Germany, Portugal and Belgium, working in English to align teams across the different markets.
   - Mentored and onboarded developers, supporting team growth and technical alignment.
 
-#item-7
+#item-8
   Technical leader contributing to multiple internal applications for Auchan HQ.
   - Migrated Angular 2/4 apps to Vue 2 and delivered new Vue applications for stock tracking, loyalty/gift card operations, live sales monitoring, store reference data, and more.
   - Worked closely with backend teams (Java Spring, Node.js) and handled CI/CD pipelines, architecture decisions, and component libraries.
   - Provided expertise on Vue.js, Nest.js, Clean Architecture, GCP, Firebase, GitLab CI/CD, and modern front-end practices.
 
-#item-8
+#item-9
   Contributed to two major ADEO products:
   - _Hommy_ (new app), the digital health record of your home — PWA built with Vue 2 and Ionic; delivered continuous improvements and architectural refinements.
   - _MDHData_ (1K unique monthly users), the internal product catalog built using Nuxt SSR with Tailwind, Vuetify, Storybook. The backend is built in Nest.js with CQRS, DDD, Event Sourcing, and Elasticsearch. Strengthened foundations across the stack in TypeScript.
 
-#item-9
+#item-10
   Key contributor and later technical lead within Auchan's internal apps ecosystem.
   - Built and modernized data-visualization apps used daily by 15,000+ employees to monitor sales, operations, and store performance.
   - Led migrations from Angular to Vue 2 across several major applications and introduced quality, performance, and architecture standards.
   - Collaborated with Product Owners to align technical choices with business goals.
   - Tech stack included Vue.js 2, Angular 2 to 4, Java, Node.js, SQL, and modern Gitlab CI/CD tooling.
 
-#item-10
+#item-11
   As part of Urbilog's R&D team, built prototypes using modern web technologies: AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic, and multiple CSS frameworks. Gained early exposure to full-stack product exploration and rapid prototyping.
 
   - Built accessibility-first navigation flows in an Ionic mobile app, enabling visually impaired users to receive guided map directions in the parisian subway network.
 
-#item-11
+#item-12
+  I worked as part of a 6-person team (5 animators + 1 team leader) in a camping supporting 19 adult vacationers with moderate to high autonomy.
+
+  - Planned and delivered a 3-weeks activity program (games, physical and creative workshops, excursions, local events), prepared meals, handled daily housekeeping while involving participants, monitored medication routines, managed emergencies, and contributed to daily team debriefs.
+
+#item-13
   Developed a multi-channel communication platform for hearing-impaired users using WebRTC, AngularJS, Ionic, Node.js, and Electron. Contributed to accessibility-focused UX and real-time communication features.
+
+#item-14
+  I served on a team of 5 (4 animators + 1 team leader) at a farm supporting 15 adult vacationers with moderate to high autonomy.
+
+  - Organized activities over a 3-weeks stay on the farm, coordinated outings and workshops, prepared meals, maintained living spaces with participant involvement, ensured medication tracking, and supported crisis management and daily team coordination.
 ::
 
 ::resume-skills-section{title="Skills"}
@@ -290,11 +350,17 @@ items:
   - certificationName: "Master's degree of IT E-Services"
     institutionName: "Lille 1 Sciences and Technologies University"
     institutionUrl: "https://www.univ-lille.fr/formations/fr-00002035"
+    startYear: 2015
+    endYear: 2017
   - certificationName: "Bachelor's degree in Computer Science"
     institutionName: "Lille 1 Sciences and Technologies University"
     institutionUrl: "https://www.univ-lille.fr/formations/fr-00002032"
+    startYear: 2012
+    endYear: 2015
   - certificationName: "General Certificate of Education in Science"
     institutionName: "International School of Bujumbura"
+    startYear: ''
+    endYear: 2012
 ---
 
 #item-0-dates
@@ -319,9 +385,9 @@ Burundi State Diploma, with honors "Grand Fruit" (= Very Good).
 ::resume-interests-section{title="Interests"}
 #default
 - Travel and cultural exploration (bi-national French/Burundian heritage, always curious about new places)
-- STEM YouTube channels (science, tech, engineering, math)
+- STEM YouTube channels (science, tech, etc. like ScienceEtonnante or Micode)
 - Coffee + code sessions in cafés
+- Open Source contributions and Meetups
 - Cooking projects (and sometimes crying in front of movies)
 - Soccer fan and board games nights
-- Open Source contributions and Meetups
 ::

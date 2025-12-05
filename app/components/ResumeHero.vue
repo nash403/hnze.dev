@@ -59,8 +59,8 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
 <template>
   <section>
     <!-- Resume header title with full name & position -->
-    <h1>
-      <div class="max-w-72 text-6xl font-bold">
+    <header>
+      <h1 class="max-w-72 text-6xl font-bold">
         <NuxtLinkLocale
           to="index"
           class="-no-hover"
@@ -68,12 +68,12 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
           <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="fullName"></span>
         </NuxtLinkLocale>
-      </div>
-      <div class="col-span-2 max-w-40 text-4xl print:max-w-44 print:pl-3">
+      </h1>
+      <p class="col-span-2 max-w-40 text-4xl print:max-w-44 print:pl-3">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <span v-html="jobTitle"></span>
-      </div>
-    </h1>
+      </p>
+    </header>
 
     <div class="col-span-3 flex flex-col place-items-center">
       <!-- Profile picture -->

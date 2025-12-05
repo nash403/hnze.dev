@@ -18,7 +18,10 @@ withDefaults(defineProps<{
       :key="index"
     >
       <template #dates>
-        <slot :name="`item-${index}-dates`"></slot>
+        <slot
+          :name="`item-${index}-dates`"
+          mdc-unwrap="p"
+        ></slot>
       </template>
       <template #default>
         <slot :name="`item-${index}`"></slot>
