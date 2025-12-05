@@ -82,6 +82,7 @@ export default defineNuxtConfig({
 
       defaultSocialHandle: 'myHandle',
       contactEmail: 'hello@example.com',
+      resumeContactEmail: 'hire-me@example.com',
       frPhoneNumber: '+33633221100',
       caPhoneNumber: '+15145551234',
     },

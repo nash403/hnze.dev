@@ -46,7 +46,7 @@ Ingénieur Web Full-Stack avec 10 ans d'expérience dans la création de produit
 
 <!-- NOTE: The following is my Linkedin intro. Keep commented
 
-Ingénieur Full-Stack Web 🦄 | Je code pour simplifier la vie des gens 👨🏾‍💻 | Curieux 🔎 | Passionné d’agilité et d’open source 🐧 | J’aime voyager 🌍, les bonnes séries 🎬 et le temps de qualité avec mes proches 🫶🏾
+Développeur Full-Stack Web 🦄 | Je code pour simplifier la vie des gens 👨🏾‍💻 | Curieux 🔎 | Passionné d’agilité et d’open source 🐧 | J’aime voyager 🌍, les bonnes séries 🎬 et le temps de qualité avec mes proches 🫶🏾
 
 Spécialisé dans l’écosystème JavaScript de bout en bout, de l’architecture front-end et des design systems aux API backend, workflows cloud et applications mobiles hybrides. J’adopte une approche pragmatique et orientée valeur : comprendre le contexte, livrer rapidement sans sacrifier la qualité, et optimiser pour la maintenabilité à long terme.
 
