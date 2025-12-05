@@ -52,7 +52,7 @@ const contactLinksColumns = computed<[ContactLinks, ContactLinks]>(() => {
   }
 
   if (props.socialLinks && props.socialLinks?.length > 0) {
-    firstGroupLinks.push({ links: props.socialLinks })
+    secondGroupLinks.push({ links: props.socialLinks })
   }
 
   return [firstGroupLinks, secondGroupLinks]

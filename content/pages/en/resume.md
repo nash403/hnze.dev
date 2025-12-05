@@ -29,6 +29,11 @@ socialLinks:
     href: "https://github.com/nash403"
     openInNewTab: true
     icon: mingcute:github-2-fill
+  - type: malt
+    username: honorenintunze1
+    href: https://www.malt.fr/profile/honorenintunze1
+    openInNewTab: true
+    icon: hnze:malt
 
 websiteLinks:
   - href: "https://hnze.dev"
