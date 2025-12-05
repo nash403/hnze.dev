@@ -158,7 +158,10 @@ const contractDetailTags = computed(() => {
                 : {}"
               class="badge gap-x-1 badge-ghost badge-md"
             >
-              <Icon :name="tag.icon" />
+              <Icon
+                :name="tag.icon"
+                mode="svg"
+              />
               {{ tag.label }}
             </component>
           </template>

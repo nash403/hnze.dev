@@ -168,7 +168,10 @@ const switchLocale = () => {
                 :to="iconOnlySocialLink.href"
                 :target="iconOnlySocialLink.openInNewTab ? '_blank' : '_self'"
               >
-                <Icon :name="iconOnlySocialLink.icon!" />
+                <Icon
+                  :name="iconOnlySocialLink.icon!"
+                  mode="svg"
+                />
               </NuxtLink>
             </template>
 
@@ -176,6 +179,7 @@ const switchLocale = () => {
               <Icon
                 v-if="socialLink.icon"
                 :name="socialLink.icon"
+                mode="svg"
               />
               <NuxtLink
                 :to="socialLink.href"

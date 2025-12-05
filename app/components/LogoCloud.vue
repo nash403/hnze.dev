@@ -49,6 +49,7 @@ const wrapperAttrs = computed(() => {
     <Icon
       v-else-if="icon"
       :name="icon"
+      mode="svg"
       class=" opacity-50 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:filter-none group-focus:opacity-100 group-focus:filter-none group-active:opacity-100 group-active:filter-none"
     />
   </component>

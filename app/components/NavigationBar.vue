@@ -65,6 +65,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
           <Icon
             name="hnze:hnze-logo"
             class="size-(--header-h) hover:animate-text-glow"
+            mode="svg"
           />
         </NuxtLinkLocale>
 
