@@ -83,7 +83,7 @@ items:
     contractType: "freelance"
     startDate: "2023-03-27"
     endDate: "2023-05-17"
-  - workPosition: "Ingénieur Full Stack"
+  - workPosition: "Développeur Full-Stack"
     companyName: "Auchan Retail France"
     companyLogoUrl: "/img/companies/auchan.svg"
     companyLogoAlt: "Logo de Auchan Retail France"
@@ -147,7 +147,7 @@ items:
     contractType: "freelance"
     startDate: "2019-05-21"
     endDate: "2020-04-03"
-  - workPosition: "Consultant Ingénieur Logiciel"
+  - workPosition: "Ingénieur Etudes & Développement (prestataire)"
     companyName: "Auchan Retail France"
     companyLogoUrl: "/img/companies/auchan.svg"
     companyLogoAlt: "Logo de Auchan Retail France"
@@ -245,7 +245,7 @@ items:
 
 #item-9
   Contribution à deux produits majeurs d'ADEO :
-  - _Hommy_ (nouvelle app), le carnet de santé numérique de votre maison — PWA construite avec Vue 2 et Ionic ; livraison d'améliorations continues et raffinements architecturaux.
+  - _Hommy_ (nouvelle app), le carnet de santé numérique de votre maison. PWA construite avec Vue 2 et Ionic ; livraison d'améliorations continues et raffinements architecturaux.
   - _MDHData_ (1K utilisateurs uniques mensuels), le catalogue produits interne construit avec Nuxt SSR avec Tailwind, Vuetify, Storybook. Le backend est construit en Nest.js avec CQRS, DDD, Event Sourcing et Elasticsearch. Renforcement des fondations sur l'ensemble de la stack en TypeScript.
 
 #item-10
@@ -256,9 +256,11 @@ items:
   - Stack technique incluant Vue.js 2, Angular 2 à 4, Java, Node.js, SQL et outillage Gitlab CI/CD moderne.
 
 #item-11
-  Au sein de l'équipe R&D d'Urbilog, création de prototypes utilisant des technologies web modernes : AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic et multiples frameworks CSS. Exposition précoce à l'exploration produit full-stack et au prototypage rapide.
+  Au sein de l'équipe R&D d'Urbilog, création de prototypes utilisant des technologies web modernes : AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic et multiples frameworks CSS.
 
+  - Exposition précoce à l'exploration produit full-stack et au prototypage rapide.
   - Conception d'une navigation axées sur l'accessibilité dans une application mobile Ionic, permettant aux utilisateurs malvoyants de recevoir un guidage dans le métro parisien.
+  - Participation à l'élaboration d'audits d'accessibilité de site internets comme celui d'AirFrance.
 
 #item-12
   Au sein d'une équipe de 6 personnes (5 animateurs + 1 responsable), accompagnement de 19 adultes en situation de handicap avec une autonomie moyenne à bonne.

@@ -83,7 +83,7 @@ items:
     contractType: "freelance"
     startDate: "2023-03-27"
     endDate: "2023-05-17"
-  - workPosition: "Full Stack Engineer"
+  - workPosition: "Full-Stack Engineer"
     companyName: "Auchan Retail France"
     companyLogoUrl: "/img/companies/auchan.svg"
     companyLogoAlt: "Auchan Retail France Logo"
@@ -245,7 +245,7 @@ items:
 
 #item-9
   Contributed to two major ADEO products:
-  - _Hommy_ (new app), the digital health record of your home — PWA built with Vue 2 and Ionic; delivered continuous improvements and architectural refinements.
+  - _Hommy_ (new app), the digital health record of your home. PWA built with Vue 2 and Ionic; delivered continuous improvements and architectural refinements.
   - _MDHData_ (1K unique monthly users), the internal product catalog built using Nuxt SSR with Tailwind, Vuetify, Storybook. The backend is built in Nest.js with CQRS, DDD, Event Sourcing, and Elasticsearch. Strengthened foundations across the stack in TypeScript.
 
 #item-10
@@ -256,9 +256,11 @@ items:
   - Tech stack included Vue.js 2, Angular 2 to 4, Java, Node.js, SQL, and modern Gitlab CI/CD tooling.
 
 #item-11
-  As part of Urbilog's R&D team, built prototypes using modern web technologies: AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic, and multiple CSS frameworks. Gained early exposure to full-stack product exploration and rapid prototyping.
+  As part of Urbilog's R&D team, built prototypes using modern web technologies: AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic, and multiple CSS frameworks.
 
+  - Gained early exposure to full-stack product exploration and rapid prototyping.
   - Built accessibility-first navigation flows in an Ionic mobile app, enabling visually impaired users to receive guided map directions in the parisian subway network.
+  - Participation in the development of website accessibility audits such as the AirFrance case.
 
 #item-12
   I worked as part of a 6-person team (5 animators + 1 team leader) in a camping supporting 19 adult vacationers with moderate to high autonomy.
