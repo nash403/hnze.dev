@@ -22,6 +22,7 @@ type WorkLocation = 'onsite' // Sur site
   | string // Fallback value
 
 interface Props {
+  experienceCategory?: 'it' | 'volunteering.not-paid' | 'associative.paid'
   workPosition: string
   companyName?: string
   companyLogoUrl?: string
@@ -35,6 +36,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  experienceCategory: 'it',
   companyLogoType: 'image',
 })
 

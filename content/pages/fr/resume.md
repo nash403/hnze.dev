@@ -96,6 +96,16 @@ items:
     contractType: "freelance"
     startDate: "2022-09-26"
     endDate: "2022-12-30"
+  - workPosition: "Bénévole"
+    experienceCategory: 'volunteering.not-paid'
+    companyName: "Utopia56"
+    companyLogoUrl: "/img/companies/utopia56.png"
+    companyLogoAlt: "Logo Utopia56"
+    companyUrl: "https://utopia56.org/"
+    workLocation: "Grande-Synthe (59), France"
+    contractType: "volunteer"
+    startDate: "2022-03-01"
+    endDate: "2022-03-30"
   - workPosition: "Professeur de Programmation"
     companyName: "EFFICOM"
     companyLogoUrl: "/img/companies/efficom.png"
@@ -150,6 +160,16 @@ items:
     contractType: "apprenticeship"
     startDate: "2015-09-01"
     endDate: "2017-06-30"
+  - workPosition: "Animateur en Séjour adapté"
+    experienceCategory: 'associative.paid'
+    companyName: "Éclaireuses et Éclaireurs de France"
+    companyLogoUrl: "/img/companies/EEDF.svg"
+    companyLogoAlt: "Logo de EEDF"
+    companyUrl: "https://www.eedf.fr/"
+    workLocation: "Saint-Cyprien (66), France"
+    contractType: "seasonal"
+    startDate: "2015-08-01"
+    endDate: "2015-08-24"
   - workPosition: "Stagiaire en développement Web"
     companyName: "Urbilog"
     companyLogoUrl: "/img/companies/urbilog.png"
@@ -159,6 +179,16 @@ items:
     contractType: "internship"
     startDate: "2015-03-30"
     endDate: "2015-07-31"
+  - workPosition: "Animateur en Séjour adapté"
+    experienceCategory: 'associative.paid'
+    companyName: "Éclaireuses et Éclaireurs de France"
+    companyLogoUrl: "/img/companies/EEDF.svg"
+    companyLogoAlt: "Logo de EEDF"
+    companyUrl: "https://www.eedf.fr/"
+    workLocation: "Montbrison (42), France"
+    contractType: "seasonal"
+    startDate: "2014-08-02"
+    endDate: "2014-08-25"
 ---
 #item-0
   Chez la startup Carelancer, j'ai dirigé le développement front-end d'une plateforme de santé à la demande connectant les patients avec des professionnels agréés au Canada et aux États-Unis, ciblant une utilisation à grande échelle dans les populations sous-assurées.
@@ -189,9 +219,12 @@ items:
   - Intégration de Brightcove Video Player et optimisation du chargement média pour des sessions d'entraînement fluides.
 
 #item-5
-  Enseignement des fondamentaux de la programmation à des étudiants de deuxième année : algorithmes, pseudo-code, structures de contrôle, fonctions, entrée / sortie et exécution de scripts. Conception de sessions pratiques pour développer les compétences de raisonnement et introduire les bases de la programmation.
+  Apport d'un soutien direct aux personnes migrantes dans les camps de Grande-Synthe. Réalisation de maraudes pour identifier les populations en détresse, distribution de matériel d'urgence (couvertures de survie, fiches d'information multilingues), rôle d'intermédiaire avec les associations partenaires spécialisées (distribution alimentaire, eau, recharge téléphonique, aide juridique pour l'asile). Accompagnement et transport pour des rendez-vous médicaux, juridiques ou urgents.
 
 #item-6
+  Enseignement des fondamentaux de la programmation à des étudiants de deuxième année : algorithmes, pseudo-code, structures de contrôle, fonctions, entrée / sortie et exécution de scripts. Conception de sessions pratiques pour développer les compétences de raisonnement et introduire les bases de la programmation.
+
+#item-7
   Développeur lead pour la nouvelle plateforme e-commerce multi-marques et multi-pays de Norauto (10M+ de visiteurs mensuels).
   - Conception des fondations techniques : composants core, couche de service GraphQL, architecture Nuxt 2 évolutive (Composition API-ready pour migration Nuxt 3), et Tailwind CSS.
   - Création de listing produits complexe avec recherche à facettes optimisée pour correspondre au catalogue complexe de l'entreprise.
@@ -199,31 +232,41 @@ items:
   - Collaboration avec des équipes internationales en Allemagne, Portugal et Belgique, travaillant en anglais pour aligner les équipes des différents marchés.
   - Mentorat et onboarding de développeurs, soutien à la croissance de l'équipe et à l'alignement technique.
 
-#item-7
+#item-8
   Leader technique contribuant à plusieurs applications internes pour le siège d'Auchan.
   - Migration d'applications Angular 2/4 vers Vue 2 et livraison de nouvelles applications Vue pour le suivi des stocks, opérations de cartes cadeaux/fidélité, monitoring des ventes en temps réel, données de référence magasin, et plus.
   - Travail en étroite collaboration avec les équipes backend (Java Spring, Node.js) et gestion des pipelines CI/CD, décisions d'architecture et bibliothèques de composants.
   - Expertise fournie sur Vue.js, Nest.js, Clean Architecture, GCP, Firebase, GitLab CI/CD et pratiques front-end modernes.
 
-#item-8
+#item-9
   Contribution à deux produits majeurs d'ADEO :
   - _Hommy_ (nouvelle app), le carnet de santé numérique de votre maison — PWA construite avec Vue 2 et Ionic ; livraison d'améliorations continues et raffinements architecturaux.
   - _MDHData_ (1K utilisateurs uniques mensuels), le catalogue produits interne construit avec Nuxt SSR avec Tailwind, Vuetify, Storybook. Le backend est construit en Nest.js avec CQRS, DDD, Event Sourcing et Elasticsearch. Renforcement des fondations sur l'ensemble de la stack en TypeScript.
 
-#item-9
+#item-10
   Contributeur clé puis lead technique au sein de l'écosystème d'applications internes d'Auchan.
   - Création et modernisation d'applications de visualisation de données utilisées quotidiennement par 15 000+ employés pour monitorer les ventes, opérations et performances des magasins.
   - Pilotage des migrations d'Angular vers Vue 2 sur plusieurs applications majeures et introduction de standards de qualité, performance et architecture.
   - Collaboration avec les Product Owners pour aligner les choix techniques avec les objectifs business.
   - Stack technique incluant Vue.js 2, Angular 2 à 4, Java, Node.js, SQL et outillage Gitlab CI/CD moderne.
 
-#item-10
+#item-11
   Au sein de l'équipe R&D d'Urbilog, création de prototypes utilisant des technologies web modernes : AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic et multiples frameworks CSS. Exposition précoce à l'exploration produit full-stack et au prototypage rapide.
 
   - Conception d'une navigation axées sur l'accessibilité dans une application mobile Ionic, permettant aux utilisateurs malvoyants de recevoir un guidage dans le métro parisien.
 
-#item-11
+#item-12
+  Au sein d'une équipe de 6 personnes (5 animateurs + 1 responsable), accompagnement de 19 adultes en situation de handicap avec une autonomie moyenne à bonne.
+
+  - Planification et animation d'un programme de 3 semaines (jeux, activités créatives ou sportives, sorties, événements locaux), préparation des repas, entretien des espaces en impliquant les participants, suivi des prises de médicaments, gestion des urgences et participation aux débriefings quotidiens.
+
+#item-13
   Développement d'une plateforme de communication multi-canal pour utilisateurs malentendants utilisant WebRTC, AngularJS, Ionic, Node.js et Electron. Contribution à l'UX axée sur l'accessibilité et aux fonctionnalités de communication en temps réel.
+
+#item-14
+  Intégré à une équipe de 5 personnes (4 animateurs + 1 responsable), accompagnement de 15 adultes en situation de handicap avec autonomie moyenne à bonne.
+
+  - Organisation des activités durant un séjour de 3 semaines à la ferme, coordination des ateliers et sorties, préparation des repas, entretien des lieux avec participation des vacanciers, suivi des traitements et participation à la gestion des imprévus ainsi qu'aux débriefings quotidiens.
 ::
 
 ::resume-skills-section{title="Compétences"}
@@ -336,9 +379,9 @@ Diplôme d'État du Burundi, mention "Grand Fruit" (Très Bien).
 ::resume-interests-section{title="Intérêts"}
 #default
 - Voyages et découvertes culturelles (bi-national français/burundais, toujours curieux de nouvelles cultures)
-- YouTubeurs STEM (sciences, techno, ingénierie, maths)
+- Chaînes YouTube STEM (sciences, tech, etc. comme ScienceEtonnante ou Micode)
 - Sessions café + code dans les cafés
+- Contributions Open Source et Meetups
 - Projets de cuisine (et parfois pleurer devant un bon film)
 - Fan de Football et soirées jeux de société
-- Contributions Open Source et Meetups
 ::
