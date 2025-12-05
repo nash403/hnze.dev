@@ -38,6 +38,18 @@ websiteLinks:
 ---
 #intro
 Full-Stack Web Engineer with 10 years of experience building reliable and scalable web products. While specializing in Vue.js and Nuxt, I work across the entire stack, from any front-end framework architecture and design systems to backend APIs, cloud workflows, and hybrid mobile apps. I take a pragmatic, value-driven approach: understanding the context, delivering quickly without compromising quality, and optimizing for long-term maintainability. Open to opportunities with startups, scale-ups, and product teams, whether it's strengthening an existing team, leading a freelance project, or building a product from the ground up.
+
+<!-- NOTE: The following is my Linkedin intro. Keep commented
+
+Full-Stack Web Engineer 🦄 | I code to make people's life easier 👨🏾‍💻 | Curious  🔎 | Agile & Open source enthusiast 🐧 | I enjoy Travelling 🌍, a good TV shows 🎬 and quality time with loved ones 🫶🏾
+
+Specialized in the full JavaScript stack, from any front-end framework architecture and design systems to backend APIs, cloud workflows, and hybrid mobile apps. I take a pragmatic, value-driven approach: understanding the context, delivering quickly without compromising quality, and optimizing for long-term maintainability.
+
+I just moved to Rennes (France) after a beautiful experience of almost 2 years in Montreal (QC, Canada) and and 10 years in Lille (France) before that.
+
+Currently open to opportunities with startups, scale-ups, and product teams, whether it's strengthening an existing team, leading a freelance project, or building a product from the ground up.
+
+If we've worked together in the past, I'd be thrilled if you could fill out this testimonial form for me, thank you: https://airtable.com/appoxLPEkRqpdwcZx/pag7qloiDWr3kZ7Af/form -->
 ::
 
 ::resume-experience-section{title="Experiences"}
