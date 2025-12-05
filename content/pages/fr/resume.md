@@ -257,14 +257,12 @@ items:
 
 #item-11
   Au sein de l'équipe R&D d'Urbilog, création de prototypes utilisant des technologies web modernes : AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic et multiples frameworks CSS.
-
   - Exposition précoce à l'exploration produit full-stack et au prototypage rapide.
   - Conception d'une navigation axées sur l'accessibilité dans une application mobile Ionic, permettant aux utilisateurs malvoyants de recevoir un guidage dans le métro parisien.
   - Participation à l'élaboration d'audits d'accessibilité de site internets comme celui d'AirFrance.
 
 #item-12
   Au sein d'une équipe de 6 personnes (5 animateurs + 1 responsable), accompagnement de 19 adultes en situation de handicap avec une autonomie moyenne à bonne.
-
   - Planification et animation d'un programme de 3 semaines (jeux, activités créatives ou sportives, sorties, événements locaux), préparation des repas, entretien des espaces en impliquant les participants, suivi des prises de médicaments, gestion des urgences et participation aux débriefings quotidiens.
 
 #item-13
@@ -272,7 +270,6 @@ items:
 
 #item-14
   Intégré à une équipe de 5 personnes (4 animateurs + 1 responsable), accompagnement de 15 adultes en situation de handicap avec autonomie moyenne à bonne.
-
   - Organisation des activités durant un séjour de 3 semaines à la ferme, coordination des ateliers et sorties, préparation des repas, entretien des lieux avec participation des vacanciers, suivi des traitements et participation à la gestion des imprévus ainsi qu'aux débriefings quotidiens.
 ::
 

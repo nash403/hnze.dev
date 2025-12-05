@@ -257,14 +257,12 @@ items:
 
 #item-11
   As part of Urbilog's R&D team, built prototypes using modern web technologies: AngularJS, Angular 2+, Vue.js, WebSockets, WebRTC, Ionic, and multiple CSS frameworks.
-
   - Gained early exposure to full-stack product exploration and rapid prototyping.
   - Built accessibility-first navigation flows in an Ionic mobile app, enabling visually impaired users to receive guided map directions in the parisian subway network.
   - Participation in the development of website accessibility audits such as the AirFrance case.
 
 #item-12
   I worked as part of a 6-person team (5 animators + 1 team leader) in a camping supporting 19 adult vacationers with moderate to high autonomy.
-
   - Planned and delivered a 3-weeks activity program (games, physical and creative workshops, excursions, local events), prepared meals, handled daily housekeeping while involving participants, monitored medication routines, managed emergencies, and contributed to daily team debriefs.
 
 #item-13
@@ -272,7 +270,6 @@ items:
 
 #item-14
   I served on a team of 5 (4 animators + 1 team leader) at a farm supporting 15 adult vacationers with moderate to high autonomy.
-
   - Organized activities over a 3-weeks stay on the farm, coordinated outings and workshops, prepared meals, maintained living spaces with participant involvement, ensured medication tracking, and supported crisis management and daily team coordination.
 ::
 
