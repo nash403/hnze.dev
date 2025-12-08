@@ -72,7 +72,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
         <NuxtLinkLocale
           v-if="navigationData?.showLetsMeetLink ?? true"
           to="lets-meet"
-          class="hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 text-base-content-900 hover:bg-primary-100 focus:bg-primary-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center"
+          class="hidden shrink-0 items-center gap-x-1.5 rounded-md px-2.5 py-1.5 hover:bg-primary-100 focus:bg-primary-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:outline-0 focus-visible:ring-inset xs:inline-flex lg:items-center dark:text-base-content-600 dark:hover:text-base-content-900 light:text-base-content-900"
           active-class="bg-primary-100 hover:ring-2 hover:ring-primary-200"
           prefetch-on="interaction"
         >
@@ -134,7 +134,7 @@ watch([() => route.fullPath, () => props.navigationData], () => {
                 <Icon
                   v-if="nav.icon"
                   :name="nav.icon"
-                  class="mr-2 inline size-5 shrink-0 items-center text-sm text-primary-700 opacity-50 transition group-hover:opacity-100"
+                  class="mr-2 inline size-5 shrink-0 items-center text-sm opacity-50 transition group-hover:opacity-100"
                   :class="{
                     'opacity-100': isActive,
                     'inline-flex': !nav.iconMinBreakpoint,

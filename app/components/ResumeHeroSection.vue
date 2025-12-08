@@ -122,7 +122,7 @@ const switchLocale = () => {
 
         <I18nInterpolated
           tag="span"
-          class="hidden text-end text-sm text-base-content-900 not-[@media_all_and_(hover:none)]:inline"
+          class="hidden text-end text-sm not-[@media_all_and_(hover:none)]:inline dark:text-base-content-600 light:text-base-content-900"
           keypath="i18n.resume_hero_section.actions.kbd_hint.text"
           :interpolations="[kbdHelp]"
           interpolations-class-name="kbd kbd-sm"
