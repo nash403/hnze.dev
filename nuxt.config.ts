@@ -47,6 +47,7 @@ export default defineNuxtConfig({
   app: {
     rootId: '__hnze-app-nuxt',
     // pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'page', mode: 'out-in' },
   },
 
   css: ['~/assets/styles/main.css'],
