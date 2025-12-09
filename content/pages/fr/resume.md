@@ -42,7 +42,7 @@ websiteLinks:
     icon: mingcute:link-line
 ---
 #intro
-Ingénieur Web Full-Stack avec 10 ans d'expérience dans la création de produits web fiables et évolutifs. Bien que spécialisé en Vue.js et Nuxt, je travaille sur l'ensemble de la stack, de l'architecture front-end et des design systems aux APIs backend, workflows cloud et applications mobiles hybrides. J'adopte une approche pragmatique et axée sur la valeur : comprendre le contexte, livrer rapidement sans compromettre la qualité, et optimiser pour la maintenabilité à long terme. Ouvert aux opportunités avec des startups, scale-ups et équipes produit, que ce soit pour renforcer une équipe existante, mener un projet freelance ou construire un produit from scratch.
+Ingénieur Web Full-Stack avec 10 ans d'expérience dans la création de produits web fiables et évolutifs. Bien que spécialisé en Vue.js et Nuxt, je travaille sur l'ensemble de la stack JS, de l'architecture front-end et des design systems aux APIs backend, workflows cloud et applications mobiles hybrides. J'adopte une approche pragmatique et axée sur la valeur : comprendre le contexte, livrer rapidement sans compromettre la qualité, et optimiser pour la maintenabilité à long terme. Ouvert aux opportunités avec des startups, scale-ups et équipes produit, que ce soit pour renforcer une équipe existante, mener un projet freelance ou construire un produit from scratch.
 
 <!-- NOTE: The following is my Linkedin intro. Keep commented
 
