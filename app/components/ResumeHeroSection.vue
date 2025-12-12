@@ -110,6 +110,7 @@ const switchLocale = () => {
         >
           <Icon name="mingcute:refresh-3-line" />
           <i18n-t
+            scope="global"
             keypath="i18n.shared.switch_to_locale"
             tag="span"
           >

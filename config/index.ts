@@ -1,4 +1,5 @@
 import { DEFAULT_THEME } from './constants'
+import { isEnabled } from '../app/utils'
 
 export function defineRuntimeOptions() {
   const caName = ['localhost', '0.0.0.0'].includes(process.env.HOST as string)
@@ -13,7 +14,7 @@ export function defineRuntimeOptions() {
     : undefined
 
   return {
-    enableDebugMode: [1, true, '1', 'true'].includes(process.env.DEBUG as any), // TODO: extract falsy helper
+    enableDebugMode: isEnabled(process.env.DEBUG),
     https,
     defaultColorMode: process.env.DEFAULT_COLOR_MODE || DEFAULT_THEME,
   }

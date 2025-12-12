@@ -106,9 +106,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-11-11',
 
   nitro: {
-    // static: true,
-    preset: 'vercel_static',
-    // serveStatic: true,
+    preset: process.env.NITRO_PRESET || 'static',
     // prerender: {
     //   crawlLinks: true,
     //   // routes: ['/sitemap.xml', '/robots.txt'],
@@ -159,12 +157,24 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    // debug: isEnabled(process.env.DEBUG_I18N),
     defaultLocale: process.env.DEFAULT_LOCALE || 'en',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root', // recommended
-    },
+    /**
+     * FIXME: disabling i18n redirect to detected language due to a bug
+     *
+     * See related issues:
+     * - https://github.com/nuxt-modules/i18n/issues/3608
+     * - https://github.com/nuxt-modules/i18n/issues/3016
+     * - https://github.com/nuxt-modules/i18n/issues/3262#issuecomment-2562396469
+     * - https://github.com/nuxt-modules/i18n/issues/3828
+    */
+    detectBrowserLanguage: false,
+    // detectBrowserLanguage: {
+    //   fallbackLocale: process.env.DEFAULT_LOCALE || 'en',
+    //   useCookie: true,
+    //   cookieKey: 'i18n_redirected',
+    //   redirectOn: 'root', // recommended for SEO
+    // },
     strategy: 'prefix_and_default',
     customRoutes: 'meta',
     locales: [
@@ -207,7 +217,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: process.env.NODE_ENV === 'production' ? 'ipxStatic' : 'ipx',
+    provider: process.env.IMAGE_PROVIDER || 'ipx',
     quality: 80,
     format: ['webp', 'avif'],
   },

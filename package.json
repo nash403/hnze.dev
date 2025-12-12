@@ -5,9 +5,10 @@
   "version": "2.0.0",
   "scripts": {
     "clean:nuxt": "nuxt cleanup",
+    "clean:vercel": "rm -rf .vercel",
     "clean:content": "rm -rf .data",
     "clean:deps": "rm -rf node_modules",
-    "clean:all": "npx run-s clean:nuxt clean:content clean:deps",
+    "clean:all": "npx run-s clean:nuxt clean:vercel clean:content clean:deps",
     "build": "nuxt build --prerender",
     "dev": "nuxt dev",
     "generate": "nuxt generate",

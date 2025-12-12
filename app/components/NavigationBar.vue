@@ -60,8 +60,6 @@ watch([() => route.fullPath, () => props.navigationData], () => {
           :title="$t('i18n.shared.link_back_to_home_title')"
           class="flex items-center"
         >
-          <!-- aria-label="Logo Hnze"
-        title="Logo Hnze" -->
           <Icon
             name="hnze:hnze-logo"
             class="size-(--header-h) hover:animate-text-glow"
