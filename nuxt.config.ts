@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
 import { defineRuntimeOptions } from './config'
+import { isEnabled } from './app/utils'
 
 const { enableDebugMode, https, defaultColorMode } = defineRuntimeOptions()
 
@@ -159,11 +160,13 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    debug: isEnabled(process.env.DEBUG_I18N),
     defaultLocale: process.env.DEFAULT_LOCALE || 'en',
     detectBrowserLanguage: {
+      fallbackLocale: process.env.DEFAULT_LOCALE || 'en',
       useCookie: true,
       cookieKey: 'i18n_redirected',
-      redirectOn: 'root', // recommended
+      redirectOn: 'root', // recommended for SEO
     },
     strategy: 'prefix_and_default',
     customRoutes: 'meta',
