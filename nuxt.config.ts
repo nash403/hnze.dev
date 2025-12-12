@@ -158,22 +158,30 @@ export default defineNuxtConfig({
     // debug: isEnabled(process.env.DEBUG_I18N),
     defaultLocale: process.env.DEFAULT_LOCALE || 'en',
     /**
-     * FIXME: disabling i18n redirect to detected language due to a bug
+     * Using 'prefix' strategy instead of 'prefix_and_default' for SSG compatibility.
+     * This ensures all localized routes (/en/*, /fr/*) are properly pre-rendered.
      *
-     * See related issues:
+     * Browser language detection is handled by public/index.html for the root path ('/'),
+     * which provides a reliable client-side redirect in SSG mode. The i18n module's
+     * detectBrowserLanguage is kept for cookie-based locale persistence on subsequent visits.
+     *
+     * With 'prefix_and_default', SSG builds would result in 404 errors when redirecting
+     * to /fr due to timing issues with client-side hydration and route generation.
+     *
+     * Related issues:
      * - https://github.com/nuxt-modules/i18n/issues/3608
      * - https://github.com/nuxt-modules/i18n/issues/3016
      * - https://github.com/nuxt-modules/i18n/issues/3262#issuecomment-2562396469
      * - https://github.com/nuxt-modules/i18n/issues/3828
     */
-    detectBrowserLanguage: false,
-    // detectBrowserLanguage: {
-    //   fallbackLocale: process.env.DEFAULT_LOCALE || 'en',
-    //   useCookie: true,
-    //   cookieKey: 'i18n_redirected',
-    //   redirectOn: 'root', // recommended for SEO
-    // },
-    strategy: 'prefix_and_default',
+    detectBrowserLanguage: {
+      fallbackLocale: process.env.DEFAULT_LOCALE || 'en',
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      // redirectOn: 'no prefix', // only redirect when accessing localized routes without prefix
+      redirectOn: 'root',
+    },
+    strategy: 'prefix',
     customRoutes: 'meta',
     locales: [
       {
