@@ -178,10 +178,9 @@ export default defineNuxtConfig({
       fallbackLocale: process.env.DEFAULT_LOCALE || 'en',
       useCookie: true,
       cookieKey: 'i18n_redirected',
-      // redirectOn: 'no prefix', // only redirect when accessing localized routes without prefix
       redirectOn: 'root',
     },
-    strategy: 'prefix',
+    strategy: 'prefix', // prefix all locale routes. switeched from 'prefix_and_default' because browser language detection and redirection was not working properly
     customRoutes: 'meta',
     locales: [
       {
