@@ -9,7 +9,7 @@
     "clean:content": "rm -rf .data",
     "clean:deps": "rm -rf node_modules",
     "clean:all": "npx run-s clean:nuxt clean:vercel clean:content clean:deps",
-    "build": "nuxt build --prerender",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

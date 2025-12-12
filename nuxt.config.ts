@@ -80,7 +80,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteNameTemplateSeparator: '-',
-
       defaultSocialHandle: 'myHandle',
       contactEmail: 'hello@example.com',
       resumeContactEmail: 'hire-me@example.com',
@@ -108,7 +107,6 @@ export default defineNuxtConfig({
   nitro: {
     preset: process.env.NITRO_PRESET || 'static',
     // prerender: {
-    //   crawlLinks: true,
     //   // routes: ['/sitemap.xml', '/robots.txt'],
     // },
   },
