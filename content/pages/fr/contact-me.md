@@ -22,7 +22,7 @@ Je travaille avec une approche pragmatique : comprendre votre contexte, identifi
 
 Je délivre vite, sans compromis sur la qualité, et j'optimise pour le long terme.
 
-Pour en savoir plus sur mon parcours, [consultez mon CV](/fr/resume){.h-link}. Et si vous souhaitez discuter directement de votre projet, [contactez-moi par email](mailto:hello@hnze.dev){.h-link}.
+Pour en savoir plus sur mon parcours, <NuxtLinkLocale to="resume" class="h-link">consultez mon CV</NuxtLinkLocale>. Et si vous souhaitez discuter directement de votre projet, [contactez-moi par email](mailto:hello@hnze.dev){.h-link}.
 
 
 

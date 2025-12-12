@@ -22,7 +22,7 @@ I work with a pragmatic mindset: understanding your context, identifying what tr
 
 I deliver fast, without compromising quality, and I optimise for the long term.
 
-To learn more about my background, [check my resume](/resume){.h-link}. And if you'd like to discuss your project directly, [contact me by email](mailto:hello@hnze.dev){.h-link}.
+To learn more about my background, <NuxtLinkLocale to="resume" class="h-link">check my resume</NuxtLinkLocale>. And if you'd like to discuss your project directly, [contact me by email](mailto:hello@hnze.dev){.h-link}.
 
 ## My services
 A solution adapted to every situation. The easiest way to begin is simply to meet.
