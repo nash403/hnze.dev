@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Redirecting...</title>
+  <script>
+    // Detect browser language and redirect
+    const browserLang = navigator.language || navigator.userLanguage;
+    const supportedLocales = ['en', 'fr'];
+    const defaultLocale = 'en';
+
+    // Check if we have a saved preference in cookie
+    const cookieMatch = document.cookie.match(/i18n_redirected=([^;]+)/);
+    let locale = cookieMatch ? cookieMatch[1] : null;
+
+    // If no cookie, detect from browser
+    if (!locale) {
+      locale = browserLang.toLowerCase().split('-')[0];
+      if (!supportedLocales.includes(locale)) {
+        locale = defaultLocale;
+      }
+      // Save preference
+      document.cookie = `i18n_redirected=${locale}; path=/; max-age=31536000; SameSite=Lax`;
+    }
+
+    // Redirect to the localized path
+    console.log('fallback index.html redirection to browser detected locale', locale)
+    window.location.href = `/${locale}${window.location.pathname === '/' ? '' : window.location.pathname}${window.location.search}${window.location.hash}`;
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/en">
+  </noscript>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
