@@ -6,9 +6,9 @@
       "source": "/",
       "has": [
         {
-          "type": "header",
-          "key": "accept-language",
-          "value": "fr.*"
+          "type": "cookie",
+          "key": "i18n_redirected",
+          "value": "fr"
         }
       ],
       "destination": "/fr",
@@ -18,9 +18,9 @@
       "source": "/",
       "has": [
         {
-          "type": "cookie",
-          "key": "i18n_redirected",
-          "value": "fr"
+          "type": "header",
+          "key": "accept-language",
+          "value": "fr.*"
         }
       ],
       "destination": "/fr",
