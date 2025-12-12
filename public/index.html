@@ -24,8 +24,8 @@
     }
 
     // Redirect to the localized path
+    console.log('fallback index.html redirection to browser detected locale', locale)
     window.location.href = `/${locale}${window.location.pathname === '/' ? '' : window.location.pathname}${window.location.search}${window.location.hash}`;
-    console.log('executedddd')
   </script>
   <noscript>
     <meta http-equiv="refresh" content="0; url=/en">
