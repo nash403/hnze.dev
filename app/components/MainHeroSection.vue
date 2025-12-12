@@ -19,7 +19,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-center space-y-12">
+  <section class="flex flex-col items-center justify-center space-y-12 overflow-clip">
     <div class="flex flex-col items-center justify-center gap-4 sm:gap-7 md:flex-row md:gap-12">
       <!-- NOTE: Credits to https://github.com/zyyv/zyyv.dev/ for the homepage style. I shamelessly copied from it. -->
       <div
